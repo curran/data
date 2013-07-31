@@ -3,7 +3,14 @@ data
 
 A collection of public data sets (just getting started, nothing here yet).
 
-The vision is that this repository can serve data files to interactive visualizations through GitHub Pages.
+The vision is that this repository can serve data files to interactive visualizations through GitHub Pages. The data sets are exposed as [AMD modules](http://requirejs.org/docs/whyamd.html) that contain data formatted to [D3's data conventions](https://github.com/mbostock/d3/wiki/CSV).
+
+Here's some example code that loads some data from this repo using [Require.js](http://requirejs.org/):
+
+```javascript
+var irisURL = 'http://curran.github.io/data/iris/iris.js';
+require([irisURL], function(data){ console.log(data); });
+```
 
 ## Data Sets
 
