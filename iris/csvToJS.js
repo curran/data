@@ -5,7 +5,11 @@ var d3 = require('d3'),
     fs = require('fs');
 fs.readFile('./iris.csv', 'utf8', function (err, data) {
   var data = d3.csv.parse(data),
-      script = ['define(', JSON.stringify(data), ');'].join('');
+      script = [
+        'define([], function(){ return ',
+        JSON.stringify(data),
+        ';});'
+      ].join('');
   fs.writeFile('./iris.js', script, function(err) {
     if(err) {
       console.log(err);
