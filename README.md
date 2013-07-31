@@ -11,6 +11,7 @@ Here's some example code that loads some data from this repo using [Require.js](
 var irisURL = 'http://curran.github.io/data/iris/iris.js';
 require([irisURL], function(data){ console.log(data); });
 ```
+[See it work in JSBin](http://jsbin.com/ayanoy/2/edit)!
 
 ## Data Sets
 
