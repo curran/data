@@ -5,6 +5,13 @@ A collection of public data sets (just getting started, nothing here yet).
 
 The vision is that this repository can serve data files to interactive visualizations through GitHub Pages.
 
+## Data Sets
+
+ * [Fisher's Iris Data](iris)
+ * United Nations
+   * [Millenium Development Goals](un/mdg)
+   * [Population](un/population)
+
 ## Targets for import:
 
  * [Soul of the Community](http://streaming.stat.iastate.edu/dataexpo/2013/) (American Statistical Association)
