@@ -2,7 +2,9 @@ This directory contains data extracted from the [United Nations Millenium Develo
 
 Example code:
 ```javascript
-var indicator = 'ChildrenUnderFiveMortalityRate',
-    url = 'http://curran.github.io/data/un/'+indicator+'.js';
-require([url], function(data){ console.log(data); });
+var dir = 'http://curran.github.io/data/un/mdg/',
+    indicator = 'ChildrenUnderFiveMortalityRate',
+    url = dir+indicator+'.js';
+    require([url], function(data){ console.log(data); });
 ```
+[See it work in JSBin](http://jsbin.com/ayanoy/4/edit)
