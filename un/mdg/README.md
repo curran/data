@@ -5,6 +5,9 @@ Example code:
 var dir = 'http://curran.github.io/data/un/mdg/',
     indicator = 'ChildrenUnderFiveMortalityRate',
     url = dir+indicator+'.js';
-    require([url], function(data){ console.log(data); });
+
+require([url], function(data){
+  console.log(data);
+});
 ```
 [See it work in JSBin](http://jsbin.com/ayanoy/4/edit)
