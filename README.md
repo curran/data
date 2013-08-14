@@ -15,7 +15,7 @@ require([irisURL], function(data){ console.log(data); });
 
 ## Data Sets
 
-Here's some example code that gets all the data sets and prints some information about them ([run it](http://curran.github.io/evalIDE/#var%20dataDir%20%3D%20'http%3A%2F%2Fcurran.github.io%2Fdata%2F'%3B%0A%0Afunction%20test(name%2C%20path)%20%7B%0A%20%20require(%5BdataDir%20%2B%20path%5D%2C%20function%20(data)%20%7B%0A%20%20%20%20console.log(%5B%0A%20%20%20%20%20%20%22Got%20%22%2C%20name%2C%20%22%20data%20(%22%2C%20data.length%2C%20%22%20rows)%22%2C%0A%20%20%20%20%20%20%22%20fields%3A%20%22%2C%20_.keys(data%5B0%5D)%0A%20%20%20%20%5D.join(%22%22))%3B%0A%20%20%7D)%3B%0A%7D%0A%0Atest(%22Child%20Mortality%22%2C%20%22un%2Fmdg%2FChildrenUnderFiveMortalityRate.js%22)%3B%0Atest(%22Iris%22%2C%20%22iris%2Firis.js%22)%3B%0Atest(%22Population%22%2C%20%22un%2Fpopulation%2FpopulationEstimates.js%22)%3B%0A)):
+Here's some example code that gets all the data sets and prints some information about them (<a href="http://curran.github.io/evalIDE/#var%20dataDir%20%3D%20'http%3A%2F%2Fcurran.github.io%2Fdata%2F'%3B%0A%0Afunction%20test(name%2C%20path)%20%7B%0A%20%20require(%5BdataDir%20%2B%20path%5D%2C%20function%20(data)%20%7B%0A%20%20%20%20console.log(%5B%0A%20%20%20%20%20%20%22Got%20%22%2C%20name%2C%20%22%20data%20(%22%2C%20data.length%2C%20%22%20rows)%22%2C%0A%20%20%20%20%20%20%22%20fields%3A%20%22%2C%20_.keys(data%5B0%5D)%0A%20%20%20%20%5D.join(%22%22))%3B%0A%20%20%7D)%3B%0A%7D%0A%0Atest(%22Child%20Mortality%22%2C%20%22un%2Fmdg%2FChildrenUnderFiveMortalityRate.js%22)%3B%0Atest(%22Iris%22%2C%20%22iris%2Firis.js%22)%3B%0Atest(%22Population%22%2C%20%22un%2Fpopulation%2FpopulationEstimates.js%22)%3B%0A)">run it!</a>):
 
     var dataDir = 'http://curran.github.io/data/';
 
