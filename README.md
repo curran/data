@@ -1,11 +1,11 @@
 data
 ====
 
-A collection of public data sets (just getting started, nothing here yet).
+A collection of public data sets (just getting started, not much here yet).
 
-The vision is that this repository can serve data files to interactive visualizations through GitHub Pages. The data sets are exposed as [AMD modules](http://requirejs.org/docs/whyamd.html) that contain data formatted to [D3's data conventions](https://github.com/mbostock/d3/wiki/CSV).
+The vision is that this repository can serve data files to interactive visualizations through GitHub Pages. The data sets are exposed as [AMD modules](http://requirejs.org/docs/whyamd.html) that contain data formatted to [D3's data conventions](https://github.com/mbostock/d3/wiki/CSV). AMD modules are used rather than text files so that the data sets can be loaded cross-domain (circumventing the [same origin policy](http://en.wikipedia.org/wiki/Same-origin_policy)). GitHub Pages was chosen as a hosting service because it seems more stable and has more longevity than a privately hosted server that I need to pay for.
 
-Here's some example code that loads some data from this repo using [Require.js](http://requirejs.org/):
+Here's some example code that loads a data set from this repository using [Require.js](http://requirejs.org/):
 
 ```javascript
 var irisURL = 'http://curran.github.io/data/iris/iris.js';
@@ -13,9 +13,36 @@ require([irisURL], function(data){ console.log(data); });
 ```
 [See it work in JSBin](http://jsbin.com/ayanoy/2/edit)!
 
+It is also possible to set up an error handler in the case that the URL does not load, like this:
+
+```javascript
+var irisURL = 'http://curran.github.io/data/iris/iris.js';
+require([irisURL], function(data){
+  // If we are here,
+  // the data loaded successfully.
+  console.log(data);
+}, function(err){
+  // If we are here,
+  // the data failed to load.
+  console.log(err);
+});
+```
+[See it work in JSBin](http://jsbin.com/ayanoy/8/edit)!
+
 ## Data Sets
 
-Here's some example code that gets all the data sets and prints some information about them:
+Listing of data sets:
+ * [Fisher's Iris Data](iris)
+ * [NSF Bachelors Degrees Statistics](nsf/bachelorsDegrees)
+ * United Nations
+   * [Millenium Development Goals](un/mdg)
+   * [Population](un/population)
+ * [CIA World Factbook](worldFactbook)
+ * Centers for Disease Control
+   * [Causes of Death](cdc/mortality)
+   * [Teen Mothers](cdc/vitalStats)
+
+Here's some example code that tests several data sets and prints some information about them:
 
 ```javascript
 var dataDir = 'http://curran.github.io/data/';
@@ -35,15 +62,10 @@ test("Population", "un/population/populationEstimates.js");
 test("GDP", "worldFactbook/GDPPerCapita.js");
 ```
 
- * [Fisher's Iris Data](iris)
- * United Nations
-   * [Millenium Development Goals](un/mdg)
-   * [Population](un/population)
- * [CIA World Factbook](worldFactbook)
-
 ## Targets for import:
 
  * [Soul of the Community](http://streaming.stat.iastate.edu/dataexpo/2013/) (American Statistical Association)
  * [World Population Prospects](http://esa.un.org/wpp/Excel-Data/population.htm) (United Nations)
  * [Employment](http://www.bls.gov/data/) (Bureau of Labor Statistics)
  * [Healthy People](http://visualizing.org/datasets/healthy-people-2010) (Centers for Disease Control)
+ * [GapMinder Data](http://www.gapminder.org/data/)
