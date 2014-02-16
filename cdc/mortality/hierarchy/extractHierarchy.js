@@ -26,6 +26,7 @@ fs.readFile(inputFile, 'utf8', function (err, data) {
         JSON.stringify(data),
         ';});'
       ].join('');
+  //console.log( JSON.stringify(data,null,2));
   fs.writeFile(outputFile, script, function(err) {
     if(err) {
       console.log(err);
