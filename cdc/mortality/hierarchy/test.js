@@ -158,7 +158,28 @@ assertEqual(parseHierarchy([
   ' F',
   ' G',
   'H'
-]), {});
+]), {
+  "name": "A",
+  "children": [
+    {
+      "name": "B",
+      "children": [
+        {
+          "name": "C",
+          "children": [
+            {
+              "name": "D",
+              "children": [ { "name": "E" } ]
+            }
+          ]
+        },
+        { "name": "F" },
+        { "name": "G" }
+      ]
+    },
+    { "name": "H" }
+  ]
+});
 function assertEqual(actual, expected){
   var strActual = JSON.stringify(actual, null, 2),
       strExpected = JSON.stringify(expected, null, 2);
