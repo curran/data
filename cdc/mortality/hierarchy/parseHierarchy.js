@@ -1,7 +1,8 @@
+var getIndentationLevel = require('./getIndentationLevel');
+
 // A dataset-specific function that extracts the tree
 // of causes of death from the original data file.
 function parseHierarchy(lines) {
-
 
   // The root of the tree data structure compatible with D3.js.
   // See https://github.com/mbostock/d3/wiki/Tree-Layout
@@ -74,21 +75,6 @@ function parseHierarchy(lines) {
   }
 
   return tree;
-}
-
-// Returns the number of 4-space indents there are
-// on the given line, using either white space character
-// used in the original data file.
-function getIndentationLevel(line) {
-  for(var i = 0; isIndentCharacter(line, i); i++){}
-  return i;
-}
-
-function isIndentCharacter(str, i) {
-  var code = str.charCodeAt(i);
-  // These two codes were observed in use as indentation
-  // characters in the original data file.
-  return code === 65533 || code === 32;
 }
 
 module.exports = parseHierarchy;
