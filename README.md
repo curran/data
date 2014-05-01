@@ -69,3 +69,4 @@ test("GDP", "worldFactbook/GDPPerCapita.js");
  * [Employment](http://www.bls.gov/data/) (Bureau of Labor Statistics)
  * [Healthy People](http://visualizing.org/datasets/healthy-people-2010) (Centers for Disease Control)
  * [GapMinder Data](http://www.gapminder.org/data/)
+ * [NASA Satellite-Derived Environmental Indicators](http://sedac.ciesin.columbia.edu/data/collection/sdei)
