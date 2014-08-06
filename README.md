@@ -3,7 +3,7 @@ data
 
 A collection of public data sets (just getting started, not much here yet).
 
-The vision is that this repository can serve data files to interactive visualizations through GitHub Pages. The data sets are exposed as [AMD modules](http://requirejs.org/docs/whyamd.html) that contain data formatted to [D3's data conventions](https://github.com/mbostock/d3/wiki/CSV). AMD modules are used rather than text files so that the data sets can be loaded cross-domain (circumventing the [same origin policy](http://en.wikipedia.org/wiki/Same-origin_policy)). GitHub Pages was chosen as a hosting service because it seems more stable and has more longevity than a privately hosted server that I need to pay for.
+This repository contains data files for interactive visualizations. The data sets are exposed as [AMD modules](http://requirejs.org/docs/whyamd.html) that contain data formatted to [D3's data conventions](https://github.com/mbostock/d3/wiki/CSV). AMD modules are used rather than text files so that the data sets can be loaded cross-domain (circumventing the [same origin policy](http://en.wikipedia.org/wiki/Same-origin_policy)).
 
 Here's some example code that loads a data set from this repository using [Require.js](http://requirejs.org/):
 

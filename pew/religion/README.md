@@ -6,3 +6,7 @@ This directory contains data extracted from the Pew Research Center [Global Reli
 
 <img src="religionByCountry.png"></img>
 A screenshot of the [data table page](http://features.pewforum.org/grl/population-number.php).
+
+See also this [Map visualization of the religion data](http://www.pewforum.org/2012/12/18/global-religious-landscape-buddhist/), which is a scatter plot layered on top of a geographic map with size representing number of adherents.
+
+<img src="http://www.pewforum.org/files/2012/12/12_budd-mag.png">
