@@ -70,3 +70,4 @@ test("GDP", "worldFactbook/GDPPerCapita.js");
  * [Healthy People](http://visualizing.org/datasets/healthy-people-2010) (Centers for Disease Control)
  * [GapMinder Data](http://www.gapminder.org/data/)
  * [NASA Satellite-Derived Environmental Indicators](http://sedac.ciesin.columbia.edu/data/collection/sdei)
+ * [IMF Public Finances in Modern History Database](http://www.imf.org/external/np/fad/histdb/)
