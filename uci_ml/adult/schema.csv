@@ -6,7 +6,7 @@ education-num, quantitative
 marital-status, nominal
 occupation, nominal
 relationship, nominal
-race, nominal
+race , nominal
 sex, nominal
 capital-gain, quantitative
 capital-loss, quantitative
