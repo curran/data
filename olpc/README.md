@@ -16,6 +16,6 @@ These shortcomings inspired me to scrape this data and do a visualization redesi
 The data is released under [CC BY 3.0](http://creativecommons.org/licenses/by/3.0/), so feel free to use as long as you include attribution to the OLPC project.
 
 
-A join was performed with countries.csv to add lat, lon coordinates. countries.csv was modified to have its names match the olpc data, and Nagorno-Karabakh was added.
+A join was performed with [countries.csv from Google](https://developers.google.com/public-data/docs/canonical/countries_csv) to add lat, lon coordinates. countries.csv was modified to have its names match the olpc data, and Nagorno-Karabakh was added.
 
 Curran K. April 2015
