@@ -1,9 +1,9 @@
 data
 ====
 
-A collection of public data sets (just getting started, not much here yet).
+A collection of small public data sets for demonstration of visualization methods. These data sets are at various stages of preparation, some are just raw data, some are CSV files, and some are exposed as AMD modules.
 
-This repository contains data files for interactive visualizations. The data sets are exposed as [AMD modules](http://requirejs.org/docs/whyamd.html) that contain data formatted to [D3's data conventions](https://github.com/mbostock/d3/wiki/CSV). AMD modules are used rather than text files so that the data sets can be loaded cross-domain (circumventing the [same origin policy](http://en.wikipedia.org/wiki/Same-origin_policy)).
+Some of these data sets are exposed as [AMD modules](http://requirejs.org/docs/whyamd.html) that contain data formatted to [D3's data conventions](https://github.com/mbostock/d3/wiki/CSV). AMD modules are used rather than text files so that the data sets can be loaded cross-domain (circumventing the [same origin policy](http://en.wikipedia.org/wiki/Same-origin_policy)).
 
 Here's some example code that loads a data set from this repository using [Require.js](http://requirejs.org/):
 
@@ -71,3 +71,7 @@ test("GDP", "worldFactbook/GDPPerCapita.js");
  * [GapMinder Data](http://www.gapminder.org/data/)
  * [NASA Satellite-Derived Environmental Indicators](http://sedac.ciesin.columbia.edu/data/collection/sdei)
  * [IMF Public Finances in Modern History Database](http://www.imf.org/external/np/fad/histdb/)
+
+Many more out there!
+
+If you have a small data set that is great for visualization, feel free to contribute it here.
