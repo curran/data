@@ -1,7 +1,7 @@
 data
 ====
 
-A collection of small public data sets for demonstration of visualization methods. These data sets are at various stages of preparation, some are just raw data, some are CSV files, and some are exposed as AMD modules.
+A collection of small public data sets for demonstration of visualization methods. These data sets are at various stages of preparation, some are just raw data, some are CSV files, and some are exposed as AMD modules. There is a vague goal of organizing these in a uniform way
 
 Some of these data sets are exposed as [AMD modules](http://requirejs.org/docs/whyamd.html) that contain data formatted to [D3's data conventions](https://github.com/mbostock/d3/wiki/CSV). AMD modules are used rather than text files so that the data sets can be loaded cross-domain (circumventing the [same origin policy](http://en.wikipedia.org/wiki/Same-origin_policy)).
 
@@ -11,36 +11,7 @@ Here's some example code that loads a data set from this repository using [Requi
 var irisURL = 'http://curran.github.io/data/iris/iris.js';
 require([irisURL], function(data){ console.log(data); });
 ```
-[See it work in JSBin](http://jsbin.com/ayanoy/2/edit)!
-
-It is also possible to set up an error handler in the case that the URL does not load, like this:
-
-```javascript
-var irisURL = 'http://curran.github.io/data/iris/iris.js';
-require([irisURL], function(data){
-  // If we are here,
-  // the data loaded successfully.
-  console.log(data);
-}, function(err){
-  // If we are here,
-  // the data failed to load.
-  console.log(err);
-});
-```
-[See it work in JSBin](http://jsbin.com/ayanoy/8/edit)!
-
-## Data Sets
-
-Listing of data sets:
- * [Fisher's Iris Data](iris)
- * [NSF Bachelors Degrees Statistics](nsf/bachelorsDegrees)
- * United Nations
-   * [Millenium Development Goals](un/mdg)
-   * [Population](un/population)
- * [CIA World Factbook](worldFactbook)
- * Centers for Disease Control
-   * [Causes of Death](cdc/mortality)
-   * [Teen Mothers](cdc/vitalStats)
+[See it in JSBin](http://jsbin.com/ayanoy/2/edit)
 
 Here's some example code that tests several data sets and prints some information about them:
 
@@ -61,6 +32,8 @@ test("Iris", "iris/iris.js");
 test("Population", "un/population/populationEstimates.js");
 test("GDP", "worldFactbook/GDPPerCapita.js");
 ```
+
+[See it in JSBin](http://jsbin.com/maqarovovu/1/edit)
 
 ## Targets for import:
 
