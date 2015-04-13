@@ -2,7 +2,7 @@
 // cities15000.txt and outputs a CSV file.
 //
 // Curran Kelleher April 2015
-var inFile = 'cities15000.txt', outFile = 'cities15000.csv';
+var inFile = 'cities15000.txt';
 var fs = require('fs');
 var data = fs.readFileSync(inFile, 'utf8');
 var toCSV = require('./toCSV');
@@ -29,8 +29,18 @@ table.sort(function(a, b){
   return a.population < b.population ? -1 : 1;
 });
 
-// Log the number of cities.
-console.log(table.length);
+function outputFiltered(populationLowerBound){
+  var filteredTable = table.filter(function(d){
+    return d.population > populationLowerBound;
+  });
+  var outfile = 'cities' + populationLowerBound + '.csv';
+  console.log(outfile + ': ' + filteredTable.length + ' rows');
+  fs.writeFileSync(outfile, toCSV(filteredTable));
+}
 
-// Output the CSV file.
-fs.writeFileSync(outFile, toCSV(table));
+// Output variants of the table.
+outputFiltered(15000);
+outputFiltered(100000);
+outputFiltered(500000);
+outputFiltered(1000000);
+outputFiltered(10000000);

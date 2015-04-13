@@ -13,4 +13,12 @@ Then run txtToCsv.js to generate the CSV file.
 node txtToCsv.js
 ```
 
-This generates cities15000.csv.
+This generates tables filtered by a lower population bound. For example, cities15000.csv contains only cities with greater than 15,000 people, and cities100000.csv contains only cities with greater than 100,000 people.
+
+```
+cities15000.csv: 23412 rows
+cities100000.csv: 4272 rows
+cities500000.csv: 788 rows
+cities1000000.csv: 355 rows
+cities10000000.csv: 16 rows
+```
