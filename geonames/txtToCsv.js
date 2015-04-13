@@ -26,7 +26,7 @@ var table = lines.map(function(line){
 
 // To make it interesting, sort by descending population.
 table.sort(function(a, b){
-  return a.population < b.population ? -1 : 1;
+  return a.population > b.population ? -1 : 1;
 });
 
 function outputFiltered(populationLowerBound){
