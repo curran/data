@@ -20,7 +20,7 @@ var table = lines.map(function(line){
     name: row[1],
     latitude: row[4],
     longitude: row[5],
-    population: row[14]
+    population: parseFloat(row[14])
   };
 });
 
