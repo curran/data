@@ -1,0 +1,15 @@
+age, quantitative
+workclass, nominal
+fnlwgt, quantitative
+education, nominal
+education-num, quantitative
+marital-status, nominal
+occupation, nominal
+relationship, nominal
+race , nominal
+sex, nominal
+capital-gain, quantitative
+capital-loss, quantitative
+hours-per-week, quantitative
+native-country, nominal
+income-category, nominal
