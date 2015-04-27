@@ -2,7 +2,7 @@ This data is from [http://one.laptop.org/map](http://one.laptop.org/map), extrac
 
 This data was originally visualized as the following map:
 
-[!](originalMap.png)
+![](originalMap.png)
 
 This visualization has several issues:
 
