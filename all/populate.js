@@ -34,7 +34,10 @@ var dataSets = [
   "un/mdg/ChildrenUnderFiveMortalityRate.csv",
   "un/population/populationEstimates.csv",
   "worldFactbook/GDPPerCapita.csv",
-  "usgs/centennial/earthquakes.csv"
+  "usgs/centennial/earthquakes.csv",
+  "usgs/centennial/earthquakes_larger_than_7_magnitude.csv",
+  "usgs/centennial/earthquakes_largest.csv",
+  "usgs/centennial/earthquakes_largest_20.csv"
 ];
 
 dataSets.forEach(function(dataSetPath){

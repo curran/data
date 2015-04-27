@@ -34,4 +34,21 @@ var rows = lines.map(function(line){
   }
 });
 
+// This file has 13542 rows.
 fs.writeFileSync('earthquakes.csv', toCSV(rows));
+
+// Filter out smaller earthquakes.
+rows = rows.filter(function (d) {
+  return d.magnitude > 7;
+});
+
+// This file has 1290 rows.
+fs.writeFileSync('earthquakes_larger_than_7_magnitude.csv', toCSV(rows));
+
+// Filter to include only the largest.
+rows = rows.filter(function (d) {
+  return d.magnitude > 8.3;
+});
+
+// This file has 20 rows.
+fs.writeFileSync('earthquakes_largest_20.csv', toCSV(rows));
