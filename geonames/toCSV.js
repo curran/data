@@ -5,7 +5,7 @@ module.exports = function toCSV(data){
       var value = d[column];
       if(typeof value === "string" && value.indexOf(",") === -1){
         return value;
-      } else {
+      } else if (typeof value !== "number") {
         return '"' + value + '"';
       }
     }).join(",");
