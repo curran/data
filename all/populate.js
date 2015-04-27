@@ -33,7 +33,8 @@ var dataSets = [
   "uci_ml/auto-mpg/auto-mpg.csv",
   "un/mdg/ChildrenUnderFiveMortalityRate.csv",
   "un/population/populationEstimates.csv",
-  "worldFactbook/GDPPerCapita.csv"
+  "worldFactbook/GDPPerCapita.csv",
+  "usgs/centennial/earthquakes.csv"
 ];
 
 dataSets.forEach(function(dataSetPath){
