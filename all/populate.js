@@ -37,7 +37,8 @@ var dataSets = [
   "usgs/centennial/earthquakes.csv",
   "usgs/centennial/earthquakes_larger_than_7_magnitude.csv",
   "usgs/centennial/earthquakes_largest.csv",
-  "usgs/centennial/earthquakes_largest_20.csv"
+  "usgs/centennial/earthquakes_largest_20.csv",
+  "integrated/population_vs_gdp.csv"
 ];
 
 dataSets.forEach(function(dataSetPath){
