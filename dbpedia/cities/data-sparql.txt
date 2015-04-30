@@ -1,0 +1,13 @@
+# Original query structure from
+# http://stackoverflow.com/questions/15610033/query-cities-and-their-country-from-dbpedia
+#
+# Properties added from top properties query results.
+
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+SELECT DISTINCT ?city ?country 
+WHERE {
+    ?city rdf:type dbpedia-owl:City ; 
+    rdfs:label ?label ; 
+    dbpedia-owl:country ?country 
+}

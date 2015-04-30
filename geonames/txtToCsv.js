@@ -33,6 +33,7 @@ function outputFiltered(populationLowerBound){
   var filteredTable = table.filter(function(d){
     return d.population > populationLowerBound;
   });
+
   var outfile = 'cities' + populationLowerBound + '.csv';
   console.log(outfile + ': ' + filteredTable.length + ' rows');
   fs.writeFileSync(outfile, toCSV(filteredTable));

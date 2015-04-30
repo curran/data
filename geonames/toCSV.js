@@ -7,6 +7,8 @@ module.exports = function toCSV(data){
         return value;
       } else if (typeof value !== "number") {
         return '"' + value + '"';
+      } else {
+        return value;
       }
     }).join(",");
   })).join("\n");

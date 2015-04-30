@@ -1,0 +1,10 @@
+# Fetch the list of the 100 most frequently used
+# properties that are listed for cities in DBPedia.
+
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+SELECT DISTINCT ?prop
+WHERE {
+    ?city rdf:type dbpedia-owl:City;
+    ?prop ?val
+} ORDER BY DESC(COUNT(?val))
+LIMIT 100
