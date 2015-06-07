@@ -152,6 +152,10 @@ This would be a great data set for more extreme scalability testing. There is an
 
 Best Buy has a [developer portal for querying their data via a Web API.](https://www.google.com/url?q=https%3A%2F%2Fdeveloper.bestbuy.com%2F&sa=D&sntz=1&usg=AFQjCNHeep1tEkODill37AcU-weTtkoDBw)
 
+[Executions in the US by type over time](http://www.deathpenaltyinfo.org/views-executions)
+
+
+
 Many more out there!
 
 If you have a small data set that is great for visualization, feel free to contribute it here.
