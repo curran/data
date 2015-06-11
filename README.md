@@ -154,8 +154,36 @@ Best Buy has a [developer portal for querying their data via a Web API.](https:/
 
 [Executions in the US by type over time](http://www.deathpenaltyinfo.org/views-executions)
 
+[Datasets used in the book, An Introduction to Categorical Data Analysis](http://lib.stat.cmu.edu/datasets/agresti)
 
+# Design Ideas
 
-Many more out there!
+Data publishing format for visualizations:
 
-If you have a small data set that is great for visualization, feel free to contribute it here.
+`http://curran.github.io/data/:dataSource/:dataSet/:table.js`
+
+Here,
+
+ * `dataSource` is a data source String identifier, e.g. "united-nations"
+ * `dataSet` is a data set String identifier, e.g. "populationEstimates"
+ * `table` is a table String identifier, e.g. "populationByCountry-1950-2010"
+
+### data.js
+
+This is a JavaScript source file that can be loaded via a `<script>` tag. This format was chosen rather than `.json` because of cross-domain restrictions. This file is a form of [JSONP](http://en.wikipedia.org/wiki/JSONP), where the function invoked is always `defineDataSet()`, which is defined by the [dataset-cache library](https://github.com/curran/dataset-cache).
+
+```javascript
+defineDataSet({
+
+  dataSource: String,
+  dataSet: String,
+  
+  schema: {
+    x: Number,
+    y: Number
+  },
+  rows: [
+    { x:5, y: 10 }
+  ]
+});
+```
