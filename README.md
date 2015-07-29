@@ -156,6 +156,8 @@ Best Buy has a [developer portal for querying their data via a Web API.](https:/
 
 [Datasets used in the book, An Introduction to Categorical Data Analysis](http://lib.stat.cmu.edu/datasets/agresti)
 
+Here are [data sets used in Vega](https://github.com/vega/vega-editor/tree/master/app/data).
+
 # Design Ideas
 
 Data publishing format for visualizations:
