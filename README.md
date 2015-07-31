@@ -160,6 +160,8 @@ Best Buy has a [developer portal for querying their data via a Web API.](https:/
 
 [Datasets used by datalib](https://github.com/vega/datalib/tree/gh-pages/data)
 
+[Datasets used by Plotly](https://github.com/plotly/datasets)
+
 # Design Ideas
 
 Data publishing format for visualizations:
