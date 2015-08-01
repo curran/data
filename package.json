@@ -1,0 +1,25 @@
+{
+  "name": "data",
+  "version": "0.0.1",
+  "description": "A collection of data sets.",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/curran/data.git"
+  },
+  "keywords": [
+    "data"
+  ],
+  "author": "Curran Kelleher",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/curran/data/issues"
+  },
+  "homepage": "https://github.com/curran/data",
+  "dependencies": {
+    "dsv-dataset": "^0.1.1"
+  }
+}
