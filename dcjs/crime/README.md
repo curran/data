@@ -1,0 +1,1 @@
+This data set contains aggregated crime data for regions of Canada. This data set was originally found [in the DC.js project](https://github.com/dc-js/dc.js/blob/e848f5b7a2038d594c533fb82cecc6cb55d17b17/crime/crime.csv).

@@ -1,0 +1,1 @@
+This data set contains monthly Nasdaq stock market values over many years. Originally found [in the DC.js project](https://github.com/dc-js/dc.js/blob/203e8ca2748c205d13bfda7c78b06c163e57e226/examples/monthly-move.csv).
