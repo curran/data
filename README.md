@@ -156,11 +156,7 @@ Best Buy has a [developer portal for querying their data via a Web API.](https:/
 
 [Datasets used in the book, An Introduction to Categorical Data Analysis](http://lib.stat.cmu.edu/datasets/agresti)
 
-[Datasets used in Vega](https://github.com/vega/vega-editor/tree/master/app/data)
-
-[Datasets used by datalib](https://github.com/vega/datalib/tree/gh-pages/data)
-
-[Datasets used by Plotly](https://github.com/plotly/datasets)
+[Energy Information Administration Open Data](http://www.eia.gov/beta/api/)
 
 # Design Ideas
 
