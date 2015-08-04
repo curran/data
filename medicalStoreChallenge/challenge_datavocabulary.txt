@@ -1,0 +1,27 @@
+Data vocabulary
+===============
+
+challenge_referrerdata.csv
+
+Each row corresponds to information on a particular client referral source
+
+referrer_code -- unique ID's of client referrers. Some IDs are meaningful, like WALK-IN for walk-in clients
+visit_count -- count of visits of clients referred by the referrer. Should map to the count derived from challenge_clientdata.csv
+postal_code_referrer -- postal code of referrer, if available
+latitude -- latitude of the referrer postal code
+longitude -- longitude of the referrer postal code
+city -- referrer city
+
+
+challenge_clientdata.csv
+
+Each row corresponds to a client visit to the store
+
+client_id -- client unique ID. There can be several rows with the same ID if the client visited the store several times
+referrer_code -- referrer code of the referrer who referred the client. Should map to challenge_referrerdata.csv
+city -- client city
+postal_code -- client postal code
+latitude -- client postal code's latitude
+longitude -- client postal code's longitude
+initial_visit_date -- date of visit to the store
+product_count -- count of products purchased by the client during the specific visit
