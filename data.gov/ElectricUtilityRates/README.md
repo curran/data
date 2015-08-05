@@ -1,0 +1,1 @@
+This data comes from [U.S. Electric Utility Companies and Rates: Look-up by Zipcode (Feb 2011)](https://catalog.data.gov/dataset/u-s-electric-utility-companies-and-rates-look-up-by-zipcode-feb-2011-57a7c).
