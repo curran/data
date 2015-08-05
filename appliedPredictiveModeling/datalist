@@ -1,0 +1,12 @@
+AlzheimerDisease: diagnosis predictors
+ChemicalManufacturingProcess
+FuelEconomy: cars2010 cars2011 cars2012
+abalone
+concrete: concrete mixtures
+hepatic: bio chem injury
+logisticCreditPredictions
+permeability: fingerprints permeability
+schedulingData
+segmentationOriginal
+solubility: solTestX solTestXtrans solTestY solTrainX solTrainXtrans solTrainY
+twoClassData: classes predictors
