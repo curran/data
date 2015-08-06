@@ -1,0 +1,1 @@
+The data behind the New York Times article [The Facebook Offering: How It Compares](http://www.nytimes.com/interactive/2012/05/17/business/dealbook/how-the-facebook-offering-compares.html?_r=0). The data was extracted from the page source (it was included as JSON directly in the HTML source code), then converted to CSV.
