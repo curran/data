@@ -1,0 +1,1 @@
+This data set contains temperature data for three US cities, Austin, New York, and San Francisco. This was originally found in the [D3 Multi-Series Line Chart Example](http://bl.ocks.org/mbostock/3884955).
