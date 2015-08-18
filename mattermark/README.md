@@ -1,0 +1,1 @@
+This data set contains information originally found in this [Forbes Article: The Top 100 Analytic Startups of 2015](http://www.forbes.com/sites/louiscolumbus/2015/08/08/the-top-100-analytics-startups-of-2015/?utm_content=buffer818f3&utm_medium=social&utm_source=twitter.com&utm_campaign=buffer). The data originally comes from [Mattermark](https://mattermark.com/). 
