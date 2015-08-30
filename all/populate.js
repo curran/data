@@ -44,6 +44,7 @@ var dataSets = [
 dataSets.forEach(function(dataSetPath){
   var csv = fs.readFileSync("../" + dataSetPath, 'utf8');
   var dataSetName = dataSetPath.replace(/\//g, "_");
+  console.log(dataSetName);
   fs.writeFileSync(dataSetName, csv);
 });
 

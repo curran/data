@@ -1,0 +1,58 @@
+Dataset Name,Person Adding,Date Added,Dataset Link,Most Recent Year in Data,Earliest Year In Data,Status,Dataset Type,Documentation,Existing Work,Tags,Active
+2008 Election Results,EJ,11/7/2012,https://docs.google.com/spreadsheet/ccc?key=0ApAkxBfw1JT4dFliRjhYOW5WLXk1WkZfNFFQTGxmSGc#gid=0,2008,,Unused,Dataset,,,"state-scale,politics",n
+Occupy Oakland Finances,EJ,11/7/2012,https://docs.google.com/spreadsheet/pub?key=0ApAkxBfw1JT4dHhNSkpva0RrQUFfcDIyUHl3LWFCVEE&output=html,2012,,Unused,Dataset,,,"historical,money",n
+NYPD Stop-and-Frisk DB API,EJ,11/7/2012,http://api.occupy-data.org/v1/,2011,2003,Unused,API,https://github.com/stopfrisknyc/docs,"http://www.forbes.com/sites/jasonoberholtzer/2012/07/17/stop-and-frisk-by-the-numbers/,http://www.dnainfo.com/new-york/20120604/new-york-city/port-authority-is-top-stop-and-frisk-hotspot-regardless-of-race","historical,people",y
+Presidential Speech Archive,Kai,11/7/2012,http://millercenter.org/president/speeches,2012,1789,Unused,Dataset,,,"historical,text",y
+USDA National Nutrient Database,Kai,11/7/2012,http://www.ars.usda.gov/Services/docs.htm?docid=8964,2012,1996,Unused,Dataset,http://www.ars.usda.gov/SP2UserFiles/Place/12354500/Data/SR25/sr25_doc.pdf,,,n
+US Foreign Aid,Kai,11/7/2012,https://explore.data.gov/Foreign-Commerce-and-Aid/U-S-Overseas-Loans-and-Grants-Greenbook-/5gah-bvex,2010,1946,Unused,Dataset,http://gbk.eads.usaidallnet.gov/about/,,,y
+US Potato Statistics,Kai,11/7/2012,https://explore.data.gov/Agriculture/U-S-Potato-Statistics/cgk7-6ccj,2007,1960,Unused,Dataset,,,,n
+Livestock and Meat International Trade,Kai,11/7/2012,https://explore.data.gov/Agriculture/Livestock-and-Meat-International-Trade-Data/gp8v-zkqc,2011,1989,Unused,,,,,n
+"Mine Accidents, Injuries",Kai,11/7/2012,http://www.msha.gov/OpenGovernmentData/OGIMSHA.asp#jump,2012,2000,Unused,,,,,n
+Sloan Digital Sky Survey,Kai,11/7/2012,http://www.sdss.org/,2011,2000,Unused,Multiple Datasets,,,astronomy,n
+National Hurricane Center Archive,Kai,11/7/2012,http://www.nhc.noaa.gov/pastall.shtml,2012,1851,Unused,,,,,y
+"Stream Flow, Drought and Floods",Kai,11/7/2012,http://waterwatch.usgs.gov/,,,Unused,,,,,n
+NSF and NASA Research Awards,Kai,11/7/2012,http://www.research.gov/research-portal/appmanager/base/desktop?_nfpb=true&_eventName=viewQuickSearchFormEvent_so_rsr,2012,2007,Unused,,,,,n
+Federal Agencies Participating in Data.gov,Kai,11/7/2012,https://docs.google.com/spreadsheet/ccc?key=0ApAkxBfw1JT4dHdPWmtMYXhVN0t6Q0dhcDhBRHpEOHc#gid=0,2012,,Unused,,http://data.gov/metric,,government,y
+Civil War Soldiers and Sailors,Kai,11/7/2012,http://www.nps.gov/civilwar/soldiers-and-sailors-database.htm,,,Unused,Web Interface,,,,n
+US Budget Databases (OMB),Kai,11/7/2012,http://www.data.gov/list/agency/17/18,2012,1962,Unused,,,,,n
+Daily Beast Mass Shooting Data,EJ,12/28/2012,https://docs.google.com/spreadsheet/ccc?key=0ApAkxBfw1JT4dG9acTdPU01wcE56WS1xNnU3TnZscWc#gid=0,2012,2001,Unused,Dataset,http://www.thedailybeast.com/articles/2012/07/24/interactive-map-the-us-shooting-epidemic.html,http://www.thedailybeast.com/articles/2012/07/24/interactive-map-the-us-shooting-epidemic.html,"guns,shootings,politics",y
+Governmental Receipts,EJ,12/28/2012,https://explore.data.gov/Federal-Government-Finances-and-Employment/Public-Budget-Database-Governmental-receipts-1962-/kwgc-t7fq,2012,1962,Unused,Dataset,http://www.data.gov/list/agency/17/18,,,y
+Real-Time MTA Data,EJ,12/28/2012,http://datamine.mta.info/,2012,,Unused,API,http://news.ycombinator.com/item?id=4979517,,,y
+All Guardian Data Journalism,EJ,1/1/2013,http://www.guardian.co.uk/news/datablog/2011/jan/27/data-store-office-for-national-statistics,2012,,Unused,Dataset,,,,n
+G20 Stats,EJ,1/1/2013,https://docs.google.com/spreadsheet/ccc?key=0AonYZs4MzlZbcGhOdG0zTG1EWkVNdE5MUVJrT3VvRXc#gid=0,2012,,Used,Dataset,http://www.guardian.co.uk/news/datablog/2009/mar/30/g20-health-and-wellbeing,http://image.guardian.co.uk/sys-files/Guardian/documents/2009/03/27/G20_summit_27_03_09.pdf,,y
+US Public Debt By Day,EJ,1/1/2013,https://spreadsheets.google.com/pub?key=phNtm3LmDZEM0b7ARpC4oaA,2010,2001,Unused,Dataset,http://www.guardian.co.uk/news/datablog/2009/mar/01/usgovernmentborrowing,,,n
+Guardian US Data,EJ,12/1/2013,http://www.guardian.co.uk/world/page/2009/jan/14/1,2012,,Unused,Multiple Datasets,,,,n
+Every NFL play for the past 10 years,EJ,12/3/2013,http://www.advancednflstats.com/2010/04/play-by-play-data.html,2012,2002,Unused,Multiple Datasets,http://news.ycombinator.com/item?id=5002974,,,y
+MJ: Assault Weapons and High-Capacity Magazines,EJ,3/6/2013,https://docs.google.com/spreadsheet/ccc?key=0Ah9Oqlm_qMOGdDJMczNPMXJUdmx6andjX1lnTG93N0E#gid=0,2012,1982,Unused,Dataset,http://www.motherjones.com/politics/2013/02/assault-weapons-high-capacity-magazines-mass-shootings-feinstein,,"guns,shootings,politics",y
+UN Database List,EJ,3/6/2013,http://data.un.org/Explorer.aspx,2012,,Unused,Multiple Datasets,,,,n
+Open States API,EJ,3/6/2013,http://openstates.org/api/,2012,,Unused,API,,,,y
+Consumer Complaint ,Ian,7/19/2014,http://www.consumerfinance.gov/complaintdatabase/,,,,Socrata API,,,,
+Slave Trade,Ian,7/2/2015,http://slavevoyages.org/tast/index.faces,,,,,,,,
+Will's Phone Metadata,Robert,8/18/2015,http://www.abc.net.au/news/2015-08-16/metadata-retention-privacy-phone-will-ockenden/6694152#dataset,,,,,,,,
+IBM Advanced Data Visualization,Robert,8/18/2015,http://www-01.ibm.com/software/analytics/many-eyes/,,,,,,,,
+Google Public Data,Robert,8/18/2015,http://www.google.com/publicdata/directory,,,,,,,,
+Global Data Index,Robert,8/18/2015,http://index.okfn.org/,,,,,,,,
+Swiss Polygons,Robert,8/18/2015,http://www.swisstopo.admin.ch/internet/swisstopo/en/home/products/landscape/vector200.html,,,,,,,,
+Move bank,Robert,8/18/2015,https://www.movebank.org/,,,,,,,,
+Land Transport Authority,Robert,8/21/2015,http://www.mytransport.sg/content/mytransport/home/dataMall.html,,,,,,,,
+Car Park Occupancy,Robert,8/21/2015,https://www.dropbox.com/s/dagd5rs5z14dcdx/carpark_occupancy.csv?dl=0,,,,,,,,
+Singapore Open Data,Robert,8/21/2015,http://data.gov.sg,,,,,,,,
+Swiss Open Data,Robert,8/21/2015,http://www.opendata.admin.ch/en,,,,,,,,
+Zurich Open Data,Robert,8/21/2015,https://www.stadt-zuerich.ch/portal/de/index/ogd.html,,,,,,,,
+Wikibon Big Data Vendors,Curran,8/27/2015,https://github.com/curran/data/blob/gh-pages/wikibon/revenueBigData2012.csv,2012,2012,,,https://github.com/curran/data/tree/gh-pages/wikibon,http://wikibon.org/wiki/v/Big_Data_Vendor_Revenue_and_Market_Forecast_2012-2017,"startups, revenue, analytics, big data",n
+Migrants' Files Deaths,Curran,8/27/2015,https://github.com/curran/data/tree/gh-pages/migrants,2015,2014,,,,http://www.themigrantsfiles.com/,,
+AirBNB User Sessions,Curran,8/27/2015,https://raw.githubusercontent.com/curran/data/gh-pages/airbnb/airbnb_session_data.txt,2015,2014,,,https://github.com/curran/data/tree/gh-pages/airbnb,http://databits.io/challenges/airbnb-user-pathways-challenge,,
+OLPC Laptops,Curran,8/27/2015,https://github.com/curran/data/blob/gh-pages/olpc/laptopsPerCountryWithLatLon.csv,2015,2015,,,https://github.com/curran/data/tree/gh-pages/olpc,http://one.laptop.org/map,,
+UNDP Human Development Indicators,Curran,8/27/2015,https://github.com/curran/data/blob/gh-pages/undp/api/HDI_Indicators_By_Country_2014.csv,2014,2014,,,https://github.com/curran/data/tree/gh-pages/undp/api,http://www.post2015hlp.org/wp-content/uploads/2013/05/UN-Report.pdf,,
+Browser Market Share over Time,Curran,8/27/2015,https://github.com/curran/data/blob/gh-pages/statCounter/browser-ww-monthly-200807-201508.csv,2008,2015,,,https://github.com/curran/data/tree/gh-pages/statCounter,http://gs.statcounter.com/#browser-ww-monthly-200807-201508,"web, browser",y
+ ,Ken,8/27/2015,https://data.sfgov.org/,,,unused,Multiple Datasets,,,,
+San Mateo County Open Data,Jessica,8/27/2015,https://data.smcgov.org/browse,2015,1990,unused,"multiple, Socrata API",https://support.socrata.com/hc/en-us/categories/200172986-Developer-Tools,,"civic open data, transportaiton, education, demographics, foster care, water use, housing",y
+Stanford University - US Mass Shootings,Jan,8/28/2015,https://library.stanford.edu/projects/mass-shootings-america/data,2015,,read with interest :),,,,,y
+Washington Post - US Police Shootings,Jan,8/28/2015,http://www.washingtonpost.com/national/how-the-washington-post-is-examining-police-shootings-in-the-us/2015/06/29/f42c10b2-151b-11e5-9518-f9e0a8959f32_story.html,2015,,much talked about,,,,,
+Killed by Police,Jan,8/28/2015,http://killedbypolice.net,2015,,,,,,,
+"Example Data sets for many different industries - banking, mining, telco, ...",Jan,8/28/2015,ask Jan...,fictional,,,,,,,
+MusicBrainz Data BAse,Jan,8/28/2015,https://musicbrainz.org/doc/MusicBrainz_Database#Download,2015,,,,,,,
+Mother Jones - Mass Shootings,Jan,8/28/2015,http://www.motherjones.com/politics/2012/12/mass-shootings-mother-jones-full-data,2015,,,,,,,
+Broccoli Build Performance Data,Ming,8/29/2015,https://gist.github.com/lightblade/08c7ffbbcf34a6d2bb90,,,,Dataset,,,graph,
+Five Thirty Eight Datasets,Ramesh,8/29/2015,https://github.com/fivethirtyeight/data,2015,,,Dataset,,,,
+Wongfu Productions (Youtube Channel) and their top collaborators,Shirley,3/13/2014,https://github.com/sxywu/wongfu/tree/master/raw,2014,2005,,JSON,,,,
