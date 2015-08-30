@@ -1,0 +1,3 @@
+This data shows 2012 Worldwide Big Data Revenue by Vendor. Originally found as part of this [Wikibon Big Data Vendor Revenue and Market Forecast 2012-2017](http://wikibon.org/wiki/v/Big_Data_Vendor_Revenue_and_Market_Forecast_2012-2017). The HTML table from that page was copied into Google Sheets, excluding the "Vendor" values "Original Device Manufacturers", "Other", and "Total". The number formatting was normalized, removing "$", "%", and "," from the number values. The resulting table was exported from Google Sheets to CSV format.
+
+The columns "Big Data Revenue" and "Total Revenue" are in $US millions.

@@ -1,0 +1,1 @@
+This data set contains unemployment rates for US cities from years 2000 to 2015. Originally found as part of the [D3 Multi-Line Voronoi Example](http://bl.ocks.org/mbostock/8033015). The Makefile there was run again on August 7, 2015 to get the latest data.

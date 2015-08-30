@@ -1,6 +1,0 @@
-{
-  "dependencies":{
-    "d3": "*",
-    "underscore": "*"
-  }
-}
