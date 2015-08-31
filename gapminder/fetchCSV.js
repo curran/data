@@ -26,10 +26,9 @@ var downloadTasks = Object.keys(index).map(function (key){
   };
 });
 
-downloadTasks.splice(3);
+//downloadTasks.splice(3);
 
 var i = 0;
-
 function downloadNext(){
   var entry = downloadTasks[i];
   i++;
