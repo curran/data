@@ -158,6 +158,8 @@ Best Buy has a [developer portal for querying their data via a Web API.](https:/
 
 [Energy Information Administration Open Data](http://www.eia.gov/beta/api/)
 
+[Data sets from Five Thirty Eight](https://github.com/fivethirtyeight/data)
+
 # Design Ideas
 
 Data publishing format for visualizations:
@@ -169,23 +171,3 @@ Here,
  * `dataSource` is a data source String identifier, e.g. "united-nations"
  * `dataSet` is a data set String identifier, e.g. "populationEstimates"
  * `table` is a table String identifier, e.g. "populationByCountry-1950-2010"
-
-### data.js
-
-This is a JavaScript source file that can be loaded via a `<script>` tag. This format was chosen rather than `.json` because of cross-domain restrictions. This file is a form of [JSONP](http://en.wikipedia.org/wiki/JSONP), where the function invoked is always `defineDataSet()`, which is defined by the [dataset-cache library](https://github.com/curran/dataset-cache).
-
-```javascript
-defineDataSet({
-
-  dataSource: String,
-  dataSet: String,
-  
-  schema: {
-    x: Number,
-    y: Number
-  },
-  rows: [
-    { x:5, y: 10 }
-  ]
-});
-```

@@ -1,0 +1,1 @@
+This table is a copy of the original [Google Doc](https://docs.google.com/spreadsheets/d/1DL3g81zC4gy6pVFFXW8lfdwfq6XaaTmzEE0gQDXzbw8/edit#gid=0) from the Bay Area D3 Meetup event [Data Soup for the Soul](http://www.meetup.com/Bay-Area-d3-User-Group/events/224684412/?a=uc1_vm&read=1&_af=event&_af_eid=224684412).
