@@ -26,3 +26,6 @@ http://spreadsheets.google.com/pub?key=rEMA-cbNPaOtpDyxTcwugnw&output=csv
 
 These pieces can be combined together to build a script that downloads all of the Gapminder data sets as CSV files.
 
+One tricky hurdle was handling redirects from the Google APIs. Using `curl` did not handle these, and also using Node's http and https modules also did not handle them. The library that ended up working is the `request` package, which handles redirects correctly by default.
+
+Another tricky thing was noticing that some indicator names are not valid file names. For this, the `sanitize` Node module was used. This strips invalid characters out of strings such that they can be used as file names.
