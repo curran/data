@@ -1,6 +1,8 @@
 This data is from [http://www.gapminder.org/data/](http://www.gapminder.org/data/).
 
-The data behind GapMinder is stored in Google Spreadsheets, which is not convenient to navigate if you are trying to build your own visualizations of the data. This directory contains all of the GapMinder data tables as CSV files, so you can easily navigate and use the data sets outside of the GapMinder visualization tool. The tables reside in the `indicators` directory, which is populated by the script `fetchCSV.js`, which uses Node.js to traverse the data set index and download all the files.
+The data behind GapMinder is stored in Google Spreadsheets, which is not convenient to navigate if you are trying to build your own visualizations of the data. This directory contains all of the GapMinder data tables as CSV files, so you can more easily navigate and use the data sets outside of the GapMinder visualization tool. The tables reside in the `indicators` directory, which is populated by the script `fetchCSV.js`. The script uses Node.js to traverse the GapMinder data set index and download all the files.
+
+## How it works
 
 The file `gapminderDataSetsIndex.json` contains the list of Gapminder data sets. This can be fetched with the command
 
@@ -23,3 +25,4 @@ http://spreadsheets.google.com/pub?key=rEMA-cbNPaOtpDyxTcwugnw&output=csv
 ```
 
 These pieces can be combined together to build a script that downloads all of the Gapminder data sets as CSV files.
+
