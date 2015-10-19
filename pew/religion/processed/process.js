@@ -1,12 +1,9 @@
 var d3 = require('d3'),
     fs = require('fs'),
-    inputFile = '../religionByCountry.csv',
-    outputFile = 'religionByCountryTop5.csv';
+    inputFile = '../religionByCountry.csv';
 
 fs.readFile(inputFile, 'utf8', function (err, data) {
   var data = d3.csv.parse(data);
-
-  //"Country",
   var religions = [
     "Christian",
     "Muslim",
@@ -17,6 +14,12 @@ fs.readFile(inputFile, 'utf8', function (err, data) {
     "Other Religions",
     "Jewish"
   ];
+  var totals = {};
+
+  religions.forEach(function (religion){
+    totals[religion] = 0;
+  });
+
   data.forEach(function (d){
     var total = 0;
     religions.forEach(function (religion){
@@ -26,39 +29,74 @@ fs.readFile(inputFile, 'utf8', function (err, data) {
         d[religion] = +d[religion];
       }
       total += d[religion];
+      totals[religion] += d[religion];
     });
     d.total = total;
   });
 
-  data = data.filter(function (d){
-    return d.total > 180000000;
-  });
-  data.sort(function (a, b){
-    return b.total - a.total;
-  });
-
   // Pivot the data so "religion" is a column.
-  var newData = [];
+  var religionByCountry = [];
   data.forEach(function (d){
     religions.forEach(function (religion){
-      newData.push({
+      religionByCountry.push({
         country: d.Country,
         religion: religion,
         population: d[religion]
       });
     });
   });
+  writeTable("religionByCountry.csv", religionByCountry);
 
-  var output = toCSV(newData);
 
-  fs.writeFile(outputFile, output, function(err) {
+  // Derive a table of worldwide religion totals.
+  var religionWorldTotals = religions.map(function (religion){
+    return {
+      religion: religion,
+      population: totals[religion]
+    };
+  });
+  writeTable("religionWorldTotals.csv", religionWorldTotals);
+
+
+  // Take the top 5 countries by population and sort them.
+  data = data
+    .filter(function (d){ return d.total > 180000000; })
+    .sort(function (a, b){ return b.total - a.total; });
+
+  // Pivot the data so "religion" is a column.
+  var religionByCountryTop5 = [];
+  data.forEach(function (d){
+    religions.forEach(function (religion){
+      religionByCountryTop5.push({
+        country: d.Country,
+        religion: religion,
+        population: d[religion]
+      });
+    });
+  });
+  writeTable("religionByCountryTop5.csv", religionByCountryTop5);
+
+
+  // Derive a table of the populations for the top 5 largest countries.
+  var countryTotalsTop5 = data.map(function (d){
+    return {
+      country: d.Country,
+      population: d.total
+    };
+  });
+  writeTable("countryTotalsTop5.csv", countryTotalsTop5);
+
+});
+
+function writeTable(fileName, data){
+  fs.writeFile(fileName, toCSV(data), function(err) {
     if(err) {
       console.log(err);
     } else {
-      console.log("Wrote '" + outputFile + "'!");
+      console.log("Wrote '" + fileName + "'!");
     }
   }); 
-});
+}
 
 function toCSV(data){
   var columns = Object.keys(data[0]);

@@ -1,0 +1,1857 @@
+country,religion,population
+Afghanistan,Christian,30000
+Afghanistan,Muslim,31330000
+Afghanistan,Unaffiliated,0
+Afghanistan,Hindu,10000
+Afghanistan,Buddhist,0
+Afghanistan,Folk Religions,0
+Afghanistan,Other Religions,20000
+Afghanistan,Jewish,0
+Albania,Christian,580000
+Albania,Muslim,2570000
+Albania,Unaffiliated,50000
+Albania,Hindu,0
+Albania,Buddhist,0
+Albania,Folk Religions,0
+Albania,Other Religions,0
+Albania,Jewish,0
+Algeria,Christian,60000
+Algeria,Muslim,34730000
+Algeria,Unaffiliated,660000
+Algeria,Hindu,0
+Algeria,Buddhist,0
+Algeria,Folk Religions,10000
+Algeria,Other Religions,0
+Algeria,Jewish,0
+American Samoa,Christian,70000
+American Samoa,Muslim,0
+American Samoa,Unaffiliated,0
+American Samoa,Hindu,0
+American Samoa,Buddhist,0
+American Samoa,Folk Religions,0
+American Samoa,Other Religions,0
+American Samoa,Jewish,0
+Andorra,Christian,80000
+Andorra,Muslim,0
+Andorra,Unaffiliated,0
+Andorra,Hindu,0
+Andorra,Buddhist,0
+Andorra,Folk Religions,0
+Andorra,Other Religions,0
+Andorra,Jewish,0
+Angola,Christian,17270000
+Angola,Muslim,40000
+Angola,Unaffiliated,980000
+Angola,Hindu,0
+Angola,Buddhist,0
+Angola,Folk Religions,790000
+Angola,Other Religions,0
+Angola,Jewish,0
+Anguilla,Christian,10000
+Anguilla,Muslim,0
+Anguilla,Unaffiliated,0
+Anguilla,Hindu,0
+Anguilla,Buddhist,0
+Anguilla,Folk Religions,0
+Anguilla,Other Religions,0
+Anguilla,Jewish,0
+Antigua and Barbuda,Christian,80000
+Antigua and Barbuda,Muslim,0
+Antigua and Barbuda,Unaffiliated,0
+Antigua and Barbuda,Hindu,0
+Antigua and Barbuda,Buddhist,0
+Antigua and Barbuda,Folk Religions,0
+Antigua and Barbuda,Other Religions,0
+Antigua and Barbuda,Jewish,0
+Argentina,Christian,34420000
+Argentina,Muslim,400000
+Argentina,Unaffiliated,4920000
+Argentina,Hindu,0
+Argentina,Buddhist,20000
+Argentina,Folk Religions,330000
+Argentina,Other Religions,120000
+Argentina,Jewish,200000
+Armenia,Christian,3050000
+Armenia,Muslim,0
+Armenia,Unaffiliated,40000
+Armenia,Hindu,0
+Armenia,Buddhist,0
+Armenia,Folk Religions,0
+Armenia,Other Religions,0
+Armenia,Jewish,0
+Aruba,Christian,100000
+Aruba,Muslim,0
+Aruba,Unaffiliated,0
+Aruba,Hindu,0
+Aruba,Buddhist,0
+Aruba,Folk Religions,0
+Aruba,Other Religions,0
+Aruba,Jewish,0
+Australia,Christian,14980000
+Australia,Muslim,540000
+Australia,Unaffiliated,5390000
+Australia,Hindu,310000
+Australia,Buddhist,600000
+Australia,Folk Religions,150000
+Australia,Other Religions,180000
+Australia,Jewish,110000
+Austria,Christian,6750000
+Austria,Muslim,450000
+Austria,Unaffiliated,1130000
+Austria,Hindu,0
+Austria,Buddhist,20000
+Austria,Folk Religions,0
+Austria,Other Religions,10000
+Austria,Jewish,10000
+Azerbaijan,Christian,280000
+Azerbaijan,Muslim,8900000
+Azerbaijan,Unaffiliated,0
+Azerbaijan,Hindu,0
+Azerbaijan,Buddhist,0
+Azerbaijan,Folk Religions,0
+Azerbaijan,Other Religions,0
+Azerbaijan,Jewish,0
+Bahamas,Christian,330000
+Bahamas,Muslim,0
+Bahamas,Unaffiliated,10000
+Bahamas,Hindu,0
+Bahamas,Buddhist,0
+Bahamas,Folk Religions,0
+Bahamas,Other Religions,0
+Bahamas,Jewish,0
+Bahrain,Christian,180000
+Bahrain,Muslim,890000
+Bahrain,Unaffiliated,20000
+Bahrain,Hindu,120000
+Bahrain,Buddhist,30000
+Bahrain,Folk Religions,0
+Bahrain,Other Religions,0
+Bahrain,Jewish,0
+Bangladesh,Christian,280000
+Bangladesh,Muslim,133540000
+Bangladesh,Unaffiliated,80000
+Bangladesh,Hindu,13520000
+Bangladesh,Buddhist,720000
+Bangladesh,Folk Religions,520000
+Bangladesh,Other Religions,30000
+Bangladesh,Jewish,0
+Barbados,Christian,260000
+Barbados,Muslim,0
+Barbados,Unaffiliated,0
+Barbados,Hindu,0
+Barbados,Buddhist,0
+Barbados,Folk Religions,0
+Barbados,Other Religions,0
+Barbados,Jewish,0
+Belarus,Christian,6830000
+Belarus,Muslim,20000
+Belarus,Unaffiliated,2740000
+Belarus,Hindu,0
+Belarus,Buddhist,0
+Belarus,Folk Religions,0
+Belarus,Other Religions,0
+Belarus,Jewish,0
+Belgium,Christian,6880000
+Belgium,Muslim,630000
+Belgium,Unaffiliated,3110000
+Belgium,Hindu,0
+Belgium,Buddhist,30000
+Belgium,Folk Religions,20000
+Belgium,Other Religions,10000
+Belgium,Jewish,30000
+Belize,Christian,270000
+Belize,Muslim,0
+Belize,Unaffiliated,30000
+Belize,Hindu,0
+Belize,Buddhist,0
+Belize,Folk Religions,0
+Belize,Other Religions,0
+Belize,Jewish,0
+Benin,Christian,4690000
+Benin,Muslim,2110000
+Benin,Unaffiliated,450000
+Benin,Hindu,0
+Benin,Buddhist,0
+Benin,Folk Religions,1600000
+Benin,Other Religions,0
+Benin,Jewish,0
+Bermuda,Christian,50000
+Bermuda,Muslim,0
+Bermuda,Unaffiliated,10000
+Bermuda,Hindu,0
+Bermuda,Buddhist,0
+Bermuda,Folk Religions,0
+Bermuda,Other Religions,0
+Bermuda,Jewish,0
+Bhutan,Christian,0
+Bhutan,Muslim,0
+Bhutan,Unaffiliated,0
+Bhutan,Hindu,160000
+Bhutan,Buddhist,540000
+Bhutan,Folk Religions,10000
+Bhutan,Other Religions,0
+Bhutan,Jewish,0
+Bolivia,Christian,9330000
+Bolivia,Muslim,0
+Bolivia,Unaffiliated,400000
+Bolivia,Hindu,0
+Bolivia,Buddhist,0
+Bolivia,Folk Religions,90000
+Bolivia,Other Religions,100000
+Bolivia,Jewish,0
+Bosnia-Herzegovina,Christian,1970000
+Bosnia-Herzegovina,Muslim,1700000
+Bosnia-Herzegovina,Unaffiliated,90000
+Bosnia-Herzegovina,Hindu,0
+Bosnia-Herzegovina,Buddhist,0
+Bosnia-Herzegovina,Folk Religions,0
+Bosnia-Herzegovina,Other Religions,0
+Bosnia-Herzegovina,Jewish,0
+Botswana,Christian,1450000
+Botswana,Muslim,0
+Botswana,Unaffiliated,410000
+Botswana,Hindu,0
+Botswana,Buddhist,0
+Botswana,Folk Religions,120000
+Botswana,Other Religions,10000
+Botswana,Jewish,0
+Brazil,Christian,173300000
+Brazil,Muslim,40000
+Brazil,Unaffiliated,15410000
+Brazil,Hindu,0
+Brazil,Buddhist,250000
+Brazil,Folk Religions,5540000
+Brazil,Other Religions,300000
+Brazil,Jewish,110000
+British Virgin Islands,Christian,20000
+British Virgin Islands,Muslim,0
+British Virgin Islands,Unaffiliated,0
+British Virgin Islands,Hindu,0
+British Virgin Islands,Buddhist,0
+British Virgin Islands,Folk Religions,0
+British Virgin Islands,Other Religions,0
+British Virgin Islands,Jewish,0
+Brunei,Christian,40000
+Brunei,Muslim,300000
+Brunei,Unaffiliated,0
+Brunei,Hindu,0
+Brunei,Buddhist,30000
+Brunei,Folk Religions,20000
+Brunei,Other Religions,0
+Brunei,Jewish,0
+Bulgaria,Christian,6150000
+Bulgaria,Muslim,1020000
+Bulgaria,Unaffiliated,310000
+Bulgaria,Hindu,0
+Bulgaria,Buddhist,0
+Bulgaria,Folk Religions,0
+Bulgaria,Other Religions,0
+Bulgaria,Jewish,0
+Burkina Faso,Christian,3710000
+Burkina Faso,Muslim,10150000
+Burkina Faso,Unaffiliated,70000
+Burkina Faso,Hindu,0
+Burkina Faso,Buddhist,0
+Burkina Faso,Folk Religions,2530000
+Burkina Faso,Other Religions,0
+Burkina Faso,Jewish,0
+Burma (Myanmar),Christian,3750000
+Burma (Myanmar),Muslim,1900000
+Burma (Myanmar),Unaffiliated,240000
+Burma (Myanmar),Hindu,820000
+Burma (Myanmar),Buddhist,38410000
+Burma (Myanmar),Folk Religions,2760000
+Burma (Myanmar),Other Religions,80000
+Burma (Myanmar),Jewish,0
+Burundi,Christian,7670000
+Burundi,Muslim,230000
+Burundi,Unaffiliated,0
+Burundi,Hindu,0
+Burundi,Buddhist,0
+Burundi,Folk Religions,480000
+Burundi,Other Religions,0
+Burundi,Jewish,0
+Cambodia,Christian,50000
+Cambodia,Muslim,280000
+Cambodia,Unaffiliated,30000
+Cambodia,Hindu,0
+Cambodia,Buddhist,13690000
+Cambodia,Folk Religions,80000
+Cambodia,Other Religions,0
+Cambodia,Jewish,0
+Cameroon,Christian,13780000
+Cameroon,Muslim,3590000
+Cameroon,Unaffiliated,1050000
+Cameroon,Hindu,0
+Cameroon,Buddhist,0
+Cameroon,Folk Religions,650000
+Cameroon,Other Religions,530000
+Cameroon,Jewish,0
+Canada,Christian,23470000
+Canada,Muslim,710000
+Canada,Unaffiliated,8050000
+Canada,Hindu,470000
+Canada,Buddhist,280000
+Canada,Folk Religions,390000
+Canada,Other Religions,300000
+Canada,Jewish,350000
+Cape Verde,Christian,440000
+Cape Verde,Muslim,0
+Cape Verde,Unaffiliated,50000
+Cape Verde,Hindu,0
+Cape Verde,Buddhist,0
+Cape Verde,Folk Religions,0
+Cape Verde,Other Religions,0
+Cape Verde,Jewish,0
+Cayman Islands,Christian,50000
+Cayman Islands,Muslim,0
+Cayman Islands,Unaffiliated,0
+Cayman Islands,Hindu,0
+Cayman Islands,Buddhist,0
+Cayman Islands,Folk Religions,0
+Cayman Islands,Other Religions,0
+Cayman Islands,Jewish,0
+Central African Republic,Christian,3940000
+Central African Republic,Muslim,370000
+Central African Republic,Unaffiliated,40000
+Central African Republic,Hindu,0
+Central African Republic,Buddhist,0
+Central African Republic,Folk Religions,40000
+Central African Republic,Other Religions,0
+Central African Republic,Jewish,0
+Chad,Christian,4560000
+Chad,Muslim,6210000
+Chad,Unaffiliated,280000
+Chad,Hindu,0
+Chad,Buddhist,0
+Chad,Folk Religions,160000
+Chad,Other Religions,20000
+Chad,Jewish,0
+Channel Islands,Christian,130000
+Channel Islands,Muslim,0
+Channel Islands,Unaffiliated,20000
+Channel Islands,Hindu,0
+Channel Islands,Buddhist,0
+Channel Islands,Folk Religions,0
+Channel Islands,Other Religions,0
+Channel Islands,Jewish,0
+Chile,Christian,15300000
+Chile,Muslim,0
+Chile,Unaffiliated,1470000
+Chile,Hindu,0
+Chile,Buddhist,10000
+Chile,Folk Religions,260000
+Chile,Other Religions,30000
+Chile,Jewish,20000
+China,Christian,68410000
+China,Muslim,24690000
+China,Unaffiliated,700680000
+China,Hindu,20000
+China,Buddhist,244130000
+China,Folk Religions,294320000
+China,Other Religions,9080000
+China,Jewish,0
+Colombia,Christian,42810000
+Colombia,Muslim,10000
+Colombia,Unaffiliated,3050000
+Colombia,Hindu,0
+Colombia,Buddhist,0
+Colombia,Folk Religions,370000
+Colombia,Other Religions,40000
+Colombia,Jewish,0
+Comoros,Christian,0
+Comoros,Muslim,720000
+Comoros,Unaffiliated,0
+Comoros,Hindu,0
+Comoros,Buddhist,0
+Comoros,Folk Religions,0
+Comoros,Other Religions,0
+Comoros,Jewish,0
+Cook Islands,Christian,20000
+Cook Islands,Muslim,0
+Cook Islands,Unaffiliated,0
+Cook Islands,Hindu,0
+Cook Islands,Buddhist,0
+Cook Islands,Folk Religions,0
+Cook Islands,Other Religions,0
+Cook Islands,Jewish,0
+Costa Rica,Christian,4230000
+Costa Rica,Muslim,0
+Costa Rica,Unaffiliated,370000
+Costa Rica,Hindu,0
+Costa Rica,Buddhist,0
+Costa Rica,Folk Religions,40000
+Costa Rica,Other Religions,10000
+Costa Rica,Jewish,0
+Croatia,Christian,4110000
+Croatia,Muslim,60000
+Croatia,Unaffiliated,230000
+Croatia,Hindu,0
+Croatia,Buddhist,0
+Croatia,Folk Religions,0
+Croatia,Other Religions,0
+Croatia,Jewish,0
+Cuba,Christian,6670000
+Cuba,Muslim,0
+Cuba,Unaffiliated,2590000
+Cuba,Hindu,20000
+Cuba,Buddhist,0
+Cuba,Folk Religions,1960000
+Cuba,Other Religions,0
+Cuba,Jewish,0
+Cyprus,Christian,810000
+Cyprus,Muslim,280000
+Cyprus,Unaffiliated,10000
+Cyprus,Hindu,0
+Cyprus,Buddhist,0
+Cyprus,Folk Religions,0
+Cyprus,Other Religions,0
+Cyprus,Jewish,0
+Czech Republic,Christian,2450000
+Czech Republic,Muslim,0
+Czech Republic,Unaffiliated,8020000
+Czech Republic,Hindu,0
+Czech Republic,Buddhist,0
+Czech Republic,Folk Religions,0
+Czech Republic,Other Religions,0
+Czech Republic,Jewish,0
+Democratic Republic of the Congo,Christian,63210000
+Democratic Republic of the Congo,Muslim,970000
+Democratic Republic of the Congo,Unaffiliated,1170000
+Democratic Republic of the Congo,Hindu,30000
+Democratic Republic of the Congo,Buddhist,0
+Democratic Republic of the Congo,Folk Religions,490000
+Democratic Republic of the Congo,Other Religions,100000
+Democratic Republic of the Congo,Jewish,0
+Denmark,Christian,4630000
+Denmark,Muslim,230000
+Denmark,Unaffiliated,650000
+Denmark,Hindu,20000
+Denmark,Buddhist,10000
+Denmark,Folk Religions,0
+Denmark,Other Religions,0
+Denmark,Jewish,0
+Djibouti,Christian,20000
+Djibouti,Muslim,860000
+Djibouti,Unaffiliated,0
+Djibouti,Hindu,0
+Djibouti,Buddhist,0
+Djibouti,Folk Religions,0
+Djibouti,Other Religions,0
+Djibouti,Jewish,0
+Dominica,Christian,60000
+Dominica,Muslim,0
+Dominica,Unaffiliated,0
+Dominica,Hindu,0
+Dominica,Buddhist,0
+Dominica,Folk Religions,0
+Dominica,Other Religions,0
+Dominica,Jewish,0
+Dominican Republic,Christian,8740000
+Dominican Republic,Muslim,0
+Dominican Republic,Unaffiliated,1080000
+Dominican Republic,Hindu,0
+Dominican Republic,Buddhist,0
+Dominican Republic,Folk Religions,90000
+Dominican Republic,Other Religions,10000
+Dominican Republic,Jewish,0
+Ecuador,Christian,13610000
+Ecuador,Muslim,0
+Ecuador,Unaffiliated,800000
+Ecuador,Hindu,0
+Ecuador,Buddhist,0
+Ecuador,Folk Religions,40000
+Ecuador,Other Religions,0
+Ecuador,Jewish,0
+Egypt,Christian,4120000
+Egypt,Muslim,76990000
+Egypt,Unaffiliated,0
+Egypt,Hindu,0
+Egypt,Buddhist,0
+Egypt,Folk Religions,0
+Egypt,Other Religions,0
+Egypt,Jewish,0
+El Salvador,Christian,5460000
+El Salvador,Muslim,0
+El Salvador,Unaffiliated,680000
+El Salvador,Hindu,0
+El Salvador,Buddhist,0
+El Salvador,Folk Religions,30000
+El Salvador,Other Religions,20000
+El Salvador,Jewish,0
+Equatorial Guinea,Christian,620000
+Equatorial Guinea,Muslim,30000
+Equatorial Guinea,Unaffiliated,30000
+Equatorial Guinea,Hindu,0
+Equatorial Guinea,Buddhist,0
+Equatorial Guinea,Folk Religions,10000
+Equatorial Guinea,Other Religions,0
+Equatorial Guinea,Jewish,0
+Eritrea,Christian,3310000
+Eritrea,Muslim,1920000
+Eritrea,Unaffiliated,0
+Eritrea,Hindu,0
+Eritrea,Buddhist,0
+Eritrea,Folk Religions,20000
+Eritrea,Other Religions,0
+Eritrea,Jewish,0
+Estonia,Christian,540000
+Estonia,Muslim,0
+Estonia,Unaffiliated,800000
+Estonia,Hindu,0
+Estonia,Buddhist,0
+Estonia,Folk Religions,0
+Estonia,Other Religions,0
+Estonia,Jewish,0
+Ethiopia,Christian,52070000
+Ethiopia,Muslim,28680000
+Ethiopia,Unaffiliated,50000
+Ethiopia,Hindu,0
+Ethiopia,Buddhist,0
+Ethiopia,Folk Religions,2130000
+Ethiopia,Other Religions,0
+Ethiopia,Jewish,0
+Faeroe Islands,Christian,50000
+Faeroe Islands,Muslim,0
+Faeroe Islands,Unaffiliated,0
+Faeroe Islands,Hindu,0
+Faeroe Islands,Buddhist,0
+Faeroe Islands,Folk Religions,0
+Faeroe Islands,Other Religions,0
+Faeroe Islands,Jewish,0
+Falkland Islands (Malvinas),Christian,0
+Falkland Islands (Malvinas),Muslim,0
+Falkland Islands (Malvinas),Unaffiliated,0
+Falkland Islands (Malvinas),Hindu,0
+Falkland Islands (Malvinas),Buddhist,0
+Falkland Islands (Malvinas),Folk Religions,0
+Falkland Islands (Malvinas),Other Religions,0
+Falkland Islands (Malvinas),Jewish,0
+Federated States of Micronesia,Christian,110000
+Federated States of Micronesia,Muslim,0
+Federated States of Micronesia,Unaffiliated,0
+Federated States of Micronesia,Hindu,0
+Federated States of Micronesia,Buddhist,0
+Federated States of Micronesia,Folk Religions,0
+Federated States of Micronesia,Other Religions,0
+Federated States of Micronesia,Jewish,0
+Fiji,Christian,550000
+Fiji,Muslim,50000
+Fiji,Unaffiliated,0
+Fiji,Hindu,240000
+Fiji,Buddhist,0
+Fiji,Folk Religions,0
+Fiji,Other Religions,0
+Fiji,Jewish,0
+Finland,Christian,4380000
+Finland,Muslim,40000
+Finland,Unaffiliated,940000
+Finland,Hindu,0
+Finland,Buddhist,0
+Finland,Folk Religions,0
+Finland,Other Religions,0
+Finland,Jewish,0
+France,Christian,39560000
+France,Muslim,4710000
+France,Unaffiliated,17580000
+France,Hindu,30000
+France,Buddhist,280000
+France,Folk Religions,220000
+France,Other Religions,100000
+France,Jewish,310000
+French Guiana,Christian,200000
+French Guiana,Muslim,0
+French Guiana,Unaffiliated,0
+French Guiana,Hindu,0
+French Guiana,Buddhist,0
+French Guiana,Folk Religions,20000
+French Guiana,Other Religions,0
+French Guiana,Jewish,0
+French Polynesia,Christian,250000
+French Polynesia,Muslim,0
+French Polynesia,Unaffiliated,10000
+French Polynesia,Hindu,0
+French Polynesia,Buddhist,0
+French Polynesia,Folk Religions,0
+French Polynesia,Other Religions,0
+French Polynesia,Jewish,0
+Gabon,Christian,1150000
+Gabon,Muslim,170000
+Gabon,Unaffiliated,80000
+Gabon,Hindu,0
+Gabon,Buddhist,0
+Gabon,Folk Religions,90000
+Gabon,Other Religions,0
+Gabon,Jewish,0
+Gambia,Christian,80000
+Gambia,Muslim,1640000
+Gambia,Unaffiliated,0
+Gambia,Hindu,0
+Gambia,Buddhist,0
+Gambia,Folk Religions,0
+Gambia,Other Religions,0
+Gambia,Jewish,0
+Georgia,Christian,3850000
+Georgia,Muslim,470000
+Georgia,Unaffiliated,30000
+Georgia,Hindu,0
+Georgia,Buddhist,0
+Georgia,Folk Religions,0
+Georgia,Other Religions,0
+Georgia,Jewish,0
+Germany,Christian,56540000
+Germany,Muslim,4760000
+Germany,Unaffiliated,20350000
+Germany,Hindu,80000
+Germany,Buddhist,210000
+Germany,Folk Religions,40000
+Germany,Other Religions,100000
+Germany,Jewish,230000
+Ghana,Christian,18260000
+Ghana,Muslim,3860000
+Ghana,Unaffiliated,1020000
+Ghana,Hindu,0
+Ghana,Buddhist,0
+Ghana,Folk Religions,1200000
+Ghana,Other Religions,40000
+Ghana,Jewish,0
+Gibraltar,Christian,30000
+Gibraltar,Muslim,0
+Gibraltar,Unaffiliated,0
+Gibraltar,Hindu,0
+Gibraltar,Buddhist,0
+Gibraltar,Folk Religions,0
+Gibraltar,Other Religions,0
+Gibraltar,Jewish,0
+Greece,Christian,10010000
+Greece,Muslim,610000
+Greece,Unaffiliated,700000
+Greece,Hindu,20000
+Greece,Buddhist,0
+Greece,Folk Religions,10000
+Greece,Other Religions,0
+Greece,Jewish,0
+Greenland,Christian,60000
+Greenland,Muslim,0
+Greenland,Unaffiliated,0
+Greenland,Hindu,0
+Greenland,Buddhist,0
+Greenland,Folk Religions,0
+Greenland,Other Religions,0
+Greenland,Jewish,0
+Grenada,Christian,100000
+Grenada,Muslim,0
+Grenada,Unaffiliated,0
+Grenada,Hindu,0
+Grenada,Buddhist,0
+Grenada,Folk Religions,0
+Grenada,Other Religions,0
+Grenada,Jewish,0
+Guadeloupe,Christian,440000
+Guadeloupe,Muslim,0
+Guadeloupe,Unaffiliated,10000
+Guadeloupe,Hindu,0
+Guadeloupe,Buddhist,0
+Guadeloupe,Folk Religions,0
+Guadeloupe,Other Religions,0
+Guadeloupe,Jewish,0
+Guam,Christian,170000
+Guam,Muslim,0
+Guam,Unaffiliated,0
+Guam,Hindu,0
+Guam,Buddhist,0
+Guam,Folk Religions,0
+Guam,Other Religions,0
+Guam,Jewish,0
+Guatemala,Christian,13690000
+Guatemala,Muslim,0
+Guatemala,Unaffiliated,590000
+Guatemala,Hindu,0
+Guatemala,Buddhist,0
+Guatemala,Folk Religions,80000
+Guatemala,Other Religions,10000
+Guatemala,Jewish,0
+Guinea,Christian,1090000
+Guinea,Muslim,8430000
+Guinea,Unaffiliated,180000
+Guinea,Hindu,0
+Guinea,Buddhist,0
+Guinea,Folk Religions,270000
+Guinea,Other Religions,0
+Guinea,Jewish,0
+Guinea Bissau,Christian,300000
+Guinea Bissau,Muslim,680000
+Guinea Bissau,Unaffiliated,70000
+Guinea Bissau,Hindu,0
+Guinea Bissau,Buddhist,0
+Guinea Bissau,Folk Religions,470000
+Guinea Bissau,Other Religions,0
+Guinea Bissau,Jewish,0
+Guyana,Christian,500000
+Guyana,Muslim,50000
+Guyana,Unaffiliated,10000
+Guyana,Hindu,190000
+Guyana,Buddhist,0
+Guyana,Folk Religions,0
+Guyana,Other Religions,0
+Guyana,Jewish,0
+Haiti,Christian,8690000
+Haiti,Muslim,0
+Haiti,Unaffiliated,1060000
+Haiti,Hindu,0
+Haiti,Buddhist,0
+Haiti,Folk Religions,220000
+Haiti,Other Religions,30000
+Haiti,Jewish,0
+Honduras,Christian,6660000
+Honduras,Muslim,10000
+Honduras,Unaffiliated,790000
+Honduras,Hindu,0
+Honduras,Buddhist,0
+Honduras,Folk Religions,80000
+Honduras,Other Religions,40000
+Honduras,Jewish,0
+Hong Kong,Christian,1010000
+Hong Kong,Muslim,130000
+Hong Kong,Unaffiliated,3950000
+Hong Kong,Hindu,30000
+Hong Kong,Buddhist,930000
+Hong Kong,Folk Religions,900000
+Hong Kong,Other Religions,110000
+Hong Kong,Jewish,0
+Hungary,Christian,8090000
+Hungary,Muslim,0
+Hungary,Unaffiliated,1860000
+Hungary,Hindu,0
+Hungary,Buddhist,0
+Hungary,Folk Religions,0
+Hungary,Other Religions,0
+Hungary,Jewish,10000
+Iceland,Christian,300000
+Iceland,Muslim,0
+Iceland,Unaffiliated,10000
+Iceland,Hindu,0
+Iceland,Buddhist,0
+Iceland,Folk Religions,0
+Iceland,Other Religions,0
+Iceland,Jewish,0
+India,Christian,31130000
+India,Muslim,176190000
+India,Unaffiliated,870000
+India,Hindu,973750000
+India,Buddhist,9250000
+India,Folk Religions,5840000
+India,Other Religions,27560000
+India,Jewish,10000
+Indonesia,Christian,23660000
+Indonesia,Muslim,209120000
+Indonesia,Unaffiliated,240000
+Indonesia,Hindu,4050000
+Indonesia,Buddhist,1720000
+Indonesia,Folk Religions,750000
+Indonesia,Other Religions,340000
+Indonesia,Jewish,0
+Iran,Christian,110000
+Iran,Muslim,73570000
+Iran,Unaffiliated,110000
+Iran,Hindu,20000
+Iran,Buddhist,0
+Iran,Folk Religions,0
+Iran,Other Religions,150000
+Iran,Jewish,0
+Iraq,Christian,270000
+Iraq,Muslim,31340000
+Iraq,Unaffiliated,40000
+Iraq,Hindu,0
+Iraq,Buddhist,0
+Iraq,Folk Religions,0
+Iraq,Other Religions,20000
+Iraq,Jewish,0
+Ireland,Christian,4110000
+Ireland,Muslim,50000
+Ireland,Unaffiliated,280000
+Ireland,Hindu,10000
+Ireland,Buddhist,0
+Ireland,Folk Religions,0
+Ireland,Other Religions,0
+Ireland,Jewish,0
+Isle of Man,Christian,70000
+Isle of Man,Muslim,0
+Isle of Man,Unaffiliated,10000
+Isle of Man,Hindu,0
+Isle of Man,Buddhist,0
+Isle of Man,Folk Religions,0
+Isle of Man,Other Religions,0
+Isle of Man,Jewish,0
+Israel,Christian,150000
+Israel,Muslim,1380000
+Israel,Unaffiliated,230000
+Israel,Hindu,0
+Israel,Buddhist,20000
+Israel,Folk Religions,20000
+Israel,Other Religions,0
+Israel,Jewish,5610000
+Italy,Christian,50440000
+Italy,Muslim,2220000
+Italy,Unaffiliated,7500000
+Italy,Hindu,90000
+Italy,Buddhist,110000
+Italy,Folk Religions,80000
+Italy,Other Religions,60000
+Italy,Jewish,50000
+Ivory Coast,Christian,8710000
+Ivory Coast,Muslim,7390000
+Ivory Coast,Unaffiliated,1570000
+Ivory Coast,Hindu,0
+Ivory Coast,Buddhist,0
+Ivory Coast,Folk Religions,2020000
+Ivory Coast,Other Religions,30000
+Ivory Coast,Jewish,0
+Jamaica,Christian,2120000
+Jamaica,Muslim,0
+Jamaica,Unaffiliated,470000
+Jamaica,Hindu,0
+Jamaica,Buddhist,0
+Jamaica,Folk Religions,120000
+Jamaica,Other Religions,30000
+Jamaica,Jewish,0
+Japan,Christian,2030000
+Japan,Muslim,200000
+Japan,Unaffiliated,72120000
+Japan,Hindu,30000
+Japan,Buddhist,45820000
+Japan,Folk Religions,450000
+Japan,Other Religions,5890000
+Japan,Jewish,0
+Jordan,Christian,130000
+Jordan,Muslim,6010000
+Jordan,Unaffiliated,0
+Jordan,Hindu,0
+Jordan,Buddhist,20000
+Jordan,Folk Religions,0
+Jordan,Other Religions,0
+Jordan,Jewish,0
+Kazakhstan,Christian,3970000
+Kazakhstan,Muslim,11290000
+Kazakhstan,Unaffiliated,670000
+Kazakhstan,Hindu,0
+Kazakhstan,Buddhist,40000
+Kazakhstan,Folk Religions,50000
+Kazakhstan,Other Religions,20000
+Kazakhstan,Jewish,0
+Kenya,Christian,34340000
+Kenya,Muslim,3920000
+Kenya,Unaffiliated,1000000
+Kenya,Hindu,60000
+Kenya,Buddhist,0
+Kenya,Folk Religions,690000
+Kenya,Other Religions,500000
+Kenya,Jewish,0
+Kiribati,Christian,100000
+Kiribati,Muslim,0
+Kiribati,Unaffiliated,0
+Kiribati,Hindu,0
+Kiribati,Buddhist,0
+Kiribati,Folk Religions,0
+Kiribati,Other Religions,0
+Kiribati,Jewish,0
+Kosovo,Christian,240000
+Kosovo,Muslim,1810000
+Kosovo,Unaffiliated,30000
+Kosovo,Hindu,0
+Kosovo,Buddhist,0
+Kosovo,Folk Religions,0
+Kosovo,Other Religions,0
+Kosovo,Jewish,0
+Kuwait,Christian,390000
+Kuwait,Muslim,2030000
+Kuwait,Unaffiliated,0
+Kuwait,Hindu,230000
+Kuwait,Buddhist,80000
+Kuwait,Folk Religions,0
+Kuwait,Other Religions,0
+Kuwait,Jewish,0
+Kyrgyzstan,Christian,610000
+Kyrgyzstan,Muslim,4690000
+Kyrgyzstan,Unaffiliated,20000
+Kyrgyzstan,Hindu,0
+Kyrgyzstan,Buddhist,0
+Kyrgyzstan,Folk Religions,0
+Kyrgyzstan,Other Religions,0
+Kyrgyzstan,Jewish,0
+Laos,Christian,90000
+Laos,Muslim,0
+Laos,Unaffiliated,50000
+Laos,Hindu,0
+Laos,Buddhist,4100000
+Laos,Folk Religions,1910000
+Laos,Other Religions,50000
+Laos,Jewish,0
+Latvia,Christian,1260000
+Latvia,Muslim,0
+Latvia,Unaffiliated,990000
+Latvia,Hindu,0
+Latvia,Buddhist,0
+Latvia,Folk Religions,0
+Latvia,Other Religions,0
+Latvia,Jewish,0
+Lebanon,Christian,1620000
+Lebanon,Muslim,2590000
+Lebanon,Unaffiliated,10000
+Lebanon,Hindu,0
+Lebanon,Buddhist,0
+Lebanon,Folk Religions,0
+Lebanon,Other Religions,0
+Lebanon,Jewish,0
+Lesotho,Christian,2100000
+Lesotho,Muslim,0
+Lesotho,Unaffiliated,70000
+Lesotho,Hindu,0
+Lesotho,Buddhist,0
+Lesotho,Folk Religions,0
+Lesotho,Other Religions,0
+Lesotho,Jewish,0
+Liberia,Christian,3430000
+Liberia,Muslim,480000
+Liberia,Unaffiliated,60000
+Liberia,Hindu,0
+Liberia,Buddhist,0
+Liberia,Folk Religions,20000
+Liberia,Other Religions,0
+Liberia,Jewish,0
+Libya,Christian,170000
+Libya,Muslim,6140000
+Libya,Unaffiliated,10000
+Libya,Hindu,0
+Libya,Buddhist,20000
+Libya,Folk Religions,0
+Libya,Other Religions,0
+Libya,Jewish,0
+Liechtenstein,Christian,30000
+Liechtenstein,Muslim,0
+Liechtenstein,Unaffiliated,0
+Liechtenstein,Hindu,0
+Liechtenstein,Buddhist,0
+Liechtenstein,Folk Religions,0
+Liechtenstein,Other Religions,0
+Liechtenstein,Jewish,0
+Lithuania,Christian,2980000
+Lithuania,Muslim,0
+Lithuania,Unaffiliated,330000
+Lithuania,Hindu,0
+Lithuania,Buddhist,0
+Lithuania,Folk Religions,0
+Lithuania,Other Religions,0
+Lithuania,Jewish,0
+Luxembourg,Christian,360000
+Luxembourg,Muslim,10000
+Luxembourg,Unaffiliated,140000
+Luxembourg,Hindu,0
+Luxembourg,Buddhist,0
+Luxembourg,Folk Religions,0
+Luxembourg,Other Religions,0
+Luxembourg,Jewish,0
+Macau,Christian,40000
+Macau,Muslim,0
+Macau,Unaffiliated,80000
+Macau,Hindu,0
+Macau,Buddhist,90000
+Macau,Folk Religions,320000
+Macau,Other Religions,0
+Macau,Jewish,0
+Madagascar,Christian,17680000
+Madagascar,Muslim,620000
+Madagascar,Unaffiliated,1440000
+Madagascar,Hindu,10000
+Madagascar,Buddhist,0
+Madagascar,Folk Religions,940000
+Madagascar,Other Religions,20000
+Madagascar,Jewish,0
+Malawi,Christian,12320000
+Malawi,Muslim,1930000
+Malawi,Unaffiliated,370000
+Malawi,Hindu,0
+Malawi,Buddhist,0
+Malawi,Folk Religions,260000
+Malawi,Other Religions,0
+Malawi,Jewish,0
+Malaysia,Christian,2670000
+Malaysia,Muslim,18100000
+Malaysia,Unaffiliated,190000
+Malaysia,Hindu,1720000
+Malaysia,Buddhist,5010000
+Malaysia,Folk Religions,650000
+Malaysia,Other Religions,60000
+Malaysia,Jewish,0
+Maldives,Christian,0
+Maldives,Muslim,310000
+Maldives,Unaffiliated,0
+Maldives,Hindu,0
+Maldives,Buddhist,0
+Maldives,Folk Religions,0
+Maldives,Other Religions,0
+Maldives,Jewish,0
+Mali,Christian,490000
+Mali,Muslim,14200000
+Mali,Unaffiliated,420000
+Mali,Hindu,0
+Mali,Buddhist,0
+Mali,Folk Religions,250000
+Mali,Other Religions,0
+Mali,Jewish,0
+Malta,Christian,400000
+Malta,Muslim,0
+Malta,Unaffiliated,10000
+Malta,Hindu,0
+Malta,Buddhist,0
+Malta,Folk Religions,0
+Malta,Other Religions,0
+Malta,Jewish,0
+Marshall Islands,Christian,50000
+Marshall Islands,Muslim,0
+Marshall Islands,Unaffiliated,0
+Marshall Islands,Hindu,0
+Marshall Islands,Buddhist,0
+Marshall Islands,Folk Religions,0
+Marshall Islands,Other Religions,0
+Marshall Islands,Jewish,0
+Martinique,Christian,390000
+Martinique,Muslim,0
+Martinique,Unaffiliated,0
+Martinique,Hindu,0
+Martinique,Buddhist,0
+Martinique,Folk Religions,0
+Martinique,Other Religions,0
+Martinique,Jewish,0
+Mauritania,Christian,0
+Mauritania,Muslim,3430000
+Mauritania,Unaffiliated,0
+Mauritania,Hindu,0
+Mauritania,Buddhist,0
+Mauritania,Folk Religions,20000
+Mauritania,Other Religions,0
+Mauritania,Jewish,0
+Mauritius,Christian,330000
+Mauritius,Muslim,220000
+Mauritius,Unaffiliated,0
+Mauritius,Hindu,730000
+Mauritius,Buddhist,0
+Mauritius,Folk Religions,0
+Mauritius,Other Religions,0
+Mauritius,Jewish,0
+Mayotte,Christian,0
+Mayotte,Muslim,200000
+Mayotte,Unaffiliated,0
+Mayotte,Hindu,0
+Mayotte,Buddhist,0
+Mayotte,Folk Religions,0
+Mayotte,Other Religions,0
+Mayotte,Jewish,0
+Mexico,Christian,107910000
+Mexico,Muslim,0
+Mexico,Unaffiliated,5330000
+Mexico,Hindu,0
+Mexico,Buddhist,0
+Mexico,Folk Religions,70000
+Mexico,Other Religions,20000
+Mexico,Jewish,70000
+Moldova,Christian,3480000
+Moldova,Muslim,20000
+Moldova,Unaffiliated,50000
+Moldova,Hindu,0
+Moldova,Buddhist,0
+Moldova,Folk Religions,0
+Moldova,Other Religions,0
+Moldova,Jewish,20000
+Monaco,Christian,30000
+Monaco,Muslim,0
+Monaco,Unaffiliated,0
+Monaco,Hindu,0
+Monaco,Buddhist,0
+Monaco,Folk Religions,0
+Monaco,Other Religions,0
+Monaco,Jewish,0
+Mongolia,Christian,60000
+Mongolia,Muslim,90000
+Mongolia,Unaffiliated,990000
+Mongolia,Hindu,0
+Mongolia,Buddhist,1520000
+Mongolia,Folk Religions,100000
+Mongolia,Other Religions,0
+Mongolia,Jewish,0
+Montenegro,Christian,490000
+Montenegro,Muslim,120000
+Montenegro,Unaffiliated,20000
+Montenegro,Hindu,0
+Montenegro,Buddhist,0
+Montenegro,Folk Religions,0
+Montenegro,Other Religions,0
+Montenegro,Jewish,0
+Montserrat,Christian,0
+Montserrat,Muslim,0
+Montserrat,Unaffiliated,0
+Montserrat,Hindu,0
+Montserrat,Buddhist,0
+Montserrat,Folk Religions,0
+Montserrat,Other Religions,0
+Montserrat,Jewish,0
+Morocco,Christian,20000
+Morocco,Muslim,31940000
+Morocco,Unaffiliated,0
+Morocco,Hindu,0
+Morocco,Buddhist,0
+Morocco,Folk Religions,0
+Morocco,Other Religions,0
+Morocco,Jewish,0
+Mozambique,Christian,13260000
+Mozambique,Muslim,4200000
+Mozambique,Unaffiliated,4200000
+Mozambique,Hindu,0
+Mozambique,Buddhist,0
+Mozambique,Folk Religions,1720000
+Mozambique,Other Religions,0
+Mozambique,Jewish,0
+Namibia,Christian,2230000
+Namibia,Muslim,0
+Namibia,Unaffiliated,40000
+Namibia,Hindu,0
+Namibia,Buddhist,0
+Namibia,Folk Religions,0
+Namibia,Other Religions,0
+Namibia,Jewish,0
+Nauru,Christian,0
+Nauru,Muslim,0
+Nauru,Unaffiliated,0
+Nauru,Hindu,0
+Nauru,Buddhist,0
+Nauru,Folk Religions,0
+Nauru,Other Religions,0
+Nauru,Jewish,0
+Nepal,Christian,140000
+Nepal,Muslim,1370000
+Nepal,Unaffiliated,80000
+Nepal,Hindu,24170000
+Nepal,Buddhist,3080000
+Nepal,Folk Religions,1100000
+Nepal,Other Religions,20000
+Nepal,Jewish,0
+Netherlands,Christian,8410000
+Netherlands,Muslim,1000000
+Netherlands,Unaffiliated,6990000
+Netherlands,Hindu,80000
+Netherlands,Buddhist,40000
+Netherlands,Folk Religions,30000
+Netherlands,Other Religions,30000
+Netherlands,Jewish,30000
+Netherlands Antilles,Christian,190000
+Netherlands Antilles,Muslim,0
+Netherlands Antilles,Unaffiliated,0
+Netherlands Antilles,Hindu,0
+Netherlands Antilles,Buddhist,0
+Netherlands Antilles,Folk Religions,0
+Netherlands Antilles,Other Religions,0
+Netherlands Antilles,Jewish,0
+New Caledonia,Christian,210000
+New Caledonia,Muslim,0
+New Caledonia,Unaffiliated,30000
+New Caledonia,Hindu,0
+New Caledonia,Buddhist,0
+New Caledonia,Folk Religions,0
+New Caledonia,Other Religions,0
+New Caledonia,Jewish,0
+New Zealand,Christian,2490000
+New Zealand,Muslim,50000
+New Zealand,Unaffiliated,1600000
+New Zealand,Hindu,90000
+New Zealand,Buddhist,70000
+New Zealand,Folk Religions,20000
+New Zealand,Other Religions,30000
+New Zealand,Jewish,0
+Nicaragua,Christian,4970000
+Nicaragua,Muslim,0
+Nicaragua,Unaffiliated,730000
+Nicaragua,Hindu,0
+Nicaragua,Buddhist,0
+Nicaragua,Folk Religions,80000
+Nicaragua,Other Religions,0
+Nicaragua,Jewish,0
+Niger,Christian,120000
+Niger,Muslim,15270000
+Niger,Unaffiliated,110000
+Niger,Hindu,0
+Niger,Buddhist,0
+Niger,Folk Religions,0
+Niger,Other Religions,0
+Niger,Jewish,0
+Nigeria,Christian,78050000
+Nigeria,Muslim,77300000
+Nigeria,Unaffiliated,680000
+Nigeria,Hindu,0
+Nigeria,Buddhist,10000
+Nigeria,Folk Religions,2290000
+Nigeria,Other Religions,90000
+Nigeria,Jewish,0
+Niue,Christian,0
+Niue,Muslim,0
+Niue,Unaffiliated,0
+Niue,Hindu,0
+Niue,Buddhist,0
+Niue,Folk Religions,0
+Niue,Other Religions,0
+Niue,Jewish,0
+North Korea,Christian,480000
+North Korea,Muslim,0
+North Korea,Unaffiliated,17350000
+North Korea,Hindu,0
+North Korea,Buddhist,370000
+North Korea,Folk Religions,3010000
+North Korea,Other Religions,3130000
+North Korea,Jewish,0
+Northern Mariana Islands,Christian,50000
+Northern Mariana Islands,Muslim,0
+Northern Mariana Islands,Unaffiliated,0
+Northern Mariana Islands,Hindu,0
+Northern Mariana Islands,Buddhist,0
+Northern Mariana Islands,Folk Religions,0
+Northern Mariana Islands,Other Religions,0
+Northern Mariana Islands,Jewish,0
+Norway,Christian,4140000
+Norway,Muslim,180000
+Norway,Unaffiliated,490000
+Norway,Hindu,20000
+Norway,Buddhist,30000
+Norway,Folk Religions,0
+Norway,Other Religions,10000
+Norway,Jewish,0
+Oman,Christian,180000
+Oman,Muslim,2390000
+Oman,Unaffiliated,0
+Oman,Hindu,150000
+Oman,Buddhist,20000
+Oman,Folk Religions,0
+Oman,Other Religions,30000
+Oman,Jewish,0
+Pakistan,Christian,2750000
+Pakistan,Muslim,167410000
+Pakistan,Unaffiliated,20000
+Pakistan,Hindu,3330000
+Pakistan,Buddhist,20000
+Pakistan,Folk Religions,30000
+Pakistan,Other Religions,20000
+Pakistan,Jewish,0
+Palau,Christian,20000
+Palau,Muslim,0
+Palau,Unaffiliated,0
+Palau,Hindu,0
+Palau,Buddhist,0
+Palau,Folk Religions,0
+Palau,Other Religions,0
+Palau,Jewish,0
+Palestinian territories,Christian,100000
+Palestinian territories,Muslim,3940000
+Palestinian territories,Unaffiliated,0
+Palestinian territories,Hindu,0
+Palestinian territories,Buddhist,0
+Palestinian territories,Folk Religions,0
+Palestinian territories,Other Religions,0
+Palestinian territories,Jewish,0
+Panama,Christian,3270000
+Panama,Muslim,30000
+Panama,Unaffiliated,170000
+Panama,Hindu,0
+Panama,Buddhist,0
+Panama,Folk Religions,20000
+Panama,Other Religions,20000
+Panama,Jewish,10000
+Papua New Guinea,Christian,6800000
+Papua New Guinea,Muslim,0
+Papua New Guinea,Unaffiliated,0
+Papua New Guinea,Hindu,0
+Papua New Guinea,Buddhist,0
+Papua New Guinea,Folk Religions,30000
+Papua New Guinea,Other Religions,20000
+Papua New Guinea,Jewish,0
+Paraguay,Christian,6250000
+Paraguay,Muslim,0
+Paraguay,Unaffiliated,70000
+Paraguay,Hindu,0
+Paraguay,Buddhist,0
+Paraguay,Folk Religions,110000
+Paraguay,Other Religions,10000
+Paraguay,Jewish,0
+Peru,Christian,27780000
+Peru,Muslim,0
+Peru,Unaffiliated,860000
+Peru,Hindu,0
+Peru,Buddhist,50000
+Peru,Folk Religions,290000
+Peru,Other Religions,90000
+Peru,Jewish,0
+Philippines,Christian,86370000
+Philippines,Muslim,5150000
+Philippines,Unaffiliated,90000
+Philippines,Hindu,0
+Philippines,Buddhist,80000
+Philippines,Folk Religions,1430000
+Philippines,Other Religions,130000
+Philippines,Jewish,0
+Poland,Christian,36100000
+Poland,Muslim,0
+Poland,Unaffiliated,2150000
+Poland,Hindu,0
+Poland,Buddhist,0
+Poland,Folk Religions,0
+Poland,Other Religions,0
+Poland,Jewish,10000
+Portugal,Christian,10010000
+Portugal,Muslim,60000
+Portugal,Unaffiliated,470000
+Portugal,Hindu,10000
+Portugal,Buddhist,60000
+Portugal,Folk Religions,50000
+Portugal,Other Religions,0
+Portugal,Jewish,0
+Puerto Rico,Christian,3630000
+Puerto Rico,Muslim,0
+Puerto Rico,Unaffiliated,70000
+Puerto Rico,Hindu,0
+Puerto Rico,Buddhist,10000
+Puerto Rico,Folk Religions,30000
+Puerto Rico,Other Religions,0
+Puerto Rico,Jewish,0
+Qatar,Christian,240000
+Qatar,Muslim,1190000
+Qatar,Unaffiliated,20000
+Qatar,Hindu,240000
+Qatar,Buddhist,50000
+Qatar,Folk Religions,0
+Qatar,Other Religions,10000
+Qatar,Jewish,0
+Republic of Macedonia,Christian,1220000
+Republic of Macedonia,Muslim,810000
+Republic of Macedonia,Unaffiliated,30000
+Republic of Macedonia,Hindu,0
+Republic of Macedonia,Buddhist,0
+Republic of Macedonia,Folk Religions,0
+Republic of Macedonia,Other Religions,0
+Republic of Macedonia,Jewish,0
+Republic of the Congo,Christian,3470000
+Republic of the Congo,Muslim,50000
+Republic of the Congo,Unaffiliated,360000
+Republic of the Congo,Hindu,0
+Republic of the Congo,Buddhist,0
+Republic of the Congo,Folk Religions,110000
+Republic of the Congo,Other Religions,40000
+Republic of the Congo,Jewish,0
+Reunion,Christian,740000
+Reunion,Muslim,40000
+Reunion,Unaffiliated,20000
+Reunion,Hindu,40000
+Reunion,Buddhist,0
+Reunion,Folk Religions,0
+Reunion,Other Religions,0
+Reunion,Jewish,0
+Romania,Christian,21380000
+Romania,Muslim,70000
+Romania,Unaffiliated,20000
+Romania,Hindu,0
+Romania,Buddhist,0
+Romania,Folk Religions,0
+Romania,Other Religions,0
+Romania,Jewish,0
+Russia,Christian,104750000
+Russia,Muslim,14290000
+Russia,Unaffiliated,23180000
+Russia,Hindu,30000
+Russia,Buddhist,170000
+Russia,Folk Religions,310000
+Russia,Other Religions,0
+Russia,Jewish,230000
+Rwanda,Christian,9920000
+Rwanda,Muslim,190000
+Rwanda,Unaffiliated,380000
+Rwanda,Hindu,0
+Rwanda,Buddhist,0
+Rwanda,Folk Religions,100000
+Rwanda,Other Religions,20000
+Rwanda,Jewish,0
+Samoa,Christian,180000
+Samoa,Muslim,0
+Samoa,Unaffiliated,0
+Samoa,Hindu,0
+Samoa,Buddhist,0
+Samoa,Folk Religions,0
+Samoa,Other Religions,0
+Samoa,Jewish,0
+San Marino,Christian,30000
+San Marino,Muslim,0
+San Marino,Unaffiliated,0
+San Marino,Hindu,0
+San Marino,Buddhist,0
+San Marino,Folk Religions,0
+San Marino,Other Religions,0
+San Marino,Jewish,0
+Sao Tome and Principe,Christian,140000
+Sao Tome and Principe,Muslim,0
+Sao Tome and Principe,Unaffiliated,20000
+Sao Tome and Principe,Hindu,0
+Sao Tome and Principe,Buddhist,0
+Sao Tome and Principe,Folk Religions,0
+Sao Tome and Principe,Other Religions,0
+Sao Tome and Principe,Jewish,0
+Saudi Arabia,Christian,1200000
+Saudi Arabia,Muslim,25520000
+Saudi Arabia,Unaffiliated,180000
+Saudi Arabia,Hindu,310000
+Saudi Arabia,Buddhist,90000
+Saudi Arabia,Folk Religions,70000
+Saudi Arabia,Other Religions,70000
+Saudi Arabia,Jewish,0
+Senegal,Christian,450000
+Senegal,Muslim,11980000
+Senegal,Unaffiliated,0
+Senegal,Hindu,0
+Senegal,Buddhist,0
+Senegal,Folk Religions,0
+Senegal,Other Religions,0
+Senegal,Jewish,0
+Serbia,Christian,7190000
+Serbia,Muslim,330000
+Serbia,Unaffiliated,250000
+Serbia,Hindu,0
+Serbia,Buddhist,0
+Serbia,Folk Religions,0
+Serbia,Other Religions,0
+Serbia,Jewish,0
+Seychelles,Christian,80000
+Seychelles,Muslim,0
+Seychelles,Unaffiliated,0
+Seychelles,Hindu,0
+Seychelles,Buddhist,0
+Seychelles,Folk Religions,0
+Seychelles,Other Religions,0
+Seychelles,Jewish,0
+Sierra Leone,Christian,1230000
+Sierra Leone,Muslim,4580000
+Sierra Leone,Unaffiliated,0
+Sierra Leone,Hindu,0
+Sierra Leone,Buddhist,0
+Sierra Leone,Folk Religions,50000
+Sierra Leone,Other Religions,0
+Sierra Leone,Jewish,0
+Singapore,Christian,920000
+Singapore,Muslim,730000
+Singapore,Unaffiliated,830000
+Singapore,Hindu,260000
+Singapore,Buddhist,1730000
+Singapore,Folk Religions,120000
+Singapore,Other Religions,490000
+Singapore,Jewish,0
+Slovakia,Christian,4660000
+Slovakia,Muslim,0
+Slovakia,Unaffiliated,780000
+Slovakia,Hindu,0
+Slovakia,Buddhist,0
+Slovakia,Folk Religions,0
+Slovakia,Other Religions,0
+Slovakia,Jewish,0
+Slovenia,Christian,1590000
+Slovenia,Muslim,70000
+Slovenia,Unaffiliated,370000
+Slovenia,Hindu,0
+Slovenia,Buddhist,0
+Slovenia,Folk Religions,0
+Slovenia,Other Religions,0
+Slovenia,Jewish,0
+Solomon Islands,Christian,520000
+Solomon Islands,Muslim,0
+Solomon Islands,Unaffiliated,0
+Solomon Islands,Hindu,0
+Solomon Islands,Buddhist,0
+Solomon Islands,Folk Religions,0
+Solomon Islands,Other Religions,0
+Solomon Islands,Jewish,0
+Somalia,Christian,0
+Somalia,Muslim,9310000
+Somalia,Unaffiliated,0
+Somalia,Hindu,0
+Somalia,Buddhist,0
+Somalia,Folk Religions,0
+Somalia,Other Religions,0
+Somalia,Jewish,0
+South Africa,Christian,40710000
+South Africa,Muslim,860000
+South Africa,Unaffiliated,7450000
+South Africa,Hindu,570000
+South Africa,Buddhist,100000
+South Africa,Folk Religions,210000
+South Africa,Other Religions,170000
+South Africa,Jewish,70000
+South Korea,Christian,14170000
+South Korea,Muslim,100000
+South Korea,Unaffiliated,22350000
+South Korea,Hindu,0
+South Korea,Buddhist,11050000
+South Korea,Folk Religions,400000
+South Korea,Other Religions,110000
+South Korea,Jewish,0
+South Sudan,Christian,6010000
+South Sudan,Muslim,610000
+South Sudan,Unaffiliated,50000
+South Sudan,Hindu,0
+South Sudan,Buddhist,0
+South Sudan,Folk Religions,3270000
+South Sudan,Other Religions,0
+South Sudan,Jewish,0
+Spain,Christian,36240000
+Spain,Muslim,980000
+Spain,Unaffiliated,8740000
+Spain,Hindu,20000
+Spain,Buddhist,0
+Spain,Folk Religions,20000
+Spain,Other Religions,10000
+Spain,Jewish,60000
+Sri Lanka,Christian,1530000
+Sri Lanka,Muslim,2040000
+Sri Lanka,Unaffiliated,0
+Sri Lanka,Hindu,2830000
+Sri Lanka,Buddhist,14450000
+Sri Lanka,Folk Religions,0
+Sri Lanka,Other Religions,0
+Sri Lanka,Jewish,0
+St. Helena,Christian,0
+St. Helena,Muslim,0
+St. Helena,Unaffiliated,0
+St. Helena,Hindu,0
+St. Helena,Buddhist,0
+St. Helena,Folk Religions,0
+St. Helena,Other Religions,0
+St. Helena,Jewish,0
+St. Kitts and Nevis,Christian,50000
+St. Kitts and Nevis,Muslim,0
+St. Kitts and Nevis,Unaffiliated,0
+St. Kitts and Nevis,Hindu,0
+St. Kitts and Nevis,Buddhist,0
+St. Kitts and Nevis,Folk Religions,0
+St. Kitts and Nevis,Other Religions,0
+St. Kitts and Nevis,Jewish,0
+St. Lucia,Christian,160000
+St. Lucia,Muslim,0
+St. Lucia,Unaffiliated,10000
+St. Lucia,Hindu,0
+St. Lucia,Buddhist,0
+St. Lucia,Folk Religions,0
+St. Lucia,Other Religions,0
+St. Lucia,Jewish,0
+St. Pierre and Miquelon,Christian,0
+St. Pierre and Miquelon,Muslim,0
+St. Pierre and Miquelon,Unaffiliated,0
+St. Pierre and Miquelon,Hindu,0
+St. Pierre and Miquelon,Buddhist,0
+St. Pierre and Miquelon,Folk Religions,0
+St. Pierre and Miquelon,Other Religions,0
+St. Pierre and Miquelon,Jewish,0
+St. Vincent and the Grenadines,Christian,100000
+St. Vincent and the Grenadines,Muslim,0
+St. Vincent and the Grenadines,Unaffiliated,0
+St. Vincent and the Grenadines,Hindu,0
+St. Vincent and the Grenadines,Buddhist,0
+St. Vincent and the Grenadines,Folk Religions,0
+St. Vincent and the Grenadines,Other Religions,0
+St. Vincent and the Grenadines,Jewish,0
+Sudan,Christian,1810000
+Sudan,Muslim,30490000
+Sudan,Unaffiliated,350000
+Sudan,Hindu,0
+Sudan,Buddhist,0
+Sudan,Folk Religions,950000
+Sudan,Other Religions,0
+Sudan,Jewish,0
+Suriname,Christian,270000
+Suriname,Muslim,80000
+Suriname,Unaffiliated,30000
+Suriname,Hindu,100000
+Suriname,Buddhist,0
+Suriname,Folk Religions,30000
+Suriname,Other Religions,0
+Suriname,Jewish,0
+Swaziland,Christian,1040000
+Swaziland,Muslim,0
+Swaziland,Unaffiliated,120000
+Swaziland,Hindu,0
+Swaziland,Buddhist,0
+Swaziland,Folk Religions,10000
+Swaziland,Other Religions,0
+Swaziland,Jewish,0
+Sweden,Christian,6310000
+Sweden,Muslim,430000
+Sweden,Unaffiliated,2540000
+Sweden,Hindu,20000
+Sweden,Buddhist,40000
+Sweden,Folk Religions,20000
+Sweden,Other Religions,20000
+Sweden,Jewish,10000
+Switzerland,Christian,6230000
+Switzerland,Muslim,420000
+Switzerland,Unaffiliated,910000
+Switzerland,Hindu,30000
+Switzerland,Buddhist,30000
+Switzerland,Folk Religions,0
+Switzerland,Other Religions,0
+Switzerland,Jewish,20000
+Syria,Christian,1060000
+Syria,Muslim,18930000
+Syria,Unaffiliated,420000
+Syria,Hindu,0
+Syria,Buddhist,0
+Syria,Folk Religions,0
+Syria,Other Religions,0
+Syria,Jewish,0
+Taiwan,Christian,1280000
+Taiwan,Muslim,10000
+Taiwan,Unaffiliated,2950000
+Taiwan,Hindu,0
+Taiwan,Buddhist,4950000
+Taiwan,Folk Religions,10260000
+Taiwan,Other Religions,3760000
+Taiwan,Jewish,0
+Tajikistan,Christian,110000
+Tajikistan,Muslim,6650000
+Tajikistan,Unaffiliated,100000
+Tajikistan,Hindu,0
+Tajikistan,Buddhist,0
+Tajikistan,Folk Religions,0
+Tajikistan,Other Religions,0
+Tajikistan,Jewish,0
+Tanzania,Christian,27540000
+Tanzania,Muslim,15770000
+Tanzania,Unaffiliated,650000
+Tanzania,Hindu,50000
+Tanzania,Buddhist,0
+Tanzania,Folk Religions,800000
+Tanzania,Other Religions,30000
+Tanzania,Jewish,0
+Thailand,Christian,600000
+Thailand,Muslim,3770000
+Thailand,Unaffiliated,190000
+Thailand,Hindu,70000
+Thailand,Buddhist,64420000
+Thailand,Folk Religions,60000
+Thailand,Other Religions,0
+Thailand,Jewish,0
+Timor-Leste,Christian,1120000
+Timor-Leste,Muslim,0
+Timor-Leste,Unaffiliated,0
+Timor-Leste,Hindu,0
+Timor-Leste,Buddhist,0
+Timor-Leste,Folk Religions,0
+Timor-Leste,Other Religions,0
+Timor-Leste,Jewish,0
+Togo,Christian,2640000
+Togo,Muslim,840000
+Togo,Unaffiliated,370000
+Togo,Hindu,0
+Togo,Buddhist,0
+Togo,Folk Religions,2150000
+Togo,Other Religions,30000
+Togo,Jewish,0
+Tokelau,Christian,0
+Tokelau,Muslim,0
+Tokelau,Unaffiliated,0
+Tokelau,Hindu,0
+Tokelau,Buddhist,0
+Tokelau,Folk Religions,0
+Tokelau,Other Religions,0
+Tokelau,Jewish,0
+Tonga,Christian,100000
+Tonga,Muslim,0
+Tonga,Unaffiliated,0
+Tonga,Hindu,0
+Tonga,Buddhist,0
+Tonga,Folk Religions,0
+Tonga,Other Religions,0
+Tonga,Jewish,0
+Trinidad and Tobago,Christian,880000
+Trinidad and Tobago,Muslim,80000
+Trinidad and Tobago,Unaffiliated,30000
+Trinidad and Tobago,Hindu,300000
+Trinidad and Tobago,Buddhist,0
+Trinidad and Tobago,Folk Religions,30000
+Trinidad and Tobago,Other Religions,20000
+Trinidad and Tobago,Jewish,0
+Tunisia,Christian,20000
+Tunisia,Muslim,10430000
+Tunisia,Unaffiliated,20000
+Tunisia,Hindu,0
+Tunisia,Buddhist,0
+Tunisia,Folk Religions,0
+Tunisia,Other Religions,0
+Tunisia,Jewish,0
+Turkey,Christian,320000
+Turkey,Muslim,71330000
+Turkey,Unaffiliated,860000
+Turkey,Hindu,0
+Turkey,Buddhist,40000
+Turkey,Folk Religions,20000
+Turkey,Other Religions,150000
+Turkey,Jewish,20000
+Turkmenistan,Christian,320000
+Turkmenistan,Muslim,4690000
+Turkmenistan,Unaffiliated,30000
+Turkmenistan,Hindu,0
+Turkmenistan,Buddhist,0
+Turkmenistan,Folk Religions,0
+Turkmenistan,Other Religions,0
+Turkmenistan,Jewish,0
+Turks and Caicos Islands,Christian,40000
+Turks and Caicos Islands,Muslim,0
+Turks and Caicos Islands,Unaffiliated,0
+Turks and Caicos Islands,Hindu,0
+Turks and Caicos Islands,Buddhist,0
+Turks and Caicos Islands,Folk Religions,0
+Turks and Caicos Islands,Other Religions,0
+Turks and Caicos Islands,Jewish,0
+Tuvalu,Christian,0
+Tuvalu,Muslim,0
+Tuvalu,Unaffiliated,0
+Tuvalu,Hindu,0
+Tuvalu,Buddhist,0
+Tuvalu,Folk Religions,0
+Tuvalu,Other Religions,0
+Tuvalu,Jewish,0
+Uganda,Christian,28980000
+Uganda,Muslim,3840000
+Uganda,Unaffiliated,170000
+Uganda,Hindu,100000
+Uganda,Buddhist,0
+Uganda,Folk Religions,290000
+Uganda,Other Religions,40000
+Uganda,Jewish,0
+Ukraine,Christian,38100000
+Ukraine,Muslim,560000
+Ukraine,Unaffiliated,6690000
+Ukraine,Hindu,10000
+Ukraine,Buddhist,20000
+Ukraine,Folk Religions,0
+Ukraine,Other Religions,0
+Ukraine,Jewish,50000
+United Arab Emirates,Christian,940000
+United Arab Emirates,Muslim,5780000
+United Arab Emirates,Unaffiliated,90000
+United Arab Emirates,Hindu,490000
+United Arab Emirates,Buddhist,150000
+United Arab Emirates,Folk Religions,0
+United Arab Emirates,Other Religions,60000
+United Arab Emirates,Jewish,0
+United Kingdom,Christian,44100000
+United Kingdom,Muslim,2740000
+United Kingdom,Unaffiliated,13220000
+United Kingdom,Hindu,800000
+United Kingdom,Buddhist,240000
+United Kingdom,Folk Religions,160000
+United Kingdom,Other Religions,500000
+United Kingdom,Jewish,280000
+United States,Christian,243060000
+United States,Muslim,2770000
+United States,Unaffiliated,50980000
+United States,Hindu,1790000
+United States,Buddhist,3570000
+United States,Folk Religions,630000
+United States,Other Religions,1900000
+United States,Jewish,5690000
+Uruguay,Christian,1950000
+Uruguay,Muslim,0
+Uruguay,Unaffiliated,1370000
+Uruguay,Hindu,0
+Uruguay,Buddhist,0
+Uruguay,Folk Religions,30000
+Uruguay,Other Religions,0
+Uruguay,Jewish,0
+U.S. Virgin Islands,Christian,100000
+U.S. Virgin Islands,Muslim,0
+U.S. Virgin Islands,Unaffiliated,0
+U.S. Virgin Islands,Hindu,0
+U.S. Virgin Islands,Buddhist,0
+U.S. Virgin Islands,Folk Religions,0
+U.S. Virgin Islands,Other Religions,0
+U.S. Virgin Islands,Jewish,0
+Uzbekistan,Christian,630000
+Uzbekistan,Muslim,26550000
+Uzbekistan,Unaffiliated,220000
+Uzbekistan,Hindu,0
+Uzbekistan,Buddhist,10000
+Uzbekistan,Folk Religions,10000
+Uzbekistan,Other Religions,0
+Uzbekistan,Jewish,10000
+Vanuatu,Christian,220000
+Vanuatu,Muslim,0
+Vanuatu,Unaffiliated,0
+Vanuatu,Hindu,0
+Vanuatu,Buddhist,0
+Vanuatu,Folk Religions,0
+Vanuatu,Other Religions,0
+Vanuatu,Jewish,0
+Vatican City,Christian,0
+Vatican City,Muslim,0
+Vatican City,Unaffiliated,0
+Vatican City,Hindu,0
+Vatican City,Buddhist,0
+Vatican City,Folk Religions,0
+Vatican City,Other Religions,0
+Vatican City,Jewish,0
+Venezuela,Christian,25890000
+Venezuela,Muslim,90000
+Venezuela,Unaffiliated,2900000
+Venezuela,Hindu,0
+Venezuela,Buddhist,0
+Venezuela,Folk Religions,60000
+Venezuela,Other Religions,20000
+Venezuela,Jewish,0
+Vietnam,Christian,7170000
+Vietnam,Muslim,160000
+Vietnam,Unaffiliated,26040000
+Vietnam,Hindu,0
+Vietnam,Buddhist,14380000
+Vietnam,Folk Religions,39750000
+Vietnam,Other Religions,350000
+Vietnam,Jewish,0
+Wallis and Futuna,Christian,10000
+Wallis and Futuna,Muslim,0
+Wallis and Futuna,Unaffiliated,0
+Wallis and Futuna,Hindu,0
+Wallis and Futuna,Buddhist,0
+Wallis and Futuna,Folk Religions,0
+Wallis and Futuna,Other Religions,0
+Wallis and Futuna,Jewish,0
+Western Sahara,Christian,0
+Western Sahara,Muslim,530000
+Western Sahara,Unaffiliated,0
+Western Sahara,Hindu,0
+Western Sahara,Buddhist,0
+Western Sahara,Folk Religions,0
+Western Sahara,Other Religions,0
+Western Sahara,Jewish,0
+Yemen,Christian,40000
+Yemen,Muslim,23830000
+Yemen,Unaffiliated,20000
+Yemen,Hindu,150000
+Yemen,Buddhist,0
+Yemen,Folk Religions,0
+Yemen,Other Religions,0
+Yemen,Jewish,0
+Zambia,Christian,12770000
+Zambia,Muslim,70000
+Zambia,Unaffiliated,70000
+Zambia,Hindu,10000
+Zambia,Buddhist,0
+Zambia,Folk Religions,40000
+Zambia,Other Religions,120000
+Zambia,Jewish,0
+Zimbabwe,Christian,10930000
+Zimbabwe,Muslim,110000
+Zimbabwe,Unaffiliated,990000
+Zimbabwe,Hindu,0
+Zimbabwe,Buddhist,0
+Zimbabwe,Folk Religions,480000
+Zimbabwe,Other Religions,40000
+Zimbabwe,Jewish,10000
