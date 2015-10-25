@@ -1,0 +1,68 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>R: Batting Averages for 18 major league baseball players, 1970</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" type="text/css" href="R.css">
+</head><body>
+
+<table width="100%" summary="page for EfronMorris"><tr><td>EfronMorris</td><td align="right">R Documentation</td></tr></table>
+
+<h2>Batting Averages for 18 major league baseball players, 1970</h2>
+
+<h3>Description</h3>
+
+<p>Batting averages for 18 major league baseball players,
+first 45 at bats of the 1970 season.</p>
+
+
+<h3>Usage</h3>
+
+<pre>data(EfronMorris)</pre>
+
+
+<h3>Format</h3>
+
+
+<dl>
+<dt><code>name</code></dt><dd><p>character, name of player</p>
+</dd>
+<dt><code>team</code></dt><dd><p>character, team of player, abbreviated</p>
+</dd>
+<dt><code>league</code></dt><dd><p>character, National League or American League</p>
+</dd>
+<dt><code>r</code></dt><dd><p>numeric, hits in 1st 45 at bats</p>
+</dd>
+<dt><code>y</code></dt><dd><p>numeric, <code>r</code>/45, batting average over 1st
+45 at bats</p>
+</dd>
+<dt><code>n</code></dt><dd><p>numeric, number of at bats, remainder of 1970
+season</p>
+</dd>
+<dt><code>p</code></dt><dd><p>numeric, batting average over remainder of 1970 season</p>
+</dd>
+</dl>
+
+
+
+<h3>Source</h3>
+
+<p>Efron, Bradley and Carl Morris. 1975. Data Analysis Using
+Stein's Estimator and Its Generalizations.  <EM>Journal of the American
+Statistical Association</EM>. 70:311-319.
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+data(EfronMorris)
+attach(EfronMorris)
+plot(p~y,
+     xlim=range(p,y),
+     ylim=range(p,y),
+     xlab="Batting Average, 1st 45 at bats",
+     ylab="Batting Average, Remainder of Season")
+abline(0,1)
+</pre>
+
+
+</body></html>

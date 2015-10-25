@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>R: Cystic fibrosis data</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" type="text/css" href="R.css">
+</head><body>
+
+<table width="100%" summary="page for cf"><tr><td>cf</td><td align="right">R Documentation</td></tr></table>
+
+<h2>Cystic fibrosis data</h2>
+
+<h3>Description</h3>
+
+<p>This data set contains a case-control indicator and 23 SNPs.
+</p>
+<p>The inter-marker distances (Morgan) are as follows
+</p>
+<p>0.000090, 0.000158, 0.005000, 0.000100, 0.000200, 0.000150, 0.000250, 
+0.000200, 0.000050, 0.000350, 0.000300, 0.000250, 0.000350, 0.000350, 0.000800,
+0.000100, 0.000200, 0.000150, 0.000550, 0.006000, 0.000700, 0.001000
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>data(cf)</pre>
+
+
+<h3>Format</h3>
+
+<p>A data frame containing 186 rows and 24 columns</p>
+
+
+<h3>Note</h3>
+
+<p>This can be used as an example of converting PL-EM to matrix format,
+</p>
+<PRE>
+cfdata &lt;- vector("numeric")
+cfname &lt;- vector("character")
+for (i in 2:dim(cf)[2])
+{
+    tmp &lt;- plem2m(cf[,i])
+    a1 &lt;- tmp[[1]]
+    a2 &lt;- tmp[[2]]
+    cfdata &lt;- cbind(cfdata,a1,a2)
+    a1name &lt;- paste("loc",i-1,".a1",sep="")
+    a2name &lt;- paste("loc",i-1,".a2",sep="")
+    cfname &lt;- cbind(cfname,a1name,a2name)
+}
+cfdata &lt;- as.data.frame(cfdata)
+names(cfdata) &lt;- cfname
+</PRE>
+
+
+<h3>Source</h3>
+
+<p>Liu JS, Sabatti C, Teng J, Keats BJB, Risch N (2001). Bayesian Analysis of Haplotypes for Linkage
+Disequilibrium Mapping. Genome Research 11:1716-1724</p>
+
+
+</body></html>

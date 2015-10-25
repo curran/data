@@ -1,0 +1,109 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>R: Pulp Fiber and Paper Data</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" type="text/css" href="R.css">
+</head><body>
+
+<table width="100%" summary="page for pulpfiber"><tr><td>pulpfiber</td><td align="right">R Documentation</td></tr></table>
+
+<h2>Pulp Fiber and Paper Data</h2>
+
+<h3>Description</h3>
+
+<p>Measurements of aspects pulp fibers and the paper produced from them.
+Four properties of each are measured in sixty-two samples.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>data(pulpfiber)</pre>
+
+
+<h3>Format</h3>
+
+<p>A data frame with 62 observations on the following 8 variables.
+</p>
+
+<dl>
+<dt><code>X1</code></dt><dd><p>numeric vector of arithmetic fiber length</p>
+</dd>
+<dt><code>X2</code></dt><dd><p>numeric vector of long fiber fraction</p>
+</dd>
+<dt><code>X3</code></dt><dd><p>numeric vector of fine fiber fraction</p>
+</dd>
+<dt><code>X4</code></dt><dd><p>numeric vector of zero span tensile</p>
+</dd>
+</dl>
+
+<dl>
+<dt><code>Y1</code></dt><dd><p>numeric vector of breaking length</p>
+</dd>
+<dt><code>Y2</code></dt><dd><p>numeric vector of elastic modulus</p>
+</dd>
+<dt><code>Y3</code></dt><dd><p>numeric vector of stress at failure</p>
+</dd>
+<dt><code>Y4</code></dt><dd><p>numeric vector of burst strength</p>
+</dd>
+</dl>
+
+
+
+<h3>Details</h3>
+
+<p>Cited from the reference article:
+<EM>The dataset contains measurements of properties of pulp fibers and the
+paper made from them.  The aim is to investigate relations between pulp
+fiber properties and the resulting paper properties.  The dataset
+contains <i>n = 62</i> measurements of the following four pulp fiber
+characteristics: arithmetic fiber length, long fiber fraction, fine
+fiber fraction, and zero span tensile.  The four paper properties that
+have been measured are breaking length, elastic modulus, stress at
+failure, and burst strength.</EM>
+</p>
+<p>The goal is to predict the <i>q = 4</i> paper properties from the
+<i>p = 4</i> fiber characteristics.
+</p>
+
+
+<h3>Author(s)</h3>
+
+<p>port to <font face="Courier New,Courier" color="#666666"><b>R</b></font> and this help page: Martin Maechler
+</p>
+
+
+<h3>Source</h3>
+
+<p>Rousseeuw, P. J., Van Aelst, S., Van Driessen, K., and Agulló, J. (2004)
+Robust multivariate regression;
+<EM>Technometrics</EM> <B>46</B>, 293&ndash;305.
+</p>
+<p><a href="http://allserv.ugent.be/~svaelst/data/pulpfiber.txt">http://allserv.ugent.be/~svaelst/data/pulpfiber.txt</a>
+</p>
+
+
+<h3>References</h3>
+
+<p>Lee, J. (1992)
+<EM>Relationships Between Properties of Pulp-Fibre and Paper</EM>,
+unpublished doctoral thesis, U. Toronto, Faculty of Forestry.
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+data(pulpfiber)
+str(pulpfiber)
+
+pairs(pulpfiber, gap=.1)
+## 2 blocks of 4 ..
+c1 &lt;- cov(pulpfiber)
+cR &lt;- covMcd(pulpfiber)
+## how different are they: The robust estimate has more clear high correlations:
+symnum(cov2cor(c1))
+symnum(cov2cor(cR$cov))
+</pre>
+
+
+</body></html>

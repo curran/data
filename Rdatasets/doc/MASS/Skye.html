@@ -1,0 +1,106 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>R: AFM Compositions of Aphyric Skye Lavas</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" type="text/css" href="R.css">
+</head><body>
+
+<table width="100%" summary="page for Skye"><tr><td>Skye</td><td align="right">R Documentation</td></tr></table>
+
+<h2>
+AFM Compositions of Aphyric Skye Lavas
+</h2>
+
+<h3>Description</h3>
+
+<p>The <code>Skye</code> data frame has 23 rows and 3 columns.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+Skye
+</pre>
+
+
+<h3>Format</h3>
+
+<p>This data frame contains the following columns:
+</p>
+
+<dl>
+<dt><code>A</code></dt><dd>
+<p>Percentage of sodium and potassium oxides.
+</p>
+</dd>
+<dt><code>F</code></dt><dd>
+<p>Percentage of iron oxide.
+</p>
+</dd>
+<dt><code>M</code></dt><dd>
+<p>Percentage of magnesium oxide.
+</p>
+</dd>
+</dl>
+
+
+
+<h3>Source</h3>
+
+<p>R. N. Thompson, J. Esson and A. C. Duncan (1972)
+Major element chemical variation in the Eocene lavas of the Isle of
+Skye. <EM>J. Petrology</EM>, <B>13</B>, 219&ndash;253.
+</p>
+
+
+<h3>References</h3>
+
+<p>J. Aitchison (1986)
+<EM>The Statistical Analysis of Compositional Data.</EM>
+Chapman and Hall, p.360.
+</p>
+<p>Venables, W. N. and Ripley, B. D. (2002)
+<EM>Modern Applied Statistics with S.</EM> Fourth edition.  Springer.
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+# ternary() is from the on-line answers.
+ternary &lt;- function(X, pch = par("pch"), lcex = 1,
+                    add = FALSE, ord = 1:3, ...)
+{
+  X &lt;- as.matrix(X)
+  if(any(X &lt; 0)) stop("X must be non-negative")
+  s &lt;- drop(X %*% rep(1, ncol(X)))
+  if(any(s&lt;=0)) stop("each row of X must have a positive sum")
+  if(max(abs(s-1)) &gt; 1e-6) {
+    warning("row(s) of X will be rescaled")
+    X &lt;- X / s
+  }
+  X &lt;- X[, ord]
+  s3 &lt;- sqrt(1/3)
+  if(!add)
+  {
+    oldpty &lt;- par("pty")
+    on.exit(par(pty=oldpty))
+    par(pty="s")
+    plot(c(-s3, s3), c(0.5-s3, 0.5+s3), type="n", axes=FALSE,
+         xlab="", ylab="")
+    polygon(c(0, -s3, s3), c(1, 0, 0), density=0)
+    lab &lt;- NULL
+    if(!is.null(dn &lt;- dimnames(X))) lab &lt;- dn[[2]]
+    if(length(lab) &lt; 3) lab &lt;- as.character(1:3)
+    eps &lt;- 0.05 * lcex
+    text(c(0, s3+eps*0.7, -s3-eps*0.7),
+         c(1+eps, -0.1*eps, -0.1*eps), lab, cex=lcex)
+  }
+  points((X[,2] - X[,3])*s3, X[,1], ...)
+}
+
+ternary(Skye/100, ord=c(1,3,2))
+</pre>
+
+
+</body></html>

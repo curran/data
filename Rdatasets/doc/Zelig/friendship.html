@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>R: Simulated Example of Schoolchildren Friendship Network</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" type="text/css" href="R.css">
+</head><body>
+
+<table width="100%" summary="page for friendship"><tr><td>friendship</td><td align="right">R Documentation</td></tr></table>
+
+<h2>Simulated Example of Schoolchildren Friendship Network</h2>
+
+<h3>Description</h3>
+
+<p>This data set contains six sociomatrices of simulated data on friendship ties among schoolchildren.</p>
+
+
+<h3>Usage</h3>
+
+<pre>data(friendship)</pre>
+
+
+<h3>Format</h3>
+
+<p>Each variable in the dataset is a 15 by 15 matrix representing some form of social network tie held by the fictitious children. The matrices are labeled &quot;friends&quot;, &quot;advice&quot;, &quot;prestige&quot;, &quot;authority&quot;, &quot;perpower&quot; and &quot;per&quot;.
+</p>
+<p>The sociomatrices were combined into the friendship dataset using the format.network.data function from the netglm package by Skyler Cranmer as shown in the example.
+</p>
+
+
+<h3>Source</h3>
+
+<p>fictitious</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+	## Not run: 
+friendship &lt;- format.network.data(friends, advice, prestige, authority, perpower, per)
+
+## End(Not run)</pre>
+
+
+</body></html>

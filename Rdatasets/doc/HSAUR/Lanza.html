@@ -1,0 +1,91 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>R: Prevention of Gastointestinal Damages</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" type="text/css" href="R.css">
+</head><body>
+
+<table width="100%" summary="page for Lanza"><tr><td>Lanza</td><td align="right">R Documentation</td></tr></table>
+
+<h2> Prevention of Gastointestinal Damages </h2>
+
+<h3>Description</h3>
+
+<p>Data from four randomised clinical trials on the prevention of 
+gastointestinal damages by Misoprostol reported by Lanza et al.
+(1987, 1988a,b, 1989).
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>data("Lanza")</pre>
+
+
+<h3>Format</h3>
+
+<p>A data frame with 198 observations on the following 3 variables.
+</p>
+
+<dl>
+<dt><code>study</code></dt><dd><p>a factor with levels <code>I</code>, <code>II</code>,
+<code>III</code>, and <code>IV</code> describing the study number.</p>
+</dd>
+<dt><code>treatment</code></dt><dd><p>a factor with levels <code>Misoprostol</code> <code>Placebo</code></p>
+</dd>
+<dt><code>classification</code></dt><dd><p>an ordered factor with levels <code>1</code> &lt; <code>2</code> &lt; <code>3</code> &lt; <code>4</code> &lt; <code>5</code>
+describing an ordered response variable.</p>
+</dd>
+</dl>
+
+
+
+<h3>Details</h3>
+
+<p>The response variable is defined by the number of haemorrhages or
+erosions. 
+</p>
+
+
+<h3>Source</h3>
+
+<p>F. L. Lanza (1987), A double-blind study of prophylactic effect of misoprostol on
+lesions of gastric and duodenal mucosa induced by oral administration of tolmetin 
+in healthy subjects. <EM>British Journal of Clinical Practice</EM>, May
+suppl, 91&ndash;101.
+</p>
+<p>F. L. Lanza, R. L. Aspinall, E. A. Swabb, R. E. Davis, M. F. Rack, A. Rubin
+(1988a), Double-blind, placebo-controlled endoscopic comparison of the
+mucosal protective effects of misoprostol versus cimetidine on
+tolmetin-induced mucosal injury to the stomach and duodenum. 
+<EM>Gastroenterology</EM>, <B>95</B>(2), 289&ndash;294.
+</p>
+<p>F. L. Lanza, K. Peace, L. Gustitus, M. F. Rack, B. Dickson (1988b),
+A blinded endoscopic comparative study of misoprostol versus
+sucralfate and placebo in the prevention of aspirin-induced
+gastric and duodenal ulceration. <EM>American Journal of Gastroenterology</EM>,
+<B>83</B>(2), 143&ndash;146.
+</p>
+<p>F. L. Lanza, D. Fakouhi, A. Rubin, R. E. Davis, M. F. Rack, C. Nissen, S. Geis
+(1989), A double-blind placebo-controlled comparison of the efficacy
+and safety of 50, 100, and 200 micrograms of misoprostol
+QID in the prevention of ibuprofen-induced gastric and
+duodenal mucosal lesions and symptoms. <EM>American Journal of  Gastroenterology</EM>,
+<B>84</B>(6), 633&ndash;636.
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+
+  data("Lanza", package = "HSAUR")
+  layout(matrix(1:4, nrow = 2))
+  pl &lt;- tapply(1:nrow(Lanza), Lanza$study, function(indx)
+      mosaicplot(table(Lanza[indx,"treatment"], 
+                       Lanza[indx,"classification"]),
+                 main = "", shade = TRUE))
+
+</pre>
+
+
+</body></html>

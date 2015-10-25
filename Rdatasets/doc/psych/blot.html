@@ -1,0 +1,73 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>R: Bond's Logical Operations Test - BLOT</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" type="text/css" href="R.css">
+</head><body>
+
+<table width="100%" summary="page for blot"><tr><td>blot</td><td align="right">R Documentation</td></tr></table>
+
+<h2>Bond's Logical Operations Test &ndash; BLOT
+</h2>
+
+<h3>Description</h3>
+
+<p>35 items for 150 subjects from Bond's Logical Operations Test.  A good example of Item Response Theory analysis using the Rasch model.  One parameter (Rasch) analysis and two parameter IRT analyses produce somewhat different results. 
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>data(blot)</pre>
+
+
+<h3>Format</h3>
+
+<p>A data frame with 150 observations on  35 variables. The BLOT was developed as a paper and pencil test for children to measure Logical Thinking as discussed by Piaget and Inhelder. 
+</p>
+
+
+<h3>Details</h3>
+
+<p>Bond and Fox apply Rasch modeling to a variety of data sets.  This one, Bond's Logical Operations Test, is used as an example of Rasch modeling for dichotomous items.  In their text (p 56), Bond and Fox report the results using WINSTEPS.  Those results are consistent (up to a scaling parameter) with those found by the rasch function in the ltm package. The WINSTEPS seem to produce difficulty estimates with a mean item difficulty of 0, whereas rasch from ltm has a mean difficulty of -1.52.  In addition, rasch seems to reverse the signs of the difficulty estimates when reporting the coefficients and is effectively reporting &quot;easiness&quot;.   
+</p>
+<p>However, when using a two parameter model, one of the items (V12) behaves very differently.
+</p>
+<p>This data set is useful when comparing 1PL, 2PL and 2PN IRT models.  
+</p>
+
+
+<h3>Source</h3>
+
+<p>The data are taken (with kind permission from Trevor Bond) from the webpage <a href="http://homes.jcu.edu.au/~edtgb/book/data/Bond87.txt">http://homes.jcu.edu.au/~edtgb/book/data/Bond87.txt</a> and read using read.fwf.  
+</p>
+
+
+<h3>References</h3>
+
+<p>T.G. Bond. BLOT:Bond's Logical Operations Test. Townsville, Australia: James Cook Univer- sity. (Original work
+published 1976), 1995.
+</p>
+<p>T. Bond and C. Fox. (2007)  Applying the Rasch model: Fundamental measurement in the human sciences. Lawrence Erlbaum, Mahwah, NJ, US, 2 edition.
+</p>
+
+
+<h3>See Also</h3>
+
+<p> See also the <code>irt.fa</code> and associated plot functions. </p>
+
+
+<h3>Examples</h3>
+
+<pre>
+data(blot)
+#not run
+#library(ltm)
+#bblot.rasch &lt;- rasch(blot, constraint = cbind(ncol(blot) + 1, 1))  #a 1PL model
+#blot.2pl &lt;- ltm(blot~z1)  #a 2PL model
+#do the same thing with functions in psych
+#blot.fa &lt;- irt.fa(blot)  # a 2PN model
+#plot(blot.fa)
+</pre>
+
+
+</body></html>

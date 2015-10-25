@@ -1,0 +1,92 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>R: Wagner's Hannover Employment Growth Data</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" type="text/css" href="R.css">
+</head><body>
+
+<table width="100%" summary="page for wagnerGrowth"><tr><td>wagnerGrowth</td><td align="right">R Documentation</td></tr></table>
+
+<h2>
+Wagner's Hannover Employment Growth Data
+</h2>
+
+<h3>Description</h3>
+
+<p>Wagner (1994) investigates the rate of employment growth (<code>y</code>) as
+function of percentage of people engaged in <B>p</B>roducation
+<B>a</B>ctivities (<code>PA</code>) and <B>h</B>igher <B>s</B>ervices
+(<code>HS</code>) and of the <B>g</B>rowth of these percentages (<code>GPA</code>,
+<code>GHS</code>) during three time periods in 21 geographical regions of
+the greater Hannover area.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>data(wagnerGrowth)</pre>
+
+
+<h3>Format</h3>
+
+<p>A data frame with <i>21 * 3 = 63</i> observations
+(one per <code>Region x Period</code>) on the following 7 variables.
+</p>
+
+<dl>
+<dt><code>Region</code></dt><dd><p>a <code>factor</code> with 21 levels, denoting
+the corresponding region in Hannover (conceptually a &ldquo;block
+factor&rdquo;).</p>
+</dd>
+<dt><code>PA</code></dt><dd><p>numeric: percent of people involved in production activities.</p>
+</dd>
+<dt><code>GPA</code></dt><dd><p><B>g</B>rowth of <code>PA</code>.</p>
+</dd>
+<dt><code>HS</code></dt><dd><p>a numeric vector</p>
+</dd>
+<dt><code>GHS</code></dt><dd><p>a numeric vector</p>
+</dd>
+<dt><code>y</code></dt><dd><p>a numeric vector</p>
+</dd>
+<dt><code>Period</code></dt><dd><p>a <code>factor</code> with levels <code>1:3</code>,
+denoting the time period, 1 = 1979-1982, 2 = 1983-1988, 3 = 1989-1992.</p>
+</dd>
+</dl>
+
+
+
+<h3>Source</h3>
+
+<p>Hubert, M. and Rousseeuw, P. J.  (1997).
+Robust regression with both continuous and binary regressors,
+<EM>Journal of Statistical Planning and Inference</EM> <B>57</B>, 153&ndash;163.
+</p>
+
+
+<h3>References</h3>
+
+<p>Wagner J. (1994).
+Regionale Beschäftigungsdynamik und höherwertige
+Produktionsdienste: Ergebnisse für den Grossraum Hannover (1979-1992).
+<EM>Raumforschung und Raumordnung</EM> <B>52</B>, 146&ndash;150.
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+data(wagnerGrowth)
+## maybe
+str(wagnerGrowth)
+
+
+require(lattice)
+(xyplot(y ~ Period | Region, data = wagnerGrowth,
+         main = "wagnerGrowth: 21 regions @ Hannover"))
+
+(dotplot(y ~ reorder(Region,y,median), data = wagnerGrowth,
+         main = "wagnerGrowth",
+         xlab = "Region [ordered by  median(y | Region) ]"))
+</pre>
+
+
+</body></html>

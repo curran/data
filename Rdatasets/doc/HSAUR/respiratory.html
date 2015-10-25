@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>R: Respiratory Illness Data</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" type="text/css" href="R.css">
+</head><body>
+
+<table width="100%" summary="page for respiratory"><tr><td>respiratory</td><td align="right">R Documentation</td></tr></table>
+
+<h2> Respiratory Illness Data </h2>
+
+<h3>Description</h3>
+
+<p>The respiratory status of patients recruited for a randomised clinical
+multicenter trial.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>data("respiratory")</pre>
+
+
+<h3>Format</h3>
+
+<p>A data frame with 555 observations on the following 7 variables.
+</p>
+
+<dl>
+<dt><code>centre</code></dt><dd><p>the study center, a factor with levels <code>1</code> and
+<code>2</code>.</p>
+</dd>
+<dt><code>treatment</code></dt><dd><p>the treatment arm, a factor with levels <code>placebo</code>
+and <code>treatment</code>.</p>
+</dd>
+<dt><code>sex</code></dt><dd><p>a factor with levels <code>female</code> and <code>male</code>.</p>
+</dd>
+<dt><code>age</code></dt><dd><p>the age of the patient.</p>
+</dd>
+<dt><code>status</code></dt><dd><p>the respiratory status (response variable), 
+a factor with levels <code>poor</code> and <code>good</code>.</p>
+</dd>
+<dt><code>month</code></dt><dd><p>the month, each patient was examined at months 
+<code>0</code>, <code>1</code>, <code>2</code>, <code>3</code> and <code>4</code>.</p>
+</dd>
+<dt><code>subject</code></dt><dd><p>the patient ID, a factor with levels <code>1</code> to
+<code>111</code>.</p>
+</dd>
+</dl>
+
+
+
+<h3>Details</h3>
+
+<p>In each of two centres, eligible patients were randomly assigned 
+to active treatment or placebo. During the treatment, the respiratory
+status (categorised <code>poor</code> or <code>good</code>) was determined at each
+of four, monthly visits. The trial recruited 111 participants
+(54 in the active group, 57 in the placebo group) and there were
+no missing data for either the responses or the covariates. The
+question of interest is to assess whether the treatment is effective
+and to estimate its effect.
+</p>
+<p>Note that the data are in long form, i.e, repeated measurments are
+stored as additional rows in the data frame.
+</p>
+
+
+<h3>Source</h3>
+
+<p>C. S. Davis (1991), Semi-parametric and non-parametric methods
+for the analysis of repeated measurements with applications to
+clinical trials. <EM>Statistics in Medicine</EM>, <B>10</B>, 
+1959&ndash;1980.
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+
+  data("respiratory", package = "HSAUR")
+  mosaicplot(xtabs( ~ treatment + month + status, data = respiratory))
+
+</pre>
+
+
+</body></html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>R: Effect of Calcium Chloride on Muscle Contraction in Rat...</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" type="text/css" href="R.css">
+</head><body>
+
+<table width="100%" summary="page for muscle"><tr><td>muscle</td><td align="right">R Documentation</td></tr></table>
+
+<h2>
+Effect of Calcium Chloride on Muscle Contraction in Rat Hearts
+</h2>
+
+<h3>Description</h3>
+
+<p>The purpose of this experiment was to assess the influence of
+calcium in solution on the contraction of heart muscle in rats.
+The left auricle of 21 rat hearts was isolated and on several
+occasions a constant-length strip of tissue was electrically
+stimulated and dipped into various concentrations of calcium
+chloride solution, after which the shortening of the strip was
+accurately measured as the response.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+muscle
+</pre>
+
+
+<h3>Format</h3>
+
+<p>This data frame contains the following columns:
+</p>
+
+<dl>
+<dt><code>Strip</code></dt><dd>
+<p>which heart muscle strip was used?
+</p>
+</dd>
+<dt><code>Conc</code></dt><dd>
+<p>concentration of calcium chloride solution, in multiples of 2.2 mM.
+</p>
+</dd>
+<dt><code>Length</code></dt><dd>
+<p>the change in length (shortening) of the strip, (allegedly) in mm.
+</p>
+</dd>
+</dl>
+
+
+
+<h3>Source</h3>
+
+<p>Linder, A., Chakravarti, I. M. and Vuagnat, P. (1964)
+Fitting asymptotic regression curves with different asymptotes.  In
+<EM>Contributions to Statistics. Presented to Professor P. C. Mahalanobis
+on the occasion of his 70th birthday</EM>,
+ed. C. R. Rao, pp. 221&ndash;228. Oxford: Pergamon Press.
+</p>
+
+
+<h3>References</h3>
+
+<p>Venables, W. N. and Ripley, B. D. (2002)
+<EM>Modern Applied Statistics with S.</EM> Fourth Edition. Springer.
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+A &lt;- model.matrix(~ Strip - 1, data=muscle)
+rats.nls1 &lt;- nls(log(Length) ~ cbind(A, rho^Conc),
+   data = muscle, start = c(rho=0.1), algorithm="plinear")
+(B &lt;- coef(rats.nls1))
+
+st &lt;- list(alpha = B[2:22], beta = B[23], rho = B[1])
+(rats.nls2 &lt;- nls(log(Length) ~ alpha[Strip] + beta*rho^Conc,
+                  data = muscle, start = st))
+
+Muscle &lt;- with(muscle, {
+Muscle &lt;- expand.grid(Conc = sort(unique(Conc)), Strip = levels(Strip))
+Muscle$Yhat &lt;- predict(rats.nls2, Muscle)
+Muscle &lt;- cbind(Muscle, logLength = rep(as.numeric(NA), 126))
+ind &lt;- match(paste(Strip, Conc),
+            paste(Muscle$Strip, Muscle$Conc))
+Muscle$logLength[ind] &lt;- log(Length)
+Muscle})
+
+lattice::xyplot(Yhat ~ Conc | Strip, Muscle, as.table = TRUE,
+   ylim = range(c(Muscle$Yhat, Muscle$logLength), na.rm = TRUE),
+   subscripts = TRUE, xlab = "Calcium Chloride concentration (mM)",
+   ylab = "log(Length in mm)", panel =
+   function(x, y, subscripts, ...) {
+      panel.xyplot(x, Muscle$logLength[subscripts], ...)
+      llines(spline(x, y))
+   })
+</pre>
+
+
+</body></html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>R: Visual Acuity in Left and Right Eyes</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" type="text/css" href="R.css">
+</head><body>
+
+<table width="100%" summary="page for VisualAcuity"><tr><td>VisualAcuity</td><td align="right">R Documentation</td></tr></table>
+
+<h2>Visual Acuity in Left and Right Eyes</h2>
+
+<h3>Description</h3>
+
+<p>Data from Kendall &amp; Stuart (1961) on unaided vision among 3,242 men
+and 7,477 women, all aged 30-39 and employed in the U.K. Royal
+Ordnance factories 1943-1946.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+data("VisualAcuity")
+</pre>
+
+
+<h3>Format</h3>
+
+<p>A data frame with 32 observations and 4 variables.
+</p>
+
+<dl>
+<dt>Freq</dt><dd><p>frequency of visual acuity measurements.</p>
+</dd>
+<dt>right</dt><dd><p>visual acuity on right eye.</p>
+</dd>
+<dt>left</dt><dd><p>visual acuity on left eye.</p>
+</dd>
+<dt>gender</dt><dd><p>factor indicating gender of patient.</p>
+</dd>
+</dl>
+
+
+
+<h3>Source</h3>
+
+<p>M. Friendly (2000),
+Visualizing Categorical Data:
+<a href="http://euclid.psych.yorku.ca/ftp/sas/vcd/catdata/vision.sas">http://euclid.psych.yorku.ca/ftp/sas/vcd/catdata/vision.sas</a>
+</p>
+
+
+<h3>References</h3>
+
+<p>M. G. Kendall &amp; A. Stuart (1961),
+<EM>The Advanced Theory of Statistics</EM>, Vol. 2.
+Griffin, London.
+</p>
+<p>M. Friendly (2000),
+<EM>Visualizing Categorical Data</EM>.
+SAS Institute, Cary, NC.
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+data("VisualAcuity")
+structable(~ gender + left + right, data = VisualAcuity)
+</pre>
+
+
+</body></html>

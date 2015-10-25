@@ -1,0 +1,57 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>R: Piston Rings Failures</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" type="text/css" href="R.css">
+</head><body>
+
+<table width="100%" summary="page for pistonrings"><tr><td>pistonrings</td><td align="right">R Documentation</td></tr></table>
+
+<h2> Piston Rings Failures </h2>
+
+<h3>Description</h3>
+
+<p>Number of failures of piston rings in three legs of four steam-driven
+compressors. 
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>data("pistonrings")</pre>
+
+
+<h3>Format</h3>
+
+<p>A two-way classification, see <code>table</code>.
+</p>
+
+
+<h3>Details</h3>
+
+<p>The data are given in form of a <code>table</code>. 
+The table gives the number of piston-ring failures in each
+of three legs of four steam-driven compressors located in the
+same building. The compressors have identical design and are
+oriented in the same way. The question of interest is whether
+the two classification variables (compressor and leg) are independent.
+</p>
+
+
+<h3>Source</h3>
+
+<p>S. J. Haberman (1973), The analysis of residuals in cross-classificed
+tables. <EM>Biometrics</EM> <B>29</B>, 205&ndash;220.
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+  
+  data("pistonrings", package = "HSAUR")
+  mosaicplot(pistonrings)
+
+</pre>
+
+
+</body></html>

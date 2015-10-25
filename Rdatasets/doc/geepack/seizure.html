@@ -1,0 +1,112 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>R: Epiliptic Seizures</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" type="text/css" href="R.css">
+</head><body>
+
+<table width="100%" summary="page for seizure"><tr><td>seizure</td><td align="right">R Documentation</td></tr></table>
+
+<h2>Epiliptic Seizures</h2>
+
+<h3>Description</h3>
+
+<p>The <code>seizure</code> data frame has 59 rows and 7 columns. The dataset
+has the number of epiliptic seizures in each of four two-week intervals,
+and in a baseline eight-week inverval, for treatment and control groups
+with a total of 59 individuals. 
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>data(seizure)</pre>
+
+
+<h3>Format</h3>
+
+<p>This data frame contains the following columns:
+</p>
+
+<dl>
+<dt>y1</dt><dd><p>the number of epiliptic seizures in the 1st 2-week
+interval</p>
+</dd>
+<dt>y2</dt><dd><p>the number of epiliptic seizures in the 2nd 2-week
+interval</p>
+</dd>
+<dt>y3</dt><dd><p>the number of epiliptic seizures in the 3rd 2-week
+interval</p>
+</dd>
+<dt>y4</dt><dd><p>the number of epiliptic seizures in the 4th 2-week
+interval</p>
+</dd>    
+<dt>trt</dt><dd><p>an indicator of treatment</p>
+</dd>
+<dt>base</dt><dd><p>the number of epilitic seizures in a baseline 8-week
+interval</p>
+</dd>
+<dt>age</dt><dd><p>a numeric vector of subject age</p>
+</dd>
+</dl>
+
+
+
+<h3>Source</h3>
+
+<p>Thall, P.F. and Vail S.C. (1990)
+Some covariance models for longitudinal count data with
+overdispersion. <EM>Biometrics</EM> <B>46</B>: 657&ndash;671.
+</p>
+
+
+<h3>References</h3>
+
+<p>Diggle, P.J., Liang, K.Y., and Zeger, S.L. (1994)
+Analysis of Longitudinal Data. Clarendon Press.
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+data(seizure)
+## Diggle, Liang, and Zeger (1994) pp166-168, compare Table 8.10
+seiz.l &lt;- reshape(seizure,
+                  varying=list(c("base","y1", "y2", "y3", "y4")),
+                  v.names="y", times=0:4, direction="long")
+seiz.l &lt;- seiz.l[order(seiz.l$id, seiz.l$time),]
+seiz.l$t &lt;- ifelse(seiz.l$time == 0, 8, 2)
+seiz.l$x &lt;- ifelse(seiz.l$time == 0, 0, 1)
+m1 &lt;- geese(y ~ offset(log(t)) + x + trt + x:trt, id = id,
+            data=seiz.l, corstr="exch", family=poisson)
+summary(m1)
+m2 &lt;- geese(y ~ offset(log(t)) + x + trt + x:trt, id = id,
+            data = seiz.l, subset = id!=49,
+            corstr = "exch", family=poisson)
+summary(m2)
+
+## Thall and Vail (1990)
+seiz.l &lt;- reshape(seizure, varying=list(c("y1","y2","y3","y4")),
+                  v.names="y", direction="long")
+seiz.l &lt;- seiz.l[order(seiz.l$id, seiz.l$time),]
+seiz.l$lbase &lt;- log(seiz.l$base / 4)
+seiz.l$lage &lt;- log(seiz.l$age)
+seiz.l$v4 &lt;- ifelse(seiz.l$time == 4, 1, 0)
+m3 &lt;- geese(y ~ lbase + trt + lbase:trt + lage + v4, 
+            sformula = ~ as.factor(time) - 1, id = id,
+            data = seiz.l, corstr = "exchangeable", family=poisson)
+## compare to Model 13 in Table 4, noticeable difference
+summary(m3)
+
+## set up a design matrix for the correlation
+z &lt;- model.matrix(~ age, data = seizure)  # data is not seiz.l
+## just to illustrate the scale link and correlation link
+m4 &lt;- geese(y ~ lbase + trt + lbase:trt + lage + v4,
+            sformula = ~ as.factor(time)-1, id = id,
+            data = seiz.l, corstr = "ar1", family = poisson,
+            zcor = z, cor.link = "fisherz", sca.link = "log")
+summary(m4)
+</pre>
+
+
+</body></html>

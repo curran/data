@@ -1,0 +1,91 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>R: Yield of dyestuff by batch</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" type="text/css" href="R.css">
+</head><body>
+
+<table width="100%" summary="page for Dyestuff"><tr><td>Dyestuff</td><td align="right">R Documentation</td></tr></table>
+
+<h2>Yield of dyestuff by batch</h2>
+
+<h3>Description</h3>
+
+<p>The <code>Dyestuff</code> data frame provides the yield of
+dyestuff (Naphthalene Black 12B) from 5 different
+preparations from each of 6 different batchs of an
+intermediate product (H-acid).  The <code>Dyestuff2</code> data
+were generated data in the same structure but with a
+large residual variance relative to the batch variance.
+</p>
+
+
+<h3>Format</h3>
+
+<p>Data frames, each with 30 observations on the following 2 variables.
+</p>
+
+<dl>
+<dt><code>Batch</code></dt><dd><p>a factor indicating the batch of the
+intermediate product from which the preparation was created.</p>
+</dd>
+<dt><code>Yield</code></dt><dd><p>the yield of dyestuff from the preparation
+(grams of standard color).</p>
+</dd>
+</dl>
+
+
+<h3>Details</h3>
+
+<p>The <code>Dyestuff</code> data are described in Davies and
+Goldsmith (1972) as coming from &ldquo;an investigation
+to find out how much the variation from batch to batch in
+the quality of an intermediate product (H-acid)
+contributes to the variation in the yield of the dyestuff
+(Naphthalene Black 12B) made from it.  In the experiment
+six samples of the intermediate, representing different
+batches of works manufacture, were obtained, and five
+preparations of the dyestuff were made in the laboratory
+from each sample. The equivalent yield of each
+preparation as grams of standard colour was determined by
+dye-trial.&rdquo;
+</p>
+<p>The <code>Dyestuff2</code> data are described in Box and Tiao
+(1973) as illustrating &ldquo; the case where
+between-batches mean square is less than the
+within-batches mean square.  These data had to be
+constructed for although examples of this sort
+undoubtably occur in practice, they seem to be rarely
+published.&rdquo;
+</p>
+
+
+<h3>Source</h3>
+
+<p>O.L. Davies and P.L. Goldsmith (eds), <EM>Statistical
+Methods in Research and Production, 4th ed.</EM>, Oliver and
+Boyd, (1972), section 6.4
+</p>
+<p>G.E.P. Box and G.C. Tiao, <EM>Bayesian Inference in
+Statistical Analysis</EM>, Addison-Wesley, (1973), section
+5.1.2
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+
+require(lattice)
+str(Dyestuff)
+dotplot(reorder(Batch, Yield) ~ Yield, Dyestuff,
+        ylab = "Batch", jitter.y = TRUE, aspect = 0.3,
+        type = c("p", "a"))
+dotplot(reorder(Batch, Yield) ~ Yield, Dyestuff2,
+        ylab = "Batch", jitter.y = TRUE, aspect = 0.3,
+        type = c("p", "a"))
+(fm1 &lt;- lmer(Yield ~ 1|Batch, Dyestuff))
+(fm2 &lt;- lmer(Yield ~ 1|Batch, Dyestuff2))
+</pre>
+
+
+</body></html>

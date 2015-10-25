@@ -1,0 +1,98 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>R: medpar</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" type="text/css" href="R.css">
+</head><body>
+
+<table width="100%" summary="page for medpar"><tr><td>medpar</td><td align="right">R Documentation</td></tr></table>
+
+<h2>medpar</h2>
+
+<h3>Description</h3>
+
+<p>The US national Medicare inpatient hospital database is referred to as the Medpar data, 
+which is prepared yearly from hospital filing records. Medpar files for each state are also 
+prepared. The full Medpar data consists of 115 variables. The national Medpar has some 
+14 million records, with one record for each hospilitiztion. The data in the medpar file comes 
+from 1991 Medicare files for the state of Arizona. The data are limited to only one diagnostic 
+group (DRG 112). Patient data have been randomly selected from the original data. 
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>data(medpar)</pre>
+
+
+<h3>Format</h3>
+
+<p>A data frame with 1495 observations on the following 10 variables.
+</p>
+
+<dl>
+<dt><code>los</code></dt><dd><p>length of hospital stay</p>
+</dd>
+<dt><code>hmo</code></dt><dd><p>Patient belongs to a Health Maintenance Organization, binary</p>
+</dd>
+<dt><code>white</code></dt><dd><p>Patient identifies themselves as Caucasian, binary</p>
+</dd>
+<dt><code>died</code></dt><dd><p>Patient died, binary</p>
+</dd>
+<dt><code>age80</code></dt><dd><p>Patient age 80 and over, binary</p>
+</dd>
+<dt><code>type</code></dt><dd><p>Type of admission, categorical</p>
+</dd>
+<dt><code>type1</code></dt><dd><p>Elective admission, binary</p>
+</dd>
+<dt><code>type2</code></dt><dd><p>Urgent admission,binary</p>
+</dd>
+<dt><code>type3</code></dt><dd><p>Elective admission, binary</p>
+</dd>
+<dt><code>provnum</code></dt><dd><p>Provider ID</p>
+</dd>
+</dl>
+
+
+
+<h3>Details</h3>
+
+<p>medpar is saved as a data frame.
+Count models use los as response variable. 0 counts are structurally excluded  
+</p>
+
+
+<h3>Source</h3>
+
+<p>1991 National Medpar data, National Health Economics &amp; Research Co.
+</p>
+
+
+<h3>References</h3>
+
+<p>Hilbe, Joseph M (2014), Modeling Count Data, Cambridge University Press
+Hilbe, Joseph M (2007, 2011), Negative Binomial Regression, Cambridge University Press
+Hilbe, Joseph M (2009), Logistic Regression Models, Chapman &amp; Hall/CRC
+first used in Hardin, JW and JM Hilbe (2001, 2007), Generalized Linear Models and Extensions, Stata Press
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+library(MASS)
+library(msme)
+data(medpar)
+glmp &lt;- glm(los ~ hmo + white + factor(type), family=poisson, data=medpar)
+summary(glmp)
+exp(coef(glmp))
+nb2 &lt;- nbinomial(los ~ hmo + white + factor(type), data=medpar)
+summary(nb2)
+exp(coef(nb2))
+glmnb &lt;- glm.nb(los ~ hmo + white + factor(type), data=medpar)
+summary(glmnb)
+exp(coef(glmnb))
+
+</pre>
+
+
+</body></html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>R: Example Data of Antille and May - for Simple Regression</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" type="text/css" href="R.css">
+</head><body>
+
+<table width="100%" summary="page for exAM"><tr><td>exAM</td><td align="right">R Documentation</td></tr></table>
+
+<h2>Example Data of Antille and May - for Simple Regression</h2>
+
+<h3>Description</h3>
+
+<p>This is an artificial data set, cleverly construced and used by
+Antille and May to demonstrate &lsquo;problems&rsquo; with LMS and LTS.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>data(exAM)</pre>
+
+
+<h3>Format</h3>
+
+<p>A data frame with 12 observations on 2 variables, <code>x</code> and <code>y</code>.
+</p>
+
+
+<h3>Details</h3>
+
+<p>Because the points are not in general position, both LMS and LTS
+typically <EM>fail</EM>; however, e.g., <code>rlm(*,
+    method="MM")</code> &ldquo;works&rdquo;.
+</p>
+
+
+<h3>Source</h3>
+
+<p>Antille, G. and El May, H. (1992)
+The use of slices in the LMS and the method of density slices:
+Foundation and comparison.<br>
+In Yadolah Dodge and Joe Whittaker, editors, <EM>COMPSTAT:
+Proc. 10th Symp. Computat. Statist., Neuchatel</EM>, <B>1</B>, 441&ndash;445;
+Physica-Verlag.
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+data(exAM)
+plot(exAM)
+summary(ls &lt;- lm(y ~ x, data=exAM))
+abline(ls)
+</pre>
+
+
+</body></html>

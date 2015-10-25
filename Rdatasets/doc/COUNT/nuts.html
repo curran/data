@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>R: nuts</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" type="text/css" href="R.css">
+</head><body>
+
+<table width="100%" summary="page for nuts"><tr><td>nuts</td><td align="right">R Documentation</td></tr></table>
+
+<h2>nuts</h2>
+
+<h3>Description</h3>
+
+<p>Squirrel data set (nuts) from Zuur, Hilbe, and Ieno (2013).  As originally 
+reported by Flaherty et al (2012), researchers recorded information about 
+squirrel behavior and forest attributes across various plots in 
+Scotland's Abernathy Forest. The study focused on the following variables.
+response      cones	 number of cones stripped by red squirrels per plot
+predictor  	sntrees  standardized number of trees per plot
+sheight standardized mean tree height per plot
+scover   standardized percentage of canopy cover per plot
+The stripped cone count was only taken when the mean diameter of trees was under 0.6m (dbh). 
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>data(nuts)</pre>
+
+
+<h3>Format</h3>
+
+<p>A data frame with 52 observations on the following 5 variables.
+</p>
+
+<dl>
+<dt><code>cones</code></dt><dd><p>total fish counted per site</p>
+</dd>
+<dt><code>ntrees</code></dt><dd><p>mean water depth per site</p>
+</dd>
+<dt><code>dbh</code></dt><dd><p>adjusted area of site</p>
+</dd>
+<dt><code>height</code></dt><dd><p>total fish counted per site</p>
+</dd>
+<dt><code>cover</code></dt><dd><p>mean water depth per site</p>
+</dd>
+<dt><code>sntrees</code></dt><dd><p>standardized mean water depth per site</p>
+</dd>
+<dt><code>sheight</code></dt><dd><p>standardized total fish counted per site</p>
+</dd>
+<dt><code>scover</code></dt><dd><p>standardized mean water depth per site</p>
+</dd>
+</dl>
+
+
+
+<h3>Details</h3>
+
+<p>nuts is saved as a data frame.
+Count models use ntrees as response variable. Counts start at 3  
+</p>
+
+
+<h3>Source</h3>
+
+<p>Zuur, Hilbe, Ieno (2013), A Beginner's Guide to GLM and GLMM using R, 
+</p>
+
+
+<h3>References</h3>
+
+<p>Hilbe, Joseph M (2014), Modeling Count Data, Cambridge University Press
+Zuur, Hilbe, Ieno (2013), A Beginner's Guide to GLM and GLMM using R, Highlands.
+Flaherty, S et al (2012), &quot;The impact of forest stand structure on red 
+squirrels habitat use&quot;, Forestry 85:437-444.
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+data(nuts)
+nut &lt;- subset(nuts, dbh&lt;.6)
+summary(PO &lt;- glm(cones ~ sntrees + sheight + scover, family=quasipoisson, data=nut))
+</pre>
+
+
+</body></html>

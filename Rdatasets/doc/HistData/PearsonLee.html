@@ -1,0 +1,144 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>R: Pearson and Lee's data on the heights of parents and children...</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" type="text/css" href="R.css">
+</head><body>
+
+<table width="100%" summary="page for PearsonLee"><tr><td>PearsonLee</td><td align="right">R Documentation</td></tr></table>
+
+<h2>
+Pearson and Lee's  data on the heights of parents and children classified by gender
+</h2>
+
+<h3>Description</h3>
+
+<p>Wachsmuth et. al (2003) noticed that a loess smooth through Galton's data
+on heights of mid-parents and their offspring exhibited a slightly non-linear
+trend, and asked whether this might be due to Galton having pooled the heights of
+fathers and mothers and sons and daughters in constructing his tables and graphs.
+</p>
+<p>To answer this question, they used analogous data from English families at about the
+same time, tabulated by Karl Pearson and Alice Lee (1896, 1903), but where the heights
+of parents and children were each classified by gender of the parent.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>data(PearsonLee)</pre>
+
+
+<h3>Format</h3>
+
+<p>A frequency data frame with 746 observations on the following 6 variables.
+</p>
+
+<dl>
+<dt><code>child</code></dt><dd><p>child height in inches, a numeric vector</p>
+</dd>
+<dt><code>parent</code></dt><dd><p>parent height in inches, a numeric vector</p>
+</dd>
+<dt><code>frequency</code></dt><dd><p>a numeric vector</p>
+</dd>
+<dt><code>gp</code></dt><dd><p>a factor with levels <code>fd</code> <code>fs</code> <code>md</code> <code>ms</code></p>
+</dd>
+<dt><code>par</code></dt><dd><p>a factor with levels <code>Father</code> <code>Mother</code></p>
+</dd>
+<dt><code>chl</code></dt><dd><p>a factor with levels <code>Daughter</code> <code>Son</code></p>
+</dd>
+</dl>
+
+
+
+<h3>Details</h3>
+
+<p>The variables <code>gp</code>, <code>par</code> and <code>chl</code> are provided to allow stratifying
+the data according to the gender of the father/mother and son/daughter.
+</p>
+
+
+<h3>Source</h3>
+
+<p>Pearson, K. and Lee, A. (1896). Mathematical contributions to the theory
+of evolution. On telegony in man, etc. <EM>Proceedings of the Royal Society of
+London</EM>, 60 , 273-283.
+</p>
+<p>Pearson, K. and Lee, A. (1903). 
+On the laws of inheritance in man: I. Inheritance of physical characters. <EM>Biometika</EM>, 2(4), 357-462.
+(Tables XXII, p. 415; XXV, p. 417; XXVIII, p. 419 and XXXI, p. 421.)
+</p>
+
+
+<h3>References</h3>
+
+<p>Wachsmuth, A.W., Wilkinson L., Dallal G.E. (2003). 
+Galton's bend: A previously undiscovered nonlinearity in Galton's family stature regression data. 
+<EM>The American Statistician</EM>, 57, 190-192. 
+<a href="http://www.cs.uic.edu/~wilkinson/Publications/galton.pdf">http://www.cs.uic.edu/~wilkinson/Publications/galton.pdf</a>
+</p>
+
+
+<h3>See Also</h3>
+
+<p><code>Galton</code>
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+data(PearsonLee)
+str(PearsonLee)
+
+with(PearsonLee, 
+    {
+    lim &lt;- c(55,80)
+    xv &lt;- seq(55,80, .5)
+    sunflowerplot(parent,child, number=frequency, xlim=lim, ylim=lim, seg.col="gray", size=.1)
+    abline(lm(child ~ parent, weights=frequency), col="blue", lwd=2)
+    lines(xv, predict(loess(child ~ parent, weights=frequency), data.frame(parent=xv)), 
+          col="blue", lwd=2)
+    # NB: dataEllipse doesn't take frequency into account
+    if(require(car)) {
+    dataEllipse(parent,child, xlim=lim, ylim=lim, plot.points=FALSE)
+        }
+  })
+
+## separate plots for combinations of (chl, par)
+
+# this doesn't quite work, because xyplot can't handle weights
+require(lattice)
+xyplot(child ~ parent|par+chl, data=PearsonLee, type=c("p", "r", "smooth"), col.line="red")
+
+# Using ggplot [thx: Dennis Murphy]
+require(ggplot2)
+ggplot(PearsonLee, aes(x = parent, y = child, weight=frequency)) +
+   geom_point(size = 1.5, position = position_jitter(width = 0.2)) +
+   geom_smooth(method = lm, aes(weight = PearsonLee$frequency,
+               colour = 'Linear'), se = FALSE, size = 1.5) +
+   geom_smooth(aes(weight = PearsonLee$frequency,
+               colour = 'Loess'), se = FALSE, size = 1.5) +
+   facet_grid(chl ~ par) +
+   scale_colour_manual(breaks = c('Linear', 'Loess'),
+                       values = c('green', 'red')) +
+   theme(legend.position = c(0.14, 0.885),
+        legend.background = element_rect(fill = 'white'))
+
+# inverse regression, as in Wachmuth et al. (2003)
+
+ggplot(PearsonLee, aes(x = child, y = parent, weight=frequency)) +
+   geom_point(size = 1.5, position = position_jitter(width = 0.2)) +
+   geom_smooth(method = lm, aes(weight = PearsonLee$frequency,
+               colour = 'Linear'), se = FALSE, size = 1.5) +
+   geom_smooth(aes(weight = PearsonLee$frequency,
+               colour = 'Loess'), se = FALSE, size = 1.5) +
+   facet_grid(chl ~ par) +
+   scale_colour_manual(breaks = c('Linear', 'Loess'),
+                       values = c('green', 'red')) +
+   theme(legend.position = c(0.14, 0.885),
+        legend.background = element_rect(fill = 'white'))
+
+</pre>
+
+
+</body></html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>R: Hertzsprung-Russell Diagram Data of Star Cluster CYG OB1</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" type="text/css" href="R.css">
+</head><body>
+
+<table width="100%" summary="page for starsCYG"><tr><td>starsCYG</td><td align="right">R Documentation</td></tr></table>
+
+<h2>Hertzsprung-Russell Diagram Data of Star Cluster CYG OB1</h2>
+
+<h3>Description</h3>
+
+<p>Data for the Hertzsprung-Russell Diagram of the Star Cluster CYG OB1,
+which contains 47 stars in the direction of Cygnus, from C.Doom.  The
+first variable is the logarithm of the effective temperature at the
+surface of the star (Te) and the second one is the logarithm of its
+light intencity (<i>L/L_0</i>).
+</p>
+<p>In the Hertzsprung-Russell diagram, which is the scatterplot of these
+data points, where the log temperature is plotted from left to right,
+two groups of points are seen:<br>
+the majority which tend to follow a steep band and four stars in the
+upper corner.  In the astronomy the 43 stars are said to lie on the
+main sequence and the four remaining stars are called &ldquo;giants&rdquo; (the
+points 11, 20, 30, 34).
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>data(starsCYG)</pre>
+
+
+<h3>Format</h3>
+
+<p>A data frame with 47 observations on the following 2 variables
+</p>
+
+<dl>
+<dt><code>log.Te</code></dt><dd><p>Logarithm of the effective temperature at the
+surface of the star (Te).</p>
+</dd>
+<dt><code>log.light</code></dt><dd><p>Logarithm of its light intencity (<i>L/L_0</i>)</p>
+</dd>
+</dl>
+
+
+
+<h3>Source</h3>
+
+<p>P. J. Rousseeuw and A. M. Leroy (1987)
+<EM>Robust Regression and Outlier Detection</EM>;
+Wiley, p.27, table 3.
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+data(starsCYG)
+plot(starsCYG)
+cst &lt;- covMcd(starsCYG)
+lm.stars &lt;- lm(log.light ~ log.Te, data = starsCYG)
+summary(lm.stars)
+plot(lm.stars)
+lts.stars &lt;- ltsReg(log.light ~ log.Te, data = starsCYG)
+plot(lts.stars)
+</pre>
+
+
+</body></html>

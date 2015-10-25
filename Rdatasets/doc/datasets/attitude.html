@@ -1,0 +1,91 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>R: The Chatterjee-Price Attitude Data</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" type="text/css" href="R.css">
+</head><body>
+
+<table width="100%" summary="page for attitude"><tr><td>attitude</td><td align="right">R Documentation</td></tr></table>
+
+<h2>The Chatterjee&ndash;Price Attitude Data</h2>
+
+<h3>Description</h3>
+
+<p>From a survey of the clerical employees of a large financial
+organization, the data are aggregated from the questionnaires of the
+approximately 35 employees for each of 30 (randomly selected)
+departments.  The numbers give the percent proportion of favourable
+responses to seven questions in each department.</p>
+
+
+<h3>Usage</h3>
+
+<pre>attitude</pre>
+
+
+<h3>Format</h3>
+
+<p>A data frame with 30 observations on 7 variables. The first column are
+the short names from the reference, the second one the variable names
+in the data frame:
+</p>
+
+<table summary="Rd table">
+<tr>
+ <td align="right">
+     Y   </td><td align="left"> rating    </td><td align="left"> numeric  </td><td align="left"> Overall rating </td>
+</tr>
+<tr>
+ <td align="right">
+    X[1] </td><td align="left"> complaints</td><td align="left"> numeric </td><td align="left"> Handling of employee complaints </td>
+</tr>
+<tr>
+ <td align="right">
+    X[2] </td><td align="left"> privileges</td><td align="left"> numeric </td><td align="left"> Does not allow special privileges </td>
+</tr>
+<tr>
+ <td align="right">
+    X[3] </td><td align="left"> learning </td><td align="left"> numeric  </td><td align="left"> Opportunity to learn </td>
+</tr>
+<tr>
+ <td align="right">
+    X[4] </td><td align="left"> raises   </td><td align="left"> numeric  </td><td align="left"> Raises based on performance </td>
+</tr>
+<tr>
+ <td align="right">
+    X[5] </td><td align="left"> critical </td><td align="left"> numeric  </td><td align="left"> Too critical </td>
+</tr>
+<tr>
+ <td align="right">
+    X[6] </td><td align="left"> advancel </td><td align="left"> numeric  </td><td align="left"> Advancement</td>
+</tr>
+
+</table>
+
+
+
+<h3>Source</h3>
+
+<p>Chatterjee, S. and Price, B. (1977)
+<EM>Regression Analysis by Example</EM>.
+New York: Wiley.
+(Section 3.7, p.68ff of 2nd ed.(1991).)
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+require(stats); require(graphics)
+pairs(attitude, main = "attitude data")
+summary(attitude)
+summary(fm1 &lt;- lm(rating ~ ., data = attitude))
+opar &lt;- par(mfrow = c(2, 2), oma = c(0, 0, 1.1, 0),
+            mar = c(4.1, 4.1, 2.1, 1.1))
+plot(fm1)
+summary(fm2 &lt;- lm(rating ~ complaints, data = attitude))
+plot(fm2)
+par(opar)
+</pre>
+
+
+</body></html>

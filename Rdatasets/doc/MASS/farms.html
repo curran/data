@@ -1,0 +1,85 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>R: Ecological Factors in Farm Management</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" type="text/css" href="R.css">
+</head><body>
+
+<table width="100%" summary="page for farms"><tr><td>farms</td><td align="right">R Documentation</td></tr></table>
+
+<h2>
+Ecological Factors in Farm Management
+</h2>
+
+<h3>Description</h3>
+
+<p>The <code>farms</code> data frame has 20 rows and 4 columns. The rows are farms
+on the Dutch island of Terschelling and the columns are factors
+describing the management of grassland.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+farms
+</pre>
+
+
+<h3>Format</h3>
+
+<p>This data frame contains the following columns:
+</p>
+
+<dl>
+<dt><code>Mois</code></dt><dd>
+<p>Five levels of soil moisture &ndash; level 3 does not occur at these 20 farms.
+</p>
+</dd>
+<dt><code>Manag</code></dt><dd>
+<p>Grassland management type (<code>SF</code> = standard,
+<code>BF</code> = biological, <code>HF</code> = hobby farming,
+<code>NM</code> = nature conservation).
+</p>
+</dd>
+<dt><code>Use</code></dt><dd>
+<p>Grassland use (<code>U1</code> = hay production, <code>U2</code> =
+intermediate, <code>U3</code> = grazing).
+</p>
+</dd>
+<dt><code>Manure</code></dt><dd>
+<p>Manure usage &ndash; classes <code>C0</code> to <code>C4</code>.
+</p>
+</dd>
+</dl>
+
+
+
+<h3>Source</h3>
+
+<p>J.C. Gower and D.J. Hand (1996) <EM>Biplots</EM>. Chapman &amp; Hall, Table 4.6.
+</p>
+<p>Quoted as from:<br>
+R.H.G. Jongman, C.J.F. ter Braak and O.F.R. van Tongeren (1987)
+<EM>Data Analysis in Community and Landscape Ecology.</EM>
+PUDOC, Wageningen.
+</p>
+
+
+<h3>References</h3>
+
+<p>Venables, W. N. and Ripley, B. D. (2002)
+<EM>Modern Applied Statistics with S.</EM> Fourth edition.  Springer.
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+farms.mca &lt;- mca(farms, abbrev = TRUE)  # Use levels as names
+eqscplot(farms.mca$cs, type = "n")
+text(farms.mca$rs, cex = 0.7)
+text(farms.mca$cs, labels = dimnames(farms.mca$cs)[[1]], cex = 0.7)
+</pre>
+
+
+</body></html>

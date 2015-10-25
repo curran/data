@@ -1,0 +1,75 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>R: Log-size of 79 Sitka spruce trees</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" type="text/css" href="R.css">
+</head><body>
+
+<table width="100%" summary="page for spruce"><tr><td>spruce</td><td align="right">R Documentation</td></tr></table>
+
+<h2>Log-size of 79 Sitka spruce trees</h2>
+
+<h3>Description</h3>
+
+<p>The <code>spruce</code> data frame has 1027 rows and 6 columns. The data
+consists of measurements on 79 sitka spruce trees over two growing
+seasons. The trees were grown in four controlled environment chambers,
+of which the first two, containing 27 trees each, were treated with
+introduced ozone at 70 ppb whilst the remaining two, containing 12 and
+13 trees, were controls.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>data(spruce)</pre>
+
+
+<h3>Format</h3>
+
+<p>This data frame contains the following columns:
+</p>
+
+<dl>
+<dt>chamber</dt><dd><p>a numeric vector of chamber numbers</p>
+</dd>
+<dt>ozone</dt><dd><p>a factor with levels <code>enriched</code> and <code>normal</code></p>
+</dd>
+<dt>id</dt><dd><p>a numeric vector of tree id</p>
+</dd>
+<dt>time</dt><dd><p>a numeric vector of the time when the measurements were
+taken, measured in days since Jan. 1, 1988</p>
+</dd>
+<dt>wave</dt><dd><p>a numeric vector of the measurement number</p>
+</dd>
+<dt>logsize</dt><dd><p>a numeric vector of the log-size</p>
+</dd>
+</dl>
+
+
+
+<h3>Source</h3>
+
+<p>Diggle, P.J., Liang, K.Y., and Zeger, S.L. (1994) Analysis of Longitudinal
+Data, Clarendon Press.
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+data(spruce)
+spruce$contr &lt;- ifelse(spruce$ozone=="enriched", 0, 1)
+sitka88 &lt;- spruce[spruce$wave &lt;= 5,]
+sitka89 &lt;- spruce[spruce$wave &gt; 5,]
+fit.88 &lt;- geese(logsize ~ as.factor(wave) + contr +
+                          I(time/100*contr) - 1,
+                id=id, data=sitka88, corstr="ar1")
+summary(fit.88)
+
+fit.89 &lt;- geese(logsize ~ as.factor(wave) + contr - 1,
+                id=id, data=sitka89, corstr="ar1")
+summary(fit.89)
+</pre>
+
+
+</body></html>

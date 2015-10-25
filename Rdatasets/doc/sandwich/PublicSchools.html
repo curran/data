@@ -1,0 +1,120 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>R: US Expenditures for Public Schools</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" type="text/css" href="R.css">
+</head><body>
+
+<table width="100%" summary="page for PublicSchools"><tr><td>PublicSchools</td><td align="right">R Documentation</td></tr></table>
+
+<h2>US Expenditures for Public Schools</h2>
+
+<h3>Description</h3>
+
+<p>Per capita expenditure on public schools and per capita income
+by state in 1979.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>data(PublicSchools)</pre>
+
+
+<h3>Format</h3>
+
+<p>A data frame containing 51 observations of 2 variables.
+</p>
+
+<dl>
+<dt>Expenditure</dt><dd><p>per capita expenditure on public schools,</p>
+</dd>
+<dt>Income</dt><dd><p>per capita income.</p>
+</dd>
+</dl>
+
+
+
+<h3>Source</h3>
+
+<p>Table 14.1 in Greene (1993)</p>
+
+
+<h3>References</h3>
+
+<p>Cribari-Neto F. (2004), Asymptotic Inference Under Heteroskedasticity
+of Unknown Form, <EM>Computational Statistics \&amp; Data Analysis</EM>,
+<B>45</B>, 215-233.
+</p>
+<p>Greene W.H. (1993), <EM>Econometric Analysis</EM>, 2nd edition.
+Macmillan Publishing Company, New York.
+</p>
+<p>US Department of Commerce (1979), <EM>Statistical Abstract of the
+United States</EM>. US Government Printing Office, Washington, DC.
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+## Willam H. Greene, Econometric Analysis, 2nd Ed.
+## Chapter 14
+## load data set, p. 385, Table 14.1
+data(PublicSchools)
+
+## omit NA in Wisconsin and scale income
+ps &lt;- na.omit(PublicSchools)
+ps$Income &lt;- ps$Income * 0.0001
+
+## fit quadratic regression, p. 385, Table 14.2
+fmq &lt;- lm(Expenditure ~ Income + I(Income^2), data = ps)
+summary(fmq)
+
+## compare standard and HC0 standard errors
+## p. 391, Table 14.3
+library(sandwich)
+coef(fmq)
+sqrt(diag(vcovHC(fmq, type = "const")))
+sqrt(diag(vcovHC(fmq, type = "HC0")))
+
+
+if(require(lmtest)) {
+## compare t ratio
+coeftest(fmq, vcov = vcovHC(fmq, type = "HC0"))
+
+## White test, p. 393, Example 14.5
+wt &lt;- lm(residuals(fmq)^2 ~ poly(Income, 4), data = ps)
+wt.stat &lt;- summary(wt)$r.squared * nrow(ps)
+c(wt.stat, pchisq(wt.stat, df = 3, lower = FALSE))
+
+## Bresch-Pagan test, p. 395, Example 14.7
+bptest(fmq, studentize = FALSE)
+bptest(fmq)
+
+## Francisco Cribari-Neto, Asymptotic Inference, CSDA 45
+## quasi z-tests, p. 229, Table 8
+## with Alaska
+coeftest(fmq, df = Inf)[3,4]
+coeftest(fmq, df = Inf, vcov = vcovHC(fmq, type = "HC0"))[3,4]
+coeftest(fmq, df = Inf, vcov = vcovHC(fmq, type = "HC3"))[3,4]
+coeftest(fmq, df = Inf, vcov = vcovHC(fmq, type = "HC4"))[3,4]
+## without Alaska (observation 2)
+fmq1 &lt;- lm(Expenditure ~ Income + I(Income^2), data = ps[-2,])
+coeftest(fmq1, df = Inf)[3,4]
+coeftest(fmq1, df = Inf, vcov = vcovHC(fmq1, type = "HC0"))[3,4]
+coeftest(fmq1, df = Inf, vcov = vcovHC(fmq1, type = "HC3"))[3,4]
+coeftest(fmq1, df = Inf, vcov = vcovHC(fmq1, type = "HC4"))[3,4]
+}
+
+## visualization, p. 230, Figure 1
+plot(Expenditure ~ Income, data = ps,
+  xlab = "per capita income",
+  ylab = "per capita spending on public schools")
+inc &lt;- seq(0.5, 1.2, by = 0.001)
+lines(inc, predict(fmq, data.frame(Income = inc)), col = 4)
+fml &lt;- lm(Expenditure ~ Income, data = ps)
+abline(fml)
+text(ps[2,2], ps[2,1], rownames(ps)[2], pos = 2)
+</pre>
+
+
+</body></html>

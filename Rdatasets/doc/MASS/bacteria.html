@@ -1,0 +1,106 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>R: Presence of Bacteria after Drug Treatments</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" type="text/css" href="R.css">
+</head><body>
+
+<table width="100%" summary="page for bacteria"><tr><td>bacteria</td><td align="right">R Documentation</td></tr></table>
+
+<h2>
+Presence of Bacteria after Drug Treatments
+</h2>
+
+<h3>Description</h3>
+
+<p>Tests of the presence of the bacteria <EM>H. influenzae</EM>
+in children with otitis media in the Northern Territory of Australia.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+bacteria
+</pre>
+
+
+<h3>Format</h3>
+
+<p>This data frame has 220 rows and the following columns:
+</p>
+
+<dl>
+<dt>y</dt><dd><p>presence or absence: a factor with levels
+<code>n</code> and <code>y</code>.</p>
+</dd>
+<dt>ap</dt><dd><p>active/placebo: a factor with levels <code>a</code> and <code>p</code>.</p>
+</dd>
+<dt>hilo</dt><dd><p>hi/low compliance: a factor with levels <code>hi</code> amd
+<code>lo</code>.</p>
+</dd>
+<dt>week</dt><dd><p>numeric: week of test.</p>
+</dd>
+<dt>ID</dt><dd><p>subject ID: a factor.</p>
+</dd>
+<dt>trt</dt><dd><p>a factor with levels <code>placebo</code>, <code>drug</code> and
+<code>drug+</code>, a re-coding of <code>ap</code> and <code>hilo</code>.</p>
+</dd>
+</dl>
+
+
+
+<h3>Details</h3>
+
+<p>Dr A. Leach tested the effects of a drug on 50 children with a history of
+otitis media in the Northern Territory of Australia.  The children
+were randomized to the drug or the a placebo, and also to receive
+active encouragement to comply with taking the drug.
+</p>
+<p>The presence of <EM>H. influenzae</EM> was checked at weeks 0, 2, 4, 6
+and 11: 30 of the checks were missing and are not included in this
+data frame.
+</p>
+
+
+<h3>Source</h3>
+
+<p>Menzies School of Health Research 1999&ndash;2000 Annual Report pp. 18&ndash;21
+(<a href="http://www.menzies.edu.au/publications/anreps/MSHR00.pdf">http://www.menzies.edu.au/publications/anreps/MSHR00.pdf</a>).
+</p>
+
+
+<h3>References</h3>
+
+<p>Venables, W. N. and Ripley, B. D. (2002)
+<EM>Modern Applied Statistics with S.</EM> Fourth edition.  Springer.
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+contrasts(bacteria$trt) &lt;- structure(contr.sdif(3),
+     dimnames = list(NULL, c("drug", "encourage")))
+## fixed effects analyses
+summary(glm(y ~ trt * week, binomial, data = bacteria))
+summary(glm(y ~ trt + week, binomial, data = bacteria))
+summary(glm(y ~ trt + I(week &gt; 2), binomial, data = bacteria))
+
+# conditional random-effects analysis
+library(survival)
+bacteria$Time &lt;- rep(1, nrow(bacteria))
+coxph(Surv(Time, unclass(y)) ~ week + strata(ID),
+      data = bacteria, method = "exact")
+coxph(Surv(Time, unclass(y)) ~ factor(week) + strata(ID),
+      data = bacteria, method = "exact")
+coxph(Surv(Time, unclass(y)) ~ I(week &gt; 2) + strata(ID),
+      data = bacteria, method = "exact")
+
+# PQL glmm analysis
+library(nlme)
+summary(glmmPQL(y ~ trt + I(week &gt; 2), random = ~ 1 | ID,
+                family = binomial, data = bacteria))
+</pre>
+
+
+</body></html>

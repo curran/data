@@ -1,0 +1,76 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>R: Condroz Data</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" type="text/css" href="R.css">
+</head><body>
+
+<table width="100%" summary="page for condroz"><tr><td>condroz</td><td align="right">R Documentation</td></tr></table>
+
+<h2> Condroz Data </h2>
+
+<h3>Description</h3>
+
+<p>Dataset with pH-value and Calcium content in soil samples, collected in different
+communities of the Condroz region in Belgium. The data pertain to a
+subset of 428 samples with a pH-value between 7.0 and 7.5.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>data(condroz)</pre>
+
+
+<h3>Format</h3>
+
+<p>A data frame with 428 observations on the following 2 variables.
+</p>
+
+<dl>
+<dt><code>Ca</code></dt><dd><p>Calcium content of the soil sample</p>
+</dd>
+<dt><code>pH</code></dt><dd><p>pH value of the soil sample</p>
+</dd>
+</dl>
+
+
+
+<h3>Details</h3>
+
+<p>For more information on the dataset, cf. Goegebeur et al. (2005).
+</p>
+
+
+<h3>Source</h3>
+
+<p>Hubert and Vandervieren (2006), p. 10.
+This dataset is also studied in Vandewalle et al. (2004).
+</p>
+
+
+<h3>References</h3>
+
+<p>Goegebeur, Y., Planchon, V., Beirlant, J., Oger, R. (2005). Quality
+Assesment of Pedochemical Data Using Extreme Value Methodology,
+Journal of Applied Science, 5, p. 1092-1102.
+</p>
+<p>Hubert, M. and Vandervieren, E. (2006). An Adjusted Boxplot for
+Skewed Distributions, Technical Report TR-06-11, KULeuven, Section
+of Statistics, Leuven.
+<a href="http://wis.kuleuven.be/stat/robust/Papers/TR0611.pdf">http://wis.kuleuven.be/stat/robust/Papers/TR0611.pdf</a>
+</p>
+<p>Vandewalle, B., Beirlant, J., Hubert, M. (2004). A robust estimator of
+the tail index based on an exponential regression model, in Hubert,
+M., Pison G., Struyf, A. and S. Van Aelst, ed., Theory and
+Applications of Recent Robust Methods, Birkhäuser, Basel, p. 367-376.
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+  adjbox(condroz$Ca)
+</pre>
+
+
+</body></html>

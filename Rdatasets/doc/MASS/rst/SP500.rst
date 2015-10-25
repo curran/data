@@ -1,0 +1,30 @@
++---------+-------------------+
+| SP500   | R Documentation   |
++---------+-------------------+
+
+Returns of the Standard and Poors 500
+-------------------------------------
+
+Description
+~~~~~~~~~~~
+
+Returns of the Standard and Poors 500 Index in the 1990's
+
+Usage
+~~~~~
+
+::
+
+    SP500
+
+Format
+~~~~~~
+
+A vector of returns of the Standard and Poors 500 index for all the
+trading days in 1990, 1991, ..., 1999.
+
+References
+~~~~~~~~~~
+
+Venables, W. N. and Ripley, B. D. (2002) *Modern Applied Statistics with
+S.* Fourth edition. Springer.

@@ -1,0 +1,74 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>R: Familial Andenomatous Polyposis</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" type="text/css" href="R.css">
+</head><body>
+
+<table width="100%" summary="page for polyps3"><tr><td>polyps3</td><td align="right">R Documentation</td></tr></table>
+
+<h2> Familial Andenomatous Polyposis </h2>
+
+<h3>Description</h3>
+
+<p>Data from a placebo-controlled trial of a non-steroidal anti-inflammatory
+drug in the treatment of familial andenomatous polyposis (FAP).
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>data("polyps3")</pre>
+
+
+<h3>Format</h3>
+
+<p>A data frame with 22 observations on the following 5 variables.
+</p>
+
+<dl>
+<dt><code>sex</code></dt><dd><p>a factor with levels <code>female</code> and <code>male</code>.</p>
+</dd>
+<dt><code>treatment</code></dt><dd><p>a factor with levels <code>placebo</code> and <code>active</code>.</p>
+</dd>
+<dt><code>baseline</code></dt><dd><p>the baseline number of polyps.</p>
+</dd>
+<dt><code>age</code></dt><dd><p>the age of the patient.</p>
+</dd>
+<dt><code>number3m</code></dt><dd><p>the number of polyps after three month.</p>
+</dd>
+</dl>
+
+
+
+<h3>Details</h3>
+
+<p>The data arise from the same study as the <code>polyps</code> data. Here, 
+the number of polyps after three months are given.
+</p>
+
+
+<h3>Source</h3>
+
+<p>F. M. Giardiello, S. R. Hamilton, A. J. Krush, S. Piantadosi, L. M. Hylind,
+P. Celano, S. V. Booker, C. R. Robinson and G. J. A. Offerhaus (1993),
+Treatment of colonic and rectal adenomas with sulindac
+in familial adenomatous polyposis. <EM>New England Journal of Medicine</EM>,
+<B>328</B>(18), 1313&ndash;1316.
+</p>
+<p>S. Piantadosi (1997), <EM>Clinical Trials: A Methodologic Perspective</EM>.
+John Wiley \&amp; Sons, New York.
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+
+  data("polyps3", package = "HSAUR")
+  plot(number3m ~ age, data = polyps3, pch = as.numeric(polyps3$treatment))
+  legend("topright", legend = levels(polyps3$treatment), pch = 1:2, bty = "n")
+
+</pre>
+
+
+</body></html>

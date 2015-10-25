@@ -1,0 +1,247 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>R: John Snow's map and data on the 1854 London Cholera outbreak</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" type="text/css" href="R.css">
+</head><body>
+
+<table width="100%" summary="page for Snow"><tr><td>Snow</td><td align="right">R Documentation</td></tr></table>
+
+<h2>
+John Snow's map and data on the 1854 London Cholera outbreak
+</h2>
+
+<h3>Description</h3>
+
+<p>The <code>Snow</code> data consists of the relevant 1854 London streets, the location of 578 
+deaths from cholera, and the position of 13 water pumps (wells)
+that can be used to re-create John Snow's map showing deaths from
+cholera in the area surrounding Broad Street, London in the 1854 outbreak.
+Another data frame provides boundaries of a tesselation of the map into 
+Thiessen (Voronoi) regions which include all cholera deaths nearer to
+a given pump than to any other.
+</p>
+<p>The apochrophal story of the significance of Snow's map is that, by closing  the
+Broad Street pump (by removing its  handle), Dr. Snow  stopped the epidemic,  and
+demonstrated that  cholera is  a water  borne disease.  The method of contagion of cholera
+was  not previously
+understood. Snow's map is the most famous and classical example in the field  of
+medical cartography, even if  it didn't happen exactly  this way.  At any  rate,
+the map, together with  various statistical annotations,  is  compelling because
+it points to the Broad Street pump as the source of the outbreak.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+	data(Snow.deaths)
+	data(Snow.pumps)
+	data(Snow.streets)
+	data(Snow.polygons)
+</pre>
+
+
+<h3>Format</h3>
+
+<p><code>Snow.deaths</code>: A  data frame  with 578  observations on  the following  3
+variables, giving the  address of a  person who died  from cholera. When  many
+points are associated with  a single street address,  they are &quot;stacked&quot; in  a
+line away from the street so that they are more easily visualized. This is how
+they are displayed on  John Snow's original map.  The dates of the  deaths are
+not recorded.
+</p>
+
+<dl>
+<dt><code>case</code></dt><dd><p>Sequential case number, in some arbitrary, randomized order</p>
+</dd>
+<dt><code>x</code></dt><dd><p>x coordinate</p>
+</dd>
+<dt><code>y</code></dt><dd><p>y coordinate</p>
+</dd>
+</dl>
+
+<p><code>Snow.pumps</code>: A data frame with 13 observations on the following 4 variables,
+giving the locations of water pumps within the boundaries of the map.
+</p>
+
+<dl>
+<dt><code>pump</code></dt><dd><p>pump number</p>
+</dd>
+<dt><code>label</code></dt><dd><p>pump label:  <code>Briddle St</code> <code>Broad St</code> ... <code>Warwick</code></p>
+</dd>
+<dt><code>x</code></dt><dd><p>x coordinate</p>
+</dd>
+<dt><code>y</code></dt><dd><p>y coordinate</p>
+</dd>
+</dl>
+
+<p><code>Snow.streets</code>: A data frame with 1241 observations on the following 4 variables,
+giving coordinates used to draw the 528 street segment lines within the boundaries of the map.
+The map is created by drawing lines connecting the <code>n</code> points in each street segment.
+</p>
+
+<dl>
+<dt><code>street</code></dt><dd><p>street segment number: <code>1:528</code></p>
+</dd>
+<dt><code>n</code></dt><dd><p>number of points in this street line segment</p>
+</dd>
+<dt><code>x</code></dt><dd><p>x coordinate</p>
+</dd>
+<dt><code>y</code></dt><dd><p>y coordinate</p>
+</dd>
+</dl>
+
+<p><code>Snow.polygons</code>: A  data frame  with 54  observations on  the following 3
+variables,  giving Thiessen  (Voronoi) polygons  containing each  pump. Their
+boundaries define the area that is closest to each pump relative to all  other
+pumps. They are mathematically defined  by the perpendicular bisectors of  the
+lines  between all  pumps. The  outlines of  these polygons  can be  drawn by
+connecting all points sequentially starting at each value of <code>start==0</code>.
+Here, each line segment consists of two sequential points.
+</p>
+
+<dl>
+<dt><code>start</code></dt><dd><p>line start indicator. The value <code>start==0</code> indicates the
+start of a new line, including all following points having <code>start==1</code></p>
+</dd>
+<dt><code>x</code></dt><dd><p>x coordinate</p>
+</dd>
+<dt><code>y</code></dt><dd><p>y coordinate</p>
+</dd>
+</dl>
+
+
+
+<h3>Details</h3>
+
+<p>The scale of the source map is approx. 1:2000.  The <code>(x, y)</code> coordinate units are 100 meters,
+with an arbitrary origin. 
+</p>
+<p>One limitation of these data sets is the lack of exact street addresses. Another
+is the lack of any data that would serve as a population denominator to
+allow for  a comparison  of mortality  rates in  the Broad  Street pump  area as
+opposed to  others.  A  third is  the lack  of dates  of death  that could allow
+analysis of the time course of the outbreak. See Koch (2000), Koch (2004),  Koch
+\&amp; Denike (2009) and Tufte (1999), p. 27-37,  for further discussion. 
+</p>
+
+
+<h3>Source</h3>
+
+<p>Tobler, W. (1994). Snow's Cholera Map
+<a href="http://www.ncgia.ucsb.edu/pubs/snow/snow.html">http://www.ncgia.ucsb.edu/pubs/snow/snow.html</a>; data files were obtained from
+<a href="http://ncgia.ucsb.edu/Publications/Software/cholera/">http://ncgia.ucsb.edu/Publications/Software/cholera/</a>
+</p>
+<p>The data in  these files were first digitized in 1992  by Rusty Dodson  of the NCGIA,
+Santa  Barbara,  from the  map  included in  the  book by  John  Snow: &quot;Snow  on
+Cholera...&quot;, London, Oxford University Press, 1936.  
+</p>
+
+
+<h3>References</h3>
+
+<p>Koch, T. (2000). <EM>Cartographies of Disease: Maps, Mapping, and Medicine</EM>.
+ESRI Press. 
+ISBN: 9781589481206.
+</p>
+<p>Koch, T. (2004).
+The Map as Intent: Variations on the Theme of John Snow
+<EM>Cartographica</EM>, 39 (4), 1-14.
+</p>
+<p>Koch, T. and Denike, K. (2009).
+Crediting his critics' concerns: Remaking John Snow's map of Broad Street
+cholera, 1854.
+<EM>Social Science \&amp; Medicine</EM> 69, 1246-1251.
+</p>
+<p>Tufte, E. (1997). <EM>Visual Explanations</EM>. Cheshire, CT: Graphics Press.
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+data(Snow.deaths); data(Snow.pumps); data(Snow.streets); data(Snow.polygons)
+
+## draw a rough approximation to Snow's map and data
+
+# define some funtions to make the pieces re-usable
+Sdeaths &lt;- function(col="red", pch=15, cex=0.6) {
+		# make sure that the plot limits include all the other stuff
+   plot(Snow.deaths[,c("x","y")], col=col, pch=pch, cex=cex, 
+   	xlab="", ylab="", xlim=c(3,20), ylim=c(3,20),
+   	main="Snow's Cholera Map of London")
+	}
+# function to plot and label the pump locations
+Spumps &lt;- function(col="blue", pch=17, cex=1.5)  {
+   points(Snow.pumps[,c("x","y")], col=col, pch=pch, cex=cex)
+   text(Snow.pumps[,c("x","y")], labels=Snow.pumps$label, pos=1, cex=0.8)
+}
+
+# function to draw the streets 
+Sstreets &lt;- function(col="gray") {
+	slist &lt;- split(Snow.streets[,c("x","y")],as.factor(Snow.streets[,"street"]))
+	invisible(lapply(slist, lines, col=col))
+}
+
+# draw a scale showing distance in meters in upper left
+mapscale &lt;- function(xs=3.5, ys=19.7) {
+   scale &lt;- matrix(c(0,0, 4,0, NA, NA), nrow=3, ncol=2, byrow=TRUE)
+   colnames(scale)&lt;- c("x","y")
+	# tick marks
+   scale &lt;- rbind(scale, expand.grid(y=c(-.1, .1, NA), x=0:4)[,2:1])
+   lines(xs+scale[,1], ys+scale[,2])
+	# value and axis labels
+   stext &lt;- matrix(c(0,0, 2,0, 4,0, 4, 0.1), nrow=4, ncol=2, byrow=TRUE)
+   text(xs+stext[,1], ys+stext[,2], labels=c("0", "2", "4", "100 m."), pos=c(1,1,1,4), cex=0.8)
+}
+
+# draw the map with the pieces
+Sdeaths()
+Spumps()
+Sstreets()
+mapscale()
+
+
+# draw the Thiessen polygon boundaries
+starts &lt;- which(Snow.polygons$start==0)
+for(i in 1:length(starts)) {
+	this &lt;- starts[i]:(starts[i]+1)
+	lines(Snow.polygons[this,2:3], col="blue", lwd=2, lty=2)
+	}
+
+
+## overlay bivariate kernel density contours of deaths
+Sdeaths()
+Spumps()
+Sstreets()
+mapscale()
+require(KernSmooth)
+kde2d &lt;- bkde2D(Snow.deaths[,2:3], bandwidth=c(0.5,0.5))
+contour(x=kde2d$x1, y=kde2d$x2,z=kde2d$fhat, add=TRUE)
+
+## re-do this the sp way... [thx: Stephane Dray]
+
+library(sp)
+
+# streets
+slist &lt;- split(Snow.streets[,c("x","y")],as.factor(Snow.streets[,"street"]))
+Ll1 &lt;- lapply(slist,Line)
+Lsl1 &lt;- Lines(Ll1,"Street")
+Snow.streets.sp &lt;- SpatialLines(list(Lsl1))
+plot(Snow.streets.sp, col="gray")
+title(main="Snow's Cholera Map of London (sp)")
+
+# deaths
+Snow.deaths.sp = SpatialPoints(Snow.deaths[,c("x","y")])
+plot(Snow.deaths.sp, add=TRUE, col ='red', pch=15, cex=0.6)
+
+# pumps
+spp &lt;- SpatialPoints(Snow.pumps[,c("x","y")])
+Snow.pumps.sp &lt;- SpatialPointsDataFrame(spp,Snow.pumps[,c("x","y")])
+plot(Snow.pumps.sp, add=TRUE, col='blue', pch=17, cex=1.5)
+text(Snow.pumps[,c("x","y")], labels=Snow.pumps$label, pos=1, cex=0.8)
+
+</pre>
+
+
+</body></html>

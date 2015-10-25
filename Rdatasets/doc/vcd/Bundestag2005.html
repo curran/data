@@ -1,0 +1,116 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>R: Votes in German Bundestag Election 2005</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" type="text/css" href="R.css">
+</head><body>
+
+<table width="100%" summary="page for Bundestag2005"><tr><td>Bundestag2005</td><td align="right">R Documentation</td></tr></table>
+
+<h2>Votes in German Bundestag Election 2005</h2>
+
+<h3>Description</h3>
+
+<p>Number of votes by province in the German Bundestag election
+2005 (for the parties that eventually entered the parliament).
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+data("Bundestag2005")
+</pre>
+
+
+<h3>Format</h3>
+
+<p>A 2-way <code>"table"</code> giving the number of votes for each
+party (<code>Fraktion</code>) in each of the 16 German provinces
+(<code>Bundesland</code>):
+</p>
+
+<table summary="Rd table">
+<tr>
+ <td align="right">
+    No </td><td align="left"> Name </td><td align="left"> Levels </td>
+</tr>
+<tr>
+ <td align="right">
+    1 </td><td align="left"> Bundesland </td><td align="left"> Schleswig-Holstein, Mecklenburg-Vorpommern, ... </td>
+</tr>
+<tr>
+ <td align="right">
+    2 </td><td align="left"> Fraktion </td><td align="left"> SPD, CDU/CSU, Gruene, FDP, Linke
+  </td>
+</tr>
+
+</table>
+
+
+
+<h3>Details</h3>
+
+<p>In the election for the German parliament &ldquo;Bundestag&rdquo;, 
+five parties obtained enough votes to enter the parliament:
+the social democrats SPD, the conservative CDU/CSU, the liberal FDP,
+the green party &ldquo;Die Gruenen&rdquo; and the leftist party 
+&ldquo;Die Linke&rdquo;. The table <code>Bundestag2005</code> gives the
+number of votes for each party (<code>Fraktion</code>) in each of the
+16 German provinces (<code>Bundesland</code>). The provinces are ordered
+from North to South.
+</p>
+<p>The data have been obtained from the German statistical office (Statistisches
+Bundesamt) from the Web page given below.
+</p>
+<p>Note that the number of seats in the parliament cannot be computed from
+the number of votes alone. The examples below show the distribution of seats
+that resulted from the election.
+</p>
+
+
+<h3>Source</h3>
+
+<p>Der Bundeswahlleiter, Statistisches Bundesamt.  
+<a href="http://www.bundeswahlleiter.de/bundestagswahl2005/">http://www.bundeswahlleiter.de/bundestagswahl2005/</a>
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+library(colorspace)
+## The outcome of the election in terms of seats in the
+## parliament was:
+seats &lt;- structure(c(226, 61, 54, 51, 222),
+  .Names = c("CDU/CSU", "FDP",  "Linke", "Gruene", "SPD"))
+
+## Hues are chosen as metaphors for the political parties
+## CDU/CSU: blue, FDP: yellow, Linke: purple, Gruene: green, SPD: red
+## using the respective hues from a color wheel with
+## chroma = 60 and luminance = 75
+parties &lt;- rainbow_hcl(6, c = 60, l = 75)[c(5, 2, 6, 3, 1)]
+names(parties) &lt;- names(seats)
+parties
+
+## The pie chart shows that neither the SPD+Gruene coalition nor
+## the opposition of CDU/CSU+FDP could assemble a majority.
+## No party would enter a coalition with the leftists, leading to a
+## big coalition.
+pie(seats, clockwise = TRUE, col = parties)
+
+## The regional distribution of the votes, stratified by province,
+## is shown in a mosaic display: first for the 10 Western then the
+## 6 Eastern provinces.
+data("Bundestag2005")
+votes &lt;- Bundestag2005[c(1, 3:5, 9, 11, 13:16, 2, 6:8, 10, 12),
+                       c("CDU/CSU", "FDP", "SPD", "Gruene", "Linke")]
+mosaic(votes, gp = gpar(fill = parties[colnames(votes)]),
+  spacing = spacing_highlighting, labeling = labeling_left,
+  labeling_args = list(rot_labels = c(0, 90, 0, 0), pos_labels = "center",
+  just_labels = c("center","center","center","right"), varnames = FALSE),
+  margins = unit(c(2.5, 1, 1, 12), "lines"),
+  keep_aspect_ratio = FALSE)
+</pre>
+
+
+</body></html>

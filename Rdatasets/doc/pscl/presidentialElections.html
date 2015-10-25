@@ -1,0 +1,111 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>R: elections for U.S. President, 1932-2012, by state</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" type="text/css" href="R.css">
+</head><body>
+
+<table width="100%" summary="page for presidentialElections"><tr><td>presidentialElections</td><td align="right">R Documentation</td></tr></table>
+
+<h2>elections for U.S. President, 1932-2012, by state</h2>
+
+<h3>Description</h3>
+
+<p>Democratic share of the
+presidential vote, 1932-2012, in each state and the District of Columbia.</p>
+
+
+<h3>Usage</h3>
+
+<pre>data(presidentialElections)</pre>
+
+
+<h3>Format</h3>
+
+
+<ul>
+<li><p>statecharacter, name of state
+</p>
+</li>
+<li><p>demVotenumeric, percent of the vote for president won by the
+Democratic candidate
+</p>
+</li>
+<li><p>yearnumeric, integer
+</p>
+</li>
+<li><p>southlogical, <code>TRUE</code> if state is one of the 11 states
+of the former Confederacy
+</p>
+</li></ul>
+
+
+
+<h3>Note</h3>
+
+<p>1,047 observations, unbalanced panel data in long format. Hawaii and Alaska contribute data
+from 1960 onwards the District of Columbia contributes data
+from 1964 onward; Alabama has missing data for 1948 and
+1964.</p>
+
+
+<h3>Source</h3>
+
+<p>David Leip's Atlas of U.S. Presidential Elections <a href="http://uselectionsatlas.org">http://uselectionsatlas.org</a>
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+data(presidentialElections)
+xyplot(demVote ~ year | state,
+       panel=panel.lines,
+       ylab="Democratic Vote for President (percent)",
+       xlab="Year",
+       data=presidentialElections,
+       scales=list(y=list(cex=.6),x=list(cex=.35)),
+       strip=strip.custom(par.strip.text=list(cex=.6)))
+
+## Obama vs Kerry, except DC
+y08 &lt;- presidentialElections$year==2008
+y04 &lt;- presidentialElections$year==2004
+tmpData &lt;- merge(y=presidentialElections[y08,],
+	         x=presidentialElections[y04,],
+                 by="state")
+tmpData &lt;- tmpData[tmpData$state!="DC",]
+xlim &lt;- range(tmpData$demVote.x,tmpData$demVote.y)
+col &lt;- rep("black",dim(tmpData)[1])
+col[tmpData$south.x] &lt;- "red"
+
+plot(demVote.y ~ demVote.x,
+     xlab="Kerry Vote Share, 2004 (percent)",
+     ylab="Obama Vote Share, 2008 (percent)",
+     xlim=xlim,
+     ylim=xlim,
+     type="n",
+     las=1,
+     data=tmpData)
+abline(0,1,lwd=2,col=gray(.65))
+ols &lt;- lm(demVote.y ~ demVote.x,
+          data=tmpData)
+abline(ols,lwd=2)	
+
+text(tmpData$demVote.x,
+     tmpData$demVote.y,
+     tmpData$state,
+     col=col,
+     cex=.65)
+legend(x="topleft",
+       bty="n",
+       lwd=c(2,2),
+       col=c(gray(.65),"black"),
+       legend=c("No Change from 2004","Regression"))
+legend(x="bottomright",
+       bty="n",
+       text.col=c("red","black"),
+       legend=c("South","Non-South"))
+
+</pre>
+
+
+</body></html>

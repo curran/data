@@ -1,0 +1,76 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>R: Water Salinity and River Discharge</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" type="text/css" href="R.css">
+</head><body>
+
+<table width="100%" summary="page for salinity"><tr><td>salinity</td><td align="right">R Documentation</td></tr></table>
+
+<h2>
+Water Salinity and River Discharge
+</h2>
+
+<h3>Description</h3>
+
+<p>The <code>salinity</code> data frame has 28 rows and 4 columns.
+</p>
+<p>Biweekly averages of the water salinity and river discharge in Pamlico
+Sound, North Carolina were recorded between the years 1972 and 1977.
+The data in this set consists only of those measurements in March, April
+and May.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+salinity
+</pre>
+
+
+<h3>Format</h3>
+
+<p>This data frame contains the following columns:
+</p>
+
+<dl>
+<dt><code>sal</code></dt><dd>
+<p>The average salinity of the water over two weeks.
+</p>
+</dd>
+<dt><code>lag</code></dt><dd>
+<p>The average salinity of the water lagged two weeks.  Since only spring is used,
+the value of <code>lag</code> is not always equal to the previous value of <code>sal</code>.
+</p>
+</dd>
+<dt><code>trend</code></dt><dd>
+<p>A factor indicating in which of the 6 biweekly periods between March and May,
+the observations were taken. The levels of the factor are from 0 to 5 with
+0 being the first two weeks in March.
+</p>
+</dd>
+<dt><code>dis</code></dt><dd>
+<p>The amount of river discharge during the two weeks for which <code>sal</code> is the
+average salinity.
+</p>
+</dd></dl>
+
+
+<h3>Source</h3>
+
+<p>The data were obtained from
+</p>
+<p>Ruppert, D. and Carroll, R.J. (1980) Trimmed least squares estimation in the 
+linear model. 
+<EM>Journal of the American Statistical Association</EM>, <B>75</B>, 828&ndash;838.
+</p>
+
+
+<h3>References</h3>
+
+<p>Davison, A.C. and Hinkley, D.V. (1997) 
+<EM>Bootstrap Methods and Their Application</EM>. Cambridge University Press.
+</p>
+
+
+</body></html>

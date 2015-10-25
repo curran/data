@@ -1,0 +1,94 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>R: European Union Agricultural Workforces</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" type="text/css" href="R.css">
+</head><body>
+
+<table width="100%" summary="page for agriculture"><tr><td>agriculture</td><td align="right">R Documentation</td></tr></table>
+
+<h2>European Union Agricultural Workforces</h2>
+
+<h3>Description</h3>
+
+<p>Gross National Product (GNP) per capita and percentage of the
+population working in agriculture for each country belonging to the
+European Union in 1993.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>data(agriculture)</pre>
+
+
+<h3>Format</h3>
+
+<p>A data frame with 12 observations on 2 variables:
+</p>
+
+<table summary="Rd table">
+<tr>
+ <td align="right">
+    [ , 1] </td><td align="left"> <code>x</code> </td><td align="left"> numeric </td><td align="left"> per capita GNP </td>
+</tr>
+<tr>
+ <td align="right">
+    [ , 2] </td><td align="left"> <code>y</code> </td><td align="left"> numeric </td><td align="left"> percentage in agriculture
+  </td>
+</tr>
+
+</table>
+
+<p>The row names of the data frame indicate the countries.
+</p>
+
+
+<h3>Details</h3>
+
+<p>The data seem to show two clusters, the &ldquo;more agricultural&rdquo; one
+consisting of Greece, Portugal, Spain, and Ireland.
+</p>
+
+
+<h3>Source</h3>
+
+<p>Eurostat (European Statistical Agency, 1994):
+<EM>Cijfers en feiten: Een statistisch portret van de Europese Unie</EM>.
+</p>
+
+
+<h3>References</h3>
+
+<p>see those in <code>agnes</code>.
+</p>
+
+
+<h3>See Also</h3>
+
+<p><code>agnes</code>, <code>daisy</code>, <code>diana</code>.
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+data(agriculture)
+
+## Compute the dissimilarities using Euclidean metric and without
+## standardization
+daisy(agriculture, metric = "euclidean", stand = FALSE)
+
+## 2nd plot is similar to Figure 3 in Struyf et al (1996)
+plot(pam(agriculture, 2))
+
+## Plot similar to Figure 7 in Struyf et al (1996)
+## Not run: plot(agnes(agriculture), ask = TRUE)
+
+
+## Plot similar to Figure 8 in Struyf et al (1996)
+## Not run: plot(diana(agriculture), ask = TRUE)
+
+</pre>
+
+
+</body></html>

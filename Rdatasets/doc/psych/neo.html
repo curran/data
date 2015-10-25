@@ -1,0 +1,133 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>R: NEO correlation matrix from the NEO_PI_R manual</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" type="text/css" href="R.css">
+</head><body>
+
+<table width="100%" summary="page for neo"><tr><td>neo</td><td align="right">R Documentation</td></tr></table>
+
+<h2>NEO correlation matrix from the NEO_PI_R manual</h2>
+
+<h3>Description</h3>
+
+<p>The NEO.PI.R is a widely used personality test to assess 5 broad factors (Neuroticism, Extraversion, Openness, Agreeableness and Conscientiousness) with six facet scales for each factor.  The correlation matrix of the facets is reported in the NEO.PI.R manual for 1000 subjects. 
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>data(neo)</pre>
+
+
+<h3>Format</h3>
+
+<p>A data frame of a 30 x 30 correlation matrix with the following 30 variables.
+</p>
+
+<dl>
+<dt>N1</dt><dd><p>Anxiety</p>
+</dd>
+<dt>N2</dt><dd><p>AngryHostility</p>
+</dd>
+<dt> N3</dt><dd><p>Depression </p>
+</dd>
+<dt> N4</dt><dd><p>Self-Consciousness </p>
+</dd>
+<dt> N5</dt><dd><p>Impulsiveness </p>
+</dd>
+<dt> N6</dt><dd><p>Vulnerability </p>
+</dd>
+<dt> E1</dt><dd><p>Warmth </p>
+</dd>
+<dt> E2</dt><dd><p>Gregariousness </p>
+</dd>
+<dt> E3</dt><dd><p>Assertiveness </p>
+</dd>
+<dt> E4</dt><dd><p>Activity </p>
+</dd>
+<dt> E5</dt><dd><p>Excitement-Seeking </p>
+</dd>
+<dt> E6</dt><dd><p>PositiveEmotions </p>
+</dd>
+<dt> O1</dt><dd><p>Fantasy </p>
+</dd>
+<dt> O2</dt><dd><p>Aesthetics </p>
+</dd>
+<dt> O3</dt><dd><p>Feelings </p>
+</dd>
+<dt> O4</dt><dd><p>Ideas </p>
+</dd>
+<dt> O5</dt><dd><p>Actions </p>
+</dd>
+<dt> O6</dt><dd><p>Values </p>
+</dd>
+<dt> A1</dt><dd><p>Trust </p>
+</dd>
+<dt> A2</dt><dd><p>Straightforwardness </p>
+</dd>
+<dt> A3</dt><dd><p>Altruism </p>
+</dd>
+<dt> A4</dt><dd><p>Compliance </p>
+</dd>
+<dt> A5</dt><dd><p>Modesty </p>
+</dd>
+<dt> A6</dt><dd><p>Tender-Mindedness </p>
+</dd>
+<dt> C1</dt><dd><p>Competence </p>
+</dd>
+<dt> C2</dt><dd><p>Order </p>
+</dd>
+<dt> C3</dt><dd><p>Dutifulness </p>
+</dd>
+<dt> C4</dt><dd><p>AchievementStriving </p>
+</dd>
+<dt> C5</dt><dd><p>Self-Discipline </p>
+</dd>
+<dt> C6</dt><dd><p>Deliberation </p>
+</dd>
+</dl>
+
+
+
+<h3>Details</h3>
+
+<p>The past thirty years of personality research has led to a general consensus on the identification of major dimensions of personality. Variously known as the &ldquo;Big 5&quot; or the &ldquo;Five Factor Model&quot;, the general solution represents 5 broad domains of personal and interpersonal experience.  Neuroticism and Extraversion are thought to reflect sensitivity to negative and positive cues from the environment and the tendency to withdraw or approach.  Openness is sometimes labeled as Intellect and reflects an interest in new ideas and experiences.  Agreeableness and Conscientiousness reflect tendencies to get along with others and to want to get ahead.
+</p>
+<p>The factor structure of the NEO suggests five correlated factors as well as two higher level factors.  The NEO was constructed with 6 &ldquo;facets&quot; for each of the five broad factors.  
+</p>
+
+
+<h3>Source</h3>
+
+<p>Costa, Paul T. and McCrae, Robert R. (1992) (NEO PI-R) professional manual. Psychological Assessment Resources, Inc. Odessa, FL. (with permission of the author and the publisher)	
+</p>
+
+
+<h3>References</h3>
+
+<p>Digman, John M. (1990) Personality structure: Emergence of the five-factor model. Annual Review of Psychology. 41, 417-440.
+</p>
+<p>John M. Digman (1997) Higher-order factors of the Big Five. Journal of Personality and Social Psychology, 73, 1246-1256. 
+</p>
+<p>McCrae, Robert R. and Costa, Paul T., Jr. (1999) A Five-Factor theory of personality. In Pervin, Lawrence A. and John, Oliver P. (eds)  Handbook of personality: Theory and research (2nd ed.) 139-153.  Guilford Press, New York. N.Y.
+</p>
+<p>Revelle, William (1995), Personality processes, Annual Review of Psychology, 46, 
+295-328.
+</p>
+<p>Joshua Wilt and William Revelle (2009) Extraversion and Emotional Reactivity. In Mark Leary and Rick H. Hoyle (eds). Handbook of Individual Differences in Social Behavior. Guilford Press, New York, N.Y. 
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+data(neo)
+n5 &lt;- fa(neo,5)
+neo.keys &lt;- make.keys(30,list(N=c(1:6),E=c(7:12),O=c(13:18),A=c(19:24),C=c(25:30)))
+n5p &lt;- target.rot(n5,neo.keys) #show a targeted rotation for simple structure
+n5p
+
+</pre>
+
+
+</body></html>

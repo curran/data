@@ -1,0 +1,93 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>R: Garland(1983) Data on Running Speed of Mammals</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" type="text/css" href="R.css">
+</head><body>
+
+<table width="100%" summary="page for Mammals"><tr><td>Mammals</td><td align="right">R Documentation</td></tr></table>
+
+<h2>Garland(1983) Data on Running Speed of Mammals</h2>
+
+<h3>Description</h3>
+
+<p>Observations on the maximal running speed of mammal species
+and their body mass.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>data(Mammals)</pre>
+
+
+<h3>Format</h3>
+
+<p>A data frame with 107 observations on the following 4 variables.
+</p>
+
+<dl>
+<dt>weight</dt><dd><p>Body mass in Kg for &quot;typical adult sizes&quot;</p>
+</dd>
+<dt>speed</dt><dd><p>Maximal running speed (fastest sprint velocity on record)</p>
+</dd>
+<dt>hoppers</dt><dd><p>logical variable indicating animals that ambulate
+by hopping, e.g. kangaroos</p>
+</dd>
+<dt>specials</dt><dd><p>logical variable indicating special animals with
+&quot;lifestyles in which speed does not figure as an important
+factor&quot;:  Hippopotamus, raccoon (Procyon), badger (Meles),
+coati (Nasua), skunk (Mephitis), man (Homo), porcupine
+(Erithizon), oppossum (didelphis), and sloth (Bradypus)
+</p>
+</dd>
+</dl>
+
+
+
+<h3>Details</h3>
+
+<p>Used by Chappell (1989) and Koenker, Ng and Portnoy (1994) to
+illustrate the fitting of piecewise linear curves.
+</p>
+
+
+<h3>Source</h3>
+
+<p>Garland, T. (1983) The relation between maximal running speed and body 
+mass in terrestrial mammals, <EM>J. Zoology</EM>, 199, 1557-1570.
+</p>
+
+
+<h3>References</h3>
+
+<p>Koenker, R., P. Ng and S. Portnoy, (1994)  Quantile Smoothing Splines&rdquo; 
+<EM>Biometrika</EM>, 81, 673-680.
+</p>
+<p>Chappell, R. (1989) Fitting Bent Lines to Data, with Applications ot
+Allometry,  <EM>J. Theo. Biology</EM>, 138, 235-256.
+</p>
+
+
+<h3>See Also</h3>
+
+<p><code>rqss</code></p>
+
+
+<h3>Examples</h3>
+
+<pre>
+data(Mammals)
+attach(Mammals)
+x &lt;- log(weight)
+y &lt;- log(speed)
+plot(x,y, xlab="Weight in log(Kg)", ylab="Speed in log(Km/hour)",type="n")
+points(x[hoppers],y[hoppers],pch = "h", col="red")
+points(x[specials],y[specials],pch = "s", col="blue")
+others &lt;- (!hoppers &amp; !specials)
+points(x[others],y[others], col="black",cex = .75)
+fit &lt;- rqss(y ~ qss(x, lambda = 1),tau = .9)
+plot(fit)
+</pre>
+
+
+</body></html>

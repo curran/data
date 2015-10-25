@@ -1,0 +1,95 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>R: ships</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" type="text/css" href="R.css">
+</head><body>
+
+<table width="100%" summary="page for ships"><tr><td>ships</td><td align="right">R Documentation</td></tr></table>
+
+<h2>ships</h2>
+
+<h3>Description</h3>
+
+<p>Data set used in McCullagh &amp; Nelder (1989), Hardin &amp; Hilbe (2003), 
+and other sources. The data contains values on the number of reported 
+accidents for ships belonging to a company over a given time period. 
+When a ship was constructed is also recorded. 
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>data(ships)</pre>
+
+
+<h3>Format</h3>
+
+<p>A data frame with 40 observations on the following 7 variables.
+</p>
+
+<dl>
+<dt><code>accident</code></dt><dd><p>number of shipping accidents</p>
+</dd>
+<dt><code>op</code></dt><dd><p>1=ship operated 1975-1979;0=1965-74</p>
+</dd>
+<dt><code>co.65.69</code></dt><dd><p>ship was in construction 1965-1969 (1/0)</p>
+</dd>
+<dt><code>co.70.74</code></dt><dd><p>ship was in construction 1970-1974 (1/0)</p>
+</dd>
+<dt><code>co.75.79</code></dt><dd><p>ship was in construction 1975-1979 (1/0)</p>
+</dd>
+<dt><code>service</code></dt><dd><p>months in service</p>
+</dd>
+<dt><code>ship</code></dt><dd><p>ship identification : 1-5</p>
+</dd>
+</dl>
+
+
+
+<h3>Details</h3>
+
+<p>ships is saved as a data frame.
+Count models use accident as the response variable, with log(service) as the 
+offset. ship can be used as a panel identifier.  
+</p>
+
+
+<h3>Source</h3>
+
+<p>McCullagh and Nelder, 1989.
+</p>
+
+
+<h3>References</h3>
+
+<p>Hilbe, Joseph M (2007, 2011), Negative Binomial Regression, Cambridge University Press
+Hilbe, Joseph M (2009), Logistic Regression Models, Chapman &amp; Hall/CRC
+Hardin, JW and JM Hilbe (2001, 2007), Generalized Linear Models and Extensions, Stata Press
+McCullagh, P.A, and J. Nelder (1989), Generalized Linear Models, Chapman &amp; Hall
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+data(ships)
+glmshp &lt;- glm(accident ~ op + co.70.74 + co.75.79 + offset(log(service)),
+              family=poisson, data=ships)
+summary(glmshp)
+exp(coef(glmshp))
+library(MASS)
+glmshnb &lt;- glm.nb(accident ~ op + co.70.74 + co.75.79 + offset(log(service)),
+                   data=ships)
+summary(glmshnb)
+exp(coef(glmshnb))
+## Not run: 
+library(gee)
+shipgee &lt;- gee(accident ~ op + co.70.74 + co.75.79 + offset(log(service)),
+              data=ships, family=poisson, corstr="exchangeable", id=ship)
+summary(shipgee)
+
+## End(Not run)
+</pre>
+
+
+</body></html>

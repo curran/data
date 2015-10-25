@@ -1,0 +1,92 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>R: loomis</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" type="text/css" href="R.css">
+</head><body>
+
+<table width="100%" summary="page for loomis"><tr><td>loomis</td><td align="right">R Documentation</td></tr></table>
+
+<h2>loomis</h2>
+
+<h3>Description</h3>
+
+<p>Data are taken from Loomis (2003). The study relates to a survey taken on reported 
+frequency of visits to national parks during the year. The survey was taken at park 
+sites, thus incurring possible effects of endogenous stratification.  
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>data(loomis)</pre>
+
+
+<h3>Format</h3>
+
+<p>A data frame with 410 observations on the following 11 variables.
+</p>
+
+<dl>
+<dt><code>anvisits</code></dt><dd><p>number of annual visits to park</p>
+</dd>
+<dt><code>gender</code></dt><dd><p>1=male;0=female</p>
+</dd>
+<dt><code>income</code></dt><dd><p>income in US dollars per year, categorical: 4 levels</p>
+</dd>
+<dt><code>income1</code></dt><dd><p>&lt;=$25000</p>
+</dd>
+<dt><code>income2</code></dt><dd><p>&gt;$25000 - $55000</p>
+</dd>
+<dt><code>income3</code></dt><dd><p>&gt;$55000 - $95000</p>
+</dd>
+<dt><code>income4</code></dt><dd><p>&gt;$95000</p>
+</dd>
+<dt><code>travel</code></dt><dd><p>travel time, categorical: 3 levels</p>
+</dd>
+<dt><code>travel1</code></dt><dd><p>&lt;.25 hrs</p>
+</dd>
+<dt><code>travel2</code></dt><dd><p>&gt;=.25 - &lt;4 hrs</p>
+</dd>
+<dt><code>travel3</code></dt><dd><p>&gt;=4 hrs</p>
+</dd>
+</dl>
+
+
+
+<h3>Details</h3>
+
+<p>loomis is saved as a data frame.
+Count models typically use anvisits as response variable. 0 counts are included
+</p>
+
+
+<h3>Source</h3>
+
+<p>from Loomis (2003)
+</p>
+
+
+<h3>References</h3>
+
+<p>Hilbe, Joseph M (2007, 2011), Negative Binomial Regression, Cambridge University Press
+Loomis, J. B. (2003). Travel cost demand model based river recreation benefit 
+estimates with on-site and household surveys: Comparative results and a 
+correction procedure, Water Resources Research, 39(4): 1105
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+data(loomis)
+glmlmp &lt;- glm(anvisits ~ gender + factor(income) + factor(travel), family=poisson, data=loomis)
+summary(glmlmp)
+exp(coef(glmlmp))
+library(MASS)
+glmlmnb &lt;- glm.nb(anvisits ~ gender + factor(income) + factor(travel), data=loomis)
+summary(glmlmnb)
+exp(coef(glmlmnb))
+</pre>
+
+
+</body></html>

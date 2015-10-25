@@ -1,0 +1,71 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>R: Reaction times in a sleep deprivation study</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" type="text/css" href="R.css">
+</head><body>
+
+<table width="100%" summary="page for sleepstudy"><tr><td>sleepstudy</td><td align="right">R Documentation</td></tr></table>
+
+<h2>Reaction times in a sleep deprivation study</h2>
+
+<h3>Description</h3>
+
+<p>The average reaction time per day for subjects in a sleep
+deprivation study. On day 0 the subjects had their normal
+amount of sleep.  Starting that night they were
+restricted to 3 hours of sleep per night.  The
+observations represent the average reaction time on a
+series of tests given each day to each subject.
+</p>
+
+
+<h3>Format</h3>
+
+<p>A data frame with 180 observations on the following 3 variables.
+</p>
+
+<dl>
+<dt><code>Reaction</code></dt><dd><p>Average reaction time (ms)</p>
+</dd>
+<dt><code>Days</code></dt><dd><p>Number of days of sleep deprivation</p>
+</dd>
+<dt><code>Subject</code></dt><dd><p>Subject number on which the observation was made.</p>
+</dd>
+</dl>
+
+
+<h3>Details</h3>
+
+<p>These data are from the study described in Belenky et al.
+(2003), for the sleep-deprived group and for the first 10
+days of the study, up to the recovery period.
+</p>
+
+
+<h3>References</h3>
+
+<p>Gregory Belenky, Nancy J. Wesensten, David R. Thorne,
+Maria L. Thomas, Helen C. Sing, Daniel P. Redmond,
+Michael B. Russo and Thomas J. Balkin (2003) Patterns of
+performance degradation and restoration during sleep
+restriction and subsequent recovery: a sleep
+dose-response study. <EM>Journal of Sleep Research</EM>
+<B>12</B>, 1&ndash;12.
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+str(sleepstudy)
+require(lattice)
+xyplot(Reaction ~ Days | Subject, sleepstudy, type = c("g","p","r"),
+       index = function(x,y) coef(lm(y ~ x))[1],
+       xlab = "Days of sleep deprivation",
+       ylab = "Average reaction time (ms)", aspect = "xy")
+(fm1 &lt;- lmer(Reaction ~ Days + (Days|Subject), sleepstudy))
+(fm2 &lt;- lmer(Reaction ~ Days + (1|Subject) + (0+Days|Subject), sleepstudy))
+</pre>
+
+
+</body></html>

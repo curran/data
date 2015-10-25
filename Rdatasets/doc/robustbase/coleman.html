@@ -1,0 +1,76 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>R: Coleman Data Set</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" type="text/css" href="R.css">
+</head><body>
+
+<table width="100%" summary="page for coleman"><tr><td>coleman</td><td align="right">R Documentation</td></tr></table>
+
+<h2>Coleman Data Set</h2>
+
+<h3>Description</h3>
+
+<p>Contains information on 20 Schools from the Mid-Atlantic and New
+England States, drawn from a population studied by Coleman et
+al. (1966). Mosteller and Tukey (1977) analyze this sample consisting
+of measurements on six different variables, one of which will be
+treated as a responce.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>data(coleman)</pre>
+
+
+<h3>Format</h3>
+
+<p>A data frame with 20 observations on the following 6 variables.
+</p>
+
+<dl>
+<dt><code>salaryP</code></dt><dd><p>staff salaries per pupil</p>
+</dd>
+<dt><code>fatherWc</code></dt><dd><p>percent of white-collar fathers</p>
+</dd>
+<dt><code>sstatus</code></dt><dd><p>socioeconomic status composite deviation: means for
+family size, family intactness, father's education, mother's
+education, and home items</p>
+</dd>
+<dt><code>teacherSc</code></dt><dd><p>mean teacher's verbal test score</p>
+</dd>
+<dt><code>motherLev</code></dt><dd><p>mean mother's educational level, one unit is equal
+to two school years</p>
+</dd>
+<dt><code>Y</code></dt><dd><p>verbal mean test score (y, all sixth graders)</p>
+</dd>
+</dl>
+
+
+
+<h3>Author(s)</h3>
+
+<p>Valentin Todorov</p>
+
+
+<h3>Source</h3>
+
+<p>P. J. Rousseeuw and A. M. Leroy (1987)
+<EM>Robust Regression and Outlier Detection</EM> Wiley, p.79, table 2.
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+data(coleman)
+pairs(coleman)
+summary( lm.coleman &lt;-     lm(Y ~ . , data = coleman))
+summary(lts.coleman &lt;- ltsReg(Y ~ . , data = coleman))
+
+coleman.x &lt;- data.matrix(coleman[, 1:6])
+(Cc &lt;- covMcd(coleman.x))
+</pre>
+
+
+</body></html>

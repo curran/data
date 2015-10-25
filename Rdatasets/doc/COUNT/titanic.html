@@ -1,0 +1,74 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>R: titanic</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" type="text/css" href="R.css">
+</head><body>
+
+<table width="100%" summary="page for titanic"><tr><td>titanic</td><td align="right">R Documentation</td></tr></table>
+
+<h2>titanic</h2>
+
+<h3>Description</h3>
+
+<p>The data is an observation-based version of the 1912 Titanic passenger survival 
+log, 
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>data(titanic)</pre>
+
+
+<h3>Format</h3>
+
+<p>A data frame with 1316 observations on the following 4 variables.
+</p>
+
+<dl>
+<dt><code>class</code></dt><dd><p>a factor with levels <code>1st class</code> <code>2nd class</code> <code>3rd class</code> <code>crew</code></p>
+</dd>
+<dt><code>age</code></dt><dd><p>a factor with levels <code>child</code> <code>adults</code></p>
+</dd>
+<dt><code>sex</code></dt><dd><p>a factor with levels <code>women</code> <code>man</code></p>
+</dd>
+<dt><code>survived</code></dt><dd><p>a factor with levels <code>no</code> <code>yes</code></p>
+</dd>
+</dl>
+
+
+
+<h3>Details</h3>
+
+<p>titanic is saved as a data frame.
+Used to assess risk ratios   
+</p>
+
+
+<h3>Source</h3>
+
+<p>Found in many other texts
+</p>
+
+
+<h3>References</h3>
+
+<p>Hilbe, Joseph M (2014), Modeling Count Data, Cambridge University Press
+Hilbe, Joseph M (2007, 2011), Negative Binomial Regression, Cambridge University Press
+Hilbe, Joseph M (2009), Logistic Regression Models, Chapman &amp; Hall/CRC
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+
+data(titanic)
+titanic$survival &lt;- titanic$survived == "yes"
+glmlr &lt;- glm(survival ~ age + sex + factor(class), family=binomial, data=titanic)
+summary(glmlr)
+
+</pre>
+
+
+</body></html>

@@ -1,0 +1,340 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>R: Income Inequality in the US</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" type="text/css" href="R.css">
+</head><body>
+
+<table width="100%" summary="page for incomeInequality"><tr><td>incomeInequality</td><td align="right">R Documentation</td></tr></table>
+
+<h2> Income Inequality in the US  </h2>
+
+<h3>Description</h3>
+
+<p>Data on quantiles of the distributions of family incomes in the United
+States. This combines three data sources:
+</p>
+<p>(1) US Census Table F-1 for the central quantiles
+</p>
+<p>(2) Piketty and Saez for the 95th and higher quantiles
+</p>
+<p>(3) Gross Domestic Product and implicit price deflators from
+<a href="http://MeasuringWorth.com">MeasuringWorth.com</a>
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>data(incomeInequality)</pre>
+
+
+<h3>Format</h3>
+
+<p>A <code>data.frame</code> containing:
+</p>
+
+<dl>
+<dt>Year</dt><dd><p> numeric year 1947:2012 </p>
+</dd>
+<dt>Number.thousands</dt><dd><p> number of families in the US </p>
+</dd>
+<dt>quintile1, quintile2, median, quintile3, quintile4, p95 </dt><dd>
+<p>quintile1, quintile2, quintile3, quintile4, and p95 are the
+indicated quantiles of the distribution of family income from US
+Census Table F-1.  The media is computed as the geometric mean of
+quintile2 and quintile3.  This is accurate to the extent that the
+lognormal distribution adequately approximates the central 20
+percent of the income distribution, which it should for most
+practical purposes.
+</p>
+</dd>
+<dt>P90, P95, P99, P99.5, P99.9, P99.99</dt><dd>
+<p>The indicated quantiles of family income per Piketty and Saez
+</p>
+</dd>
+<dt>realGDP.M, GDP.Deflator, PopulationK, realGDPperCap </dt><dd>
+<p>real GDP in millions, GDP implicit price deflators, US population
+in thousands, and real GDP per capita, according to
+<a href="http://MeasuringWorth.com">MeasuringWorth.com</a>.
+</p>
+</dd>
+<dt>P95IRSvsCensus</dt><dd>
+<p>ratio of the estimates of the 95th percentile of distributions of
+family income from the Piketty and Saez analyis of data from the
+Internal Revenue Service (IRS) and from the US Census Bureau.
+</p>
+<p>The IRS has ranged between 72 and 98 percent of the Census Bureau
+figures for the 95th percentile of the distribution, with this
+ratio averaging around 75 percent since the late 1980s.  However,
+this systematic bias is modest relative to the differences between
+the different quantiles of interest in this combined dataset.
+</p>
+</dd>
+<dt>personsPerFamily</dt><dd>
+<p>average number of persons per family using the number of families
+from US Census Table F-1 and the population from
+<a href="http://MeasuringWorth.com">MeasuringWorth.com</a>.
+</p>
+</dd>
+<dt>realGDPperFamily</dt><dd>
+<p><code>personsPerFamily * realGDPperCap</code>
+</p>
+</dd>
+<dt>mean.median</dt><dd>
+<p>ratio of realGDPperFamily to the median.  This is a measure of
+skewness and income inequality.
+</p>
+</dd>
+</dl>
+
+
+
+<h3>Details</h3>
+
+<p>For details on how this <code>data.frame</code> was created, see
+&quot;F1.PikettySaez.R&quot; in <code>system.file('scripts', package='fda')</code>.
+This provides links for files to download and R commands to read those
+files and convert them into an updated version of
+<code>incomeInequality</code>.  This is a reasonable thing to do if it is
+more  than 2 years since <code>max(incomeInequality$year)</code>.  All data
+are in constant 2012 dollars.
+</p>
+
+
+<h3>Author(s)</h3>
+
+<p>Spencer Graves</p>
+
+
+<h3>Source</h3>
+
+<p>United States Census Bureau, Table F-1. Income Limits for Each Fifth
+and Top 5 Percent of Families, All Races,
+<a href="http://www.census.gov/hhes/www/income/data/historical/families">http://www.census.gov/hhes/www/income/data/historical/families</a>,
+accessed March 25, 2014.
+</p>
+<p>Thomas Piketty and Emmanuel Saez (2003) &quot;Income Inequality in the
+United States, 1913-1998&quot;, Quarterly Journal of Economics, 118(1)
+1-39, <a href="http://elsa.berkeley.edu/~saez">http://elsa.berkeley.edu/~saez</a>, update accessed February
+28, 2014.
+</p>
+<p>Louis Johnston and Samuel H. Williamson (2011) &quot;What Was the U.S. GDP
+Then?&quot; MeasuringWorth, <a href="http://www.measuringworth.org/usgdp">http://www.measuringworth.org/usgdp</a>,
+accessed February 28, 2014.
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+##
+## Rato of IRS to census estimates for the 95th percentile
+##
+data(incomeInequality)
+plot(P95IRSvsCensus~Year, incomeInequality, type='b')
+# starts ~0.74, trends rapidly up to ~0.97,
+# then drifts back to ~0.75
+abline(h=0.75)
+abline(v=1989)
+# check
+sum(is.na(incomeInequality$P95IRSvsCensus))
+# The Census data runs to 2011;  Pikety and Saez runs to 2010.
+quantile(incomeInequality$P95IRSvsCensus, na.rm=TRUE)
+# 0.72 ... 0.98
+
+##
+## Persons per Family
+##
+
+plot(personsPerFamily~Year, incomeInequality, type='b')
+quantile(incomeInequality$personsPerFamily)
+# ranges from 3.72 to 4.01 with median 3.84
+#  -- almost 4
+
+##
+## GDP per family
+##
+plot(realGDPperFamily~Year, incomeInequality, type='b', log='y')
+
+##
+## Plot the mean then the first quintile, then the median,
+##            99th, 99.9th and 99.99th percentiles
+##
+plotCols &lt;- c(21, 3, 5, 11, 13:14)
+kcols &lt;- length(plotCols)
+plotColors &lt;- c(1:6, 8:13)[1:kcols] # omit 7=yellow
+plotLty &lt;- 1:kcols
+
+matplot(incomeInequality$Year, incomeInequality[plotCols]/1000,
+        log='y', type='l', col=plotColors, lty=plotLty)
+
+#*** Growth broadly shared 1947 - 1970, then began diverging
+#*** The divergence has been most pronouced among the top 1%
+#*** and especially the top 0.01%
+
+##
+## Growth rate by quantile 1947-1970 and 1970 - present
+##
+keyYears &lt;- c(1947, 1970, 2010)
+(iYears &lt;- which(is.element(incomeInequality$Year, keyYears)))
+
+(dYears &lt;- diff(keyYears))
+kk &lt;- length(keyYears)
+(lblYrs &lt;- paste(keyYears[-kk], keyYears[-1], sep='-'))
+
+(growth &lt;- sapply(incomeInequality[iYears,], function(x, labels=lblYrs){
+    dxi &lt;- exp(diff(log(x)))
+    names(dxi) &lt;- labels
+    dxi
+} ))
+
+# as percent
+(gr &lt;- round(100*(growth-1), 1))
+
+# The average annual income (realGDPperFamily) doubled between
+# 1970 and 2010 (increased by 101 percent), while the median household
+# income increased only 23 percent.
+
+##
+## Income lost by each quantile 1970-2010
+## relative to the broadly shared growth 1947-1970
+##
+(lostGrowth &lt;- (growth[, 'realGDPperFamily']-growth[, plotCols]))
+# 1947-1970:  The median gained 20% relative to the mean,
+#           while the top 1% lost ground
+# 1970-2010:  The median lost 79%, the 99th percentile lost 29%,
+#           while the top 0.1% gained
+
+(lostIncome &lt;- (lostGrowth[2, ] *
+                incomeInequality[iYears[2], plotCols]))
+# The median family lost $39,000 per year in income
+# relative to what they would have with the same economic growth
+# broadly shared as during 1947-1970.
+# That's slightly over $36,500 per year = $100 per day
+
+(grYr &lt;- growth^(1/dYears))
+(grYr. &lt;- round(100*(grYr-1), 1))
+
+##
+## Regression line:  linear spline
+##
+
+(varyg &lt;- c(3:14, 21))
+Varyg &lt;- names(incomeInequality)[varyg]
+str(F01ps &lt;- reshape(incomeInequality[c(1, varyg)], idvar='Year',
+                     ids=F1.PikettySeaz$Year,
+                     times=Varyg, timevar='pctile',
+                     varying=list(Varyg), direction='long'))
+names(F01ps)[2:3] &lt;- c('variable', 'value')
+F01ps$variable &lt;- factor(F01ps$variable)
+
+# linear spline basis function with knot at 1970
+F01ps$t1970p &lt;- pmax(0, F01ps$Year-1970)
+
+table(nas &lt;- is.na(F01ps$value))
+# 6 NAs, one each of the Piketty-Saez variables in 2011
+F01i &lt;- F01ps[!nas, ]
+
+# formula:
+# log(value/1000) ~ b*Year + (for each variable:
+#     different intercept + (different slope after 1970))
+
+Fit &lt;- lm(log(value/1000)~Year+variable*t1970p, F01i)
+anova(Fit)
+# all highly significant
+# The residuals may show problems with the model,
+# but we will ignore those for now.
+
+# Model predictions
+str(Pred &lt;- predict(Fit))
+
+##
+## Combined plot
+##
+#  Plot to a file?  Wikimedia Commons prefers svg format.
+svg('incomeInequality8.svg')
+#  If you want software to convert svg to another format such as png,
+#  consider GIMP (www.gimp.org).
+
+#  Base plot
+
+# Leave extra space on the right to label with growth since 1970
+op &lt;- par(mar=c(5, 4, 4, 5)+0.1)
+
+matplot(incomeInequality$Year, incomeInequality[plotCols]/1000,
+        log='y', type='l', col=plotColors, lty=plotLty,
+        xlab='', ylab='', las=1, axes=FALSE, lwd=3)
+axis(1, at=seq(1950, 2010, 10),
+     labels=c(1950, NA, 1970, NA, 1990, NA, 2010), cex.axis=1.5)
+yat &lt;- c(10, 50, 100, 500, 1000, 5000, 10000)
+axis(2, yat, labels=c('$10K', '$50K', '$100K', '$500K',
+             '$1M', '$5M', '$10M'), las=1, cex.axis=1.2)
+
+#  Label the lines
+pctls &lt;- paste(c(20, 40, 50, 60, 80, 90, 95, 99, 99.5, 99.9, 99.99),
+              '%', sep='')
+lineLbl0 &lt;- c('Year', 'families K', pctls,
+     'realGDP.M', 'GDP deflator', 'pop-K', 'realGDPperFamily',
+     '95 pct(IRS / Census)', 'size of household',
+     'average family income', 'mean/median')
+(lineLbls &lt;- lineLbl0[plotCols])
+sel75 &lt;- (incomeInequality$Year==1975)
+
+laby &lt;- incomeInequality[sel75, plotCols]/1000
+
+text(1973.5, c(1.2, 1.2, 1.3, 1.5, 1.9)*laby[-1], lineLbls[-1], cex=1.2)
+text(1973.5, 1.2*laby[1], lineLbls[1], cex=1.2, srt=10)
+
+##
+## Add lines + points for the knots in 1970
+##
+End &lt;- numeric(kcols)
+F01names &lt;- names(incomeInequality)
+for(i in seq(length=kcols)){
+  seli &lt;- (as.character(F01i$variable) == F01names[plotCols[i]])
+#  with(F01i[seli, ], lines(Year, exp(Pred[seli]), col=plotColors[i]))
+  yri &lt;- F01i$Year[seli]
+  predi &lt;- exp(Pred[seli])
+  lines(yri, predi, col=plotColors[i])
+  End[i] &lt;- predi[length(predi)]
+  sel70i &lt;- (yri==1970)
+  points(yri[sel70i], predi[sel70i], col=plotColors[i])
+}
+
+##
+##  label growth rates
+##
+table(sel70. &lt;- (incomeInequality$Year&gt;1969))
+(lastYrs &lt;- incomeInequality[sel70., 'Year'])
+(lastYr. &lt;- max(lastYrs)+4)
+#text(lastYr., End, gR., xpd=NA)
+text(lastYr., End, paste(gr[2, plotCols], '%', sep=''), xpd=NA)
+text(lastYr.+7, End, paste(grYr.[2, plotCols], '%', sep=''), xpd=NA)
+
+##
+##  Label the presidents
+##
+abline(v=c(1953, 1961, 1969, 1977, 1981, 1989, 1993, 2001, 2009))
+(m99.95 &lt;- with(incomeInequality, sqrt(P99.9*P99.99))/1000)
+
+text(1949, 5000, 'Truman')
+text(1956.8, 5000, 'Eisenhower', srt=90)
+text(1963, 5000, 'Kennedy', srt=90)
+text(1966.8, 5000, 'Johnson', srt=90)
+text(1971, 5*m99.95[24], 'Nixon', srt=90)
+text(1975, 5*m99.95[28], 'Ford', srt=90)
+text(1978.5, 5*m99.95[32], 'Carter', srt=90)
+text(1985.1, m99.95[38], 'Reagan' )
+text(1991, 0.94*m99.95[44], 'GHW Bush', srt=90)
+text(1997, m99.95[50], 'Clinton')
+text(2005, 1.1*m99.95[58], 'GW Bush', srt=90)
+text(2010, 1.2*m99.95[62], 'Obama', srt=90)
+##
+##  Done
+##
+par(op) # reset margins
+
+dev.off() # for plot to a file
+</pre>
+
+
+</body></html>

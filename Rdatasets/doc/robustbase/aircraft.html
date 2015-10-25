@@ -1,0 +1,67 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>R: Aircraft Data</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" type="text/css" href="R.css">
+</head><body>
+
+<table width="100%" summary="page for aircraft"><tr><td>aircraft</td><td align="right">R Documentation</td></tr></table>
+
+<h2>Aircraft Data</h2>
+
+<h3>Description</h3>
+
+<p>Aircraft Data, deals with 23 single-engine aircraft built
+over the years 1947-1979, from Office of Naval Research.
+The dependent variable is cost  (in units of \$100,000)
+and the explanatory variables are aspect ratio, lift-to-drag ratio,
+weight of plane (in pounds) and maximal thrust.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>data(aircraft)</pre>
+
+
+<h3>Format</h3>
+
+<p>A data frame with 23 observations on the following 5 variables.
+</p>
+
+<dl>
+<dt><code>X1</code></dt><dd><p>Aspect Ratio</p>
+</dd>
+<dt><code>X2</code></dt><dd><p>Lift-to-Drag Ratio</p>
+</dd>
+<dt><code>X3</code></dt><dd><p>Weight</p>
+</dd>
+<dt><code>X4</code></dt><dd><p>Thrust</p>
+</dd>
+<dt><code>Y</code></dt><dd><p>Cost</p>
+</dd>
+</dl>
+
+
+
+<h3>Source</h3>
+
+<p>P. J. Rousseeuw and A. M. Leroy (1987)
+<EM>Robust Regression and Outlier Detection</EM>;
+Wiley, page 154, table 22.
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+data(aircraft)
+summary( lm.airc &lt;-        lm(Y ~ ., data = aircraft))
+summary(rlm.airc &lt;- MASS::rlm(Y ~ ., data = aircraft))
+
+aircraft.x &lt;- data.matrix(aircraft[,1:4])
+c_air &lt;- covMcd(aircraft.x)
+c_air
+</pre>
+
+
+</body></html>

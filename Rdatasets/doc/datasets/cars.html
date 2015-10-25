@@ -1,0 +1,90 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>R: Speed and Stopping Distances of Cars</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" type="text/css" href="R.css">
+</head><body>
+
+<table width="100%" summary="page for cars"><tr><td>cars</td><td align="right">R Documentation</td></tr></table>
+
+<h2>Speed and Stopping Distances of Cars</h2>
+
+<h3>Description</h3>
+
+<p>The data give the speed of cars and the distances taken to stop.
+Note that the data were recorded in the 1920s.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>cars</pre>
+
+
+<h3>Format</h3>
+
+<p>A data frame with 50 observations on 2 variables.
+</p>
+
+<table summary="Rd table">
+<tr>
+ <td align="right">
+    [,1]  </td><td align="left"> speed  </td><td align="left"> numeric  </td><td align="left"> Speed (mph)</td>
+</tr>
+<tr>
+ <td align="right">
+    [,2]  </td><td align="left"> dist   </td><td align="left"> numeric  </td><td align="left"> Stopping distance (ft)
+  </td>
+</tr>
+
+</table>
+
+
+
+<h3>Source</h3>
+
+<p>Ezekiel, M. (1930)
+<EM>Methods of Correlation Analysis</EM>.
+Wiley.
+</p>
+
+
+<h3>References</h3>
+
+<p>McNeil, D. R. (1977)
+<EM>Interactive Data Analysis</EM>.
+Wiley.
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+require(stats); require(graphics)
+plot(cars, xlab = "Speed (mph)", ylab = "Stopping distance (ft)",
+     las = 1)
+lines(lowess(cars$speed, cars$dist, f = 2/3, iter = 3), col = "red")
+title(main = "cars data")
+plot(cars, xlab = "Speed (mph)", ylab = "Stopping distance (ft)",
+     las = 1, log = "xy")
+title(main = "cars data (logarithmic scales)")
+lines(lowess(cars$speed, cars$dist, f = 2/3, iter = 3), col = "red")
+summary(fm1 &lt;- lm(log(dist) ~ log(speed), data = cars))
+opar &lt;- par(mfrow = c(2, 2), oma = c(0, 0, 1.1, 0),
+            mar = c(4.1, 4.1, 2.1, 1.1))
+plot(fm1)
+par(opar)
+
+## An example of polynomial regression
+plot(cars, xlab = "Speed (mph)", ylab = "Stopping distance (ft)",
+    las = 1, xlim = c(0, 25))
+d &lt;- seq(0, 25, length.out = 200)
+for(degree in 1:4) {
+  fm &lt;- lm(dist ~ poly(speed, degree), data = cars)
+  assign(paste("cars", degree, sep = "."), fm)
+  lines(d, predict(fm, data.frame(speed = d)), col = degree)
+}
+anova(cars.1, cars.2, cars.3, cars.4)
+</pre>
+
+
+</body></html>

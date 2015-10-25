@@ -1,0 +1,142 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>R: Frequency Table from a Copenhagen Housing Conditions Survey</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" type="text/css" href="R.css">
+</head><body>
+
+<table width="100%" summary="page for housing"><tr><td>housing</td><td align="right">R Documentation</td></tr></table>
+
+<h2>
+Frequency Table from a Copenhagen Housing Conditions Survey
+</h2>
+
+<h3>Description</h3>
+
+<p>The <code>housing</code> data frame has 72 rows and 5 variables.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+housing
+</pre>
+
+
+<h3>Format</h3>
+
+
+<dl>
+<dt><code>Sat</code></dt><dd>
+<p>Satisfaction of householders with their present housing
+circumstances, (High, Medium or Low, ordered factor).
+</p>
+</dd>
+<dt><code>Infl</code></dt><dd>
+<p>Perceived degree of influence householders have on the
+management of the property (High, Medium, Low).
+</p>
+</dd>
+<dt><code>Type</code></dt><dd>
+<p>Type of rental accommodation, (Tower, Atrium, Apartment, Terrace).
+</p>
+</dd>
+<dt><code>Cont</code></dt><dd>
+<p>Contact residents are afforded with other residents, (Low, High).
+</p>
+</dd>
+<dt><code>Freq</code></dt><dd>
+<p>Frequencies: the numbers of residents in each class.
+</p>
+</dd>
+</dl>
+
+
+
+<h3>Source</h3>
+
+<p>Madsen, M. (1976)
+Statistical analysis of multiple contingency tables. Two examples.
+<EM>Scand. J. Statist.</EM> <B>3</B>, 97&ndash;106.
+</p>
+<p>Cox, D. R. and Snell, E. J. (1984)
+<EM>Applied Statistics, Principles and Examples</EM>.
+Chapman &amp; Hall.
+</p>
+
+
+<h3>References</h3>
+
+<p>Venables, W. N. and Ripley, B. D. (2002)
+<EM>Modern Applied Statistics with S.</EM> Fourth edition.  Springer.
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+options(contrasts = c("contr.treatment", "contr.poly"))
+
+# Surrogate Poisson models
+house.glm0 &lt;- glm(Freq ~ Infl*Type*Cont + Sat, family = poisson,
+                  data = housing)
+summary(house.glm0, cor = FALSE)
+
+addterm(house.glm0, ~. + Sat:(Infl+Type+Cont), test = "Chisq")
+
+house.glm1 &lt;- update(house.glm0, . ~ . + Sat*(Infl+Type+Cont))
+summary(house.glm1, cor = FALSE)
+
+1 - pchisq(deviance(house.glm1), house.glm1$df.residual)
+
+dropterm(house.glm1, test = "Chisq")
+
+addterm(house.glm1, ~. + Sat:(Infl+Type+Cont)^2, test  =  "Chisq")
+
+hnames &lt;- lapply(housing[, -5], levels) # omit Freq
+newData &lt;- expand.grid(hnames)
+newData$Sat &lt;- ordered(newData$Sat)
+house.pm &lt;- predict(house.glm1, newData,
+                    type = "response")  # poisson means
+house.pm &lt;- matrix(house.pm, ncol = 3, byrow = TRUE,
+                   dimnames = list(NULL, hnames[[1]]))
+house.pr &lt;- house.pm/drop(house.pm %*% rep(1, 3))
+cbind(expand.grid(hnames[-1]), round(house.pr, 2))
+
+# Iterative proportional scaling
+loglm(Freq ~ Infl*Type*Cont + Sat*(Infl+Type+Cont), data = housing)
+
+
+# multinomial model
+library(nnet)
+(house.mult&lt;- multinom(Sat ~ Infl + Type + Cont, weights = Freq,
+                       data = housing))
+house.mult2 &lt;- multinom(Sat ~ Infl*Type*Cont, weights = Freq,
+                        data = housing)
+anova(house.mult, house.mult2)
+
+house.pm &lt;- predict(house.mult, expand.grid(hnames[-1]), type = "probs")
+cbind(expand.grid(hnames[-1]), round(house.pm, 2))
+
+# proportional odds model
+house.cpr &lt;- apply(house.pr, 1, cumsum)
+logit &lt;- function(x) log(x/(1-x))
+house.ld &lt;- logit(house.cpr[2, ]) - logit(house.cpr[1, ])
+(ratio &lt;- sort(drop(house.ld)))
+mean(ratio)
+
+(house.plr &lt;- polr(Sat ~ Infl + Type + Cont,
+                   data = housing, weights = Freq))
+
+house.pr1 &lt;- predict(house.plr, expand.grid(hnames[-1]), type = "probs")
+cbind(expand.grid(hnames[-1]), round(house.pr1, 2))
+
+Fr &lt;- matrix(housing$Freq, ncol  =  3, byrow = TRUE)
+2*sum(Fr*log(house.pr/house.pr1))
+
+house.plr2 &lt;- stepAIC(house.plr, ~.^2)
+house.plr2$anova
+</pre>
+
+
+</body></html>

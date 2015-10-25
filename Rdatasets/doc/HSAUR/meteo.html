@@ -1,0 +1,70 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>R: Meteorological Measurements for 11 Years</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" type="text/css" href="R.css">
+</head><body>
+
+<table width="100%" summary="page for meteo"><tr><td>meteo</td><td align="right">R Documentation</td></tr></table>
+
+<h2> Meteorological Measurements for 11 Years </h2>
+
+<h3>Description</h3>
+
+<p>Several meteorological measurements for a period between 1920 and 1931.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>data("meteo")</pre>
+
+
+<h3>Format</h3>
+
+<p>A data frame with 11 observations on the following 6 variables.
+</p>
+
+<dl>
+<dt><code>year</code></dt><dd><p>the years.</p>
+</dd>
+<dt><code>rainNovDec</code></dt><dd><p>rainfall in November and December (mm).</p>
+</dd>
+<dt><code>temp</code></dt><dd><p>average July temperature.</p>
+</dd>
+<dt><code>rainJuly</code></dt><dd><p>rainfall in July (mm).</p>
+</dd>
+<dt><code>radiation</code></dt><dd><p>radiation in July (millilitres of alcohol).</p>
+</dd>
+<dt><code>yield</code></dt><dd><p>average harvest yield (quintals per hectare).</p>
+</dd>
+</dl>
+
+
+
+<h3>Details</h3>
+
+<p>Carry out a principal components analysis of both the covariance
+matrix and the correlation matrix of the data and compare the
+results. Which set of components leads to the most meaningful
+interpretation? 
+</p>
+
+
+<h3>Source</h3>
+
+<p>B. S. Everitt and G. Dunn (2001), <EM>Applied Multivariate Data
+Analysis</EM>, 2nd edition, Arnold, London.
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+
+  data("meteo", package = "HSAUR")
+  meteo
+
+</pre>
+
+
+</body></html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>R: 11 emotional variables from Burt (1915)</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" type="text/css" href="R.css">
+</head><body>
+
+<table width="100%" summary="page for burt"><tr><td>burt</td><td align="right">R Documentation</td></tr></table>
+
+<h2>11 emotional variables from Burt (1915)</h2>
+
+<h3>Description</h3>
+
+<p>Cyril Burt reported an early factor analysis with a circumplex structure of 11 emotional variables in 1915.  8 of these were subsequently used by Harman in his text on factor analysis.  Unfortunately, it seems as if Burt made a mistake for the matrix is not positive definite.  With one change from .87 to .81 the matrix is positive definite.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>data(burt)</pre>
+
+
+<h3>Format</h3>
+
+<p>A correlation matrix based upon 172 &quot;normal school age children aged 9-12&quot;. 
+</p>
+
+<dl>
+<dt>Sociality</dt><dd><p>Sociality</p>
+</dd>
+<dt>Sorrow</dt><dd><p>Sorrow</p>
+</dd>
+<dt>Tenderness</dt><dd><p>Tenderness</p>
+</dd>
+<dt>Joy</dt><dd><p>Joy</p>
+</dd>
+<dt>Wonder</dt><dd><p>Wonder</p>
+</dd>
+<dt>Elation</dt><dd><p>Elation</p>
+</dd>
+<dt>Disgust</dt><dd><p>Disgust</p>
+</dd>
+<dt>Anger</dt><dd><p>Anger</p>
+</dd>
+<dt>Sex</dt><dd><p>Sex</p>
+</dd>
+<dt>Fear</dt><dd><p>Fear</p>
+</dd>
+<dt>Subjection</dt><dd><p>Subjection</p>
+</dd>
+</dl>
+
+
+
+<h3>Details</h3>
+
+<p>The Burt data set is interesting for several reasons.  It seems to be an early example of the organizaton of emotions into an affective circumplex, a subset of it has been used for factor analysis examples (see <code>Harman.Burt</code>, and it is an example of how typos affect data.  The original data matrix has one negative eigenvalue. With the replacement of the correlation between Sorrow and Tenderness from .87 to .81, the matrix is positive definite.
+</p>
+<p>Alternatively, using <code>cor.smooth</code>, the matrix can be made positive definite as well, although cor.smooth makes more (but smaller) changes.
+</p>
+
+
+<h3>Source</h3>
+
+<p>(retrieved from the web at http://www.biodiversitylibrary.org/item/95822#790)
+Following a suggestion by Jan DeLeeuw.
+</p>
+
+
+<h3>References</h3>
+
+<p>Burt, C.General and Specific Factors underlying the Primary Emotions. Reports of the British Association for the Advancement of Science, 85th meeting, held in Manchester,  September 7-11, 1915. London, John Murray, 1916, p. 694-696 (retrieved from the web at http://www.biodiversitylibrary.org/item/95822#790) 
+</p>
+
+
+<h3>See Also</h3>
+
+ <p><code>Harman.Burt</code> in the <code>Harman</code> dataset and <code>cor.smooth</code>
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+data(burt)
+eigen(burt)$values  #one is negative!
+burt.new &lt;- burt
+burt.new[2,3] &lt;- burt.new[3,2] &lt;- .81
+eigen(burt.new)$values  #all are positive
+bs &lt;- cor.smooth(burt)
+round(burt.new - bs,3)
+
+</pre>
+
+
+</body></html>

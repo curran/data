@@ -1,0 +1,57 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>R: Survival Times after Mastectomy of Breast Cancer Patients</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" type="text/css" href="R.css">
+</head><body>
+
+<table width="100%" summary="page for mastectomy"><tr><td>mastectomy</td><td align="right">R Documentation</td></tr></table>
+
+<h2> Survival Times after Mastectomy of Breast Cancer Patients </h2>
+
+<h3>Description</h3>
+
+<p>Survival times in months after mastectomy of women with breast cancer. 
+The cancers are classified as having metastized or not based on a 
+histochemical marker. 
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>data("mastectomy")</pre>
+
+
+<h3>Format</h3>
+
+<p>A data frame with 42 observations on the following 3 variables.
+</p>
+
+<dl>
+<dt>time</dt><dd><p>survival times in months.</p>
+</dd>
+<dt>event</dt><dd><p>a logical indicating if the event was observed (<code>TRUE</code>)
+or if the survival time was censored (<code>FALSE</code>).</p>
+</dd>
+<dt>metastized</dt><dd><p>a factor at levels <code>yes</code> and <code>no</code>.</p>
+</dd>
+</dl>
+
+
+
+<h3>Source</h3>
+
+<p>B. S. Everitt and S. Rabe-Hesketh (2001),
+<EM>Analysing Medical Data using S-PLUS</EM>, Springer, New York, USA.
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+
+  data("mastectomy", package = "HSAUR")
+  table(mastectomy$metastized)
+</pre>
+
+
+</body></html>

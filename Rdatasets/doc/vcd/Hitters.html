@@ -1,0 +1,84 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>R: Hitters Data</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" type="text/css" href="R.css">
+</head><body>
+
+<table width="100%" summary="page for Hitters"><tr><td>Hitters</td><td align="right">R Documentation</td></tr></table>
+
+<h2>Hitters Data</h2>
+
+<h3>Description</h3>
+
+<p>This data set is deduced from the <code>Baseball</code> fielding data
+set: fielding performance basically includes the numbers of Errors,
+Putouts and Assists made by each player.  In order to reduce the
+number of observations, the was compressed by calculating the mean
+number of errors, putouts and assists for each team and for only 6
+positions (1B, 2B, 3B, C, OF, SS and UT).  In addition, each of these
+three variables was scaled to a common range by dividing each variable
+by the maximum of the variable.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>data("Hitters")</pre>
+
+
+<h3>Format</h3>
+
+<p>A data frame with 154 observations and 4 variables.
+</p>
+
+<dl>
+<dt>Positions</dt><dd><p>factor indicating the field position (1B=first
+baseman, 2B=second baseman, 3B=third baseman, C=catcher,
+OF=outfielder, SS=Short Stop, UT=Utility Players).</p>
+</dd>
+<dt>Putouts</dt><dd><p>occur when a fielder causes an opposing player to be
+tagged or forced out.</p>
+</dd>
+<dt>Assists</dt><dd><p>are credited to other fielders involved in making
+that putout.</p>
+</dd>
+<dt>Errors</dt><dd><p>count the errors made by a player.</p>
+</dd>
+</dl>
+
+
+
+<h3>Source</h3>
+
+<p>SAS System for Statistical Graphics, First Edition, Page A2.3
+</p>
+
+
+<h3>References</h3>
+
+<p>M. Friendly (2000),
+<EM>Visualizing Categorical Data</EM>.
+SAS Institute, Cary, NC.
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+data("Hitters")
+attach(Hitters)
+
+colors &lt;- c("black","red","green","blue","red","black","blue")
+pch &lt;- substr(levels(Positions), 1, 1)
+ternaryplot(Hitters[,2:4],
+  pch = as.character(Positions),
+  col = colors[as.numeric(Positions)],
+  main = "Baseball Hitters Data")
+grid_legend(0.8, 0.9, pch, colors, levels(Positions),
+  title = "POSITION(S)")
+
+detach(Hitters)
+</pre>
+
+
+</body></html>

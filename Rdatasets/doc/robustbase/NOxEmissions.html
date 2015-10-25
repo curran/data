@@ -1,0 +1,90 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>R: NOx Air Pollution Data</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" type="text/css" href="R.css">
+</head><body>
+
+<table width="100%" summary="page for NOxEmissions"><tr><td>NOxEmissions</td><td align="right">R Documentation</td></tr></table>
+
+<h2>NOx Air Pollution Data</h2>
+
+<h3>Description</h3>
+
+<p>A typical medium sized environmental data set with hourly measurements
+of <i>NOx</i> pollution content in the ambient air.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>data(NOxEmissions)</pre>
+
+
+<h3>Format</h3>
+
+<p>A data frame with 8088 observations on the following 4 variables.
+</p>
+
+<dl>
+<dt><code>julday</code></dt><dd><p>day number, a factor with levels <code>373</code>
+... <code>730</code>, typically with 24 hourly measurements.</p>
+</dd>
+<dt><code>LNOx</code></dt><dd><i>\log</i><p> of hourly mean of NOx concentration in
+ambient air [ppb] next to a highly frequented motorway.</p>
+</dd>
+<dt><code>LNOxEm</code></dt><dd><i>\log</i><p> of hourly sum of NOx emission of
+cars on this motorway in arbitrary units.</p>
+</dd>
+<dt><code>sqrtWS</code></dt><dd><p>Square root of wind speed [m/s].</p>
+</dd>
+</dl>
+
+
+
+<h3>Details</h3>
+
+<p>The original data set had more observations, but with missing values.
+Here, all cases with missing values were omitted
+(<code>na.omit(.)</code>), and then only those were retained that
+belonged to days with at least 20 (fully) observed hourly
+measurements.
+</p>
+
+
+<h3>Source</h3>
+
+<p>René Locher (at ZHAW, Switzerland).
+
+</p>
+
+
+<h3>See Also</h3>
+
+<p>another NOx dataset, <code>ambientNOxCH</code>.
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+data(NOxEmissions)
+plot(LNOx ~ LNOxEm, data = NOxEmissions, cex = 0.25, col = "gray30")
+
+## Not run: ## these take too much time --
+ ## p = 340  ==&gt; already Least Squares is not fast
+ (lmNOx &lt;- lm(LNOx ~ . ,data = NOxEmissions))
+ plot(lmNOx) #-&gt;  indication of 1 outlier
+
+ M.NOx &lt;- MASS::rlm(LNOx ~ . , data = NOxEmissions)
+ ## M-estimation works
+ ## whereas  MM-estimation fails:
+ try(MM.NOx &lt;- MASS::rlm(LNOx ~ . , data = NOxEmissions, method = "MM"))
+ ## namely because S-estimation fails:
+ try(lts.NOx &lt;- ltsReg(LNOx ~ . , data = NOxEmissions))
+ try(lmR.NOx &lt;- lmrob (LNOx ~ . , data = NOxEmissions))
+
+## End(Not run)
+</pre>
+
+
+</body></html>

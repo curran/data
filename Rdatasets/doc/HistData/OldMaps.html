@@ -1,0 +1,89 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>R: Latitudes and Longitudes of 39 Points in 11 Old Maps</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" type="text/css" href="R.css">
+</head><body>
+
+<table width="100%" summary="page for OldMaps"><tr><td>OldMaps</td><td align="right">R Documentation</td></tr></table>
+
+<h2>
+Latitudes and Longitudes of 39 Points in 11 Old Maps
+</h2>
+
+<h3>Description</h3>
+
+<p>The data set is concerned with the problem of aligning the coordinates of points
+read from old maps (1688 - 1818) of the Great Lakes area.  
+39 easily identifiable
+points were selected  in the Great Lakes area, and their (lat, long) coordinates
+were recorded using a grid overlaid on each of 11 old maps, and using linear interpolation.
+</p>
+<p>It was conjectured that maps might be systematically in error in five key ways:
+(a) constant error in latitude; (b)constant error in longitude;
+(c) proportional error in latitude; (d)proportional error in longitude;
+(e) angular error from a non-zero difference between true North and the map's North.
+</p>
+<p>One challenge from these data is to produce useful analyses and graphical displays
+that relate to these characteristics or to other aspects of the data.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>data(OldMaps)</pre>
+
+
+<h3>Format</h3>
+
+<p>A data frame with 468 observations on the following 6 variables, giving the latitude
+and longitude of 39 points recorded from 12 sources (Actual + 11 maps).
+</p>
+
+<dl>
+<dt><code>point</code></dt><dd><p>a numeric vector</p>
+</dd>
+<dt><code>col</code></dt><dd><p>Column in the table a numeric vector</p>
+</dd>
+<dt><code>name</code></dt><dd><p>Name of the map maker, using <code>Actual</code> for the true coordinates of the points.
+A factor with levels <code>Actual</code> 
+<code>Arrowsmith</code> <code>Belin</code> <code>Cary</code> <code>Coronelli</code> <code>D'Anville} \code{Del'Isle</code> <code>Lattre</code> <code>Melish</code> <code>Mitchell</code> <code>Popple</code></p>
+</dd>
+<dt><code>year</code></dt><dd><p>Year of the map</p>
+</dd>
+<dt><code>lat</code></dt><dd><p>Latitude</p>
+</dd>
+<dt><code>long</code></dt><dd><p>Longitude</p>
+</dd>
+</dl>
+
+
+
+<h3>Details</h3>
+
+<p>Some of the latitude and longitude values are inexplicably negative.
+It is probable that this is an error in type settting, because the table footnote
+says &quot;* denotes that interpolation accuracy is not good,&quot; yet no &quot;*&quot;s appear in
+the body of the table.
+</p>
+
+
+<h3>Source</h3>
+
+<p>Andrews, D. F., and Herzberg, A. M. (1985).
+<EM>Data: A Collection of Problems from Many fields for the Student and Research Worker</EM>.
+New York: Springer, Table 10.1.  
+The data were obtained from <a href="http://www.stat.duke.edu/courses/Spring01/sta114/data/Andrews/T10.1">http://www.stat.duke.edu/courses/Spring01/sta114/data/Andrews/T10.1</a>.
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+data(OldMaps)
+## maybe str(OldMaps) ; plot(OldMaps) ...
+
+with(OldMaps, plot(abs(long),abs(lat), pch=col, col=colors()[point]))
+</pre>
+
+
+</body></html>

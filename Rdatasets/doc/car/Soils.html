@@ -1,0 +1,98 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>R: Soil Compositions of Physical and Chemical Characteristics</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" type="text/css" href="R.css">
+</head><body>
+
+<table width="100%" summary="page for Soils"><tr><td>Soils</td><td align="right">R Documentation</td></tr></table>
+
+<h2>Soil Compositions of Physical and Chemical Characteristics</h2>
+
+<h3>Description</h3>
+
+<p>Soil characteristics were measured on samples from three types of
+contours (Top, Slope, and Depression) and at four depths (0-10cm,
+10-30cm, 30-60cm, and 60-90cm).  The area was divided into 4 
+blocks, in a randomized block design. (Suggested by Michael Friendly.)
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>Soils</pre>
+
+
+<h3>Format</h3>
+
+<p>A data frame with 48 observations on the following 14 variables.  There are 3 factors and 9 response variables.
+</p>
+
+<dl>
+<dt><code>Group</code></dt><dd><p>a factor with 12 levels, corresponding to the combinations of <code>Contour</code> and <code>Depth</code> </p>
+</dd>
+<dt><code>Contour</code></dt><dd><p>a factor with 3 levels: <code>Depression</code> <code>Slope</code> <code>Top</code></p>
+</dd>
+<dt><code>Depth</code></dt><dd><p>a factor with 4 levels: <code>0-10</code> <code>10-30</code> <code>30-60</code> <code>60-90</code></p>
+</dd>
+<dt><code>Gp</code></dt><dd><p>a factor with 12 levels, giving abbreviations for the groups: 
+<code>D0</code> <code>D1</code> <code>D3</code> <code>D6</code> <code>S0</code> <code>S1</code> <code>S3</code> <code>S6</code> <code>T0</code> <code>T1</code> <code>T3</code> <code>T6</code></p>
+</dd>
+<dt><code>Block</code></dt><dd><p>a factor with levels <code>1</code> <code>2</code> <code>3</code> <code>4</code></p>
+</dd>
+<dt><code>pH</code></dt><dd><p>soil pH</p>
+</dd>
+<dt><code>N</code></dt><dd><p>total nitrogen in %</p>
+</dd>
+<dt><code>Dens</code></dt><dd><p>bulk density in gm/cm$^3$ </p>
+</dd>
+<dt><code>P</code></dt><dd><p>total phosphorous in ppm</p>
+</dd>
+<dt><code>Ca</code></dt><dd><p>calcium in me/100 gm.</p>
+</dd>
+<dt><code>Mg</code></dt><dd><p>magnesium in me/100 gm.</p>
+</dd>
+<dt><code>K</code></dt><dd><p>phosphorous in me/100 gm.</p>
+</dd>
+<dt><code>Na</code></dt><dd><p>sodium in me/100 gm.</p>
+</dd>
+<dt><code>Conduc</code></dt><dd><p>conductivity</p>
+</dd>
+</dl>
+
+
+
+<h3>Details</h3>
+
+<p>These data provide good examples of MANOVA and canonical discriminant analysis in a somewhat
+complex multivariate setting.  They may be treated as a one-way design (ignoring <code>Block</code>),
+by using either <code>Group</code> or <code>Gp</code> as the factor, or a two-way randomized block
+design using <code>Block</code>, <code>Contour</code> and <code>Depth</code> (quantitative, so orthogonal
+polynomial contrasts are useful).
+</p>
+
+
+<h3>Source</h3>
+
+<p>Horton, I. F.,Russell, J. S., and Moore, A. W. (1968)
+Multivariate-covariance and canonical analysis: 
+A method for selecting the most effective discriminators in a multivariate situation.
+<EM>Biometrics</EM> <B>24</B>, 845&ndash;858.
+<a href="http://www.stat.lsu.edu/faculty/moser/exst7037/soils.sas">http://www.stat.lsu.edu/faculty/moser/exst7037/soils.sas</a>
+</p>
+
+
+<h3>References</h3>
+
+<p>Khattree, R., and Naik, D. N. (2000)
+<EM>Multivariate Data Reduction and Discrimination with SAS Software.</EM>
+SAS Institute.
+</p>
+<p>Friendly, M. (2006)
+Data ellipses, HE plots and reduced-rank displays for
+multivariate linear models: SAS software and examples.
+<EM>Journal of Statistical Software</EM>, 17(6),
+<a href="http://www.jstatsoft.org/v17/i06">http://www.jstatsoft.org/v17/i06</a>.  
+</p>
+
+
+</body></html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>R: Body Temperature Series of Beaver 1</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" type="text/css" href="R.css">
+</head><body>
+
+<table width="100%" summary="page for beav1"><tr><td>beav1</td><td align="right">R Documentation</td></tr></table>
+
+<h2>
+Body Temperature Series of Beaver 1
+</h2>
+
+<h3>Description</h3>
+
+<p>Reynolds (1994) describes a small part of a study of the long-term
+temperature dynamics of beaver <EM>Castor canadensis</EM> in
+north-central Wisconsin.  Body temperature was measured by telemetry
+every 10 minutes for four females, but data from a one period of less
+than a day for each of two animals is used there.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+beav1
+</pre>
+
+
+<h3>Format</h3>
+
+<p>The <code>beav1</code> data frame has 114 rows and 4 columns.
+This data frame contains the following columns:
+</p>
+
+<dl>
+<dt><code>day</code></dt><dd>
+<p>Day of observation (in days since the beginning of 1990),
+December 12&ndash;13.
+</p>
+</dd>
+<dt><code>time</code></dt><dd>
+<p>Time of observation, in the form <code>0330</code> for 3.30am.
+</p>
+</dd>
+<dt><code>temp</code></dt><dd>
+<p>Measured body temperature in degrees Celsius.
+</p>
+</dd>
+<dt><code>activ</code></dt><dd>
+<p>Indicator of activity outside the retreat.
+</p>
+</dd>
+</dl>
+
+
+
+<h3>Note</h3>
+
+<p>The observation at 22:20 is missing.
+</p>
+
+
+<h3>Source</h3>
+
+<p>P. S. Reynolds (1994) Time-series analyses of beaver body temperatures.
+Chapter 11 of
+Lange, N., Ryan, L., Billard, L., Brillinger, D., Conquest, L.
+and Greenhouse, J. eds (1994) <EM>Case Studies in Biometry.</EM> New
+York: John Wiley and Sons.
+</p>
+
+
+<h3>References</h3>
+
+<p>Venables, W. N. and Ripley, B. D. (2002)
+<EM>Modern Applied Statistics with S.</EM> Fourth edition.  Springer.
+</p>
+
+
+<h3>See Also</h3>
+
+<p><code>beav2</code>
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+beav1 &lt;- within(beav1,
+               hours &lt;- 24*(day-346) + trunc(time/100) + (time%%100)/60)
+plot(beav1$hours, beav1$temp, type="l", xlab="time",
+   ylab="temperature", main="Beaver 1")
+usr &lt;- par("usr"); usr[3:4] &lt;- c(-0.2, 8); par(usr=usr)
+lines(beav1$hours, beav1$activ, type="s", lty=2)
+temp &lt;- ts(c(beav1$temp[1:82], NA, beav1$temp[83:114]),
+           start = 9.5, frequency = 6)
+activ &lt;- ts(c(beav1$activ[1:82], NA, beav1$activ[83:114]),
+            start = 9.5, frequency = 6)
+
+acf(temp[1:53])
+acf(temp[1:53], type = "partial")
+ar(temp[1:53])
+act &lt;- c(rep(0, 10), activ)
+X &lt;- cbind(1, act = act[11:125], act1 = act[10:124],
+          act2 = act[9:123], act3 = act[8:122])
+alpha &lt;- 0.80
+stemp &lt;- as.vector(temp - alpha*lag(temp, -1))
+sX &lt;- X[-1, ] - alpha * X[-115,]
+beav1.ls &lt;- lm(stemp ~ -1 + sX, na.action = na.omit)
+summary(beav1.ls, cor = FALSE)
+rm(temp, activ)
+</pre>
+
+
+</body></html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>R: Foraging Ecology of Bald Eagles</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" type="text/css" href="R.css">
+</head><body>
+
+<table width="100%" summary="page for eagles"><tr><td>eagles</td><td align="right">R Documentation</td></tr></table>
+
+<h2>
+Foraging Ecology of Bald Eagles
+</h2>
+
+<h3>Description</h3>
+
+<p>Knight and Skagen collected during a field study on the foraging
+behaviour of wintering Bald Eagles in Washington State, USA data
+concerning 160 attempts by one (pirating) Bald Eagle to steal a chum
+salmon from another (feeding) Bald Eagle.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+eagles
+</pre>
+
+
+<h3>Format</h3>
+
+<p>The <code>eagles</code> data frame has 8 rows and 5 columns.
+</p>
+
+<dl>
+<dt><code>y</code></dt><dd>
+<p>Number of successful attempts.
+</p>
+</dd>
+<dt><code>n</code></dt><dd>
+<p>Total number of attempts.
+</p>
+</dd>
+<dt><code>P</code></dt><dd>
+<p>Size of pirating eagle (<code>L</code> = large, <code>S</code> = small).
+</p>
+</dd>
+<dt><code>A</code></dt><dd>
+<p>Age of pirating eagle (<code>I</code> = immature, <code>A</code> = adult).
+</p>
+</dd>
+<dt><code>V</code></dt><dd>
+<p>Size of victim eagle (<code>L</code> = large, <code>S</code> = small).
+</p>
+</dd>
+</dl>
+
+
+
+<h3>Source</h3>
+
+<p>Knight, R. L. and Skagen, S. K. (1988)
+Agonistic asymmetries and the foraging ecology of Bald Eagles.
+<EM>Ecology</EM> <B>69</B>, 1188&ndash;1194.
+</p>
+
+
+<h3>References</h3>
+
+<p>Venables, W. N. and Ripley, B. D. (1999)
+<EM>Modern Applied Statistics with S-PLUS.</EM> Third
+Edition. Springer.
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+eagles.glm &lt;- glm(cbind(y, n - y) ~ P*A + V, data = eagles,
+                  family = binomial)
+dropterm(eagles.glm)
+prof &lt;- profile(eagles.glm)
+plot(prof)
+pairs(prof)
+</pre>
+
+
+</body></html>

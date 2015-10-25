@@ -1,0 +1,109 @@
++-----------+-------------------+
+| rwm1984   | R Documentation   |
++-----------+-------------------+
+
+rwm1984
+-------
+
+Description
+~~~~~~~~~~~
+
+German health registry for the year 1984.
+
+Usage
+~~~~~
+
+::
+
+    data(rwm1984)
+
+Format
+~~~~~~
+
+A data frame with 3,874 observations on the following 17 variables.
+
+``docvis``
+    number of visits to doctor during year (0-121)
+
+``hospvis``
+    number of days in hospital during year (0-51)
+
+``edlevel``
+    educational level (categorical: 1-4)
+
+``age``
+    age: 25-64
+
+``outwork``
+    out of work=1; 0=working
+
+``female``
+    female=1; 0=male
+
+``married``
+    married=1; 0=not married
+
+``kids``
+    have children=1; no children=0
+
+``hhninc``
+    household yearly income in marks (in Marks)
+
+``educ``
+    years of formal education (7-18)
+
+``self``
+    self-employed=1; not self employed=0
+
+``edlevel1``
+    (1/0) not high school graduate
+
+``edlevel2``
+    (1/0) high school graduate
+
+``edlevel3``
+    (1/0) university/college
+
+``edlevel4``
+    (1/0) graduate school
+
+Details
+~~~~~~~
+
+rwm1984 is saved as a data frame. Count models typically use docvis as
+response variable. 0 counts are included
+
+Source
+~~~~~~
+
+German Health Reform Registry, year=1984, in Hilbe and Greene (2007)
+
+References
+~~~~~~~~~~
+
+Hilbe, Joseph, M (2014), Modeling Count Data, Cambridge University Press
+Hilbe, Joseph M (2011), Negative Binomial Regression, Cambridge
+University Press Hilbe, J. and W. Greene (2008). Count Response
+Regression Models, in ed. C.R. Rao, J.P Miller, and D.C. Rao,
+Epidemiology and Medical Statistics, Elsevier Handbook of Statistics
+Series. London, UK: Elsevier.
+
+Examples
+~~~~~~~~
+
+::
+
+    library(MASS)
+    library(msme)
+    data(rwm1984)
+
+    glmrp <- glm(docvis ~ outwork + female + age + factor(edlevel), family=poisson, data=rwm1984)
+    summary(glmrp)
+    exp(coef(glmrp))
+
+    summary(nb2 <- nbinomial(docvis ~ outwork + female + age + factor(edlevel), data=rwm1984))
+    exp(coef(nb2))
+
+    summary(glmrnb <- glm.nb(docvis ~ outwork + female + age + factor(edlevel), data=rwm1984))
+    exp(coef(glmrnb))
+

@@ -1,0 +1,88 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>R: titanicgrp</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" type="text/css" href="R.css">
+</head><body>
+
+<table width="100%" summary="page for titanicgrp"><tr><td>titanicgrp</td><td align="right">R Documentation</td></tr></table>
+
+<h2>titanicgrp</h2>
+
+<h3>Description</h3>
+
+<p>The data is an grouped version of the 1912 Titanic passenger survival 
+log, 
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>data(titanicgrp)</pre>
+
+
+<h3>Format</h3>
+
+<p>A data frame with 12 observations on the following 5 variables.
+</p>
+
+<dl>
+<dt><code>survive</code></dt><dd><p>number of passengers who survived</p>
+</dd>
+<dt><code>cases</code></dt><dd><p>number of passengers with same pattern of covariates</p>
+</dd>
+<dt><code>age</code></dt><dd><p>1=adult; 0=child</p>
+</dd>
+<dt><code>sex</code></dt><dd><p>1=Male; 0=female</p>
+</dd>
+<dt><code>class</code></dt><dd><p>ticket class 1= 1st class; 2= second class; 3= third class</p>
+</dd>
+</dl>
+
+
+
+<h3>Details</h3>
+
+<p>titanicgrp is saved as a data frame.
+Used to assess risk ratios   
+</p>
+
+
+<h3>Source</h3>
+
+<p>Found in many other texts
+</p>
+
+
+<h3>References</h3>
+
+<p>Hilbe, Joseph M (2014), Modeling Count Data, Cambridge University Press
+Hilbe, Joseph M (2007, 2011), Negative Binomial Regression, Cambridge University Press
+Hilbe, Joseph M (2009), Logistic Regression Models, Chapman &amp; Hall/CRC
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+library(MASS)
+library(msme)
+data(titanicgrp)
+glmlr &lt;- glm(survive ~ age + sex + factor(class) + offset(log(cases)),
+             family=poisson, data=titanicgrp)
+summary(glmlr)
+exp(coef(glmlr))
+
+lcases &lt;- titanicgrp$cases
+nb2o &lt;- nbinomial(survive ~ age + sex + factor(class), 
+                                        formula2 =~ age + sex,
+                                        offset = lcases,
+                                        mean.link="log",
+                                        scale.link="log_s",
+                                        data=titanicgrp)
+summary(nb2o)
+exp(coef(nb2o))
+
+</pre>
+
+
+</body></html>

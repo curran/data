@@ -1,0 +1,92 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>R: Accelerated Life Testing of Motorettes</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" type="text/css" href="R.css">
+</head><body>
+
+<table width="100%" summary="page for motors"><tr><td>motors</td><td align="right">R Documentation</td></tr></table>
+
+<h2>
+Accelerated Life Testing of Motorettes
+</h2>
+
+<h3>Description</h3>
+
+<p>The <code>motors</code> data frame has 40 rows and 3 columns.  It describes an
+accelerated life test at each of four temperatures of 10 motorettes,
+and has rather discrete times.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+motors
+</pre>
+
+
+<h3>Format</h3>
+
+<p>This data frame contains the following columns:
+</p>
+
+<dl>
+<dt><code>temp</code></dt><dd>
+<p>the temperature (degrees C) of the test.
+</p>
+</dd>
+<dt><code>time</code></dt><dd>
+<p>the time in hours to failure or censoring at 8064 hours (= 336 days).
+</p>
+</dd>
+<dt><code>cens</code></dt><dd>
+<p>an indicator variable for death.
+</p>
+</dd>
+</dl>
+
+
+
+<h3>Source</h3>
+
+<p>Kalbfleisch, J. D. and Prentice, R. L. (1980)
+<EM>The Statistical Analysis of Failure Time Data.</EM>
+New York: Wiley.
+</p>
+<p>taken from
+</p>
+<p>Nelson, W. D. and Hahn, G. J. (1972)
+Linear regression of a regression relationship from censored data.
+Part 1 &ndash; simple methods and their application.
+<EM>Technometrics</EM>, <B>14</B>, 247&ndash;276.
+</p>
+
+
+<h3>References</h3>
+
+<p>Venables, W. N. and Ripley, B. D. (2002)
+<EM>Modern Applied Statistics with S.</EM> Fourth edition.  Springer.
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+library(survival)
+plot(survfit(Surv(time, cens) ~ factor(temp), motors), conf.int = FALSE)
+# fit Weibull model
+motor.wei &lt;- survreg(Surv(time, cens) ~ temp, motors)
+summary(motor.wei)
+# and predict at 130C
+unlist(predict(motor.wei, data.frame(temp=130), se.fit = TRUE))
+
+motor.cox &lt;- coxph(Surv(time, cens) ~ temp, motors)
+summary(motor.cox)
+# predict at temperature 200
+plot(survfit(motor.cox, newdata = data.frame(temp=200),
+     conf.type = "log-log"))
+summary( survfit(motor.cox, newdata = data.frame(temp=130)) )
+</pre>
+
+
+</body></html>

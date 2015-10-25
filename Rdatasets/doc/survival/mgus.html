@@ -1,0 +1,184 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>R: Monoclonal gammapothy data</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" type="text/css" href="R.css">
+</head><body>
+
+<table width="100%" summary="page for mgus"><tr><td>mgus</td><td align="right">R Documentation</td></tr></table>
+
+<h2>Monoclonal gammapothy data</h2>
+
+<h3>Description</h3>
+
+<p>Natural history of 241 subjects with monoclonal gammapothy of
+undetermined significance (MGUS).
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+mgus
+mgus1
+mgus2
+</pre>
+
+
+<h3>Format</h3>
+
+<p>mgus: A data frame with 241 observations on the following 12 variables.
+</p>
+
+<table summary="Rd table">
+<tr>
+ <td align="left">
+    id:</td><td align="left"> subject id </td>
+</tr>
+<tr>
+ <td align="left">
+    age:</td><td align="left"> age in years </td>
+</tr>
+<tr>
+ <td align="left">
+    sex:</td><td align="left"> <code>male</code> or <code>female</code> </td>
+</tr>
+<tr>
+ <td align="left">
+    dxyr:</td><td align="left"> year of diagnosis </td>
+</tr>
+<tr>
+ <td align="left">
+    pcdx:</td><td align="left"> for subjects who progress to a plasma cell malignancy </td>
+</tr>
+<tr>
+ <td align="left">
+       </td><td align="left"> the subtype of malignancy: multiple myeloma (MM) is the </td>
+</tr>
+<tr>
+ <td align="left">
+       </td><td align="left"> most common, followed by amyloidosis (AM), macroglobulinemia (MA),</td>
+</tr>
+<tr>
+ <td align="left">
+      </td><td align="left"> and other lymphprolifative (LP) </td>
+</tr>
+<tr>
+ <td align="left">
+    pctime:</td><td align="left"> days from MGUS until diagnosis of a plasma cell malignancy </td>
+</tr>
+<tr>
+ <td align="left">
+    futime:</td><td align="left"> days from diagnosis to last follow-up </td>
+</tr>
+<tr>
+ <td align="left">
+    death:</td><td align="left"> 1= follow-up is until death </td>
+</tr>
+<tr>
+ <td align="left">
+    alb:</td><td align="left"> albumin level at MGUS diagnosis </td>
+</tr>
+<tr>
+ <td align="left">
+    creat:</td><td align="left"> creatinine at MGUS diagnosis </td>
+</tr>
+<tr>
+ <td align="left">
+    hgb:</td><td align="left"> hemoglobin at MGUS diagnosis </td>
+</tr>
+<tr>
+ <td align="left">
+    mspike:</td><td align="left"> size of the monoclonal protien spike at diagnosis </td>
+</tr>
+<tr>
+ <td align="left">
+    </td>
+</tr>
+
+</table>
+
+<p>mgus1: The same data set in start,stop format. Contains the id, age, sex, and
+laboratory variable described above along with
+</p>
+
+<table summary="Rd table">
+<tr>
+ <td align="left"> 
+    start, stop:</td><td align="left"> sequential intervals of time for each
+      subject </td>
+</tr>
+<tr>
+ <td align="left">
+    status:</td><td align="left"> =1 if the interval ends in an event </td>
+</tr>
+<tr>
+ <td align="left">
+    event:</td><td align="left"> the event type </td>
+</tr>
+<tr>
+ <td align="left">
+  </td>
+</tr>
+
+</table>
+
+<p>mgus2: The mgus data, but formatted in the competing risks style.  Each
+subject has three observations, one for time to death, one for time to
+MM, and one for time to a PC malignancy other than MM.
+Contains the id, age, sex, and
+laboratory variable described above along with 
+</p>
+
+<table summary="Rd table">
+<tr>
+ <td align="left">
+    time:</td><td align="left"> time to event or censoring </td>
+</tr>
+<tr>
+ <td align="left">
+    status:</td><td align="left"> 1 if the event occured, 0 otherwise </td>
+</tr>
+<tr>
+ <td align="left">
+    event:</td><td align="left"> death, myeloma, or other </td>
+</tr>
+<tr>
+ <td align="left">
+  </td>
+</tr>
+
+</table>
+
+
+
+<h3>Details</h3>
+
+<p>Plasma cells are responsible for manufacturing immunoglobulins, an
+important part of the immune defense. At any given time there are
+estimated to be about <i>10^6</i> different immunoglobulins in the circulation
+at any one time.  When a patient has a plasma cell malignancy the
+distribuion will become dominated by a single isotype, the product of
+the malignant clone, visible as a spike on a serum protein
+electrophoresis. Monoclonal gammapothy of undertermined significance
+(MGUS) is the presence of such a spike, but in a patient with no
+evidence of overt malignancy.  This data set of 241 sequential subjects
+at Mayo Clinic was the groundbreaking study defining the natural history
+of such subjects. 
+</p>
+
+
+<h3>Source</h3>
+
+<p>Mayo Clinic data courtesy of Dr. Robert Kyle.
+</p>
+
+
+<h3>References</h3>
+
+<p>R Kyle, Benign monoclonal gammopathy &ndash; after 20 to 35 years of
+follow-up,
+Mayo Clinic Proc 1993; 68:26-36. 
+</p>
+
+
+</body></html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>R: Numbers of Car Insurance claims</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" type="text/css" href="R.css">
+</head><body>
+
+<table width="100%" summary="page for Insurance"><tr><td>Insurance</td><td align="right">R Documentation</td></tr></table>
+
+<h2>
+Numbers of Car Insurance claims
+</h2>
+
+<h3>Description</h3>
+
+<p>The data given in data frame <code>Insurance</code> consist of the
+numbers of policyholders of an insurance company who were
+exposed to risk, and the numbers of car insurance claims made by
+those policyholders in the third quarter of 1973.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+Insurance
+</pre>
+
+
+<h3>Format</h3>
+
+<p>This data frame contains the following columns:
+</p>
+
+<dl>
+<dt><code>District</code></dt><dd>
+<p>factor: district of residence of policyholder (1 to 4): 4 is major cities.
+</p>
+</dd>
+<dt><code>Group</code></dt><dd>
+<p>an ordered factor: group of car with levels  &lt;1 litre, 1&ndash;1.5 litre,
+1.5&ndash;2 litre, &gt;2 litre.
+</p>
+</dd>
+<dt><code>Age</code></dt><dd>
+<p>an ordered factor: the age of the insured in 4 groups labelled
+&lt;25, 25&ndash;29, 30&ndash;35, &gt;35.
+</p>
+</dd>
+<dt><code>Holders</code></dt><dd>
+<p>numbers of policyholders.
+</p>
+</dd>
+<dt><code>Claims</code></dt><dd>
+<p>numbers of claims
+</p>
+</dd>
+</dl>
+
+
+
+<h3>Source</h3>
+
+<p>L. A. Baxter, S. M. Coutts and G. A. F. Ross (1980) Applications of
+linear models in motor insurance.
+<EM>Proceedings of the 21st International Congress of Actuaries, Zurich</EM>
+pp. 11&ndash;29.
+</p>
+<p>M. Aitkin, D. Anderson, B. Francis and J. Hinde (1989)
+<EM>Statistical Modelling in GLIM.</EM>
+Oxford University Press.
+</p>
+
+
+<h3>References</h3>
+
+<p>Venables, W. N. and Ripley, B. D. (1999)
+<EM>Modern Applied Statistics with S-PLUS.</EM> Third
+Edition. Springer.
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+## main-effects fit as Poisson GLM with offset
+glm(Claims ~ District + Group + Age + offset(log(Holders)),
+    data = Insurance, family = poisson)
+
+# same via loglm
+loglm(Claims ~ District + Group + Age + offset(log(Holders)),
+      data = Insurance)
+</pre>
+
+
+</body></html>

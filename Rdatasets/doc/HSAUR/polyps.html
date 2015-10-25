@@ -1,0 +1,76 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>R: Familial Andenomatous Polyposis</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" type="text/css" href="R.css">
+</head><body>
+
+<table width="100%" summary="page for polyps"><tr><td>polyps</td><td align="right">R Documentation</td></tr></table>
+
+<h2> Familial Andenomatous Polyposis </h2>
+
+<h3>Description</h3>
+
+<p>Data from a placebo-controlled trial of a non-steroidal anti-inflammatory  
+drug in the treatment of familial andenomatous polyposis (FAP).
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>data("polyps")</pre>
+
+
+<h3>Format</h3>
+
+<p>A data frame with 20 observations on the following 3 variables.
+</p>
+
+<dl>
+<dt><code>number</code></dt><dd><p>number of colonic polyps at 12 months.</p>
+</dd>
+<dt><code>treat</code></dt><dd><p>treatment arms of the trail, a factor with 
+levels <code>placebo</code> and <code>drug</code>.</p>
+</dd>
+<dt><code>age</code></dt><dd><p>the age of the patient.</p>
+</dd>
+</dl>
+
+
+
+<h3>Details</h3>
+
+<p>Giardiello et al. (1993) and Piantadosi (1997) describe the
+results of a placebo-controlled trial of a non-steroidal anti-inflammatory  
+drug in the treatment of familial andenomatous polyposis (FAP). 
+The trial was halted after a planned interim analysis had suggested
+compelling evidence in favour of the treatment. 
+Here we are interested in assessing whether the number of colonic polyps at 
+12 months is related to treatment and age of patient.
+</p>
+
+
+<h3>Source</h3>
+
+<p>F. M. Giardiello, S. R. Hamilton, A. J. Krush, S. Piantadosi, L. M. Hylind,
+P. Celano, S. V. Booker, C. R. Robinson and G. J. A. Offerhaus (1993), 
+Treatment of colonic and rectal adenomas with sulindac 
+in familial adenomatous polyposis. <EM>New England Journal of Medicine</EM>,
+<B>328</B>(18), 1313&ndash;1316.
+</p>
+<p>S. Piantadosi (1997), <EM>Clinical Trials: A Methodologic Perspective</EM>.
+John Wiley \&amp; Sons, New York.
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+
+  data("polyps", package = "HSAUR")
+  plot(number ~ age, data = polyps, pch = as.numeric(polyps$treat))
+  legend(40, 40, legend = levels(polyps$treat), pch = 1:2, bty = "n")
+
+</pre>
+
+
+</body></html>

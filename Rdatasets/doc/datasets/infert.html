@@ -1,0 +1,125 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>R: Infertility after Spontaneous and Induced Abortion</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" type="text/css" href="R.css">
+</head><body>
+
+<table width="100%" summary="page for infert"><tr><td>infert</td><td align="right">R Documentation</td></tr></table>
+
+<h2>Infertility after Spontaneous and Induced Abortion</h2>
+
+<h3>Description</h3>
+
+<p>This is a matched case-control study dating from before the
+availability of conditional logistic regression.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>infert</pre>
+
+
+<h3>Format</h3>
+
+
+<table summary="Rd table">
+<tr>
+ <td align="right">
+    1.  </td><td align="left"> Education  </td><td align="left"> 0 = 0-5  years </td>
+</tr>
+<tr>
+ <td align="right">
+        </td><td align="left">            </td><td align="left"> 1 = 6-11 years </td>
+</tr>
+<tr>
+ <td align="right">
+        </td><td align="left">            </td><td align="left"> 2 = 12+  years  </td>
+</tr>
+<tr>
+ <td align="right">
+    2.  </td><td align="left"> age        </td><td align="left"> age in years of case </td>
+</tr>
+<tr>
+ <td align="right">
+    3.  </td><td align="left"> parity     </td><td align="left"> count </td>
+</tr>
+<tr>
+ <td align="right">
+    4.  </td><td align="left"> number of prior </td><td align="left"> 0 = 0 </td>
+</tr>
+<tr>
+ <td align="right">
+        </td><td align="left"> induced abortions </td><td align="left"> 1 = 1 </td>
+</tr>
+<tr>
+ <td align="right">
+        </td><td align="left">            </td><td align="left"> 2 = 2 or more </td>
+</tr>
+<tr>
+ <td align="right">
+    5.  </td><td align="left"> case status</td><td align="left"> 1 = case </td>
+</tr>
+<tr>
+ <td align="right">
+        </td><td align="left">            </td><td align="left"> 0 = control </td>
+</tr>
+<tr>
+ <td align="right">
+    6.  </td><td align="left"> number of prior </td><td align="left"> 0 = 0 </td>
+</tr>
+<tr>
+ <td align="right">
+        </td><td align="left"> spontaneous abortions </td><td align="left"> 1 = 1 </td>
+</tr>
+<tr>
+ <td align="right">
+        </td><td align="left">            </td><td align="left"> 2 = 2 or more </td>
+</tr>
+<tr>
+ <td align="right">
+    7.  </td><td align="left"> matched set number </td><td align="left"> 1-83 </td>
+</tr>
+<tr>
+ <td align="right">
+    8.  </td><td align="left"> stratum number </td><td align="left"> 1-63</td>
+</tr>
+
+</table>
+
+
+
+<h3>Note</h3>
+
+<p>One case with two prior spontaneous abortions and two prior induced
+abortions is omitted.
+</p>
+
+
+<h3>Source</h3>
+
+<p>Trichopoulos <EM>et al</EM> (1976)
+<EM>Br. J. of Obst. and Gynaec.</EM> <B>83</B>, 645&ndash;650.
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+require(stats)
+model1 &lt;- glm(case ~ spontaneous+induced, data = infert, family = binomial())
+summary(model1)
+## adjusted for other potential confounders:
+summary(model2 &lt;- glm(case ~ age+parity+education+spontaneous+induced,
+                     data = infert, family = binomial()))
+## Really should be analysed by conditional logistic regression
+## which is in the survival package
+if(require(survival)){
+  model3 &lt;- clogit(case ~ spontaneous+induced+strata(stratum), data = infert)
+  print(summary(model3))
+  detach()  # survival (conflicts)
+}
+</pre>
+
+
+</body></html>

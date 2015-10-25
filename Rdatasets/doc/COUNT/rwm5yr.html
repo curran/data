@@ -1,0 +1,114 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>R: rwm5yr</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" type="text/css" href="R.css">
+</head><body>
+
+<table width="100%" summary="page for rwm5yr"><tr><td>rwm5yr</td><td align="right">R Documentation</td></tr></table>
+
+<h2>rwm5yr</h2>
+
+<h3>Description</h3>
+
+<p>German health registry for the years 1984-1988. Health 
+information for years immediately prior to health reform. 
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>data(rwm5yr)</pre>
+
+
+<h3>Format</h3>
+
+<p>A data frame with 19,609 observations on the following 17 variables.
+</p>
+
+<dl>
+<dt><code>id</code></dt><dd><p>patient ID  (1=7028)</p>
+</dd>
+<dt><code>docvis</code></dt><dd><p>number of visits to doctor during year (0-121)</p>
+</dd>
+<dt><code>hospvis</code></dt><dd><p>number of days in hospital during year (0-51)</p>
+</dd>
+<dt><code>year</code></dt><dd><p>year; (categorical: 1984, 1985, 1986, 1987, 1988)</p>
+</dd>
+<dt><code>edlevel</code></dt><dd><p>educational level (categorical: 1-4)</p>
+</dd>
+<dt><code>age</code></dt><dd><p>age: 25-64</p>
+</dd>
+<dt><code>outwork</code></dt><dd><p>out of work=1; 0=working</p>
+</dd>
+<dt><code>female</code></dt><dd><p>female=1; 0=male</p>
+</dd>
+<dt><code>married</code></dt><dd><p>married=1; 0=not married</p>
+</dd>
+<dt><code>kids</code></dt><dd><p>have children=1; no children=0</p>
+</dd>
+<dt><code>hhninc</code></dt><dd><p>household yearly income in marks (in Marks)</p>
+</dd>
+<dt><code>educ</code></dt><dd><p>years of formal education (7-18)</p>
+</dd>
+<dt><code>self</code></dt><dd><p>self-employed=1; not self employed=0</p>
+</dd>
+<dt><code>edlevel1</code></dt><dd><p>(1/0) not high school graduate</p>
+</dd>
+<dt><code>edlevel2</code></dt><dd><p>(1/0) high school graduate</p>
+</dd>
+<dt><code>edlevel3</code></dt><dd><p>(1/0) university/college</p>
+</dd> 
+<dt><code>edlevel4</code></dt><dd><p>(1/0) graduate school</p>
+</dd>
+</dl>
+
+
+
+<h3>Details</h3>
+
+<p>rwm5yr is saved as a data frame.
+Count models typically use docvis as response variable. 0 counts are included
+</p>
+
+
+<h3>Source</h3>
+
+<p>German Health Reform Registry, years pre-reform 1984-1988, in Hilbe and Greene (2007)
+</p>
+
+
+<h3>References</h3>
+
+<p>Hilbe, Joseph M (2014), Modeling Count Data, Cambridge University Press
+Hilbe, Joseph M (2011), Negative Binomial Regression, Cambridge University Press
+Hilbe, J. and W. Greene (2008). Count Response Regression Models, in ed. 
+C.R. Rao, J.P Miller, and D.C. Rao, Epidemiology and Medical Statistics, 
+Elsevier Handbook of  Statistics Series. London, UK: Elsevier.
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+library(MASS)
+data(rwm5yr)
+
+glmrp &lt;- glm(docvis ~ outwork + female + age + factor(edlevel), family=poisson, data=rwm5yr)
+summary(glmrp)
+exp(coef(glmrp))
+
+## Not run: 
+library(msme)
+nb2 &lt;- nbinomial(docvis ~ outwork + female + age + factor(edlevel), data=rwm5yr)
+summary(nb2)
+exp(coef(nb2)) 
+
+glmrnb &lt;- glm.nb(docvis ~ outwork + female + age + factor(edlevel), data=rwm5yr)
+summary(glmrnb)
+exp(coef(glmrnb))
+
+## End(Not run)
+</pre>
+
+
+</body></html>

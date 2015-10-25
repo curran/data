@@ -1,0 +1,263 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>R: Statistics of Deadly Quarrels</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" type="text/css" href="R.css">
+</head><body>
+
+<table width="100%" summary="page for Quarrels"><tr><td>Quarrels</td><td align="right">R Documentation</td></tr></table>
+
+<h2>
+Statistics of Deadly Quarrels
+</h2>
+
+<h3>Description</h3>
+
+<p><EM>The Statistics Of Deadly Quarrels</EM> by                            
+Lewis Fry Richardson (1960) is one of the earlier attempts                   
+at quantification of historical conflict behavior.                    
+</p>
+<p>The data set contains 779 dyadic deadly quarrels that cover a             
+time period from 1809 to 1949.  A quarrel consists of one             
+pair of belligerents, and is identified by its
+beginning date and magnitude (log 10 of the number of deaths).
+Neither actor in a quarrel is identified by name.
+</p>
+<p>Because Richardson took a dyad of belligerents as his unit,
+a given war, such as World War I or World War II comprises
+multiple observations, for all pairs of belligerents. 
+For example, there are forty-four pairs of belligerents coded for              
+World War I.
+</p>
+<p>For each quarrel, the nominal variables
+include the type of quarrel, as well as political, cultural, and economic
+similarities and dissimilarities between the pair of combatants.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>data(Quarrels)</pre>
+
+
+<h3>Format</h3>
+
+<p>A data frame with 779 observations on the following 84 variables.
+</p>
+
+<dl>
+<dt><code>ID </code></dt><dd><p>V84: Id sequence </p>
+</dd>
+<dt><code>year </code></dt><dd><p>V1: Begin date of quarrel </p>
+</dd>
+<dt><code>international </code></dt><dd><p>V2: Nation vs nation </p>
+</dd>
+<dt><code>colonial </code></dt><dd><p>V3: Nation vs colony </p>
+</dd>
+<dt><code>revolution </code></dt><dd><p>V4: Revolution or civil war </p>
+</dd>
+<dt><code>nat.grp </code></dt><dd><p>V5: Nation vs gp in other nation </p>
+</dd>
+<dt><code>grp.grpSame </code></dt><dd><p>V6: Grp vs grp (same nation) </p>
+</dd>
+<dt><code>grp.grpDif </code></dt><dd><p>V7: Grp vs grp (between nations) </p>
+</dd>
+<dt><code>numGroups </code></dt><dd><p>V8: Num grps agst which fighting </p>
+</dd>
+<dt><code>months </code></dt><dd><p>V9: Num months fighting </p>
+</dd>
+<dt><code>pairs </code></dt><dd><p>V10: Num pairs in whole matrix </p>
+</dd>
+<dt><code>monthsPairs </code></dt><dd><p>V11: Num mons for all in mtrx </p>
+</dd>
+<dt><code>logDeaths </code></dt><dd><p>V12: Log (killed) matrix </p>
+</dd>
+<dt><code>deaths </code></dt><dd><p>V13: Total killed for matrix </p>
+</dd>
+<dt><code>exchangeGoods </code></dt><dd><p>V14: Gp sent goods to other </p>
+</dd>
+<dt><code>obstacleGoods </code></dt><dd><p>V15: Gp puts obstacles to goods </p>
+</dd>
+<dt><code>intermarriageOK </code></dt><dd><p>V16: Present intermarriages </p>
+</dd>
+<dt><code>intermarriageBan </code></dt><dd><p>V17: Intermarriages banned </p>
+</dd>
+<dt><code>simBody </code></dt><dd><p>V18: Similar body characteristics </p>
+</dd>
+<dt><code>difBody </code></dt><dd><p>V19: Difference in body characteristics </p>
+</dd>
+<dt><code>simDress </code></dt><dd><p>V20: Similarity of customs (dress) </p>
+</dd>
+<dt><code>difDress </code></dt><dd><p>V21: Difference of customs (dress) </p>
+</dd>
+<dt><code>eqWealth </code></dt><dd><p>V22: Common level of wealth </p>
+</dd>
+<dt><code>difWealth </code></dt><dd><p>V23: Difference in wealth </p>
+</dd>
+<dt><code>simMariagCust </code></dt><dd><p>V24: Similar marriage cusomst </p>
+</dd>
+<dt><code>difMariagCust </code></dt><dd><p>V25: Different marriage customs </p>
+</dd>
+<dt><code>simRelig </code></dt><dd><p>V26: Similar religeon or philosophy of life </p>
+</dd>
+<dt><code>difRelig </code></dt><dd><p>V27: Religeon or philisophy felt different </p>
+</dd>
+<dt><code>philanthropy </code></dt><dd><p>V28: General philanthropy </p>
+</dd>
+<dt><code>restrictMigration </code></dt><dd><p>V29: Restricted immigrations </p>
+</dd>
+<dt><code>sameLanguage </code></dt><dd><p>V30: Common mother tongue </p>
+</dd>
+<dt><code>difLanguage </code></dt><dd><p>V31: Different languages </p>
+</dd>
+<dt><code>simArtSci </code></dt><dd><p>V32: Similar science, arts </p>
+</dd>
+<dt><code>travel </code></dt><dd><p>V33: Travel </p>
+</dd>
+<dt><code>ignorance </code></dt><dd><p>V34: Ignorant of other/both </p>
+</dd>
+<dt><code>simPersLiberty </code></dt><dd><p>V35: Personal liberty similar </p>
+</dd>
+<dt><code>difPersLiberty </code></dt><dd><p>V36: More personal liberty </p>
+</dd>
+<dt><code>sameGov </code></dt><dd><p>V37: Common government </p>
+</dd>
+<dt><code>sameGovYrs </code></dt><dd><p>V38: Years since common govt established </p>
+</dd>
+<dt><code>prevConflict </code></dt><dd><p>V39: Belligerents fought previously </p>
+</dd>
+<dt><code>prevConflictYrs </code></dt><dd><p>V40: Years since belligerents fought </p>
+</dd>
+<dt><code>chronicFighting </code></dt><dd><p>V41: Chronic figthing between belligerents </p>
+</dd>
+<dt><code>persFriendship </code></dt><dd><p>V42: Autocrats personal friends </p>
+</dd>
+<dt><code>persResentment </code></dt><dd><p>V43: Leaders personal resentment </p>
+</dd>
+<dt><code>difLegal </code></dt><dd><p>V44: Annoyingly different legal systems </p>
+</dd>
+<dt><code>nonintervention </code></dt><dd><p>V45: Policy of nonintervention </p>
+</dd>
+<dt><code>thirdParty </code></dt><dd><p>V46: Led by 3rd group to conflict </p>
+</dd>
+<dt><code>supportEnemy </code></dt><dd><p>V47: Supported others enemy </p>
+</dd>
+<dt><code>attackAlly </code></dt><dd><p>V48: Attacked ally of other </p>
+</dd>
+<dt><code>rivalsLand </code></dt><dd><p>V49: Rivals territory concess </p>
+</dd>
+<dt><code>rivalsTrade </code></dt><dd><p>V50: Rivals trade </p>
+</dd>
+<dt><code>churchPower </code></dt><dd><p>V51: Church civil power </p>
+</dd>
+<dt><code>noExtension </code></dt><dd><p>V52: Policy not extending ter </p>
+</dd>
+<dt><code>territory </code></dt><dd><p>V53: Desired territory </p>
+</dd>
+<dt><code>habitation </code></dt><dd><p>V54: Wanted habitation </p>
+</dd>
+<dt><code>minerals </code></dt><dd><p>V55: Desired minerals </p>
+</dd>
+<dt><code>StrongHold </code></dt><dd><p>V56: Wanted strategic stronghold </p>
+</dd>
+<dt><code>taxation </code></dt><dd><p>V57: Taxed other </p>
+</dd>
+<dt><code>loot </code></dt><dd><p>V58: Wanted loot </p>
+</dd>
+<dt><code>objectedWar </code></dt><dd><p>V59: Objected to war </p>
+</dd>
+<dt><code>enjoyFight </code></dt><dd><p>V60: Enjoyed fighting </p>
+</dd>
+<dt><code>pride </code></dt><dd><p>V61: Elated by strong pride </p>
+</dd>
+<dt><code>overpopulated </code></dt><dd><p>V62: Insufficient land for population </p>
+</dd>
+<dt><code>fightForPay </code></dt><dd><p>V63: Fought only for pay </p>
+</dd>
+<dt><code>joinWinner </code></dt><dd><p>V64: Desired to join winners </p>
+</dd>
+<dt><code>otherDesiredWar </code></dt><dd><p>V65: Quarrel desired by other </p>
+</dd>
+<dt><code>propaganda3rd </code></dt><dd><p>V66: Issued of propaganda to third parties </p>
+</dd>
+<dt><code>protection </code></dt><dd><p>V67: Offered protection </p>
+</dd>
+<dt><code>sympathy </code></dt><dd><p>V68: Sympathized under control </p>
+</dd>
+<dt><code>debt </code></dt><dd><p>V69: Owed money to others </p>
+</dd>
+<dt><code>prevAllies </code></dt><dd><p>V70: Had fought as allies </p>
+</dd>
+<dt><code>yearsAllies </code></dt><dd><p>V71: Years since fought as allies </p>
+</dd>
+<dt><code>intermingled </code></dt><dd><p>V72: Had intermingled on territory </p>
+</dd>
+<dt><code>interbreeding </code></dt><dd><p>V73: Interbreeding between groups </p>
+</dd>
+<dt><code>propadanda </code></dt><dd><p>V74: Issued propaganda to other group </p>
+</dd>
+<dt><code>orderedObey </code></dt><dd><p>V75: Ordered other to obey </p>
+</dd>
+<dt><code>commerceOther </code></dt><dd><p>V76: Commercial enterprises </p>
+</dd>
+<dt><code>feltStronger </code></dt><dd><p>V77: Felt stronger </p>
+</dd>
+<dt><code>competeIntellect </code></dt><dd><p>V78: Competed succesfully intellectual occ </p>
+</dd>
+<dt><code>insecureGovt </code></dt><dd><p>V79: Government insecure </p>
+</dd>
+<dt><code>prepWar </code></dt><dd><p>V80: Preparations for war </p>
+</dd>
+<dt><code>RegionalError </code></dt><dd><p>V81: Regional error measure </p>
+</dd>
+<dt><code>CasualtyError </code></dt><dd><p>V82: Casualty error measure </p>
+</dd>
+<dt><code>Auxiliaries </code></dt><dd><p>V83: Auxiliaries in service of nation at war </p>
+</dd>
+</dl>
+
+
+
+<h3>Details</h3>
+
+<p>In the original data set obtained from ICPSR, variables were
+named <code>V1</code>-<code>V84</code>.  These were renamed to make them more
+meaningful. <code>V84</code>, renamed <code>ID</code> was moved to the first position,
+but otherwise the order of variables is the same.
+</p>
+<p>In many of the <code>factor</code> variables, <code>0</code> is used to indicate
+&quot;irrelevant to quarrel&quot;.  This refers to those relations that              
+Richardson found absent or irrelevant to the particular               
+quarrel, and did not subsequently mention.                            
+</p>
+<p>See the original codebook at
+<a href="http://www.icpsr.umich.edu/cgi-bin/file?comp=none&amp;study=5407&amp;ds=1&amp;file_id=652814">http://www.icpsr.umich.edu/cgi-bin/file?comp=none&amp;study=5407&amp;ds=1&amp;file_id=652814</a>
+for details not contained here.
+</p>
+
+
+<h3>Source</h3>
+
+<p><a href="http://www.icpsr.umich.edu/icpsrweb/ICPSR/studies/05407">http://www.icpsr.umich.edu/icpsrweb/ICPSR/studies/05407</a>
+</p>
+
+
+<h3>References</h3>
+
+<p>Lewis F. Richardson, (1960).
+<EM>The Statistics Of Deadly Quarrels</EM>. (Edited by Q. Wright and C. C. Lienau). 
+Pittsburgh: Boxwood Press.  
+</p>
+<p>Rummel, Rudolph J. (1967), &quot;Dimensions of Dyadic War, 1820-1952.&quot; <EM>Journal of
+Conflict Resolution</EM>. 11, (2), 176 - 183.
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+data(Quarrels)
+str(Quarrels)
+</pre>
+
+
+</body></html>

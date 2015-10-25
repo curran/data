@@ -1,0 +1,73 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>R: Applications to a Political Science PhD Program</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" type="text/css" href="R.css">
+</head><body>
+
+<table width="100%" summary="page for admit"><tr><td>admit</td><td align="right">R Documentation</td></tr></table>
+
+<h2>Applications to a Political Science PhD Program</h2>
+
+<h3>Description</h3>
+
+<p>Ordinal ratings (faculty evaluations) of applicants to a Political Science PhD
+Program.</p>
+
+
+<h3>Usage</h3>
+
+<pre>data(admit)</pre>
+
+
+<h3>Format</h3>
+
+<p>A data frame with 106 observations on the following 6 variables.
+</p>
+
+<dl>
+<dt><code>score</code></dt><dd><p>an ordered factor with levels <code>1</code> &lt; <code>2</code> &lt; <code>3</code> &lt; <code>4</code> &lt; <code>5</code></p>
+</dd>
+<dt><code>gre.quant</code></dt><dd><p>applicant's score on the quantitative
+section of the GRE; the maximum score is 800</p>
+</dd>
+<dt><code>gre.verbal</code></dt><dd><p>applicant's score on the verbal section of
+the GRE; the maximum score is 800</p>
+</dd>
+<dt><code>ap</code></dt><dd><p>1 if the applicant indicated an interest in
+American politics; 0 otherwise</p>
+</dd>
+<dt><code>pt</code></dt><dd><p>1 if the applicant indicated an interest in
+Political Theory; 0 otherwise</p>
+</dd>
+<dt><code>female</code></dt><dd><p>1 for female applicants; 0 otherwise</p>
+</dd>
+</dl>
+
+
+
+<h3>References</h3>
+
+<p>Jackman, Simon.  2004.  &quot;What Do We Learn From Graduate
+Admissions Committees?: A Multiple-Rater, Latent Variable Model, with
+Incomplete Discrete and Continuous Indicators.&quot;  <EM>Political
+Analysis</EM>.  12(4):400-424.  </p>
+
+
+<h3>Examples</h3>
+
+<pre>
+data(admit)
+summary(admit)
+## ordered probit model
+op1 &lt;- polr(score ~ gre.quant + gre.verbal + ap + pt + female,
+            Hess=TRUE,
+            data=admit,
+            method="probit")
+summary(op1)
+hitmiss(op1)
+logLik(op1)
+pR2(op1)   
+</pre>
+
+
+</body></html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>R: Annual Precipitation in US Cities</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" type="text/css" href="R.css">
+</head><body>
+
+<table width="100%" summary="page for precip"><tr><td>precip</td><td align="right">R Documentation</td></tr></table>
+
+<h2>Annual Precipitation in US Cities</h2>
+
+<h3>Description</h3>
+
+<p>The average amount of precipitation (rainfall) in inches for each of
+70 United States (and Puerto Rico) cities.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>precip</pre>
+
+
+<h3>Format</h3>
+
+<p>A named vector of length 70.
+</p>
+
+
+<h3>Source</h3>
+
+<p>Statistical Abstracts of the United States, 1975.
+</p>
+
+
+<h3>References</h3>
+
+<p>McNeil, D. R. (1977)
+<EM>Interactive Data Analysis</EM>.
+New York: Wiley.
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+require(graphics)
+dotchart(precip[order(precip)], main = "precip data")
+title(sub = "Average annual precipitation (in.)")
+</pre>
+
+
+</body></html>

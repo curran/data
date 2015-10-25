@@ -1,0 +1,68 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>R: Engel Data</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" type="text/css" href="R.css">
+</head><body>
+
+<table width="100%" summary="page for engel"><tr><td>engel</td><td align="right">R Documentation</td></tr></table>
+
+<h2>Engel Data</h2>
+
+<h3>Description</h3>
+
+<p>Engel food expenditure data used in Koenker and Bassett(1982).
+This is a regression data set consisting of 235 observations on
+income and expenditure on food for Belgian working class households.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>data(engel)</pre>
+
+
+<h3>Format</h3>
+
+<p>A data frame containing 235 observations on 2 variables
+</p>
+
+<dl>
+<dt>income</dt><dd><p>annual household income in Belgian francs</p>
+</dd>
+<dt>foodexp</dt><dd><p>annual household food expenditure in Belgian francs</p>
+</dd>
+</dl>
+
+
+
+<h3>References</h3>
+
+<p>Koenker, R. and Bassett, G (1982)
+Robust Tests of Heteroscedasticity based on Regression Quantiles;
+<EM>Econometrica</EM> <B>50</B>, 43&ndash;61.
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+## See also    demo("engel1")
+##             --------------
+
+data(engel)
+plot(engel, log = "xy",
+     main = "'engel' data  (log - log scale)")
+plot(log10(foodexp) ~ log10(income), data = engel,
+     main = "'engel' data  (log10 - transformed)")
+taus &lt;- c(.15, .25, .50, .75, .95, .99)
+rqs &lt;- as.list(taus)
+for(i in seq(along = taus)) {
+  rqs[[i]] &lt;- rq(log10(foodexp) ~ log10(income), tau = taus[i], data = engel)
+  lines(log10(engel$income), fitted(rqs[[i]]), col = i+1)
+}
+legend("bottomright", paste("tau = ", taus), inset = .04,
+       col = 2:(length(taus)+1), lty=1)
+</pre>
+
+
+</body></html>

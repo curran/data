@@ -1,0 +1,121 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>R: Seizure Counts for Epileptics</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" type="text/css" href="R.css">
+</head><body>
+
+<table width="100%" summary="page for epil"><tr><td>epil</td><td align="right">R Documentation</td></tr></table>
+
+<h2>
+Seizure Counts for Epileptics
+</h2>
+
+<h3>Description</h3>
+
+<p>Thall and Vail (1990) give a data set on two-week seizure counts for
+59 epileptics.  The number of seizures was recorded for a baseline
+period of 8 weeks, and then patients were randomly assigned to a
+treatment group or a control group.  Counts were then recorded for
+four successive two-week periods. The subject's age is the only
+covariate.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+epil
+</pre>
+
+
+<h3>Format</h3>
+
+<p>This data frame has 236 rows and the following 9 columns:
+</p>
+
+<dl>
+<dt><code>y</code></dt><dd>
+<p>the count for the 2-week period.
+</p>
+</dd>
+<dt><code>trt</code></dt><dd>
+<p>treatment, <code>"placebo"</code> or <code>"progabide"</code>.
+</p>
+</dd>
+<dt><code>base</code></dt><dd>
+<p>the counts in the baseline 8-week period.
+</p>
+</dd>
+<dt><code>age</code></dt><dd>
+<p>subject's age, in years.
+</p>
+</dd>
+<dt><code>V4</code></dt><dd>
+<p><code>0/1</code> indicator variable of period 4.
+</p>
+</dd>
+<dt><code>subject</code></dt><dd>
+<p>subject number, 1 to 59.
+</p>
+</dd>
+<dt><code>period</code></dt><dd>
+<p>period, 1 to 4.
+</p>
+</dd>
+<dt><code>lbase</code></dt><dd>
+<p>log-counts for the baseline period, centred to have zero mean.
+</p>
+</dd>
+<dt><code>lage</code></dt><dd>
+<p>log-ages, centred to have zero mean.
+</p>
+</dd>
+</dl>
+
+
+
+<h3>Source</h3>
+
+<p>Thall, P. F. and Vail, S. C. (1990)
+Some covariance models for longitudinal count data with over-dispersion.
+<EM>Biometrics</EM> <B>46</B>, 657&ndash;671.
+</p>
+
+
+<h3>References</h3>
+
+<p>Venables, W. N. and Ripley, B. D. (2002)
+<EM>Modern Applied Statistics with S.</EM> Fourth Edition. Springer.
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+summary(glm(y ~ lbase*trt + lage + V4, family = poisson,
+            data = epil), cor = FALSE)
+epil2 &lt;- epil[epil$period == 1, ]
+epil2["period"] &lt;- rep(0, 59); epil2["y"] &lt;- epil2["base"]
+epil["time"] &lt;- 1; epil2["time"] &lt;- 4
+epil2 &lt;- rbind(epil, epil2)
+epil2$pred &lt;- unclass(epil2$trt) * (epil2$period &gt; 0)
+epil2$subject &lt;- factor(epil2$subject)
+epil3 &lt;- aggregate(epil2, list(epil2$subject, epil2$period &gt; 0),
+   function(x) if(is.numeric(x)) sum(x) else x[1])
+epil3$pred &lt;- factor(epil3$pred,
+   labels = c("base", "placebo", "drug"))
+
+contrasts(epil3$pred) &lt;- structure(contr.sdif(3),
+    dimnames = list(NULL, c("placebo-base", "drug-placebo")))
+summary(glm(y ~ pred + factor(subject) + offset(log(time)),
+            family = poisson, data = epil3), cor = FALSE)
+
+summary(glmmPQL(y ~ lbase*trt + lage + V4,
+                random = ~ 1 | subject,
+                family = poisson, data = epil))
+summary(glmmPQL(y ~ pred, random = ~1 | subject,
+                family = poisson, data = epil3))
+</pre>
+
+
+</body></html>

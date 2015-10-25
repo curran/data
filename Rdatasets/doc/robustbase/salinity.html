@@ -1,0 +1,72 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>R: Salinity Data</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" type="text/css" href="R.css">
+</head><body>
+
+<table width="100%" summary="page for salinity"><tr><td>salinity</td><td align="right">R Documentation</td></tr></table>
+
+<h2>Salinity Data</h2>
+
+<h3>Description</h3>
+
+<p>This is a data set consisting of measurements of water salinity (i.e.,
+its salt concentration) and river discharge taken in North Carolina's
+Pamlico Sound; This dataset was listed by Ruppert and Carroll
+(1980).  In Carrol and Ruppert (1985) the physical background of the
+data is described.  They indicated that observations 5 and 16
+correspond to periods of very heavy discharge and showed that the
+discrepant observation 5 was masked by observations 3 and 16, i.e.,
+only after deletion of these observations it was possible to identify
+the influential observation 5.
+</p>
+<p>This data set is a prime example of the masking effect.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>data(salinity)</pre>
+
+
+<h3>Format</h3>
+
+<p>A data frame with 28 observations on the following 4 variables.
+</p>
+
+<dl>
+<dt><code>X1</code></dt><dd><p>Lagged Salinity</p>
+</dd>
+<dt><code>X2</code></dt><dd><p>Trend</p>
+</dd>
+<dt><code>X3</code></dt><dd><p>Discharge</p>
+</dd>
+<dt><code>Y</code></dt><dd><p>Salinity</p>
+</dd>
+</dl>
+
+
+
+<h3>Source</h3>
+
+<p>P. J. Rousseeuw and A. M. Leroy (1987)
+<EM>Robust Regression and Outlier Detection</EM>;
+Wiley, p.82, table 5.
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+data(salinity)
+summary(lm.sali  &lt;-        lm(Y ~ . , data = salinity))
+summary(rlm.sali &lt;- MASS::rlm(Y ~ . , data = salinity))
+summary(lts.sali &lt;-    ltsReg(Y ~ . , data = salinity))
+
+salinity.x &lt;- data.matrix(salinity[, 1:3])
+c_sal &lt;- covMcd(salinity.x)
+plot(c_sal, "tolEllipsePlot")
+</pre>
+
+
+</body></html>

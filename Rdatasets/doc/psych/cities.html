@@ -1,0 +1,96 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>R: Distances between 11 US cities</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" type="text/css" href="R.css">
+</head><body>
+
+<table width="100%" summary="page for cities"><tr><td>cities</td><td align="right">R Documentation</td></tr></table>
+
+<h2>Distances between 11 US cities</h2>
+
+<h3>Description</h3>
+
+<p>Airline distances between 11 US cities may be used as an example for multidimensional scaling or cluster analysis.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>data(cities)</pre>
+
+
+<h3>Format</h3>
+
+<p>A data frame with 11 observations on the following 11 variables.
+</p>
+
+<dl>
+<dt><code>ATL</code></dt><dd><p>Atlana, Georgia</p>
+</dd>
+<dt><code>BOS</code></dt><dd><p>Boston, Massachusetts</p>
+</dd>
+<dt><code>ORD</code></dt><dd><p>Chicago, Illinois</p>
+</dd>
+<dt><code>DCA</code></dt><dd><p>Washington, District of Columbia</p>
+</dd>
+<dt><code>DEN</code></dt><dd><p>Denver, Colorado</p>
+</dd>
+<dt><code>LAX</code></dt><dd><p>Los Angeles, California</p>
+</dd>
+<dt><code>MIA</code></dt><dd><p>Miami, Florida</p>
+</dd>
+<dt><code>JFK</code></dt><dd><p>New York, New York</p>
+</dd>
+<dt><code>SEA</code></dt><dd><p>Seattle, Washington</p>
+</dd>
+<dt><code>SFO</code></dt><dd><p>San Francisco, California</p>
+</dd>
+<dt><code>MSY</code></dt><dd><p>New Orleans, Lousianna</p>
+</dd>
+</dl>
+
+
+
+<h3>Details</h3>
+
+<p>An 11 x11  matrix of distances between major US airports. This is a useful demonstration of multiple dimensional scaling. 
+</p>
+<p>city.location is a dataframe of longitude and latitude for those cities.
+</p>
+<p>Note that the 2 dimensional MDS solution does not perfectly capture the data from these city distances.   Boston, New York and Washington, D.C. are located slightly too far west, and Seattle and LA are slightly too far south.
+</p>
+
+
+<h3>Source</h3>
+
+ <p><a href="http://www.timeanddate.com/worldclock/distance.html">http://www.timeanddate.com/worldclock/distance.html</a>
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+
+data(cities)
+city.location[,1] &lt;- -city.location[,1]
+#not run
+#an overlay map can be added if the package maps is available
+#
+#
+#libary(maps)
+#map("usa")
+#title("MultiDimensional Scaling of US cities")
+#points(city.location)
+
+plot(city.location, xlab="Dimension 1", ylab="Dimension 2",
+   main ="Multidimensional scaling of US cities")
+city.loc &lt;- cmdscale(cities, k=2) #ask for a 2 dimensional solution  round(city.loc,0) 
+city.loc &lt;- -city.loc 
+ city.loc &lt;- rescale(city.loc,apply(city.location,2,mean),apply(city.location,2,sd))
+points(city.loc,type="n") 
+text(city.loc,labels=names(cities))
+
+</pre>
+
+
+</body></html>

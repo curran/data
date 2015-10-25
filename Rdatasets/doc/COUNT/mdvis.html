@@ -1,0 +1,103 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>R: mdvis</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" type="text/css" href="R.css">
+</head><body>
+
+<table width="100%" summary="page for mdvis"><tr><td>mdvis</td><td align="right">R Documentation</td></tr></table>
+
+<h2>mdvis</h2>
+
+<h3>Description</h3>
+
+<p>Data from a subset of the German Socio-Economic Panel  (SOEP). The subset was created 
+by Rabe-Hesketh and Skrondal (2005). Only working women are included in these data. 
+Beginning in 1997, German health reform in part entailed a 200
+co-payment as well as limits in provider reimbursement. Patients were surveyed for the 
+one year panel (1996) prior to and the one year panel (1998) after reform to assess 
+whether the number of physician visits by patients declined - which was the goal of 
+reform legislation. 
+The response, or variable to be explained by the model, is numvisit, which 
+indicates the number of patient visits to a physician's office during a three month period.   
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>data(mdvis)</pre>
+
+
+<h3>Format</h3>
+
+<p>A data frame with 2,227 observations on the following 13 variables.
+</p>
+
+<dl>
+<dt><code>numvisit</code></dt><dd><p>visits to MD office 3mo prior</p>
+</dd>
+<dt><code>reform</code></dt><dd><p>1=interview yr post-reform: 1998;0=pre-reform:1996</p>
+</dd>
+<dt><code>badh</code></dt><dd><p>1=bad health; 0 = not bad health</p>
+</dd>
+<dt><code>age</code></dt><dd><p>Age(yrs 20-60)</p>
+</dd>
+<dt><code>educ</code></dt><dd><p>education(1:7-10;2=10.5-12;3=HSgrad+)</p>
+</dd>
+<dt><code>educ1</code></dt><dd><p>educ1= 7-10 years</p>
+</dd>
+<dt><code>educ2</code></dt><dd><p>educ2= 10.5-12 years</p>
+</dd>
+<dt><code>educ3</code></dt><dd><p>educ3= post secondary or high school</p>
+</dd>
+<dt><code>agegrp</code></dt><dd><p>age: 1=20-39; 2=40-49; 3=50-60</p>
+</dd>
+<dt><code>age1</code></dt><dd><p>age 20-39</p>
+</dd>
+<dt><code>age2</code></dt><dd><p>age 40-49</p>
+</dd>
+<dt><code>age3</code></dt><dd><p>age 50-60</p>
+</dd>
+<dt><code>loginc</code></dt><dd><p>log(household income in DM)</p>
+</dd>
+</dl>
+
+
+
+<h3>Details</h3>
+
+<p>mdvis is saved as a data frame.
+Count models typically use docvis as response variable. 0 counts are included
+</p>
+
+
+<h3>Source</h3>
+
+<p>German Socio-Economic Panel (SOEP), 1995 pre-reform; 1998 post reform. Created
+by Rabe-Hesketh and Skrondal (2005).
+</p>
+
+
+<h3>References</h3>
+
+<p>Hilbe, Joseph M (2007, 2011), Negative Binomial Regression, Cambridge University Press
+Hilbe, Joseph M (2009), Logistic Regression Models, Chapman &amp; Hall/CRC
+Rabe-Hesketh, S. and A. Skrondal (2005). Multilevel and Longitudinal Modeling Using Stata, 
+College Station: Stata Press.
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+data(mdvis)
+glmmdp &lt;- glm(numvisit ~ reform + factor(educ) + factor(agegrp), family=poisson, data=mdvis)
+summary(glmmdp)
+exp(coef(glmmdp))
+library(MASS)
+glmmdnb &lt;- glm.nb(numvisit ~ reform + factor(educ) + factor(agegrp), data=mdvis)
+summary(glmmdnb)
+exp(coef(glmmdnb))
+</pre>
+
+
+</body></html>

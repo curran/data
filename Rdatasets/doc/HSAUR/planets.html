@@ -1,0 +1,72 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>R: Exoplanets Data</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" type="text/css" href="R.css">
+</head><body>
+
+<table width="100%" summary="page for planets"><tr><td>planets</td><td align="right">R Documentation</td></tr></table>
+
+<h2> Exoplanets Data </h2>
+
+<h3>Description</h3>
+
+<p>Data on planets outside the Solar System.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>data("planets")</pre>
+
+
+<h3>Format</h3>
+
+<p>A data frame with 101 observations from 101 exoplanets 
+on the following 3 variables.
+</p>
+
+<dl>
+<dt>mass</dt><dd><p>Jupiter mass of the planet.</p>
+</dd>
+<dt>period</dt><dd><p>period in earth days.</p>
+</dd>
+<dt>eccen</dt><dd><p>the radial eccentricity of the planet.</p>
+</dd>
+</dl>
+
+
+
+<h3>Details</h3>
+
+<p>From the properties of the exoplanets found up to now it        
+appears that the theory of planetary development constructed    
+for the planets of the Solar System may need to be reformulated.
+The exoplanets are not at all like the nine local planets that
+we know so well. A first step in the process of understanding
+the exoplanets might be to try to classify them with respect 
+to their known properties.
+</p>
+
+
+<h3>Source</h3>
+
+<p>M. Mayor and P. Frei (2003). <EM>New Worlds in the Cosmos: 
+The Discovery of Exoplanets</EM>. Cambridge University Press,
+Cambridge, UK.
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+
+  data("planets", package = "HSAUR")
+  require("scatterplot3d")
+  scatterplot3d(log(planets$mass), log(planets$period), log(planets$eccen), 
+                type = "h", highlight.3d = TRUE,  angle = 55, 
+                scale.y = 0.7, pch = 16)
+
+</pre>
+
+
+</body></html>

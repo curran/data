@@ -1,0 +1,116 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>R: Breathlessness and Wheeze in Coal Miners</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" type="text/css" href="R.css">
+</head><body>
+
+<table width="100%" summary="page for CoalMiners"><tr><td>CoalMiners</td><td align="right">R Documentation</td></tr></table>
+
+<h2>Breathlessness and Wheeze in Coal Miners</h2>
+
+<h3>Description</h3>
+
+<p>Data from Ashford &amp; Sowden (1970) given by Agresti (1990) on the
+association between two pulmonary conditions, breathlessness and
+wheeze, in a large sample of coal miners who were smokers with no
+radiological evidence of pneumoconlosis, aged between 20&ndash;64
+when examined.
+This data is frequently used as an example of fitting models for
+bivariate, binary responses.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+data("CoalMiners")
+</pre>
+
+
+<h3>Format</h3>
+
+<p>A 3-dimensional table of size 2 x 2 x 9
+resulting from cross-tabulating variables for
+18,282 coal miners.  The variables and their levels are as follows:
+</p>
+
+<table summary="Rd table">
+<tr>
+ <td align="right">
+    No </td><td align="left"> Name </td><td align="left"> Levels </td>
+</tr>
+<tr>
+ <td align="right">
+    1 </td><td align="left"> Breathlessness </td><td align="left"> B, NoB </td>
+</tr>
+<tr>
+ <td align="right">
+    2 </td><td align="left"> Wheeze </td><td align="left"> W, NoW </td>
+</tr>
+<tr>
+ <td align="right">
+    3 </td><td align="left"> Age </td><td align="left"> 20-24, 25-29, 30-34, ..., 60-64
+  </td>
+</tr>
+
+</table>
+
+
+
+<h3>Details</h3>
+
+<p>In an earlier version of this data set, the first group, aged 20-24, was
+inadvertently omitted from this data table and the breathlessness variable
+was called wheeze and vice versa.
+</p>
+
+
+<h3>Source</h3>
+
+<p>Michael Friendly (2000),
+Visualizing Categorical Data, pages 82&ndash;83, 319&ndash;322.
+</p>
+
+
+<h3>References</h3>
+
+<p>A. Agresti (1990),
+<EM>Categorical Data Analysis</EM>.
+Wiley-Interscience, New York, Table 7.11, p. 237
+</p>
+<p>J. R. Ashford and R. D. Sowdon (1970),
+Multivariate probit analysis,
+<EM>Biometrics</EM>, <B>26</B>, 535&ndash;546.
+</p>
+<p>M. Friendly (2000),
+<EM>Visualizing Categorical Data</EM>.
+SAS Institute, Cary, NC.
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+data("CoalMiners")
+
+ftable(CoalMiners, row.vars = 3)
+
+## Fourfold display, both margins equated
+fourfold(CoalMiners[,,2:9], mfcol = c(2,4))
+
+## Fourfold display, strata equated
+fourfold(CoalMiners[,,2:9], std = "ind.max", mfcol = c(2,4))
+
+
+## Log Odds Ratio Plot
+summary(l &lt;- oddsratio(CoalMiners[,,2:9]))
+age &lt;- seq(25, 60, by = 5)
+plot(l,
+     xlab = "Age Group",
+     main = "Breathlessness and Wheeze in Coal Miners")
+m &lt;- lm(l ~ age + I(age^2))
+lines(fitted(m), col = "red", lwd=2)
+</pre>
+
+
+</body></html>

@@ -1,0 +1,118 @@
++----------+-------------------+
+| ca2006   | R Documentation   |
++----------+-------------------+
+
+California Congressional Districts in 2006
+------------------------------------------
+
+Description
+~~~~~~~~~~~
+
+Election returns and identifying information, California's 53
+congressional districts in the 2006 Congresisonal elections.
+
+Usage
+~~~~~
+
+::
+
+    data(ca2006)
+
+Format
+~~~~~~
+
+A data frame with 53 observations on the following 11 variables.
+
+``district``
+    numeric, number of Congressional district
+
+``D``
+    numeric, number of votes for the Democratic candidate
+
+``R``
+    numeric, votes for the Republican candidate
+
+``Other``
+    numeric, votes for other candidates
+
+``IncParty``
+    character, party of the incumbent (or retiring member), ``D`` or
+    ``R``
+
+``IncName``
+    character, last name of the incumbent, character ``NA`` if no
+    incumbent running
+
+``open``
+    logical, ``TRUE`` if no incumbent running
+
+``contested``
+    logical, ``TRUE`` if both major parties ran candidates
+
+``Bush2004``
+    numeric, votes for George W. Bush (R) in the district in the 2004
+    presidential election
+
+``Kerry2004``
+    numeric, votes for John Kerry (D) in 2004
+
+``Other2004``
+    numeric votes for other candidates in 2004
+
+``Bush2000``
+    numeric, votes for George W. Bush in 2000
+
+``Gore2000``
+    numeric, votes for Al Gore (D) in 2000
+
+Source
+~~~~~~
+
+2006 data from the California Secretary of State's web site,
+`http://vote2006.sos.ca.gov/Returns/usrep/all.htm <http://vote2006.sos.ca.gov/Returns/usrep/all.htm>`__;
+Excel data at
+`http://www.sos.ca.gov/elections/sov/2006\_general/congress.xls <http://www.sos.ca.gov/elections/sov/2006_general/congress.xls>`__.
+2004 and 2000 presidential vote in congressional districts from the 2006
+*Almanac of American Politics*.
+
+Thanks to Arthur Aguirre for the updated links, above.
+
+References
+~~~~~~~~~~
+
+Michael Baraon and Richard E. Cohen. 2006. *The Almanac of American
+Politics, 2006.* National Journal Group: Washington, D.C.
+
+Examples
+~~~~~~~~
+
+::
+
+    data(ca2006)
+
+    ## 2006 CA congressional vote against 2004 pvote
+    y <- ca2006$D/(ca2006$D+ca2006$R)
+    x <- ca2006$Kerry2004/(ca2006$Kerry2004+ca2006$Bush2004)
+
+    pch <- rep(19,length(y))
+    pch[ca2006$open] <- 1
+    col <- rep("black",length(y))
+    col[11] <- "red"    ## Pembo (R) loses to McNerney (D)
+    plot(y~x,pch=pch,
+         col=col,
+         xlim=range(x,y,na.rm=TRUE),
+         ylim=range(x,y,na.rm=TRUE),
+         xlab="Kerry Two-Party Vote, 2004",
+         ylab="Democratic Two-Party Vote Share, 2006")
+    abline(0,1)
+    abline(h=.5,lty=2)
+    abline(v=.5,lty=2)
+    legend(x="topleft",
+           bty="n",
+           col=c("red","black","black"),
+           pch=c(19,19,1),
+           legend=c("Seat Changing Hands",
+             "Seat Retained by Incumbent Party",
+             "Open Seat (no incumbent running)")
+           )
+

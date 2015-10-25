@@ -1,0 +1,68 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>R: Stage C Prostate Cancer</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" type="text/css" href="R.css">
+</head><body>
+
+<table width="100%" summary="page for stagec"><tr><td>stagec</td><td align="right">R Documentation</td></tr></table>
+
+<h2>Stage C Prostate Cancer</h2>
+
+<h3>Description</h3>
+
+<p>A set of 146 patients with stage C prostate cancer, from a
+study exploring the prognostic value of flow cytometry.</p>
+
+
+<h3>Usage</h3>
+
+<pre>data(stagec)</pre>
+
+
+<h3>Format</h3>
+
+<p>A data frame with 146 observations on the following 8 variables.
+</p>
+
+<dl>
+<dt><code>pgtime</code></dt><dd><p>Time to progression or last follow-up (years)</p>
+</dd>
+<dt><code>pgstat</code></dt><dd><p>1 = progression observed, 0 = censored</p>
+</dd>
+<dt><code>age</code></dt><dd><p>age in years</p>
+</dd>
+<dt><code>eet</code></dt><dd><p>early endocrine therapy, 1 = no, 2 = yes</p>
+</dd>
+<dt><code>g2</code></dt><dd><p>percent of cells in G2 phase, as found by flow cytometry</p>
+</dd>
+<dt><code>grade</code></dt><dd><p>grade of the tumor, Farrow system</p>
+</dd>
+<dt><code>gleason</code></dt><dd><p>grade of the tumor, Gleason system</p>
+</dd>
+<dt><code>ploidy</code></dt><dd><p>the ploidy status of the tumor, from flow
+cytometry. Values are <span class="samp">diploid</span>, <span class="samp">tetraploid</span>,
+and <span class="samp">aneuploid</span></p>
+</dd>
+</dl>
+
+
+
+<h3>Details</h3>
+
+<p>A tumor is called diploid (normal complement of dividing cells) if the
+fraction of cells in G2 phase was determined to be 13% or less.
+Aneuploid cells have a measurable fraction with a chromosome count that
+is neither 24 nor 48, for these the G2 percent is difficult or
+impossible to measure.
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+require(survival)
+rpart(Surv(pgtime, pgstat) ~ ., stagec)
+</pre>
+
+
+</body></html>

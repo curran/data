@@ -1,0 +1,67 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>R: CYG OB1 Star Cluster Data</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" type="text/css" href="R.css">
+</head><body>
+
+<table width="100%" summary="page for CYGOB1"><tr><td>CYGOB1</td><td align="right">R Documentation</td></tr></table>
+
+<h2> CYG OB1 Star Cluster Data </h2>
+
+<h3>Description</h3>
+
+<p>Energy output and surface termperature for Star Cluster CYG OB1.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>data("CYGOB1")</pre>
+
+
+<h3>Format</h3>
+
+<p>A data frame with 47 observations on the following 2 variables.
+</p>
+
+<dl>
+<dt><code>logst</code></dt><dd><p>log survface termperature of the star.</p>
+</dd>
+<dt><code>logli</code></dt><dd><p>log light intensity of the star.</p>
+</dd>
+</dl>
+
+
+
+<h3>Details</h3>
+
+<p>The Hertzsprung-Russell (H-R) diagram forms the basis of
+the theory of stellar evolution. The diagram is essentially a 
+plot of the energy output of stars plotted against their surface
+temperature. Data from the H-R diagram of Star Cluster CYG OB1, 
+calibrated according to VanismaGreve1972 are given here.
+</p>
+
+
+<h3>Source</h3>
+
+<p>F. Vanisma and J. P. De Greve (1972), Close binary systems 
+before and after mass transfer. <EM>Astrophysics and Space Science</EM>,
+<B>87</B>, 377&ndash;401.
+</p>
+<p>D. J. Hand, F. Daly, A. D. Lunn, K. J. McConway and E. Ostrowski (1994).
+<EM>A Handbook of Small Datasets</EM>, Chapman and Hall/CRC, London.
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+
+  data("CYGOB1", package = "HSAUR")
+  plot(logst ~ logli, data = CYGOB1)
+
+</pre>
+
+
+</body></html>

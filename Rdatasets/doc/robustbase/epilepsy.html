@@ -1,0 +1,114 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>R: Epilepsy Attacks Data Set</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" type="text/css" href="R.css">
+</head><body>
+
+<table width="100%" summary="page for epilepsy"><tr><td>epilepsy</td><td align="right">R Documentation</td></tr></table>
+
+<h2>Epilepsy Attacks Data Set</h2>
+
+<h3>Description</h3>
+
+<p>Data from a clinical trial of 59 patients with epilepsy
+(Breslow, 1996) in order to illustrate diagnostic techniques in
+Poisson regression.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>data(epilepsy)</pre>
+
+
+<h3>Format</h3>
+
+<p>A data frame with 59 observations on the following 11 variables.
+</p>
+
+<dl>
+<dt><code>ID</code></dt><dd><p>Patient identification number</p>
+</dd>
+<dt><code>Y1</code></dt><dd><p>Number of epilepsy attacks patients have during the
+first follow-up period</p>
+</dd>
+<dt><code>Y2</code></dt><dd><p>Number of epilepsy attacks patients have during the
+second follow-up period</p>
+</dd>
+<dt><code>Y3</code></dt><dd><p>Number of epilepsy attacks patients have during the
+third follow-up period</p>
+</dd>
+<dt><code>Y4</code></dt><dd><p>Number of epilepsy attacks patients have during the
+forth follow-up period</p>
+</dd>
+<dt><code>Base</code></dt><dd><p>Number of epileptic attacks
+recorded during 8 week period prior to randomization</p>
+</dd>
+<dt><code>Age</code></dt><dd><p>Age of the patients</p>
+</dd>
+<dt><code>Trt</code></dt><dd><p>a factor with levels <code>placebo</code>
+<code>progabide</code> indicating whether the anti-epilepsy
+drug Progabide has been applied or not</p>
+</dd>
+<dt><code>Ysum</code></dt><dd><p>Total number of epilepsy attacks patients have
+during the four follow-up periods  </p>
+</dd>
+<dt><code>Age10</code></dt><dd><p>Age of the patients devided by 10</p>
+</dd>
+<dt><code>Base4</code></dt><dd><p>Variable <code>Base</code> devided by 4</p>
+</dd>
+</dl>
+
+
+
+<h3>Details</h3>
+
+<p>Thall and Vail reported data from  a clinical trial of 59 patients
+with epilepsy, 31 of whom were randomized to receive the anti-epilepsy
+drug Progabide and 28 of whom received a placebo. Baseline data
+consisted of the patient's age and the number of epileptic seizures
+recorded during 8 week period prior to randomization. The response
+consisted of counts of seizures occuring during the four consecutive
+follow-up periods of two weeks each.
+</p>
+
+
+<h3>Source</h3>
+
+<p>Thall, P.F. and Vail S.C. (1990)
+Some covariance models for longitudinal count data with overdispersion.
+<EM>Biometrics</EM> <B>46</B>, 657&ndash;671.
+</p>
+
+
+<h3>References</h3>
+
+<p>Diggle, P.J., Liang, K.Y., and Zeger, S.L. (1994)
+<EM>Analysis of Longitudinal Data</EM>; Clarendon Press.
+</p>
+<p>Breslow N. E. (1996)
+Generalized linear models: Checking assumptions and strengthening
+conclusions.
+<EM>Statistica Applicata</EM> <B>8</B>, 23&ndash;41.
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+data(epilepsy)
+str(epilepsy)
+pairs(epilepsy[,c("Ysum","Base4","Trt","Age10")])
+
+Efit1 &lt;- glm(Ysum ~ Age10 + Base4*Trt, family=poisson, data=epilepsy)
+summary(Efit1)
+
+## Robust Fit :
+Efit2 &lt;- glmrob(Ysum ~ Age10 + Base4*Trt, family=poisson, data=epilepsy,
+                method = "Mqle",
+                tcc=1.2, maxit=100)
+summary(Efit2)
+</pre>
+
+
+</body></html>

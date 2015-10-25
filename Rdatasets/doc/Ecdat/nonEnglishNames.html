@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>R: Names with Character Set Problems</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" type="text/css" href="R.css">
+</head><body>
+
+<table width="100%" summary="page for nonEnglishNames"><tr><td>nonEnglishNames</td><td align="right">R Documentation</td></tr></table>
+
+<h2>
+Names with Character Set Problems
+</h2>
+
+<h3>Description</h3>
+
+<p>A <code>data.frame</code> describing names containing character codes
+rare or non-existent in standard English text, e.g., with various
+accent marks that may not be coded consistenty in different locales or
+by different software.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>data(nonEnglishNames)</pre>
+
+
+<h3>Format</h3>
+
+<p>A <code>data.frame</code> with two columns:
+</p>
+
+<dl>
+<dt>nonEnglish</dt><dd>
+<p>a character vector containing names that often have non-standard
+characters with the non-standard characters replaced by &quot;_&quot;
+</p>
+</dd>
+<dt>English</dt><dd>
+<p>a character vector containing a standard English-character
+translation of <code>nonEnglish</code>
+</p>
+</dd>
+</dl>
+
+
+
+<h3>See Also</h3>
+
+<p><code>grepNonStandardCharacters</code>,
+<code>subNonStandardCharacters</code>
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+data(nonEnglishNames)
+
+
+all.equal(dim(nonEnglishNames), c(17, 2))
+
+
+</pre>
+
+
+</body></html>

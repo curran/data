@@ -1,0 +1,83 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>R: Smoking Deaths Among Doctors</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" type="text/css" href="R.css">
+</head><body>
+
+<table width="100%" summary="page for breslow"><tr><td>breslow</td><td align="right">R Documentation</td></tr></table>
+
+<h2>
+Smoking Deaths Among Doctors
+</h2>
+
+<h3>Description</h3>
+
+<p>The <code>breslow</code> data frame has 10 rows and 5 columns.
+</p>
+<p>In 1961 Doll and Hill sent out a questionnaire to all men on the British 
+Medical Register enquiring about their smoking habits. Almost 70% of 
+such men replied.  Death certificates were obtained for medical practitioners
+and causes of death were assigned on the basis of these certificates.  The
+<code>breslow</code> data set contains the person-years of observations and deaths from
+coronary artery disease accumulated during the first ten years of the study.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+breslow
+</pre>
+
+
+<h3>Format</h3>
+
+<p>This data frame contains the following columns:
+</p>
+
+<dl>
+<dt><code>age</code></dt><dd>
+<p>The mid-point of the 10 year age-group for the doctors.
+</p>
+</dd>
+<dt><code>smoke</code></dt><dd>
+<p>An indicator of whether the doctors smoked (1) or not (0).
+</p>
+</dd>
+<dt><code>n</code></dt><dd>
+<p>The number of person-years in the category.
+</p>
+</dd>
+<dt><code>y</code></dt><dd>
+<p>The number of deaths attributed to coronary artery disease.
+</p>
+</dd>
+<dt><code>ns</code></dt><dd>
+<p>The number of smoker years in the category (<code>smoke*n</code>).
+</p>
+</dd></dl>
+
+
+<h3>Source</h3>
+
+<p>The data were obtained from
+</p>
+<p>Breslow, N.E. (1985) Cohort Analysis in Epidemiology. In 
+<EM>A Celebration of Statistics</EM> 
+A.C. Atkinson and S.E. Fienberg (editors), 109&ndash;143.
+Springer-Verlag.
+</p>
+
+
+<h3>References</h3>
+
+<p>Davison, A.C. and Hinkley, D.V. (1997) 
+<EM>Bootstrap Methods and Their Application</EM>. Cambridge University Press.
+</p>
+<p>Doll, R. and Hill, A.B. (1966) Mortality of British doctors in relation to 
+smoking: Observations on coronary thrombosis. 
+<EM>National Cancer Institute Monograph</EM>, <B>19</B>, 205-268.
+</p>
+
+
+</body></html>

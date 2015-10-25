@@ -1,0 +1,112 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>R: Pre-marital Sex and Divorce</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" type="text/css" href="R.css">
+</head><body>
+
+<table width="100%" summary="page for PreSex"><tr><td>PreSex</td><td align="right">R Documentation</td></tr></table>
+
+<h2>Pre-marital Sex and Divorce</h2>
+
+<h3>Description</h3>
+
+<p>Data from Thornes \&amp; Collard (1979), reported in Gilbert (1981), on
+pre- and extra-marital sex and divorce.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+data("PreSex")
+</pre>
+
+
+<h3>Format</h3>
+
+<p>A 4-dimensional array resulting from cross-tabulating 1036
+observations on 4 variables.  The variables and their levels are as
+follows:
+</p>
+
+<table summary="Rd table">
+<tr>
+ <td align="right">
+    No </td><td align="left"> Name </td><td align="left"> Levels </td>
+</tr>
+<tr>
+ <td align="right">
+    1 </td><td align="left"> MaritalStatus </td><td align="left"> Divorced, Married </td>
+</tr>
+<tr>
+ <td align="right">
+    2 </td><td align="left"> ExtramaritalSex </td><td align="left"> Yes, No </td>
+</tr>
+<tr>
+ <td align="right">
+    3 </td><td align="left"> PremaritalSex </td><td align="left"> Yes, No </td>
+</tr>
+<tr>
+ <td align="right">
+    4 </td><td align="left"> Gender </td><td align="left"> Women, Men
+  </td>
+</tr>
+
+</table>
+
+
+
+<h3>Source</h3>
+
+<p>Michael Friendly (2000),
+Visualizing Categorical Data:
+<a href="http://euclid.psych.yorku.ca/ftp/sas/vcd/catdata/marital.sas">http://euclid.psych.yorku.ca/ftp/sas/vcd/catdata/marital.sas</a>
+</p>
+
+
+<h3>References</h3>
+
+<p>G. N. Gilbert (1981),
+<EM>Modelling Society: An Introduction to Loglinear Analysis for
+Social Researchers</EM>.
+Allen and Unwin, London.
+</p>
+<p>B. Thornes \&amp; J. Collard (1979),
+<EM>Who Divorces?</EM>.
+Routledge \&amp; Kegan, London.
+</p>
+<p>M. Friendly (2000),
+<EM>Visualizing Categorical Data</EM>.
+SAS Institute, Cary, NC.
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+data("PreSex")
+
+## Mosaic display for Gender and Premarital Sexual Experience
+## (Gender Pre)
+mosaic(margin.table(PreSex, c(3,4)), 
+                main = "Gender and Premarital Sex")
+
+## (Gender Pre)(Extra)
+mosaic(margin.table(PreSex, c(2,3,4)), 
+       expected = ~Gender * PremaritalSex + ExtramaritalSex ,
+	   main = "PreMaritalSex*Gender +Sex")
+
+## (Gender Pre Extra)(Marital)
+mosaic(PreSex,
+       expected = ~Gender*PremaritalSex*ExtramaritalSex + MaritalStatus,
+       main = "PreMarital*ExtraMarital + MaritalStatus")
+
+## (GPE)(PEM)
+mosaic(PreSex, 
+       expected = ~ Gender * PremaritalSex * ExtramaritalSex
+                    + MaritalStatus * PremaritalSex * ExtramaritalSex,
+       main = "G*P*E + P*E*M")
+</pre>
+
+
+</body></html>

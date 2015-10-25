@@ -1,0 +1,99 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>R: Eighth-Grade Pupils in the Netherlands</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" type="text/css" href="R.css">
+</head><body>
+
+<table width="100%" summary="page for nlschools"><tr><td>nlschools</td><td align="right">R Documentation</td></tr></table>
+
+<h2>
+Eighth-Grade Pupils in the Netherlands
+</h2>
+
+<h3>Description</h3>
+
+<p>Snijders and Bosker (1999) use as a running example a study of 2287
+eighth-grade pupils (aged about 11) in 132 classes in 131 schools in
+the Netherlands.  Only the variables used in our examples are supplied.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+nlschools
+</pre>
+
+
+<h3>Format</h3>
+
+<p>This data frame contains 2287 rows and the following columns:
+</p>
+
+<dl>
+<dt><code>lang</code></dt><dd>
+<p>language test score.
+</p>
+</dd>
+<dt><code>IQ</code></dt><dd>
+<p>verbal IQ.
+</p>
+</dd>
+<dt><code>class</code></dt><dd>
+<p>class ID.
+</p>
+</dd>
+<dt><code>GS</code></dt><dd>
+<p>class size: number of eighth-grade pupils recorded in the class (there
+may be others: see <code>COMB</code>, and some may have been omitted
+with missing values).
+</p>
+</dd>
+<dt><code>SES</code></dt><dd>
+<p>social-economic status of pupil's family.
+</p>
+</dd>
+<dt><code>COMB</code></dt><dd>
+<p>were the pupils taught in a multi-grade class (<code>0/1</code>)?  Classes which
+contained pupils from grades 7 and 8 are coded <code>1</code>, but only
+eighth-graders were tested.
+</p>
+</dd>
+</dl>
+
+
+
+<h3>Source</h3>
+
+<p>Snijders, T. A. B. and Bosker, R. J. (1999)
+<EM>Multilevel Analysis. An Introduction to Basic and Advanced
+Multilevel Modelling.</EM> London: Sage.
+</p>
+
+
+<h3>References</h3>
+
+<p>Venables, W. N. and Ripley, B. D. (2002)
+<EM>Modern Applied Statistics with S.</EM> Fourth edition.  Springer.
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+
+nl1 &lt;- within(nlschools, {
+IQave &lt;- tapply(IQ, class, mean)[as.character(class)]
+IQ &lt;- IQ - IQave
+})
+cen &lt;- c("IQ", "IQave", "SES")
+nl1[cen] &lt;- scale(nl1[cen], center = TRUE, scale = FALSE)
+
+nl.lme &lt;- nlme::lme(lang ~ IQ*COMB + IQave + SES,
+                    random = ~ IQ | class, data = nl1)
+summary(nl.lme)
+
+</pre>
+
+
+</body></html>

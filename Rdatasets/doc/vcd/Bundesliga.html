@@ -1,0 +1,111 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>R: Ergebnisse der Fussball-Bundesliga</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" type="text/css" href="R.css">
+</head><body>
+
+<table width="100%" summary="page for Bundesliga"><tr><td>Bundesliga</td><td align="right">R Documentation</td></tr></table>
+
+<h2>Ergebnisse der Fussball-Bundesliga</h2>
+
+<h3>Description</h3>
+
+<p>Results from the first German soccer league (1963-2008).
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+data("Bundesliga")
+</pre>
+
+
+<h3>Format</h3>
+
+<p>A data frame with 14018 observations and 7 variables.
+</p>
+
+<dl>
+<dt>HomeTeam</dt><dd><p>factor. Name of the home team.</p>
+</dd>
+<dt>AwayTeam</dt><dd><p>factor. Name of the away team.</p>
+</dd>
+<dt>HomeGoals</dt><dd><p>number of goals scored by the home team.</p>
+</dd>
+<dt>AwayGoals</dt><dd><p>number of goals scored by the away team.</p>
+</dd>
+<dt>Round</dt><dd><p>round of the game.</p>
+</dd>
+<dt>Year</dt><dd><p>year in which the season started.</p>
+</dd>
+<dt>Date</dt><dd><p>starting time of the game (in <code>"POSIXct"</code> format).</p>
+</dd>
+</dl>
+
+
+
+<h3>Details</h3>
+
+<p>The data comprises all games in the first German soccer league since
+its foundation in 1963. The data have been queried online from the 
+official Web page of the DFB and prepared as a data frame in R by
+Daniel Dekic, Torsten Hothorn, and Achim Zeileis (replacing earlier versions of the
+data in the package containing only subsets of years).
+</p>
+<p>Each year/season comprises 34 rounds (except 1963, 1964, 1991) so that
+all 18 teams play twice against each other (switching home court advantage).
+In 1963/64, there were only 16 teams, hence only 30 rounds.
+In 1991, after the German unification, there was one season with 20 teams
+and 38 rounds.
+</p>
+
+
+<h3>Source</h3>
+
+<p>Homepage of the Deutscher Fussball-Bund (DFB, German Football Association):
+<a href="http://www.dfb.de/">http://www.dfb.de/</a>
+</p>
+
+
+<h3>References</h3>
+
+<p>Leonhard Knorr-Held (1999), Dynamic rating of sports teams.
+SFB 386 &ldquo;Statistical Analysis of Discrete Structures&rdquo;,
+Discussion paper <B>98</B>.
+</p>
+
+
+<h3>See Also</h3>
+
+<p><code>UKSoccer</code>
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+data("Bundesliga")
+
+## number of goals per game poisson distributed?
+ngoals1 &lt;- xtabs(~ HomeGoals, data = Bundesliga, subset = Year == 1995)
+ngoals2 &lt;- xtabs(~ AwayGoals, data = Bundesliga, subset = Year == 1995)
+ngoals3 &lt;- table(apply(subset(Bundesliga, Year == 1995)[,3:4], 1, sum))
+
+gf1 &lt;- goodfit(ngoals1)
+gf2 &lt;- goodfit(ngoals2)
+gf3 &lt;- goodfit(ngoals3)
+
+summary(gf1)
+summary(gf2)
+summary(gf3)
+plot(gf1)
+plot(gf2)
+plot(gf3)
+
+Ord_plot(ngoals1)
+distplot(ngoals1)
+</pre>
+
+
+</body></html>

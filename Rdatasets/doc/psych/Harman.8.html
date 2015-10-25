@@ -1,0 +1,81 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>R: Correlations of eight physical variables (from Harman, 1966)</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" type="text/css" href="R.css">
+</head><body>
+
+<table width="100%" summary="page for Harman.8"><tr><td>Harman.8</td><td align="right">R Documentation</td></tr></table>
+
+<h2>Correlations of eight physical variables (from Harman, 1966)</h2>
+
+<h3>Description</h3>
+
+<p>A classic data set from Harman (1976) reporting the correlations of eight physical variables.  Used by Harman for demonstrations of factor analysis (both principal axis and minimum residual). 
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>data(Harman.8)</pre>
+
+
+<h3>Format</h3>
+
+<p>The format is:
+num [1:8, 1:8] 1 0.846 0.805 0.859 0.473 0.398 0.301 0.382 0.846 1 ...
+- attr(*, &quot;dimnames&quot;)=List of 2
+..$ : chr [1:8] &quot;Height&quot; &quot;Arm span&quot; &quot;Length of forearm&quot; &quot;Length of lower leg&quot; ...
+..$ : chr [1:8] &quot;V1&quot; &quot;V2&quot; &quot;V3&quot; &quot;V4&quot; ...
+</p>
+
+
+<h3>Details</h3>
+
+<p>The Eight Physical Variables problem is taken from Harman (1976) and represents the correlations between eight physical variables for 305 girls.  The two correlated clusters represent four measures of &quot;lankiness&quot; and then four measures of &quot;stockiness&quot;.  The original data were selected from 17 variables reported in an unpublished dissertation by Mullen (1939). 
+</p>
+<p>Variable 6 (&quot;Bitrochanteric diamter&quot;) is the distance between the outer points of the hips.  
+</p>
+<p>The row names match the original Harman paper, the column names have been abbreviated.
+</p>
+<p>The <code>fa</code> solution for principal axes (fm=&quot;pa&quot;) matches the reported minres solution, while the fm=&quot;minres&quot; does not. 
+</p>
+<p>For those interested in teaching examples using various body measurements, see the body data set in the gclus package.  
+</p>
+<p>There are several other Harman examples in the psych package as well as in the dataseta and  and  GPArotation packages.  The Harman 24 mental tests problem is in the basic datasets package at Harman74.cor.  
+</p>
+
+
+<h3>Source</h3>
+
+<p>H. Harman and W.Jones. (1966)
+Factor analysis by minimizing residuals (minres).  Psychometrika, 31(3):351-368.
+</p>
+
+
+<h3>References</h3>
+
+<p>Harman, Harry Horace (1976) Modern factor analysis, 3d ed., rev, University of Chicago Press. Chicago.
+</p>
+<p>Harman, Harry Horace and Jones, W. (1966)
+Factor analysis by minimizing residuals (minres).  Psychometrika, 31(3):351-368.
+</p>
+
+
+<h3>See Also</h3>
+
+ <p><code>Harman</code>, <code>Harman.political</code> and <code>Harman74.cor</code>
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+data(Harman.8)
+cor.plot(Harman.8)
+fa(Harman.8,2,rotate="none")  #the minres solution
+fa(Harman.8,2,rotate="none",fm="pa") #the principal axis solution
+
+</pre>
+
+
+</body></html>

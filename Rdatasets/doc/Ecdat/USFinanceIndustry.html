@@ -1,0 +1,123 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>R: US Finance Industry Profits</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" type="text/css" href="R.css">
+</head><body>
+
+<table width="100%" summary="page for USFinanceIndustry"><tr><td>USFinanceIndustry</td><td align="right">R Documentation</td></tr></table>
+
+<h2>
+US Finance Industry Profits
+</h2>
+
+<h3>Description</h3>
+
+<p>A <code>data.frame</code> giving the profits of the finance industry in the
+United States as a proportion of total corporate domestic profits.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>data(USFinanceIndustry)</pre>
+
+
+<h3>Format</h3>
+
+<p> A <code>data.frame</code> with the following columns:
+</p>
+
+<dl>
+<dt>year</dt><dd><p> integer year starting with 1929 </p>
+</dd>
+<dt>CorporateProfitsAdj</dt><dd>
+<p>Corporate profits with inventory valuation and capital
+consumption adjustments in billons of current (not adjusted for
+inflation) US dollars
+</p>
+</dd>
+<dt>Domestic</dt><dd><p> Domestic industries profits in billions </p>
+</dd>
+<dt>Financial</dt><dd><p> Financial industries profits in billions </p>
+</dd>
+<dt>Nonfinancial</dt><dd><p> Nonfinancial industries profits in billions </p>
+</dd>
+<dt>restOfWorld</dt><dd>
+<p>Profits of the &quot;Rest of the world&quot; in their contribution to US
+Gross Domestic Product in billions
+</p>
+</dd>
+<dt>FinanceProportion</dt><dd><p> = Financial/Domestic </p>
+</dd>
+</dl>
+
+
+
+<h3>Details</h3>
+
+<p>This is extracted from Table 6.16 of the National Income and Product
+Accounts (NIPA) copiled by the Bureau of Economic Analysis of the
+United States federal government.  This table comes in four parts, A
+(1929-1947), B (1948-1987), C (1987-2000), and D (1998-present).  Parts
+A, B, C and D contain different numbers of data elements, but the
+first five have the same names and are the only ones used here.  The
+overlap between parts C and D (1998-2000) have a root mean square
+relative difference of 0.7 percent;  there were no differences between
+the numbers in the overlap period between parts B and C (1987).
+</p>
+<p>This was created using the following command:
+</p>
+<p>demoDir &lt;- system.file('demoFiles', package='Ecdat')
+demoCsv &lt;- dir(demoDir, pattern='csv$', full.names=TRUE)
+</p>
+<p>nipa6.16 &lt;- readNIPA(demoCsv)
+USFinanceIndustry &lt;- as.data.frame(nipa6.16)
+names(USFinanceIndustry) &lt;- c('year', 'CorporateProfitsAdj',
+'Domestic', 'Financial', 'Nonfinancial',
+'restOfWorld')
+USFinanceIndustry$FinanceProportion &lt;- with(USFinanceIndustry,
+Financial/Domestic)
+</p>
+
+
+<h3>Source</h3>
+
+<p><a href="http://www.bea.gov">http://www.bea.gov</a>:  Under &quot;U.S. Economic Accounts&quot;, first
+select &quot;Corporate Profits&quot; under &quot;National&quot;.  Then next to
+&quot;Interactive Tables&quot;, select, &quot;National Income and Product Accounts
+Tables&quot;.  From there, select &quot;Begin using the data...&quot;.  Under
+&quot;Section 6 - income and employment by industry&quot;, select each of the
+tables starting &quot;Table 6.16&quot;.  As of February 2013, there were 4 such
+tables available:  Table 6.16A, 6.16B, 6.16C and 6.16D.  Each of the
+last three are available in annual and quarterly summaries.  The
+<code>USFinanceIndustry</code> data combined the first 4 rows of the 4
+annual summary tables.
+</p>
+
+
+<h3>See Also</h3>
+
+<p><code>readNIPA</code>
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+data(USFinanceIndustry)
+plot(FinanceProportion~year, USFinanceIndustry, type='b',
+     ylim=c(0, max(FinanceProportion, na.rm=TRUE)),
+     xlab='', ylab='', las=1, cex.axis=2, bty='n', lwd=2,
+     col='blue')
+
+# Write to a file for Wikimedia Commons
+svg('USFinanceIndustry.svg')
+plot(FinanceProportion~year, USFinanceIndustry, type='b',
+     ylim=c(0, max(FinanceProportion, na.rm=TRUE)),
+     xlab='', ylab='', las=1, cex.axis=2, bty='n', lwd=2,
+     col='blue')
+dev.off()
+</pre>
+
+
+</body></html>

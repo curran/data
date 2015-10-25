@@ -1,0 +1,79 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>R: Egyptian Skulls</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" type="text/css" href="R.css">
+</head><body>
+
+<table width="100%" summary="page for skulls"><tr><td>skulls</td><td align="right">R Documentation</td></tr></table>
+
+<h2> Egyptian Skulls </h2>
+
+<h3>Description</h3>
+
+<p>Measurements made on Egyptian skulls from five epochs.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>data("skulls")</pre>
+
+
+<h3>Format</h3>
+
+<p>A data frame with 150 observations on the following 5 variables.
+</p>
+
+<dl>
+<dt><code>epoch</code></dt><dd><p>the epoch the skull as assigned to, 
+a factor with levels <code>c4000BC</code> <code>c3300BC</code>,
+<code>c1850BC</code>,  <code>c200BC</code>, and  <code>cAD150</code>,
+where the years are only given approximately, of
+course.</p>
+</dd>
+<dt><code>mb</code></dt><dd><p>maximum breaths of the skull.</p>
+</dd>
+<dt><code>bh</code></dt><dd><p>basibregmatic heights of the skull.</p>
+</dd>
+<dt><code>bl</code></dt><dd><p>basialiveolar length of the skull.</p>
+</dd>
+<dt><code>nh</code></dt><dd><p>nasal heights of the skull.</p>
+</dd>
+</dl>
+
+
+
+<h3>Details</h3>
+
+<p>The question is whether the measurements change over time.
+Non-constant measurements of the skulls over time would indicate
+interbreeding with immigrant populations.
+</p>
+
+
+<h3>Source</h3>
+
+<p>D. J. Hand, F. Daly, A. D. Lunn, K. J. McConway and E. Ostrowski (1994).
+<EM>A Handbook of Small Datasets</EM>, Chapman and Hall/CRC, London.
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+
+  data("skulls", package = "HSAUR")
+  means &lt;- tapply(1:nrow(skulls), skulls$epoch, function(i)
+               apply(skulls[i,colnames(skulls)[-1]], 2, mean))
+  means &lt;- matrix(unlist(means), nrow = length(means), byrow = TRUE)
+  colnames(means) &lt;- colnames(skulls)[-1]
+  rownames(means) &lt;- levels(skulls$epoch)
+  pairs(means,
+      panel = function(x, y) {
+          text(x, y, levels(skulls$epoch))
+      })
+
+</pre>
+
+
+</body></html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>R: Remission Times for Acute Myelogenous Leukaemia</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" type="text/css" href="R.css">
+</head><body>
+
+<table width="100%" summary="page for aml"><tr><td>aml</td><td align="right">R Documentation</td></tr></table>
+
+<h2>
+Remission Times for Acute Myelogenous Leukaemia
+</h2>
+
+<h3>Description</h3>
+
+<p>The <code>aml</code> data frame has 23 rows and 3 columns.
+</p>
+<p>A clinical trial to evaluate the efficacy of maintenance chemotherapy for
+acute myelogenous leukaemia was 
+conducted by Embury et al. (1977) at Stanford University.  After reaching a
+stage of remission through treatment by chemotherapy, patients were randomized
+into two groups. The first group received maintenance chemotherapy and the 
+second group did not.  The aim of the study was to see if maintenance 
+chemotherapy increased the length of the remission.  The data here formed a
+preliminary analysis which was conducted in October 1974.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+aml
+</pre>
+
+
+<h3>Format</h3>
+
+<p>This data frame contains the following columns:
+</p>
+
+<dl>
+<dt><code>time</code></dt><dd>
+<p>The length of the complete remission (in weeks).
+</p>
+</dd>
+<dt><code>cens</code></dt><dd>
+<p>An indicator of right censoring.  1 indicates that the patient had a relapse
+and so <code>time</code> is the length of the remission. 0 indicates that the patient
+had left the study or was still in remission in October 1974, that is the
+length of remission is right-censored.
+</p>
+</dd>
+<dt><code>group</code></dt><dd>
+<p>The group into which the patient was randomized.  Group 1 received
+maintenance chemotherapy, group 2 did not.
+</p>
+</dd></dl>
+
+
+<h3>Note</h3>
+
+<p>Package <span class="pkg">survival</span> also has a dataset <code>aml</code>. It is the same
+data with different names and with <code>group</code> replaced by a factor
+<code>x</code>.
+</p>
+
+
+<h3>Source</h3>
+
+<p>The data were obtained from
+</p>
+<p>Miller, R.G. (1981) <EM>Survival Analysis</EM>. John Wiley.
+</p>
+
+
+<h3>References</h3>
+
+<p>Davison, A.C. and Hinkley, D.V. (1997) 
+<EM>Bootstrap Methods and Their Application</EM>. Cambridge University Press.
+</p>
+<p>Embury, S.H, Elias, L., Heller, P.H., Hood, C.E., Greenberg, P.L. and
+Schrier, S.L. (1977) Remission maintenance therapy in  acute myelogenous
+leukaemia. <EM>Western Journal of Medicine</EM>, <B>126</B>, 267-272.
+</p>
+
+
+</body></html>

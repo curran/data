@@ -1,0 +1,83 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>R: Days not Spent at School</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" type="text/css" href="R.css">
+</head><body>
+
+<table width="100%" summary="page for schooldays"><tr><td>schooldays</td><td align="right">R Documentation</td></tr></table>
+
+<h2> Days not Spent at School </h2>
+
+<h3>Description</h3>
+
+<p>Data from a sociological study, the number of days absent from school is
+the response variable.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>data("schooldays")</pre>
+
+
+<h3>Format</h3>
+
+<p>A data frame with 154 observations on the following 5 variables.
+</p>
+
+<dl>
+<dt><code>race</code></dt><dd><p>race of the child, a factor with levels 
+<code>aboriginal</code> and <code>non-aboriginal</code>.</p>
+</dd>
+<dt><code>sex</code></dt><dd><p>the sex of the child, a factor with levels 
+<code>female</code> and <code>male</code>.</p>
+</dd>
+<dt><code>school</code></dt><dd><p>the school type, a factor with levels 
+<code>F0</code> (primary), <code>F1</code> (first), <code>F2</code> (second) and  
+<code>F3</code> (third form).</p>
+</dd>
+<dt><code>learner</code></dt><dd><p>how good is the child in learning things, 
+a factor with levels <code>average</code> and
+<code>slow</code>.</p>
+</dd>
+<dt><code>absent</code></dt><dd><p>number of days absent from school.</p>
+</dd>
+</dl>
+
+
+
+<h3>Details</h3>
+
+<p>The data arise from a sociological study
+of Australian Aboriginal and white children reported by
+Quine (1975).
+</p>
+<p>In this study, children of both sexes from four age groups
+(final grade in primary schools and first, second and third form  
+in secondary school) and from two cultural groups were used.
+The children in age group were classified as slow or average 
+learners. The response variable was the number of days absent   
+from school during the school year. (Children who had suffered
+a serious illness during the years were excluded.) 
+</p>
+
+
+<h3>Source</h3>
+
+<p>S. Quine (1975), Achievement Orientation of Aboriginal and
+White Adolescents. Doctoral Dissertation, 
+Australian National University, Canberra.
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+
+  data("schooldays", package = "HSAUR")
+  plot.design(schooldays)
+
+</pre>
+
+
+</body></html>

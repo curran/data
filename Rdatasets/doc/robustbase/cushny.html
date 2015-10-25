@@ -1,0 +1,91 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>R: Cushny and Peebles Prolongation of Sleep Data</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" type="text/css" href="R.css">
+</head><body>
+
+<table width="100%" summary="page for cushny"><tr><td>cushny</td><td align="right">R Documentation</td></tr></table>
+
+<h2>Cushny and Peebles Prolongation of Sleep Data</h2>
+
+<h3>Description</h3>
+
+<p>The original data set was bivariate and recorded for ten subjects the
+prolongation of sleep caused by two different drugs.  These data were
+used by Student as the first illustration of the paired t-test which
+only needs the <EM>differences</EM> of the two measurements.  These
+differences are the values of <code>cushny</code>.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>data(cushny)</pre>
+
+
+<h3>Format</h3>
+
+<p>numeric vector, sorted increasingly:<br>
+0 0.8 1 1.2 1.3 1.3 1.4 1.8 2.4 4.6
+</p>
+
+
+<h3>Source</h3>
+
+<p>Cushny, A.R. and Peebles, A.R. (1905)
+The action of optical isomers. II. Hyoscines.
+<EM>J. Physiol.</EM> <B>32</B>, 501&ndash;510.
+</p>
+<p>These data were used by Student(1908) as the first illustration of the
+paired t-test, see also <code>sleep</code>; then cited by
+Fisher (1925) and thereforth copied in numerous books as an example of
+a normally distributed sample, see, e.g., Anderson (1958).
+</p>
+
+
+<h3>References</h3>
+
+<p>Student (1908)
+The probable error of a mean.
+<EM>Biometrika</EM> <B>6</B>, 1&ndash;25.
+</p>
+<p>Fisher, R.A. (1925)
+<EM>Statistical Methods for Research Workers</EM>;
+Oliver &amp; Boyd, Edinburgh.
+</p>
+<p>Anderson, T.W. (1958)
+<EM>An Introduction to Multivariate Statistical Analysis</EM>;
+Wiley, N.Y.
+</p>
+<p>Hampel, F., Ronchetti, E., Rousseeuw, P. and Stahel, W.  (1986)
+<EM>Robust Statistics: The Approach Based on Influence Functions</EM>;
+Wiley, N.Y.
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+data(cushny)
+
+plot(cushny,  rep(0, 10), pch = 3, cex = 3,
+     ylab = "", yaxt = "n")
+plot(jitter(cushny),  rep(0, 10), pch = 3, cex = 2,
+     main = "'cushny' data (n= 10)", ylab = "", yaxt = "n")
+abline(h=0, col="gray", lty=3)
+myPt &lt;- function(m, lwd = 2, ..., e = 1.5*par("cxy")[2])
+  segments(m, +e, m, -e, lwd = lwd, ...)
+myPt(  mean(cushny), col = "pink3")
+myPt(median(cushny), col = "light blue")
+legend("topright", c("mean", "median"), lwd = 2,
+       col = c("pink3", "light blue"), inset = .01)
+
+## The 'sleep' data from the standard 'datasets' package:
+d.sleep &lt;- local({ gr &lt;- with(datasets::sleep, split(extra, group))
+                   gr[[2]] - gr[[1]] })
+stopifnot(all.equal(cushny,
+                    sort(d.sleep), tolerance=1e-15))
+</pre>
+
+
+</body></html>

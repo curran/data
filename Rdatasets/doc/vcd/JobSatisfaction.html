@@ -1,0 +1,79 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>R: Job Satisfaction Data</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" type="text/css" href="R.css">
+</head><body>
+
+<table width="100%" summary="page for JobSatisfaction"><tr><td>JobSatisfaction</td><td align="right">R Documentation</td></tr></table>
+
+<h2>Job Satisfaction Data</h2>
+
+<h3>Description</h3>
+
+<p>Data from Petersen (1968) about the job satisfaction of 715 blue
+collar workers, selected from Danish Industry in 1968.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+data("JobSatisfaction")
+</pre>
+
+
+<h3>Format</h3>
+
+<p>A data frame with 8 observations and 4 variables.
+</p>
+
+<dl>
+<dt>Freq</dt><dd><p>frequency.</p>
+</dd>
+<dt>management</dt><dd><p>factor indicating quality of management (bad,
+good).</p>
+</dd> 
+<dt>supervisor</dt><dd><p>factor indicating supervisor's job satisfaction
+(low, high).</p>
+</dd>
+<dt>own</dt><dd><p>factor indicating worker's own job satisfaction (low,
+high).</p>
+</dd>
+</dl>
+
+
+
+<h3>Source</h3>
+
+<p>E. B. Andersen (1991),
+The Statistical Analysis of Categorical Data, Table 5.4.
+</p>
+
+
+<h3>References</h3>
+
+<p>E. B. Andersen (1991),
+<EM>The Statistical Analysis of Categorical Data</EM>.
+2nd edition.
+Springer-Verlag, Berlin.
+</p>
+<p>E. Petersen (1968),
+<EM>Job Satisfaction in Denmark</EM>.
+(In Danish).
+Mentalhygiejnisk Forlag, Copenhagen.
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+data("JobSatisfaction")
+structable(~ ., data = JobSatisfaction)
+
+mantelhaen.test(xtabs(Freq ~ own + supervisor + management,
+                      data = JobSatisfaction))
+
+</pre>
+
+
+</body></html>

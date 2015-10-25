@@ -1,0 +1,56 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>R: Cloud point of a Liquid</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" type="text/css" href="R.css">
+</head><body>
+
+<table width="100%" summary="page for cloud"><tr><td>cloud</td><td align="right">R Documentation</td></tr></table>
+
+<h2>Cloud point of a Liquid</h2>
+
+<h3>Description</h3>
+
+<p>This data set contains the measurements concerning the
+cloud point of a Liquid, from Draper and Smith (1969).
+The cloud point is a measure of the degree of crystallization in a
+stock.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>data(cloud)</pre>
+
+
+<h3>Format</h3>
+
+<p>A data frame with 19 observations on the following 2 variables.
+</p>
+
+<dl>
+<dt><code>Percentage</code></dt><dd><p>Percentage of I-8</p>
+</dd>
+<dt><code>CloudPoint</code></dt><dd><p>Cloud point</p>
+</dd>
+</dl>
+
+
+
+<h3>Source</h3>
+
+<p>P. J. Rousseeuw and A. M. Leroy (1987)
+<EM>Robust Regression and Outlier Detection</EM>;
+Wiley, p.96, table 10.
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+data(cloud)
+summary(lm.cloud &lt;- lm(CloudPoint ~., data=cloud))
+
+</pre>
+
+
+</body></html>

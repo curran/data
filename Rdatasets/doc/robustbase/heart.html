@@ -1,0 +1,84 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>R: Heart Catherization Data</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" type="text/css" href="R.css">
+</head><body>
+
+<table width="100%" summary="page for heart"><tr><td>heart</td><td align="right">R Documentation</td></tr></table>
+
+<h2>Heart Catherization Data</h2>
+
+<h3>Description</h3>
+
+<p>This data set was analyzed by Weisberg (1980) and Chambers et
+al. (1983).  A catheter is passed into a major vein or artery at the
+femoral region and moved into the heart.  The proper length of the
+introduced catheter has to be guessed by the physician. The aim of the
+data set is to describe the relation between the catheter length and
+the patient's height (X1) and weight (X2).
+</p>
+<p>This data sets is used to demonstrate the effects caused by collinearity.
+The correlation between height and weight is so high that either
+variable almost completely determines the other.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+data(heart)
+
+
+
+</pre>
+
+
+<h3>Format</h3>
+
+<p>A data frame with 12 observations on the following 3 variables.
+</p>
+
+<dl>
+<dt><code>height</code></dt><dd><p>Patient's height in inches</p>
+</dd>
+<dt><code>weight</code></dt><dd><p>Patient's weights in pounds</p>
+</dd>
+<dt><code>clength</code></dt><dd><p>Y: Catheter Length (in centimeters)</p>
+</dd>
+</dl>
+
+
+
+<h3>Note</h3>
+
+<p>There are other <code>heart</code> datasets in other <font face="Courier New,Courier" color="#666666"><b>R</b></font> packages,
+notably <span class="pkg">survival</span>, hence considering using
+<code>package = "robustbase"</code>, see examples.
+</p>
+
+
+<h3>Source</h3>
+
+<p>Weisberg (1980)
+</p>
+<p>Chambers et al. (1983)
+</p>
+<p>P. J. Rousseeuw and A. M. Leroy (1987)
+<EM>Robust Regression and Outlier Detection</EM>;
+Wiley, p.103, table 13.
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+data(heart, package="robustbase")
+heart.x &lt;- data.matrix(heart[, 1:2]) # the X-variables
+plot(heart.x)
+covMcd(heart.x)
+summary( lm.heart &lt;-     lm(clength ~ . , data = heart))
+summary(lts.heart &lt;- ltsReg(clength ~ . , data = heart))
+</pre>
+
+
+</body></html>

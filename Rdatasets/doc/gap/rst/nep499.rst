@@ -1,0 +1,34 @@
++----------+-------------------+
+| nep499   | R Documentation   |
++----------+-------------------+
+
+A study of Alzheimer's disease with eight SNPs and APOE
+-------------------------------------------------------
+
+Description
+~~~~~~~~~~~
+
+This is a study of the neprilysin gene and sporadic Alzheimer's disease
+in Chinese. There are 257 cases and 242 controls, each with eight SNPs
+detecting through denaturing high-performance liquid chromatography
+(DHPLC).
+
+Usage
+~~~~~
+
+::
+
+    data(nep499)
+
+Format
+~~~~~~
+
+A data frame
+
+Source
+~~~~~~
+
+Shi J, Zhang S, Tang M, Ma C, Zhao J, Li T, Liu X, Sun Y, Guo Y, Han H,
+Ma Y, Zhao Z. Mutation Screening and Association Study of the Neprilysin
+Gene in Sporadic Alzheimer's Disease in Chinese Persons. J Gerontol A:
+Bio Sci Med Sci 60:301-306, 2005

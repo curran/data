@@ -1,0 +1,56 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>R: Eight political variables used by Harman (1967) as example...</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" type="text/css" href="R.css">
+</head><body>
+
+<table width="100%" summary="page for Harman.political"><tr><td>Harman.political</td><td align="right">R Documentation</td></tr></table>
+
+<h2>Eight political variables used by Harman (1967) as example 8.17 </h2>
+
+<h3>Description</h3>
+
+<p>Another one of the many Harman (1967) data sets. This contains 8 political variables taken over 147 election areas.  The principal factor method with SMCs as communalities match those of table 8.18.  The data are used by Dziubian and Shirkey as an example of the Kaiser-Meyer-Olkin test of factor adequacy.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>data(Harman.political)</pre>
+
+
+<h3>Format</h3>
+
+<p>The format is:
+num [1:8, 1:8] 1 0.84 0.62 -0.53 0.03 0.57 -0.33 -0.63 0.84 1 ...
+- attr(*, &quot;dimnames&quot;)=List of 2
+..$ : chr [1:8] &quot;Lewis&quot; &quot;Roosevelt&quot; &quot;Party Voting&quot; &quot;Median Rental&quot; ...
+..$ : chr [1:8] &quot;Lewis&quot; &quot;Roosevelt&quot; &quot;Party Voting&quot; &quot;Median Rental&quot; ...
+</p>
+
+
+<h3>Details</h3>
+
+<p>The communalities from the original table are not included. They are .52, 1.00, .78, .82, .36, .80, .63, and .97</p>
+
+
+<h3>Source</h3>
+
+<p>Harman, Harry Horace (1976) Modern factor analysis, 3d ed., rev, University of Chicago Press. Chicago. p 166.</p>
+
+
+<h3>References</h3>
+
+<p>Dziuban, Charles D. and Shirkey, Edwin C. (1974) When is a correlation matrix appropriate for factor analysis? Some decision rules. Psychological Bulletin, 81 (6) 358 - 361.
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+data(Harman.political)
+KMO(Harman.political)
+</pre>
+
+
+</body></html>

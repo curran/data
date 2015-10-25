@@ -1,0 +1,77 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>R: Data from the National Wilm's Tumor Study</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" type="text/css" href="R.css">
+</head><body>
+
+<table width="100%" summary="page for nwtco"><tr><td>nwtco</td><td align="right">R Documentation</td></tr></table>
+
+<h2>Data from the National Wilm's Tumor Study</h2>
+
+<h3>Description</h3>
+
+<p>Missing data/masurement error example. Tumor histology predicts
+survival, but prediction is stronger with central lab histology than
+with the local institution determination.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>nwtco</pre>
+
+
+<h3>Format</h3>
+
+<p>A data frame with 4028 observations on the following 9 variables.
+</p>
+
+<dl>
+<dt><code>seqno</code></dt><dd><p>id number</p>
+</dd>
+<dt><code>instit</code></dt><dd><p>Histology from local institution</p>
+</dd>
+<dt><code>histol</code></dt><dd><p>Histology from central lab</p>
+</dd>
+<dt><code>stage</code></dt><dd><p>Disease stage</p>
+</dd>
+<dt><code>study</code></dt><dd><p>study</p>
+</dd>
+<dt><code>rel</code></dt><dd><p>indicator for relapse</p>
+</dd>
+<dt><code>edrel</code></dt><dd><p>time to relapse</p>
+</dd>
+<dt><code>age</code></dt><dd><p>age in months</p>
+</dd>
+<dt><code>in.subcohort</code></dt><dd><p>Included in the subcohort for the example in the
+paper</p>
+</dd>
+</dl>
+
+
+
+<h3>Source</h3>
+
+<p><a href="http://faculty.washington.edu/norm/software.html">http://faculty.washington.edu/norm/software.html</a>
+</p>
+
+
+<h3>References</h3>
+
+<p>NE Breslow and N Chatterjee (1999),
+Design and analysis of two-phase studies with binary outcome applied
+to Wilms tumour prognosis.
+<EM>Applied Statistics</EM> <B>48</B>, 457&ndash;68.
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+with(nwtco, table(instit,histol))
+anova(coxph(Surv(edrel,rel)~histol+instit,data=nwtco))
+anova(coxph(Surv(edrel,rel)~instit+histol,data=nwtco))
+</pre>
+
+
+</body></html>

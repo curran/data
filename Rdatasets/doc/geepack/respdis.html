@@ -1,0 +1,71 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>R: Clustered Ordinal Respiratory Disorder</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" type="text/css" href="R.css">
+</head><body>
+
+<table width="100%" summary="page for respdis"><tr><td>respdis</td><td align="right">R Documentation</td></tr></table>
+
+<h2>Clustered Ordinal Respiratory Disorder</h2>
+
+<h3>Description</h3>
+
+<p>The <code>respdis</code> data frame has 111 rows and 3 columns. The study
+described in Miller et. al. (1993) is a randomized clinical trial of a
+new treatment of respiratory disorder. The study was conducted in 111
+patients who were randomly assigned to one of two treatments (active,
+placebo). At each of four visits during the follow-up period, the
+response status of each patients was classified on an ordinal scale.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>data(respdis)</pre>
+
+
+<h3>Format</h3>
+
+<p>This data frame contains the following columns:
+</p>
+
+<dl>
+<dt>y1, y2, y3, y4</dt><dd><p>ordered factor measured at 4 visits for
+the response with levels, <code>1</code> &lt; <code>2</code> &lt; <code>3</code>,
+1 = poor, 2 = good, and 3 = excellent</p>
+</dd>
+<dt>trt</dt><dd><p>a factor for treatment with levels, 1 = active, 0 =
+placebo.</p>
+</dd>
+</dl>
+
+
+
+<h3>References</h3>
+
+<p>Miller, M.E., David, C.S., and Landis, R.J. (1993) The analysis of
+longitudinal polytomous data: Generalized estimating equation and
+connections with weighted least squares, <EM>Biometrics</EM> <B>49</B>: 1033-1048.
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+data(respdis)
+resp.l &lt;- reshape(respdis, varying = list(c("y1", "y2", "y3", "y4")),
+                  v.names = "resp", direction = "long")
+resp.l &lt;- resp.l[order(resp.l$id, resp.l$time),]
+fit &lt;- ordgee(ordered(resp) ~ trt, id = id, data = resp.l, int.const = FALSE)
+summary(fit)
+
+z &lt;- model.matrix( ~ trt - 1, data = respdis)
+ind &lt;- rep(1:111, 4*3/2 * 2^2)
+zmat &lt;- z[ind,,drop=FALSE]
+fit &lt;- ordgee(ordered(resp) ~ trt, id = id, data = resp.l, int.const = FALSE,
+              z = zmat, corstr = "exchangeable")
+summary(fit)
+</pre>
+
+
+</body></html>

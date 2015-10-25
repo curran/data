@@ -1,0 +1,92 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>R: Ovary Cancer Data</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" type="text/css" href="R.css">
+</head><body>
+
+<table width="100%" summary="page for OvaryCancer"><tr><td>OvaryCancer</td><td align="right">R Documentation</td></tr></table>
+
+<h2>Ovary Cancer Data</h2>
+
+<h3>Description</h3>
+
+<p>Data from Obel (1975) about a retrospective study of ovary cancer
+carried out in 1973.  Information was obtained from 299 women, who
+were operated for ovary cancer 10 years before.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+data("OvaryCancer")
+</pre>
+
+
+<h3>Format</h3>
+
+<p>A data frame with 16 observations and 5 variables.
+</p>
+
+<dl>
+<dt>Freq</dt><dd><p>frequency.</p>
+</dd>
+<dt>stage</dt><dd><p>factor indicating the stage of the cancer at the
+time of operation (early, advanced).</p>
+</dd>
+<dt>operation</dt><dd><p>factor indicating type of operation (radical,
+limited).</p>
+</dd>
+<dt>survival</dt><dd><p>factor indicating survival status after 10 years
+(yes, no).</p>
+</dd>
+<dt>xray</dt><dd><p>factor indicating whether X-ray treatment was received
+(yes, no).</p>
+</dd>
+</dl>
+
+
+
+<h3>Source</h3>
+
+<p>E. B. Andersen (1991),
+The Statistical Analysis of Categorical Data, Table 6.4.
+</p>
+
+
+<h3>References</h3>
+
+<p>E. B. Obel (1975),
+A Comparative Study of Patients with Cancer of the Ovary Who Have
+Survived More or Less Than 10 Years.
+<EM>Acta Obstetricia et Gynecologica Scandinavica</EM>, 
+<B>55</B>, 429-439.
+</p>
+<p>E. B. Andersen (1991),
+<EM>The Statistical Analysis of Categorical Data</EM>.
+2nd edition.
+Springer-Verlag, Berlin.
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+data("OvaryCancer")
+tab &lt;- xtabs(Freq ~ xray + survival + stage + operation, data = OvaryCancer)
+ftable(tab, col.vars = "survival", row.vars = c("stage", "operation", "xray"))
+
+## model: ~ xray * operation * stage + survival * stage
+## interpretation: treat xray, operation, stage as fixed margins,
+##   the survival depends on stage, but not xray and operation.
+doubledecker(survival ~ stage + operation + xray, data = tab)
+mosaic(~ stage + operation + xray + survival,
+  split = c(FALSE, TRUE, TRUE, FALSE), data = tab, keep = FALSE,
+  gp = gpar(fill = rev(grey.colors(2))))
+mosaic(~ stage + operation + xray + survival,
+  split = c(FALSE, TRUE, TRUE, FALSE), data = tab, keep = FALSE,
+  expected = ~ xray * operation * stage + survival*stage)
+</pre>
+
+
+</body></html>

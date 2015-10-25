@@ -1,0 +1,77 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>R: Butterfly Species in Malaya</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" type="text/css" href="R.css">
+</head><body>
+
+<table width="100%" summary="page for Butterfly"><tr><td>Butterfly</td><td align="right">R Documentation</td></tr></table>
+
+<h2>Butterfly Species in Malaya</h2>
+
+<h3>Description</h3>
+
+<p>Data from Fisher et al. (1943) giving the number of tokens found for
+each of 501 species of butterflies collected in Malaya.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+data("Butterfly")
+</pre>
+
+
+<h3>Format</h3>
+
+<p>A 1-way table giving the number of tokens for 501 species of
+butterflies. The variable and its levels are
+</p>
+
+<table summary="Rd table">
+<tr>
+ <td align="right">
+    No </td><td align="left"> Name </td><td align="left"> Levels </td>
+</tr>
+<tr>
+ <td align="right">
+    1 </td><td align="left"> nTokens </td><td align="left"> 0, 1, ..., 24 </td>
+</tr>
+<tr>
+ <td align="right">
+  </td>
+</tr>
+
+</table>
+
+
+
+<h3>Source</h3>
+
+<p>Michael Friendly (2000),
+Visualizing Categorical Data, pages 21&ndash;22.
+</p>
+
+
+<h3>References</h3>
+
+<p>R. A. Fisher, A. S. Corbet, C. B. Williams (1943),
+The relation between the number of species and the number of
+individuals,
+<EM>Journal of Animal Ecology</EM>, <B>12</B>, 42&ndash;58.
+</p>
+<p>M. Friendly (2000),
+<EM>Visualizing Categorical Data</EM>.
+SAS Institute, Cary, NC.
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+data("Butterfly")
+Ord_plot(Butterfly)
+</pre>
+
+
+</body></html>

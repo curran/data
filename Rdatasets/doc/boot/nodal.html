@@ -1,0 +1,97 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>R: Nodal Involvement in Prostate Cancer</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" type="text/css" href="R.css">
+</head><body>
+
+<table width="100%" summary="page for nodal"><tr><td>nodal</td><td align="right">R Documentation</td></tr></table>
+
+<h2>
+Nodal Involvement in Prostate Cancer
+</h2>
+
+<h3>Description</h3>
+
+<p>The <code>nodal</code> data frame has 53 rows and 7 columns.
+</p>
+<p>The treatment strategy for a patient diagnosed with cancer of the prostate
+depend highly on whether the cancer has spread to the surrounding lymph nodes.
+It is common to operate on the patient to get samples from the nodes which can
+then be analysed under a microscope but clearly it would be preferable if an
+accurate assessment of nodal involvement could be made without surgery.
+</p>
+<p>For a sample of 53 prostate cancer patients, a number of possible predictor
+variables were measured before surgery.  The patients then had surgery to 
+determine nodal involvement.  It was required to see if nodal involvement could 
+be accurately predicted from the predictor variables and which ones were
+most important.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+nodal
+</pre>
+
+
+<h3>Format</h3>
+
+<p>This data frame contains the following columns:
+</p>
+
+<dl>
+<dt><code>m</code></dt><dd>
+<p>A column of ones.
+</p>
+</dd>
+<dt><code>r</code></dt><dd>
+<p>An indicator of nodal involvement. 
+</p>
+</dd>
+<dt><code>aged</code></dt><dd>
+<p>The patients age dichotomized into less than 60 (<code>0</code>) and 60 or over <code>1</code>.
+</p>
+</dd>
+<dt><code>stage</code></dt><dd>
+<p>A measurement of the size and position of the tumour observed by palpitation
+with the fingers via the rectum.  A value of <code>1</code> indicates a more serious
+case of the cancer.
+</p>
+</dd>
+<dt><code>grade</code></dt><dd>
+<p>Another indicator of the seriousness of the cancer, this one is determined by
+a pathology reading of a biopsy taken by needle before surgery.
+A value of <code>1</code> indicates a more serious case of the cancer.
+</p>
+</dd>
+<dt><code>xray</code></dt><dd>
+<p>A third measure of the seriousness of the cancer taken from an X-ray reading.
+A value of <code>1</code> indicates a more serious case of the cancer.
+</p>
+</dd>
+<dt><code>acid</code></dt><dd>
+<p>The level of acid phosphatase in the blood serum.
+</p>
+</dd></dl>
+
+
+<h3>Source</h3>
+
+<p>The data were obtained from
+</p>
+<p>Brown, B.W. (1980) Prediction analysis for binary data. In 
+<EM>Biostatistics Casebook</EM>.
+R.G. Miller, B. Efron, B.W. Brown and L.E. Moses (editors),
+3&ndash;18. John Wiley.
+</p>
+
+
+<h3>References</h3>
+
+<p>Davison, A.C. and Hinkley, D.V. (1997) 
+<EM>Bootstrap Methods and Their Application</EM>. Cambridge University Press.
+</p>
+
+
+</body></html>

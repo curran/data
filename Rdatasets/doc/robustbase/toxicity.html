@@ -1,0 +1,88 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>R: Toxicity of Carboxylic Acids Data</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" type="text/css" href="R.css">
+</head><body>
+
+<table width="100%" summary="page for toxicity"><tr><td>toxicity</td><td align="right">R Documentation</td></tr></table>
+
+<h2>Toxicity of Carboxylic Acids Data</h2>
+
+<h3>Description</h3>
+
+<p>The aim of the experiment was to predict the toxicity of carboxylic acids on
+the basis of several molecular descriptors.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>data(toxicity)</pre>
+
+
+<h3>Format</h3>
+
+<p>A data frame with 38 observations on the following 10 variables which are
+attributes for carboxylic acids:
+</p>
+
+<dl>
+<dt><code>toxicity</code></dt><dd><p>aquatic toxicity, defined as
+<i>log(IGC50^(-1))</i>; typically the &ldquo;response&rdquo;.</p>
+</dd>
+<dt><code>logKow</code></dt><dd><i>log Kow</i><p>, the partition coefficient</p>
+</dd>
+<dt><code>pKa</code></dt><dd><p>pKa: the dissociation constant</p>
+</dd>
+<dt><code>ELUMO</code></dt><dd><p><B>E</B>nergy of the <B>l</B>owest
+<B>u</B>noccupied <B>m</B>olecular <B>o</B>rbital</p>
+</dd>
+<dt><code>Ecarb</code></dt><dd><p>Electrotopological state of the <B>carb</B>oxylic group</p>
+</dd>
+<dt><code>Emet</code></dt><dd><p>Electrotopological state of the <B>met</B>hyl group</p>
+</dd>
+<dt><code>RM</code></dt><dd><p>Molar refractivity</p>
+</dd>
+<dt><code>IR</code></dt><dd><p>Refraction index</p>
+</dd>
+<dt><code>Ts</code></dt><dd><p>Surface tension</p>
+</dd>
+<dt><code>P</code></dt><dd><p>Polarizability</p>
+</dd>
+</dl>
+
+
+
+<h3>Source</h3>
+
+<p>The website accompanying the MMY-book:
+<a href="http://www.wiley.com/legacy/wileychi/robust_statistics">http://www.wiley.com/legacy/wileychi/robust_statistics</a>
+</p>
+
+
+<h3>References</h3>
+
+<p>Maguna, F.P., Núñez, M.B., Okulik, N.B. and Castro, E.A. (2003)
+Improved QSAR analysis of the toxicity of aliphatic carboxylic acids;
+<EM>Russian Journal of General Chemistry</EM> <B>73</B>, 1792&ndash;1798.
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+data(toxicity)
+summary(toxicity)
+plot(toxicity)
+plot(toxicity ~ pKa, data = toxicity)
+
+## robustly scale the data (to scale 1) using Qn
+(scQ.tox &lt;- sapply(toxicity, Qn))
+scTox &lt;- scale(toxicity, center = FALSE, scale = scQ.tox)
+csT &lt;- covOGK(scTox, n.iter = 2,
+              sigmamu = s_Qn, weight.fn = hard.rejection)
+as.dist(round(cov2cor(csT$cov), 2))
+</pre>
+
+
+</body></html>

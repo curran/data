@@ -1,0 +1,78 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>R: Alcohol Solubility in Water Data</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" type="text/css" href="R.css">
+</head><body>
+
+<table width="100%" summary="page for alcohol"><tr><td>alcohol</td><td align="right">R Documentation</td></tr></table>
+
+<h2>Alcohol Solubility in Water Data</h2>
+
+<h3>Description</h3>
+
+<p>The solubility of alcohols in water is important in understanding
+alcohol transport in living organisms.  This dataset from (Romanelli
+et al., 2001) contains physicochemical characteristics of 44 aliphatic
+alcohols.  The aim of the experiment was the prediction of the
+solubility on the basis of molecular descriptors.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>data(alcohol)</pre>
+
+
+<h3>Format</h3>
+
+<p>A data frame with 44 observations on the following 7 numeric variables.
+</p>
+
+<dl>
+<dt><code>SAG</code></dt><dd><p>solvent accessible surface-bounded molecular volume.</p>
+</dd>
+<dt><code>V</code></dt><dd><p>volume</p>
+</dd>
+<dt><code>logPC</code></dt><dd><p>Log(PC); PC = octanol-water partitions coefficient</p>
+</dd>
+<dt><code>P</code></dt><dd><p>polarizability</p>
+</dd>
+<dt><code>RM</code></dt><dd><p>molar refractivity</p>
+</dd>
+<dt><code>Mass</code></dt><dd><p>the mass</p>
+</dd>
+<dt><code>logSolubility</code></dt><dd><p>ln(Solubility), the response.</p>
+</dd>
+</dl>
+
+
+
+<h3>Source</h3>
+
+<p>The website accompanying the MMY-book:
+<a href="http://www.wiley.com/legacy/wileychi/robust_statistics">http://www.wiley.com/legacy/wileychi/robust_statistics</a>
+</p>
+
+
+<h3>References</h3>
+
+
+
+
+
+<p>Maronna, R.A., Martin, R.D. and Yohai, V.J. (2006)
+<EM>Robust Statistics, Theory and Methods</EM>, Wiley.
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+data(alcohol)
+## version of data set with trivial names, as
+s.alcohol &lt;- alcohol
+names(s.alcohol) &lt;- paste("Col", 1:7, sep='')
+</pre>
+
+
+</body></html>

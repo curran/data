@@ -1,0 +1,118 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>R: Galton's data on the heights of parents and their children</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" type="text/css" href="R.css">
+</head><body>
+
+<table width="100%" summary="page for Galton"><tr><td>Galton</td><td align="right">R Documentation</td></tr></table>
+
+<h2>
+Galton's data on the heights of parents and their children
+</h2>
+
+<h3>Description</h3>
+
+<p>Galton (1886) presented these data in a table, showing a cross-tabulation of
+928 adult children born to 205 fathers and mothers, by their height and
+their mid-parent's height.
+He visually smoothed the bivariate frequency distribution and showed that the
+contours formed concentric and similar ellipses, thus setting the stage for
+correlation, regression and the bivariate normal distribution.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>data(Galton)</pre>
+
+
+<h3>Format</h3>
+
+<p>A data frame with 928 observations on the following 2 variables.
+</p>
+
+<dl>
+<dt><code>parent</code></dt><dd><p>a numeric vector: height of the mid-parent (average of father and mother)</p>
+</dd>
+<dt><code>child</code></dt><dd><p>a numeric vector: height of the child</p>
+</dd>
+</dl>
+
+
+
+<h3>Details</h3>
+
+<p>The data are recorded in class intervals of width 1.0 in. He used non-integer
+values for the center of each class interval because of the strong bias toward
+integral inches.
+</p>
+<p>All of the heights of female children were multiplied by 1.08  before tablulation
+to compensate for sex differences.  See Hanley (2004) for a reanalysis of
+Galton's raw data questioning whether this was appropriate.
+</p>
+
+
+<h3>Source</h3>
+
+<p>Galton, F. (1886). Regression Towards Mediocrity in Hereditary Stature
+<EM>Journal of the Anthropological Institute</EM>, 15, 246-263
+</p>
+
+
+<h3>References</h3>
+
+<p>Friendly, M. &amp; Denis, D. (2005). The early origins and development of the scatterplot. 
+<EM>Journal of the History of the Behavioral Sciences</EM>, 
+41, 103-130.
+</p>
+<p>Galton, F. (1869). <EM>Hereditary Genius: An Inquiry into its Laws and Consequences</EM>.
+London: Macmillan.
+</p>
+<p>Hanley, J. A. (2004). &quot;Transmuting&quot; Women into Men: Galton's Family Data on Human Stature.
+<EM>The American Statistician</EM>, 58, 237-243.
+See: <a href="http://www.medicine.mcgill.ca/epidemiology/hanley/galton/">http://www.medicine.mcgill.ca/epidemiology/hanley/galton/</a> for source materials.
+</p>
+<p>Stigler, S. M. (1986). 
+<EM>The History of Statistics: The Measurement of Uncertainty before 1900</EM>.
+Cambridge, MA: Harvard University Press, Table 8.1
+</p>
+<p>Wachsmuth, A. W., Wilkinson L., Dallal G. E. (2003). 
+Galton's bend: A previously undiscovered nonlinearity in Galton's family stature regression data. 
+<EM>The American Statistician</EM>, 57, 190-192. 
+<a href="http://www.cs.uic.edu/~wilkinson/Publications/galton.pdf">http://www.cs.uic.edu/~wilkinson/Publications/galton.pdf</a>
+</p>
+
+
+<h3>See Also</h3>
+
+<p><code>link{GaltonFamilies}</code>,
+<code>PearsonLee</code>,
+<code>galton</code>
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+
+data(Galton)
+
+###########################################################################
+# sunflower plot with regression line and data ellipses and lowess smooth
+###########################################################################
+
+with(Galton, 
+	{
+	sunflowerplot(parent,child, xlim=c(62,74), ylim=c(62,74))
+	reg &lt;- lm(child ~ parent)
+	abline(reg)
+	lines(lowess(parent, child), col="blue", lwd=2)
+	if(require(car)) {
+	dataEllipse(parent,child, xlim=c(62,74), ylim=c(62,74), plot.points=FALSE)
+		}
+  })
+
+</pre>
+
+
+</body></html>

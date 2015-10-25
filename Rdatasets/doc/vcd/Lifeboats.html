@@ -1,0 +1,89 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>R: Lifeboats on the Titanic</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" type="text/css" href="R.css">
+</head><body>
+
+<table width="100%" summary="page for Lifeboats"><tr><td>Lifeboats</td><td align="right">R Documentation</td></tr></table>
+
+<h2>Lifeboats on the Titanic</h2>
+
+<h3>Description</h3>
+
+<p>Data from Mersey (1912) about the 18 (out of 20) lifeboats launched
+before the sinking of the S. S. Titanic.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>data("Lifeboats")</pre>
+
+
+<h3>Format</h3>
+
+<p>A data frame with 18 observations and 8 variables.
+</p>
+
+<dl>
+<dt>launch</dt><dd><p>launch time in <code>"POSIXt"</code> format.</p>
+</dd>
+<dt>side</dt><dd><p>factor.  Side of the boat.</p>
+</dd>
+<dt>boat</dt><dd><p>factor indicating the boat.</p>
+</dd>
+<dt>crew</dt><dd><p>number of male crew members on board.</p>
+</dd>
+<dt>men</dt><dd><p>number of men on board.</p>
+</dd>
+<dt>women</dt><dd><p>number of women (including female crew) on board.</p>
+</dd>
+<dt>total</dt><dd><p>total number of passengers.</p>
+</dd>
+<dt>cap</dt><dd><p>capacity of the boat.</p>
+</dd>
+</dl>
+
+
+
+<h3>Source</h3>
+
+<p>M. Friendly (2000),
+Visualizing Categorical Data:
+<a href="http://euclid.psych.yorku.ca/ftp/sas/vcd/catdata/lifeboat.sas">http://euclid.psych.yorku.ca/ftp/sas/vcd/catdata/lifeboat.sas</a>
+</p>
+
+
+<h3>References</h3>
+
+<p>L. Mersey (1912),
+Report on the loss of the &ldquo;Titanic&rdquo; (S. S.).
+Parliamentary command paper 6452.
+</p>
+<p>M. Friendly (2000),
+<EM>Visualizing Categorical Data</EM>.
+SAS Institute, Cary, NC.
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+data("Lifeboats")
+attach(Lifeboats)
+ternaryplot(
+  Lifeboats[,4:6],
+  pch = ifelse(side == "Port", 1, 19),
+  col = ifelse(side == "Port", "red", "blue"),
+  id  = ifelse(men / total &gt; 0.1, as.character(boat), NA),
+  prop_size = 2,
+  dimnames_position = "edge",
+  main = "Lifeboats on the Titanic"
+)
+grid_legend(0.8, 0.9, c(1, 19), c("red", "blue"),
+  c("Port", "Starboard"), title = "SIDE")
+detach(Lifeboats)
+</pre>
+
+
+</body></html>

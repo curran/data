@@ -1,0 +1,69 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>R: Electricity from Wave Power at Sea</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" type="text/css" href="R.css">
+</head><body>
+
+<table width="100%" summary="page for waves"><tr><td>waves</td><td align="right">R Documentation</td></tr></table>
+
+<h2> Electricity from Wave Power at Sea </h2>
+
+<h3>Description</h3>
+
+<p>Measurements of root mean square bending moment by two different mooring
+methods.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>data("waves")</pre>
+
+
+<h3>Format</h3>
+
+<p>A data frame with 18 observations on the following 2 variables.
+</p>
+
+<dl>
+<dt>method1</dt><dd><p>Root mean square bending moment in Newton metres, mooring method 1</p>
+</dd>
+<dt>method2</dt><dd><p>Root mean square bending moment in Newton metres, mooring method 2</p>
+</dd>
+</dl>
+
+
+
+<h3>Details</h3>
+
+<p>In a design study for a device to generate electricity from
+wave power at sea, experiments were carried out on scale models
+in a wave tank to establish how the choice of mooring method
+for the system affected the bending stress produced in part of
+the device. The wave tank could simulate a wide range of sea
+states and the model system was subjected to the same sample 
+of sea states with each of two mooring methods, one of which    
+was considerably cheaper than the other.
+The question of interest is whether bending stress differs
+for the two mooring methods.
+</p>
+
+
+<h3>Source</h3>
+
+<p>D. J. Hand, F. Daly, A. D. Lunn, K. J. McConway and E. Ostrowski (1994).
+<EM>A Handbook of Small Datasets</EM>, Chapman and Hall/CRC, London.
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+
+  data("waves", package = "HSAUR")
+  plot(method1 ~ method2, data = waves)
+
+</pre>
+
+
+</body></html>

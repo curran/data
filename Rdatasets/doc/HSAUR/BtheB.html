@@ -1,0 +1,97 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>R: Beat the Blues Data</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" type="text/css" href="R.css">
+</head><body>
+
+<table width="100%" summary="page for BtheB"><tr><td>BtheB</td><td align="right">R Documentation</td></tr></table>
+
+<h2> Beat the Blues Data </h2>
+
+<h3>Description</h3>
+
+<p>Data from a clinical trial of an interactive multimedia program called 
+&lsquo;Beat the Blues&rsquo;.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>data("BtheB")</pre>
+
+
+<h3>Format</h3>
+
+<p>A data frame with 100 observations of 100 patients 
+on the following 8 variables.
+</p>
+
+<dl>
+<dt>drug</dt><dd><p>did the patient take anti-depressant
+drugs (<code>No</code> or <code>Yes</code>).</p>
+</dd>
+<dt>length</dt><dd><p>the length of the current episode of depression, 
+a factor with levels <code>&lt;6m</code> (less than six months) and 
+<code>&gt;6m</code> (more than six months).</p>
+</dd>
+<dt>treatment</dt><dd><p>treatment group, 
+a factor with levels <code>TAU</code> (treatment as usual)
+and  <code>BtheB</code> (Beat the Blues)</p>
+</dd>
+<dt>bdi.pre</dt><dd><p>Beck Depression Inventory
+II before treatment.</p>
+</dd>
+<dt>bdi.2m</dt><dd><p>Beck Depression Inventory II after two months.</p>
+</dd>
+<dt>bdi.4m</dt><dd><p>Beck Depression Inventory II after four months.</p>
+</dd>
+<dt>bdi.6m</dt><dd><p>Beck Depression Inventory II after six months.</p>
+</dd>
+<dt>bdi.8m</dt><dd><p>Beck Depression Inventory II after eight months.</p>
+</dd>
+</dl>
+
+
+
+<h3>Details</h3>
+
+<p>Longitudinal data from a clinical trial of 
+an interactive, multimedia program known as &quot;Beat the Blues&quot; 
+designed to deliver cognitive behavioural therapy 
+to depressed patients via a computer terminal. 
+Patients with depression recruited in primary       
+care were randomised to either the Beating the Blues program,       
+or to &quot;Treatment as Usual (TAU)&quot;. 
+</p>
+<p>Note that the data are stored in the wide form, i.e., repeated measurments
+are represented by additional columns in the data frame.
+</p>
+
+
+<h3>Source</h3>
+
+<p>J. Proudfoot, D. Goldberg and A. Mann (2003). 
+Computerised, interactive, multimedia CBT reduced anxiety
+and depression in general practice: A RCT.
+<EM>Psychological Medicine</EM>, <B>33</B>, 217&ndash;227.
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+
+  data("BtheB", package = "HSAUR")
+  layout(matrix(1:2, nrow = 1))   
+  ylim &lt;- range(BtheB[,grep("bdi", names(BtheB))], na.rm = TRUE)
+  boxplot(subset(BtheB, treatment == "TAU")[,grep("bdi", names(BtheB))],
+          main = "Treated as usual", ylab = "BDI", 
+          xlab = "Time (in months)", names = c(0, 2, 4, 6, 8), ylim = ylim)
+  boxplot(subset(BtheB, treatment == "BtheB")[,grep("bdi", names(BtheB))], 
+          main = "Beat the Blues", ylab = "BDI", xlab = "Time (in months)",
+          names = c(0, 2, 4, 6, 8), ylim = ylim)
+
+</pre>
+
+
+</body></html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>R: Melanoma skin cancer incidence</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" type="text/css" href="R.css">
+</head><body>
+
+<table width="100%" summary="page for H_melanoma"><tr><td>H_melanoma</td><td align="right">R Documentation</td></tr></table>
+
+<h2> Melanoma skin cancer incidence </h2>
+
+<h3>Description</h3>
+
+<p>These data from the Connecticut Tumor Registry present
+age-adjusted numbers of melanoma skin-cancer incidences per
+100,000 people in Connectict for the years from 1936 to 1972.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>melanoma</pre>
+
+
+<h3>Format</h3>
+
+<p>A data frame with 37 observations on the following 2 variables.
+</p>
+
+<dl>
+<dt>year</dt><dd><p>Years 1936 to 1972.</p>
+</dd>
+<dt>incidence</dt><dd><p>Rate of melanoma cancer per 100,000 population.</p>
+</dd>
+</dl>
+
+
+
+<h3>Note</h3>
+
+<p>This dataset is not related to the <code>melanoma</code>
+dataset in the <B>boot</B> package with the same name.
+</p>
+<p>The S-PLUS 6.2 help for the melanoma data says that the incidence rate is
+per <EM>million</EM>, but this is not consistent with data found at the
+National Cancer Institute (<a href="http://www.nci.nih.gov">http://www.nci.nih.gov</a>).
+</p>
+
+
+<h3>Author(s)</h3>
+
+<p>Documentation contributed by Kevin Wright.
+</p>
+
+
+<h3>Source</h3>
+
+<p>Houghton, A., E. W. Munster, and M. V. Viola.  (1978).  Increased
+Incidence of Malignant Melanoma After Peaks of Sunspot Activity.
+<EM>The Lancet</EM>, <B>8</B>, 759&ndash;760.
+</p>
+
+
+<h3>References</h3>
+
+<p>Cleveland, William S. (1993) <EM>Visualizing Data</EM>.  Hobart Press,
+Summit, New Jersey.
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+# Time-series plot.  Figure 3.64 from Cleveland.
+xyplot(incidence ~ year,
+  data = melanoma,
+	aspect = "xy",
+	panel = function(x, y)
+		panel.xyplot(x, y, type="o", pch = 16),
+	ylim = c(0, 6),
+	xlab = "Year",
+	ylab = "Incidence")
+</pre>
+
+
+</body></html>

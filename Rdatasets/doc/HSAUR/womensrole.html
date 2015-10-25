@@ -1,0 +1,73 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>R: Womens Role in Society</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" type="text/css" href="R.css">
+</head><body>
+
+<table width="100%" summary="page for womensrole"><tr><td>womensrole</td><td align="right">R Documentation</td></tr></table>
+
+<h2> Womens Role in Society </h2>
+
+<h3>Description</h3>
+
+<p>Data from a survey from 1974 / 1975 asking both female and male
+responders about their opinion on the statement: Women
+should take care of running their homes and leave running the   
+country up to men.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>data("womensrole")</pre>
+
+
+<h3>Format</h3>
+
+<p>A data frame with 42 observations on the following 4 variables.
+</p>
+
+<dl>
+<dt><code>education</code></dt><dd><p>years of education.</p>
+</dd>
+<dt><code>sex</code></dt><dd><p>a factor with levels <code>Male</code> and <code>Female</code>.</p>
+</dd>
+<dt><code>agree</code></dt><dd><p>number of subjects in agreement with the statement.</p>
+</dd>
+<dt><code>disagree</code></dt><dd><p>number of subjects in disagreement with the 
+statement.</p>
+</dd>
+</dl>
+
+
+
+<h3>Details</h3>
+
+<p>The data are from Haberman (1973) and also given in
+Collett (2003). The questions here are whether the response of men and women 
+differ.
+</p>
+
+
+<h3>Source</h3>
+
+<p>S. J. Haberman (1973), The analysis of residuals in cross-classificed
+tables. <EM>Biometrics</EM>, <B>29</B>, 205&ndash;220.
+</p>
+<p>D. Collett (2003), <EM>Modelling Binary Data</EM>. Chapman and Hall / CRC,
+London. 2nd edition.
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+
+  data("womensrole", package = "HSAUR")
+  summary(subset(womensrole, sex == "Female"))
+  summary(subset(womensrole, sex == "Male"))
+
+</pre>
+
+
+</body></html>

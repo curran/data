@@ -1,0 +1,85 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>R: Contagious bovine pleuropneumonia</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" type="text/css" href="R.css">
+</head><body>
+
+<table width="100%" summary="page for cbpp"><tr><td>cbpp</td><td align="right">R Documentation</td></tr></table>
+
+<h2>Contagious bovine pleuropneumonia</h2>
+
+<h3>Description</h3>
+
+<p>Contagious bovine pleuropneumonia (CBPP) is a major
+disease of cattle in Africa, caused by a mycoplasma.
+This dataset describes the serological incidence of CBPP
+in zebu cattle during a follow-up survey implemented in
+15 commercial herds located in the Boji district of
+Ethiopia.  The goal of the survey was to study the
+within-herd spread of CBPP in newly infected herds. Blood
+samples were quarterly collected from all animals of
+these herds to determine their CBPP status.  These data
+were used to compute the serological incidence of CBPP
+(new cases occurring during a given time period).  Some
+data are missing (lost to follow-up).
+</p>
+
+
+<h3>Format</h3>
+
+<p>A data frame with 56 observations on the following 4 variables.
+</p>
+
+<dl>
+<dt><code>herd</code></dt><dd><p>A factor identifying the herd (1 to 15).</p>
+</dd>
+<dt><code>incidence</code></dt><dd><p>The number of new serological cases for a
+given herd and time period.</p>
+</dd>
+<dt><code>size</code></dt><dd><p>A numeric vector describing herd size at the
+beginning of a given time period.</p>
+</dd>
+<dt><code>period</code></dt><dd><p>A factor with levels <code>1</code> to <code>4</code>.</p>
+</dd>
+</dl>
+
+
+<h3>Details</h3>
+
+<p>Serological status was determined using a competitive
+enzyme-linked immuno-sorbent assay (cELISA).
+</p>
+
+
+<h3>Source</h3>
+
+<p>Lesnoff, M., Laval, G., Bonnet, P., Abdicho, S.,
+Workalemahu, A., Kifle, D., Peyraud, A., Lancelot, R.,
+Thiaucourt, F. (2004) Within-herd spread of contagious
+bovine pleuropneumonia in Ethiopian highlands.
+<EM>Preventive Veterinary Medicine</EM> <B>64</B>, 27&ndash;40.
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+## response as a matrix
+(m1 &lt;- glmer(cbind(incidence, size - incidence) ~ period + (1 | herd),
+             family = binomial, data = cbpp))
+## response as a vector of probabilities and usage of argument "weights"
+m1p &lt;- glmer(incidence / size ~ period + (1 | herd), weights = size,
+             family = binomial, data = cbpp)
+## Confirm that these are equivalent:
+stopifnot(all.equal(fixef(m1), fixef(m1p), tolerance = 1e-5),
+          all.equal(ranef(m1), ranef(m1p), tolerance = 1e-5))
+
+
+## GLMM with individual-level variability (accounting for overdispersion)
+cbpp$obs &lt;- 1:nrow(cbpp)
+(m2 &lt;- glmer(cbind(incidence, size - incidence) ~ period + (1 | herd) +  (1|obs),
+              family = binomial, data = cbpp))
+</pre>
+
+
+</body></html>

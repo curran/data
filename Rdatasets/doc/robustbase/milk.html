@@ -1,0 +1,90 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>R: Daudin's Milk Composition Data</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" type="text/css" href="R.css">
+</head><body>
+
+<table width="100%" summary="page for milk"><tr><td>milk</td><td align="right">R Documentation</td></tr></table>
+
+<h2>Daudin's Milk Composition Data</h2>
+
+<h3>Description</h3>
+
+<p>Daudin et al.(1988) give 8 readings on the composition of 86
+containers of milk.  They speak about 85 observations, but this
+can be explained with the fact that observations 63 and 64 are
+identical (as noted by Rocke (1996)).
+</p>
+<p>The data set was used for analysing the stability of principal
+component analysis by the bootstrap method.  In the same context, but
+using high breakdown point robust PCA, these data were analysed by
+Todorov et al.(1994).  Atkinson (1994) used these data for ilustration
+of the forward search algorithm for identifying of multiple outliers.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>data(milk)</pre>
+
+
+<h3>Format</h3>
+
+<p>A data frame with 86 observations on the following 8 variables, all
+but the first measure units in <EM>grams / liter</EM>.
+</p>
+
+<dl>
+<dt><code>X1</code></dt><dd><p>density</p>
+</dd>
+<dt><code>X2</code></dt><dd><p>fat content</p>
+</dd>
+<dt><code>X3</code></dt><dd><p>protein content</p>
+</dd>
+<dt><code>X4</code></dt><dd><p>casein content</p>
+</dd>
+<dt><code>X5</code></dt><dd><p>cheese dry substance measured in the factory</p>
+</dd>
+<dt><code>X6</code></dt><dd><p>cheese dry substance measured in the laboratory</p>
+</dd>
+<dt><code>X7</code></dt><dd><p>milk dry substance</p>
+</dd>
+<dt><code>X8</code></dt><dd><p>cheese product</p>
+</dd>
+</dl>
+
+
+
+<h3>Source</h3>
+
+<p>Daudin, J.J. Duby, C. and Trecourt, P. (1988)
+Stability of Principal Component Analysis Studied by the Bootstrap Method;
+<EM>Statistics</EM> <B>19</B>, 241&ndash;258.
+</p>
+
+
+<h3>References</h3>
+
+<p>Todorov, V., Neyko, N., Neytchev, P. (1994)
+Stability of High Breakdown Point Robust PCA,
+in <EM>Short Communications, COMPSTAT'94</EM>; Physica Verlag, Heidelberg.
+</p>
+<p>Atkinson, A.C. (1994)
+Fast Very Robust Methods for the Detection of Multiple Outliers.
+<EM>J. Amer. Statist. Assoc.</EM> <B>89</B> 1329&ndash;1339.
+</p>
+<p>Rocke, D. M. and Woodruff, D. L. (1996)
+Identification of Outliers in Multivariate Data;
+<EM>J. Amer. Statist. Assoc.</EM> <B>91</B> (435), 1047&ndash;1061.
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+data(milk)
+covMcd(milk)
+</pre>
+
+
+</body></html>

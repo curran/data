@@ -1,0 +1,98 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>R: Attributes of Animals</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" type="text/css" href="R.css">
+</head><body>
+
+<table width="100%" summary="page for animals"><tr><td>animals</td><td align="right">R Documentation</td></tr></table>
+
+<h2>Attributes of Animals</h2>
+
+<h3>Description</h3>
+
+<p>This data set considers 6 binary attributes for 20 animals.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>data(animals)</pre>
+
+
+<h3>Format</h3>
+
+<p>A data frame with 20 observations on 6 variables:
+</p>
+
+<table summary="Rd table">
+<tr>
+ <td align="right">
+    [ , 1] </td><td align="left"> war </td><td align="left"> warm-blooded </td>
+</tr>
+<tr>
+ <td align="right">
+    [ , 2] </td><td align="left"> fly </td><td align="left"> can fly </td>
+</tr>
+<tr>
+ <td align="right">
+    [ , 3] </td><td align="left"> ver </td><td align="left"> vertebrate </td>
+</tr>
+<tr>
+ <td align="right">
+    [ , 4] </td><td align="left"> end </td><td align="left"> endangered </td>
+</tr>
+<tr>
+ <td align="right">
+    [ , 5] </td><td align="left"> gro </td><td align="left"> live in groups </td>
+</tr>
+<tr>
+ <td align="right">
+    [ , 6] </td><td align="left"> hai </td><td align="left"> have hair </td>
+</tr>
+<tr>
+ <td align="right">
+  </td>
+</tr>
+
+</table>
+
+<p>All variables are encoded as 1 = &lsquo;no&rsquo;, 2 = &lsquo;yes&rsquo;.
+</p>
+
+
+<h3>Details</h3>
+
+<p>This dataset is useful for illustrating monothetic (only a single
+variable is used for each split) hierarchical clustering.
+</p>
+
+
+<h3>Source</h3>
+
+<p>Leonard Kaufman and Peter J. Rousseeuw (1990):
+<EM>Finding Groups in Data</EM>
+(pp 297ff).
+New York: Wiley.
+</p>
+
+
+<h3>References</h3>
+
+<p>see Struyf, Hubert &amp; Rousseeuw (1996),  in <code>agnes</code>.
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+data(animals)
+apply(animals,2, table) # simple overview
+
+ma &lt;- mona(animals)
+ma
+## Plot similar to Figure 10 in Struyf et al (1996)
+plot(ma)
+</pre>
+
+
+</body></html>

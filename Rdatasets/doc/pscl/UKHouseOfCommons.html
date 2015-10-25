@@ -1,0 +1,114 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>R: 1992 United Kingdom electoral returns</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" type="text/css" href="R.css">
+</head><body>
+
+<table width="100%" summary="page for UKHouseOfCommons"><tr><td>UKHouseOfCommons</td><td align="right">R Documentation</td></tr></table>
+
+<h2>1992 United Kingdom electoral returns</h2>
+
+<h3>Description</h3>
+
+<p>Electoral returns, selected constituencies, 1992 general
+election for the British House of Commons</p>
+
+
+<h3>Usage</h3>
+
+<pre>data(UKHouseOfCommons)</pre>
+
+
+<h3>Format</h3>
+
+<p>A data frame with 521 observations on the following 12 variables.
+</p>
+
+<dl>
+<dt><code>constituency</code></dt><dd><p>a character vector, name of the House of Commons constituency</p>
+</dd>
+<dt><code>county</code></dt><dd><p>a character vector, county of the House of Commons constituency</p>
+</dd>
+<dt><code>y1</code></dt><dd><p>a numeric vector, log-odds of Conservative to LibDem vote share</p>
+</dd>
+<dt><code>y2</code></dt><dd><p>a numeric vector, log-odds of Labor to LibDem vote share</p>
+</dd>
+<dt><code>y1lag</code></dt><dd><p>a numeric vector, <code>y1</code> from previous election</p>
+</dd>
+<dt><code>y2lag</code></dt><dd><p>a numeric vector, <code>y2</code> from previous election</p>
+</dd>
+<dt><code>coninc</code></dt><dd><p>a numeric vector, 1 if the incumbent is a
+Conservative, 0 otherwise</p>
+</dd>
+<dt><code>labinc</code></dt><dd><p>a numeric vector, 1 if the incumbent is from
+the Labor Party, 0 otherwise</p>
+</dd>
+<dt><code>libinc</code></dt><dd><p>a numeric vector, 1 if the incumbent is from
+the LibDems, 0 otherwise</p>
+</dd>
+<dt><code>v1</code></dt><dd><p>a numeric vector, Conservative vote share
+(proportion of 3 party vote)</p>
+</dd>
+<dt><code>v2</code></dt><dd><p>a numeric vector, Labor vote share  (proportion of 3 party vote)</p>
+</dd>
+<dt><code>v3</code></dt><dd><p>a numeric vector, LibDem vote share (proportion of 3 party vote)</p>
+</dd>
+</dl>
+
+
+
+<h3>Details</h3>
+
+<p>These data span only 521 of the 621 seats in the House of
+Commons at the time of 1992 election.  Seats missing either a Conservative,
+Labor, or a LibDem candidate appear to have been dropped.   
+</p>
+<p>The original Katz and King data set does not have case labels.  I
+used matches to an additional data source to recover a set of constituency labels for
+these data; labels could not recovered for two of the constituencies.
+</p>
+
+
+<h3>Source</h3>
+
+<p>Jonathan Katz; Gary King. 1999. &quot;Replication data for: A Statistical Model of Multiparty Electoral Data&quot;, <a href="http://hdl.handle.net/1902.1/QIGTWZYTLZ">http://hdl.handle.net/1902.1/QIGTWZYTLZ</a>
+</p>
+<p>Martin Baxter.  <a href="http://www.electoralcalculus.co.uk/electdata_1992ob.txt">http://www.electoralcalculus.co.uk/electdata_1992ob.txt</a>
+</p>
+
+
+<h3>References</h3>
+
+<p>Katz, Jonathan and Gary King. 1999. &ldquo;A Statistical Model for
+Multiparty Electoral Data&rdquo;. <EM>American Political Science
+Review</EM>. 93(1): 15-32.
+</p>
+<p>Jackman, Simon. 2009.  <EM>Bayesian Analysis for the Social
+Sciences</EM>.  Wiley: Chichester.  Example 6.9.
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+data(UKHouseOfCommons)
+tmp &lt;- UKHouseOfCommons[,c("v1","v2","v3")] 
+summary(apply(tmp,1,sum))
+
+col &lt;- rep("black",dim(tmp)[1])
+col[UKHouseOfCommons$coninc==1] &lt;- "blue"
+col[UKHouseOfCommons$labinc==1] &lt;- "red"
+col[UKHouseOfCommons$libinc==1] &lt;- "orange"
+
+library(vcd)
+vcd::ternaryplot(tmp,
+                 dimnames=c("Cons","Lab","Lib-Dem"),
+                 labels="outside",
+                 col=col,
+                 pch=1,
+                 main="1992 UK House of Commons Election",
+                 cex=.75)
+</pre>
+
+
+</body></html>

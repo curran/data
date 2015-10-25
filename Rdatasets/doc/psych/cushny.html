@@ -1,0 +1,80 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>R: A data set from Cushny and Peebles (1905) on the effect of...</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" type="text/css" href="R.css">
+</head><body>
+
+<table width="100%" summary="page for cushny"><tr><td>cushny</td><td align="right">R Documentation</td></tr></table>
+
+<h2>
+A data set from Cushny and Peebles (1905) on the effect of three drugs on hours of sleep, used by Student (1908)
+</h2>
+
+<h3>Description</h3>
+
+<p>The classic data set used by Gossett (publishing as Student) for the introduction of the t-test.  The design was a within subjects study with hours of sleep in a control condition compared to those in 3 drug conditions.  Drug1 was 06mg of L Hscyamine, Drug 2L and Drug2R were said to be .6 mg of  Left and Right isomers of Hyoscine. As discussed by Zabell (2008) these were not optical isomers. The detal1, delta2L and delta2R are changes from the baseline control.  
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>data(cushny)</pre>
+
+
+<h3>Format</h3>
+
+<p>A data frame with 10 observations on the following 7 variables.
+</p>
+
+<dl>
+<dt><code>Control</code></dt><dd><p>Hours of sleep in a control condition</p>
+</dd>
+<dt><code>drug1</code></dt><dd><p>Hours of sleep in Drug condition 1</p>
+</dd>
+<dt><code>drug2L</code></dt><dd><p>Hours of sleep in Drug condition 2</p>
+</dd>
+<dt><code>drug2R</code></dt><dd><p>Hours of sleep in Drug condition 3 (an isomer of the drug in condition 2</p>
+</dd>
+<dt><code>delta1</code></dt><dd><p>Change from control, drug 1</p>
+</dd>
+<dt><code>delta2L</code></dt><dd><p>Change from control, drug 2L</p>
+</dd>
+<dt><code>delta2R</code></dt><dd><p>Change from control, drug 2R</p>
+</dd>
+</dl>
+
+
+
+<h3>Details</h3>
+
+<p>The original analysis by Student is used as an example for the t-test function, both as a paired t-test and a two group t-test.  The data are also useful for a repeated measures analysis of variance.  
+</p>
+
+
+<h3>Source</h3>
+
+<p>Cushny, A.R. and Peebles, A.R. (1905) The action of optical isomers: II hyoscines.  The Journal of Physiology 32, 501-510.
+</p>
+<p>Student (1908) The probable error of the mean.  Biometrika, 6 (1) , 1-25.
+</p>
+
+
+<h3>References</h3>
+
+<p>See also the data set sleep and the examples for the t.test
+</p>
+<p>S. L. Zabell.  On Student's 1908 Article &quot;The Probable Error of a Mean&quot; Journal of the American Statistical Association, Vol. 103, No. 481 (Mar., 2008), pp. 1- 20</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+data(cushny)
+with(cushny, t.test(drug1,drug2L,paired=TRUE)) #within subjects 
+
+error.bars(cushny[1:4],within=TRUE,ylab="Hours of sleep",xlab="Drug condition", 
+       main="95% confidence of within subject effects")
+</pre>
+
+
+</body></html>

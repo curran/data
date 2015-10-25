@@ -1,0 +1,100 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>R: Automobile Data from 'Consumer Reports' 1990</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" type="text/css" href="R.css">
+</head><body>
+
+<table width="100%" summary="page for cu.summary"><tr><td>cu.summary</td><td align="right">R Documentation</td></tr></table>
+
+<h2>Automobile Data from 'Consumer Reports' 1990</h2>
+
+<h3>Description</h3>
+
+<p>The <code>cu.summary</code> data frame has 117 rows and 5 columns,
+giving data on makes of cars taken from the April, 1990 issue of
+<EM>Consumer Reports</EM>.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+cu.summary
+</pre>
+
+
+<h3>Format</h3>
+
+<p>This data frame contains the following columns:
+</p>
+
+<dl>
+<dt><code>Price</code></dt><dd>
+<p>a numeric vector giving the list price in US dollars of a standard model
+</p>
+</dd>
+<dt><code>Country</code></dt><dd>
+<p>of origin, a factor with levels
+<span class="samp">Brazil</span>,
+<span class="samp">England</span>,
+<span class="samp">France</span>,
+<span class="samp">Germany</span>,
+<span class="samp">Japan</span>,
+<span class="samp">Japan/USA</span>,
+<span class="samp">Korea</span>,
+<span class="samp">Mexico</span>,
+<span class="samp">Sweden</span> and
+<span class="samp">USA</span>
+</p>
+</dd>
+<dt><code>Reliability</code></dt><dd>
+<p>an ordered factor with levels
+<span class="samp">Much worse</span> &lt; <span class="samp">worse</span> &lt; <span class="samp">average</span> &lt; <span class="samp">better</span> &lt; <span class="samp">Much better</span>
+</p>
+</dd>
+<dt><code>Mileage</code></dt><dd>
+<p>fuel consumption miles per US gallon, as tested.
+</p>
+</dd>
+<dt><code>Type</code></dt><dd>
+<p>a factor with levels
+<code>Compact</code>
+<code>Large</code>
+<code>Medium</code>
+<code>Small</code>
+<code>Sporty</code>
+<code>Van</code>
+</p>
+</dd>
+</dl>
+
+
+
+<h3>Source</h3>
+
+<p><EM>Consumer Reports</EM>, April, 1990, pp. 235&ndash;288 quoted in
+</p>
+<p>John M. Chambers and Trevor J. Hastie eds. (1992)
+<EM>Statistical Models in S</EM>, Wadsworth and Brooks/Cole,
+Pacific Grove, CA, pp. 46&ndash;47.
+</p>
+
+
+<h3>See Also</h3>
+
+<p><code>car.test.frame</code>,
+<code>car90</code>
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+fit &lt;- rpart(Price ~ Mileage + Type + Country, cu.summary)
+par(xpd = TRUE)
+plot(fit, compress = TRUE)
+text(fit, use.n = TRUE)
+</pre>
+
+
+</body></html>

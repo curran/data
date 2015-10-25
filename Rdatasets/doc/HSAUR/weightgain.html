@@ -1,0 +1,69 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>R: Gain in Weight of Rats</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" type="text/css" href="R.css">
+</head><body>
+
+<table width="100%" summary="page for weightgain"><tr><td>weightgain</td><td align="right">R Documentation</td></tr></table>
+
+<h2> Gain in Weight of Rats </h2>
+
+<h3>Description</h3>
+
+<p>The data arise from an experiment to study the
+gain in weight of rats fed on four different diets, distinguished
+by amount of protein (low and high) and by source of protein
+(beef and cereal).
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>data("weightgain")</pre>
+
+
+<h3>Format</h3>
+
+<p>A data frame with 40 observations on the following 3 variables.
+</p>
+
+<dl>
+<dt><code>source</code></dt><dd><p>source of protein given, a factor with levels <code>Beef</code>
+and <code>Cereal</code>.</p>
+</dd>
+<dt><code>type</code></dt><dd><p>amount of protein given, a factor with levels <code>High</code>
+and <code>Low</code>.</p>
+</dd>
+<dt><code>weightgain</code></dt><dd><p>weigt gain in grams.</p>
+</dd>
+</dl>
+
+
+
+<h3>Details</h3>
+
+<p>Ten rats are randomized to each of the four
+treatments. The question
+of interest is how diet affects weight gain.
+</p>
+
+
+<h3>Source</h3>
+
+<p>D. J. Hand, F. Daly, A. D. Lunn, K. J. McConway and E. Ostrowski (1994).
+<EM>A Handbook of Small Datasets</EM>, Chapman and Hall/CRC, London.
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+
+  data("weightgain", package = "HSAUR")
+  interaction.plot(weightgain$type, weightgain$source, 
+                   weightgain$weightgain)
+
+</pre>
+
+
+</body></html>

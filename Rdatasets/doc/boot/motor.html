@@ -1,0 +1,82 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>R: Data from a Simulated Motorcycle Accident</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" type="text/css" href="R.css">
+</head><body>
+
+<table width="100%" summary="page for motor"><tr><td>motor</td><td align="right">R Documentation</td></tr></table>
+
+<h2>
+Data from a Simulated Motorcycle Accident
+</h2>
+
+<h3>Description</h3>
+
+<p>The <code>motor</code> data frame has 94 rows and 4 columns.  The rows are
+obtained by removing replicate values of <code>time</code> from the dataset 
+<code>mcycle</code>.  Two extra columns are added to allow for strata with
+a different residual variance in each stratum.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+motor
+</pre>
+
+
+<h3>Format</h3>
+
+<p>This data frame contains the following columns:
+</p>
+
+<dl>
+<dt><code>times</code></dt><dd>
+<p>The time in milliseconds since impact.
+</p>
+</dd>
+<dt><code>accel</code></dt><dd>
+<p>The recorded head acceleration (in g).
+</p>
+</dd>
+<dt><code>strata</code></dt><dd>
+<p>A numeric column indicating to which of the three strata (numbered 1, 2 and 3)
+the observations belong.
+</p>
+</dd>
+<dt><code>v</code></dt><dd>
+<p>An estimate of the residual variance for the observation.  <code>v</code> is constant
+within the strata but a different
+estimate is used for each of the three strata.
+</p>
+</dd></dl>
+
+
+<h3>Source</h3>
+
+<p>The data were obtained from
+</p>
+<p>Silverman, B.W. (1985) Some aspects of the spline smoothing approach to
+non-parametric curve fitting. 
+<EM>Journal of the Royal Statistical Society, B</EM>, <B>47</B>, 1&ndash;52.
+</p>
+
+
+<h3>References</h3>
+
+<p>Davison, A.C. and Hinkley, D.V. (1997) 
+<EM>Bootstrap Methods and Their Application</EM>. Cambridge University Press.
+</p>
+<p>Venables, W.N. and Ripley, B.D. (1994) 
+<EM>Modern Applied Statistics with S-Plus</EM>. Springer-Verlag.
+</p>
+
+
+<h3>See Also</h3>
+
+<p><code>mcycle</code>
+</p>
+
+
+</body></html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>R: Vaso Constriction Skin Data Set</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" type="text/css" href="R.css">
+</head><body>
+
+<table width="100%" summary="page for vaso"><tr><td>vaso</td><td align="right">R Documentation</td></tr></table>
+
+<h2>Vaso Constriction Skin Data Set</h2>
+
+<h3>Description</h3>
+
+<p>Finney's data on vaso constriction in the skin of the digits.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>data(vaso)</pre>
+
+
+<h3>Format</h3>
+
+<p>A data frame with 39 observations on the following 3 variables.
+</p>
+
+<dl>
+<dt><code>Volume</code></dt><dd><p>Inhaled volume of air</p>
+</dd>
+<dt><code>Rate</code></dt><dd><p>Rate of inhalation</p>
+</dd>
+<dt><code>Y</code></dt><dd><p>vector of 0 or 1 values.</p>
+</dd>
+</dl>
+
+
+
+<h3>Details</h3>
+
+<p>The data taken from Finney (1947) were obtained in a carefully
+controlled study in human physiology where a reflex
+&ldquo;vaso constriction&rdquo; may occur in the skin of the digits after taking a
+single deep breath.  The response y is the occurence (y = 1) or
+non-occurence (y = 0) of vaso constriction in the skin of the digits
+of a subject after he or she inhaled a certain volume of air at a certain
+rate.  The responses of three subjects are available.  The first
+contributed 9 responses, the second contributed 8 responses, and the
+third contributed 22 responses.
+</p>
+<p>Although the data represent repeated measurements, an analysis that
+assumes independent observations may be applied, as claimed by Pregibon
+(1981).
+</p>
+
+
+<h3>Source</h3>
+
+<p>Finney, D.J. (1947)
+The estimation from individual records of the relationship between
+dose and quantal response.
+<EM>Biometrika</EM> <B>34</B>, 320&ndash;334
+</p>
+
+
+<h3>References</h3>
+
+<p>Atkinson, A.C. and Riani, M. (2000)
+<EM>Robust Diagnostic Regression Analysis</EM>,
+First Edition. New York: Springer, Table A.23.
+</p>
+<p>Fahrmeir, L. and Tutz, G. (2001)
+<EM>Multivariate Statistical Modelling Based on Generalized Linear Models</EM>,
+Springer, Table 4.2.
+</p>
+<p>Kuensch, H.R., Stefanski, A. and Carrol, R.J. (1989)
+Conditionally unbiased bounded influence estimation in general
+regression models, with applications to generalized linear models,
+<EM>JASA</EM> <B>84</B>, 460&ndash;466.
+</p>
+<p>Pregibon, D. (1981)
+Logistic regression diagnostics,
+<EM>Annals of Statistics</EM> <B>9</B>, 705&ndash;724.
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+data(vaso)
+str(vaso)
+pairs(vaso)
+
+glmV &lt;- glm(Y ~ log(Volume) + log(Rate), family=binomial, data=vaso)
+summary(glmV)
+## --&gt;  example(glmrob)  showing classical &amp; robust GLM
+</pre>
+
+
+</body></html>

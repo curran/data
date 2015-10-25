@@ -1,0 +1,105 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>R: Arbuthnot's data on male and female birth ratios in London...</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" type="text/css" href="R.css">
+</head><body>
+
+<table width="100%" summary="page for Arbuthnot"><tr><td>Arbuthnot</td><td align="right">R Documentation</td></tr></table>
+
+<h2>
+Arbuthnot's data on male and female birth ratios in London from 1629-1710.
+</h2>
+
+<h3>Description</h3>
+
+<p>John Arbuthnot (1710) used these time series data on the ratios of
+male to female births in London from 1629-1710 to carry out the first known
+significance test, comparing observed data to a null hypothesis.
+The data for these 81 years showed that in every year there were
+more male than female christenings.
+</p>
+<p>On the assumption that male and female births were equally likely,
+he showed that the probability of observing 82 years with more
+males than females was vanishingly small (<i>~ 4.14 x 10^{-25}</i>).
+He used this to argue that a nearly constant birth ratio &gt; 1
+could be interpreted to show the guiding hand of a devine being.
+The data set adds variables of deaths from the plague and total
+mortality obtained by Campbell and from Creighton (1965).
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>data(Arbuthnot)</pre>
+
+
+<h3>Format</h3>
+
+<p>A data frame with 82 observations on the following 7 variables.
+</p>
+
+<dl>
+<dt><code>Year</code></dt><dd><p>a numeric vector, 1629-1710</p>
+</dd>
+<dt><code>Males</code></dt><dd><p>a numeric vector, number of male christenings</p>
+</dd>
+<dt><code>Females</code></dt><dd><p>a numeric vector, number of female christenings</p>
+</dd>
+<dt><code>Plague</code></dt><dd><p>a numeric vector, number of deaths from plague</p>
+</dd>
+<dt><code>Mortality</code></dt><dd><p>a numeric vector, total mortality</p>
+</dd>
+<dt><code>Ratio</code></dt><dd><p>a numeric vector, ratio of Males/Females</p>
+</dd>
+<dt><code>Total</code></dt><dd><p>a numeric vector, total christenings in London (000s)</p>
+</dd>
+</dl>
+
+
+
+<h3>Details</h3>
+
+<p>Sandy Zabell (1976) pointed out several errors and inconsistencies in the
+Arbuthnot data.  In particular, the values for 1674 and 1704 are identical,
+suggesting that the latter were copied erroneously from the former.
+</p>
+
+
+<h3>Source</h3>
+
+<p>Arbuthnot, John (1710). &quot;An argument for Devine Providence, taken from the constant Regularity
+observ'd in the Births of both Sexes,&quot; <EM>Philosophical transactions</EM>, 27, 186-190.
+Published in 1711.
+</p>
+
+
+<h3>References</h3>
+
+<p>Campbell, R. B., Arbuthnot and the Human Sex Ratio,
+<a href="http://www.math.uni.edu/~campbell/arbuth.html">http://www.math.uni.edu/~campbell/arbuth.html</a>
+</p>
+<p>Creighton, C. (1965). A History of Epidemics in Britain, 2nd edition, vol. 1 and 2. 
+NY: Barnes and Noble.
+</p>
+<p>S. Zabell (1976). Arbuthnot, Heberden, and the <EM>Bills of Mortality</EM>.
+Technical Report No. 40, Department of Statistics, University of Chicago.
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+data(Arbuthnot)
+# plot the sex ratios
+with(Arbuthnot, plot(Year,Ratio, type='b', ylim=c(1, 1.20), ylab="Sex Ratio (M/F)"))
+abline(h=1, col="red")
+#  add loess smooth
+Arb.smooth &lt;- with(Arbuthnot, loess.smooth(Year,Ratio))
+lines(Arb.smooth$x, Arb.smooth$y, col="blue", lwd=2)
+
+# plot the total christenings to observe the anomalie in 1704
+with(Arbuthnot, plot(Year,Total, type='b', ylab="Total Christenings"))
+</pre>
+
+
+</body></html>

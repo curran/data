@@ -1,0 +1,157 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>R: Darwin's Heights of Cross- and Self-fertilized Zea May Pairs</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" type="text/css" href="R.css">
+</head><body>
+
+<table width="100%" summary="page for ZeaMays"><tr><td>ZeaMays</td><td align="right">R Documentation</td></tr></table>
+
+<h2>
+Darwin's Heights of Cross- and Self-fertilized Zea May Pairs
+</h2>
+
+<h3>Description</h3>
+
+<p>Darwin (1876) studied the growth of pairs of zea may (aka corn)
+seedlings, one produced by cross-fertilization and the other
+produced by self-fertilization, but otherwise grown under identical 
+conditions.
+His goal was to demonstrate the greater vigour of the cross-fertilized plants.
+The data recorded are the final height (inches, to the nearest 1/8th)  of the plants in each pair.
+</p>
+<p>In the <EM>Design of Experiments</EM>, Fisher (1935) used these data to illustrate
+a paired t-test (well, a one-sample test on the mean difference, <code>cross - self</code>).
+Later in the book (section 21), he used this data to illustrate an early example of a non-parametric permutation
+test, treating each paired difference as having (randomly) either a positive or negative sign. 
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>data(ZeaMays)</pre>
+
+
+<h3>Format</h3>
+
+<p>A data frame with 15 observations on the following 4 variables.
+</p>
+
+<dl>
+<dt><code>pair</code></dt><dd><p>pair number, a numeric vector</p>
+</dd>
+<dt><code>pot</code></dt><dd><p>pot, a factor with levels <code>1</code> <code>2</code> <code>3</code> <code>4</code></p>
+</dd>
+<dt><code>cross</code></dt><dd><p>height of cross fertilized plant, a numeric vector</p>
+</dd>
+<dt><code>self</code></dt><dd><p>height of cross fertilized plant, a numeric vector</p>
+</dd>
+<dt><code>diff</code></dt><dd><p><code>cross - self</code> for each pair</p>
+</dd>
+</dl>
+
+
+
+<h3>Details</h3>
+
+<p>In addition to the standard paired t-test,
+several types of non-parametric tests can be contemplated:
+</p>
+<p>(a) Permutation test, where the values of, say <code>self</code> are permuted and <code>diff=cross - self</code>
+is calculated for each permutation.  There are 15! permutations, but a reasonably
+large number of random permutations would suffice.  But this doesn't take the paired samples
+into account.
+</p>
+<p>(b) Permutation test based on assigning each <code>abs(diff)</code> a + or - sign, and calculating the mean(diff).
+There are <i>2^{15}</i> such possible values.  This is essentially what Fisher 
+proposed.  The p-value for the test is the proportion of absolute mean differences
+under such randomization which exceed the observed mean difference.
+</p>
+<p>(c) Wilcoxon signed rank test: tests the hypothesis that the median signed rank of the <code>diff</code> is zero,
+or that the distribution of <code>diff</code> is symmetric about 0, vs. a location shifted alternative.
+</p>
+
+
+<h3>Source</h3>
+
+<p>Darwin, C. (1876). <EM>The Effect of Cross- and Self-fertilization in the Vegetable Kingdom</EM>,
+2nd Ed. London: John Murray.
+</p>
+<p>Andrews, D. and Herzberg, A. (1985) <EM>Data:
+a collection of problems from many fields for the student and research worker</EM>.
+New York: Springer. Data retrieved from: <a href="http://lib.stat.cmu.edu/datasets/Andrews/">http://lib.stat.cmu.edu/datasets/Andrews/</a>
+</p>
+
+
+<h3>References</h3>
+
+<p>Fisher, R. A. (1935). <EM>The Design of Experiments</EM>. London: Oliver &amp; Boyd.
+</p>
+
+
+<h3>See Also</h3>
+
+<p><code>wilcox.test</code>
+</p>
+<p><code>independence_test</code> in the <code>coin</code> package, a general framework for conditional inference procedures
+(permutation tests)
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+data(ZeaMays)
+
+##################################
+## Some preliminary exploration ##
+##################################
+boxplot(ZeaMays[,c("cross", "self")], ylab="Height (in)", xlab="Fertilization")
+
+# examine large individual diff/ces
+largediff &lt;- subset(ZeaMays, abs(diff) &gt; 2*sd(abs(diff)))
+with(largediff, segments(1, cross, 2, self, col="red"))
+
+# plot cross vs. self.  NB: unusual trend and some unusual points
+with(ZeaMays, plot(self, cross, pch=16, cex=1.5))
+abline(lm(cross ~ self, data=ZeaMays), col="red", lwd=2)
+
+# pot effects ?
+ anova(lm(diff ~ pot, data=ZeaMays))
+
+##############################
+## Tests of mean difference ##
+##############################
+# Wilcoxon signed rank test
+# signed ranks:
+with(ZeaMays, sign(diff) * rank(abs(diff)))
+wilcox.test(ZeaMays$cross, ZeaMays$self, conf.int=TRUE, exact=FALSE)
+
+# t-tests
+with(ZeaMays, t.test(cross, self))
+with(ZeaMays, t.test(diff))
+
+mean(ZeaMays$diff)
+# complete permutation distribution of diff, for all 2^15 ways of assigning
+# one value to cross and the other to self (thx: Bert Gunter)
+N &lt;- nrow(ZeaMays)
+allmeans &lt;- as.matrix(expand.grid(as.data.frame(
+                         matrix(rep(c(-1,1),N), nr =2))))  %*% abs(ZeaMays$diff) / N
+
+# upper-tail p-value
+sum(allmeans &gt; mean(ZeaMays$diff)) / 2^N
+# two-tailed p-value
+sum(abs(allmeans) &gt; mean(ZeaMays$diff)) / 2^N
+
+hist(allmeans, breaks=64, xlab="Mean difference, cross-self",
+	main="Histogram of all mean differences")
+abline(v=c(1, -1)*mean(ZeaMays$diff), col="red", lwd=2, lty=1:2)
+
+plot(density(allmeans), xlab="Mean difference, cross-self",
+	main="Density plot of all mean differences")
+abline(v=c(1, -1)*mean(ZeaMays$diff), col="red", lwd=2, lty=1:2)
+
+
+</pre>
+
+
+</body></html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>R: Heat Evolved by Setting Cements</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" type="text/css" href="R.css">
+</head><body>
+
+<table width="100%" summary="page for cement"><tr><td>cement</td><td align="right">R Documentation</td></tr></table>
+
+<h2>
+Heat Evolved by Setting Cements
+</h2>
+
+<h3>Description</h3>
+
+<p>Experiment on the heat evolved in the setting of each of 13 cements.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+cement
+</pre>
+
+
+<h3>Format</h3>
+
+
+<dl>
+<dt><code>x1, x2, x3, x4</code></dt><dd>
+<p>Proportions (%) of active ingredients.
+</p>
+</dd>
+<dt><code>y</code></dt><dd>
+<p>heat evolved in cals/gm.
+</p>
+</dd>
+</dl>
+
+
+
+<h3>Details</h3>
+
+<p>Thirteen samples of Portland cement were set. For each sample, the
+percentages of the four main chemical ingredients was accurately
+measured.  While the cement was setting the amount of heat evolved was
+also measured.
+</p>
+
+
+<h3>Source</h3>
+
+<p>Woods, H., Steinour, H.H. and Starke, H.R. (1932) Effect of composition of 
+Portland cement on heat evolved during hardening. 
+<EM>Industrial Engineering and Chemistry</EM>, <B>24</B>, 1207&ndash;1214.
+</p>
+
+
+<h3>References</h3>
+
+<p>Hald, A. (1957) <EM>Statistical Theory with Engineering
+Applications.</EM> Wiley, New York.
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+lm(y ~ x1 + x2 + x3 + x4, cement)
+</pre>
+
+
+</body></html>

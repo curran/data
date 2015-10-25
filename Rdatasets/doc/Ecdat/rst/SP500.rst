@@ -1,0 +1,43 @@
++---------+-------------------+
+| SP500   | R Documentation   |
++---------+-------------------+
+
+Returns on Standard \\& Poor's 500 Index
+----------------------------------------
+
+Description
+~~~~~~~~~~~
+
+daily observations from 1981–01 to 1991–04
+
+*number of observations* : 2783
+
+Usage
+~~~~~
+
+::
+
+    data(SP500)
+
+Format
+~~~~~~
+
+A dataframe containing :
+
+r500
+    daily return S\\&P500 (change in log index)
+
+References
+~~~~~~~~~~
+
+Verbeek, Marno (2004) *A guide to modern econometrics*, John Wiley and
+Sons,
+`http://www.econ.kuleuven.ac.be/GME <http://www.econ.kuleuven.ac.be/GME>`__.
+
+See Also
+~~~~~~~~
+
+``Index.Source``, ``Index.Economics``, ``Index.Econometrics``,
+``Index.Observations``,
+
+``Index.Time.Series``

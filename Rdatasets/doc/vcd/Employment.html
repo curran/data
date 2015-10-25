@@ -1,0 +1,107 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>R: Employment Status</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" type="text/css" href="R.css">
+</head><body>
+
+<table width="100%" summary="page for Employment"><tr><td>Employment</td><td align="right">R Documentation</td></tr></table>
+
+<h2>Employment Status</h2>
+
+<h3>Description</h3>
+
+<p>Data from a 1974 Danish study given by Andersen (1991) on the
+employees who had been laid off.  The workers are classified by 
+their employment status on 1975-01-01, the cause of their layoff
+and the length of employment before they were laid off.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+data("Employment")
+</pre>
+
+
+<h3>Format</h3>
+
+<p>A 3-dimensional array resulting from cross-tabulating variables for
+1314 employees.  The variables and their levels are as follows:
+</p>
+
+<table summary="Rd table">
+<tr>
+ <td align="right">
+    No </td><td align="left"> Name </td><td align="left"> Levels </td>
+</tr>
+<tr>
+ <td align="right">
+    1 </td><td align="left"> EmploymentStatus </td><td align="left"> NewJob, Unemployed </td>
+</tr>
+<tr>
+ <td align="right">
+    2 </td><td align="left"> EmploymentLength </td><td align="left"> &lt;1Mo, 1-3Mo, 3-12Mo, 1-2Yr, 2-5Yr, &gt;5Yr </td>
+</tr>
+<tr>
+ <td align="right">
+    3 </td><td align="left"> LayoffCause </td><td align="left"> Closure, Replaced
+  </td>
+</tr>
+
+</table>
+
+
+
+<h3>Source</h3>
+
+<p>Michael Friendly (2000),
+Visualizing Categorical Data, pages 126&ndash;129.
+</p>
+
+
+<h3>References</h3>
+
+<p>E. B. Andersen (1991),
+<EM>The Statistical Analysis of Categorical Data</EM>.
+Springer-Verlag, Berlin.
+</p>
+<p>M. Friendly (2000),
+<EM>Visualizing Categorical Data</EM>.
+SAS Institute, Cary, NC.
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+data("Employment")
+
+## Employment Status
+mosaic(Employment,
+       expected = ~ LayoffCause * EmploymentLength + EmploymentStatus,
+       main = "Layoff*EmployLength + EmployStatus")
+
+mosaic(Employment,
+       expected = ~ LayoffCause * EmploymentLength + LayoffCause * EmploymentStatus,
+       main = "Layoff*EmployLength + Layoff*EmployStatus")
+
+## Stratified view
+
+grid.newpage()
+pushViewport(viewport(layout = grid.layout(ncol = 2)))
+pushViewport(viewport(layout.pos.col = 1))
+
+## Closure
+mosaic(Employment[,,1], main = "Layoff: Closure", newpage = FALSE)
+
+popViewport(1)
+pushViewport(viewport(layout.pos.col = 2))
+
+## Replaced
+mosaic(Employment[,,2], main = "Layoff: Replaced", newpage = FALSE)
+popViewport(2)
+</pre>
+
+
+</body></html>

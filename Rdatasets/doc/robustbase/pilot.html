@@ -1,0 +1,57 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>R: Pilot-Plant Data</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" type="text/css" href="R.css">
+</head><body>
+
+<table width="100%" summary="page for pilot"><tr><td>pilot</td><td align="right">R Documentation</td></tr></table>
+
+<h2>Pilot-Plant Data</h2>
+
+<h3>Description</h3>
+
+<p>Pilot-Plant data from Daniel and Wood (1971). The response variable
+corresponds to the acid content determined by titration and the
+explanatory variable is the organic acid content determined by
+extraction and weighing. This data set was analyzed also by Yale and
+Forsythe (1976).
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>data(pilot)</pre>
+
+
+<h3>Format</h3>
+
+<p>A data frame with 20 observations on the following 2 variables.
+</p>
+
+<dl>
+<dt><code>X</code></dt><dd><p>Organic acid content - extraction</p>
+</dd>
+<dt><code>Y</code></dt><dd><p>Acid content - titration </p>
+</dd>
+</dl>
+
+
+
+<h3>Source</h3>
+
+<p>P. J. Rousseeuw and A. M. Leroy (1987)
+<EM>Robust Regression and Outlier Detection</EM>;
+Wiley, page 21, table 1.
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+data(pilot)
+summary(lm.pilot &lt;- lm(Y ~.,data=pilot))
+
+</pre>
+
+
+</body></html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>R: Variation in penicillin testing</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" type="text/css" href="R.css">
+</head><body>
+
+<table width="100%" summary="page for Penicillin"><tr><td>Penicillin</td><td align="right">R Documentation</td></tr></table>
+
+<h2>Variation in penicillin testing</h2>
+
+<h3>Description</h3>
+
+<p>Six samples of penicillin were tested using the <EM>B.
+subtilis</EM> plate method on each of 24 plates.  The
+response is the diameter (mm) of the zone of inhibition
+of growth of the organism.
+</p>
+
+
+<h3>Format</h3>
+
+<p>A data frame with 144 observations on the following 3 variables.
+</p>
+
+<dl>
+<dt><code>diameter</code></dt><dd><p>diameter (mm) of the zone of inhibition of
+the growth of the organism.</p>
+</dd>
+<dt><code>plate</code></dt><dd><p>assay plate.  A factor with levels &lsquo;a&rsquo; to
+&lsquo;x&rsquo;.</p>
+</dd>
+<dt><code>sample</code></dt><dd><p>penicillin sample.  A factor with levels
+&lsquo;A&rsquo; to &lsquo;F&rsquo;.</p>
+</dd>
+</dl>
+
+
+<h3>Details</h3>
+
+<p>The data are described in Davies and Goldsmith (1972) as
+coming from an investigation to &ldquo;assess the
+variability between samples of penicillin by the <EM>B.
+subtilis</EM> method.  In this test method a bulk-inoculated
+nutrient agar medium is poured into a Petri dish of
+approximately 90 mm. diameter, known as a plate.  When
+the medium has set, six small hollow cylinders or pots
+(about 4 mm. in diameter) are cemented onto the surface
+at equally spaced intervals.  A few drops of the
+penicillin solutions to be compared are placed in the
+respective cylinders, and the whole plate is placed in an
+incubator for a given time.  Penicillin diffuses from the
+pots into the agar, and this produces a clear circular
+zone of inhibition of growth of the organisms, which can
+be readily measured.  The diameter of the zone is related
+in a known way to the concentration of penicillin in the
+solution.&rdquo;
+</p>
+
+
+<h3>Source</h3>
+
+<p>O.L. Davies and P.L. Goldsmith (eds), <EM>Statistical
+Methods in Research and Production, 4th ed.</EM>, Oliver and
+Boyd, (1972), section 6.6
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+str(Penicillin)
+require(lattice)
+dotplot(reorder(plate, diameter) ~ diameter, Penicillin, groups = sample,
+        ylab = "Plate", xlab = "Diameter of growth inhibition zone (mm)",
+        type = c("p", "a"), auto.key = list(columns = 3, lines = TRUE,
+        title = "Penicillin sample"))
+(fm1 &lt;- lmer(diameter ~ (1|plate) + (1|sample), Penicillin))
+
+L &lt;- getME(fm1, "L")
+Matrix::image(L, main = "L",
+              sub = "Penicillin: Structure of random effects interaction")
+</pre>
+
+
+</body></html>

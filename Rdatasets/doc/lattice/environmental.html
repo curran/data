@@ -1,0 +1,105 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>R: Atmospheric environmental conditions in New York City</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" type="text/css" href="R.css">
+</head><body>
+
+<table width="100%" summary="page for H_environmental"><tr><td>H_environmental</td><td align="right">R Documentation</td></tr></table>
+
+<h2> Atmospheric environmental conditions in New York City </h2>
+
+<h3>Description</h3>
+
+<p>Daily measurements of ozone concentration, wind speed, temperature and
+solar radiation in New York City from May to September of 1973.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>environmental</pre>
+
+
+<h3>Format</h3>
+
+<p>A data frame with 111 observations on the following 4 variables.
+</p>
+
+<dl>
+<dt>ozone</dt><dd><p>Average ozone concentration (of hourly measurements) of
+in parts per billion.</p>
+</dd>
+<dt>radiation</dt><dd><p>Solar radiation (from 08:00 to 12:00) in langleys.</p>
+</dd>
+<dt>temperature</dt><dd><p>Maximum daily emperature in degrees Fahrenheit.</p>
+</dd>
+<dt>wind</dt><dd><p>Average wind speed (at 07:00 and 10:00) in miles per hour.</p>
+</dd>
+</dl>
+
+
+
+<h3>Author(s)</h3>
+
+<p>Documentation contributed by Kevin Wright.
+</p>
+
+
+<h3>Source</h3>
+
+<p>Bruntz, S. M., W. S. Cleveland, B. Kleiner, and J. L. Warner.  (1974).
+The Dependence of Ambient Ozone on Solar Radiation, Wind, Temperature,
+and Mixing Height.  In <EM>Symposium on Atmospheric Diffusion and
+Air Pollution</EM>, pages 125&ndash;128.  American Meterological Society,
+Boston.
+</p>
+
+
+<h3>References</h3>
+
+<p>Cleveland, William S. (1993) <EM>Visualizing Data</EM>.  Hobart Press,
+Summit, New Jersey.
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+# Scatter plot matrix with loess lines
+splom(~environmental,
+  panel=function(x,y){
+    panel.xyplot(x,y)
+    panel.loess(x,y)
+  }
+)
+
+
+# Conditioned plot similar to figure 5.3 from Cleveland
+attach(environmental)
+Temperature &lt;- equal.count(temperature, 4, 1/2)
+Wind &lt;- equal.count(wind, 4, 1/2)
+xyplot((ozone^(1/3)) ~ radiation | Temperature * Wind,
+  aspect=1,
+	prepanel = function(x, y) 
+		prepanel.loess(x, y, span = 1),
+	panel = function(x, y){
+		panel.grid(h = 2, v = 2)
+		panel.xyplot(x, y, cex = .5)
+		panel.loess(x, y, span = 1)
+	},
+	xlab = "Solar radiation (langleys)",
+	ylab = "Ozone (cube root ppb)")
+detach()
+
+# Similar display using the coplot function
+with(environmental,{
+  coplot((ozone^.33) ~ radiation | temperature * wind,
+  number=c(4,4),
+  panel = function(x, y, ...) panel.smooth(x, y, span = .8, ...),
+  xlab="Solar radiation (langleys)",
+  ylab="Ozone (cube root ppb)")
+})
+</pre>
+
+
+</body></html>

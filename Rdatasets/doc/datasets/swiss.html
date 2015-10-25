@@ -1,0 +1,130 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>R: Swiss Fertility and Socioeconomic Indicators (1888) Data</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" type="text/css" href="R.css">
+</head><body>
+
+<table width="100%" summary="page for swiss"><tr><td>swiss</td><td align="right">R Documentation</td></tr></table>
+
+<h2>Swiss Fertility and Socioeconomic Indicators (1888) Data</h2>
+
+<h3>Description</h3>
+
+<p>Standardized fertility measure and socio-economic indicators for each
+of 47 French-speaking provinces of Switzerland at about 1888.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>swiss</pre>
+
+
+<h3>Format</h3>
+
+<p>A data frame with 47 observations on 6 variables, <EM>each</EM> of which
+is in percent, i.e., in <i>[0, 100]</i>.
+</p>
+
+<table summary="Rd table">
+<tr>
+ <td align="right">
+    [,1] </td><td align="left"> Fertility </td><td align="left"> <i>Ig</i>, &lsquo;<p>common standardized
+fertility measure&rsquo;</p>
+</td>
+</tr>
+<tr>
+ <td align="right">
+    [,2] </td><td align="left"> Agriculture</td><td align="left"> % of males involved in agriculture
+    as occupation</td>
+</tr>
+<tr>
+ <td align="right">
+    [,3] </td><td align="left"> Examination</td><td align="left"> % draftees receiving highest mark
+    on army examination</td>
+</tr>
+<tr>
+ <td align="right">
+    [,4] </td><td align="left"> Education </td><td align="left"> % education beyond primary school for draftees.</td>
+</tr>
+<tr>
+ <td align="right">
+    [,5] </td><td align="left"> Catholic </td><td align="left"> % &lsquo;<p>catholic&rsquo;</p>
+ (as opposed to &lsquo;<p>protestant&rsquo;</p>
+).</td>
+</tr>
+<tr>
+ <td align="right">
+    [,6] </td><td align="left"> Infant.Mortality</td><td align="left"> live births who live less than 1
+    year.
+  </td>
+</tr>
+
+</table>
+
+<p>All variables but &lsquo;Fertility&rsquo; give proportions of the
+population.
+</p>
+
+
+<h3>Details</h3>
+
+<p>(paraphrasing Mosteller and Tukey):
+</p>
+<p>Switzerland, in 1888, was entering a period known as the
+<EM>demographic transition</EM>; i.e., its fertility was beginning to
+fall from the high level typical of underdeveloped countries.
+</p>
+<p>The data collected are for 47 French-speaking &ldquo;provinces&rdquo; at
+about 1888.
+</p>
+<p>Here, all variables are scaled to <i>[0, 100]</i>, where in the
+original, all but <code>"Catholic"</code> were scaled to <i>[0, 1]</i>.
+</p>
+
+
+<h3>Note</h3>
+
+<p>Files for all 182 districts in 1888 and other years have been available at
+<a href="http://opr.princeton.edu/archive/eufert/switz.html">http://opr.princeton.edu/archive/eufert/switz.html</a> or
+<a href="http://opr.princeton.edu/archive/pefp/switz.asp">http://opr.princeton.edu/archive/pefp/switz.asp</a>.
+</p>
+<p>They state that variables <code>Examination</code> and <code>Education</code>
+are averages for 1887, 1888 and 1889.
+</p>
+
+
+<h3>Source</h3>
+
+<p>Project &ldquo;16P5&rdquo;, pages 549&ndash;551 in
+</p>
+<p>Mosteller, F. and Tukey, J. W. (1977)
+<EM>Data Analysis and Regression: A Second Course in Statistics</EM>.
+Addison-Wesley, Reading Mass.
+</p>
+<p>indicating their source as
+&ldquo;Data used by permission of Franice van de Walle. Office of
+Population Research, Princeton University, 1976.  Unpublished data
+assembled under NICHD contract number No 1-HD-O-2077.&rdquo;
+</p>
+
+
+<h3>References</h3>
+
+<p>Becker, R. A., Chambers, J. M. and Wilks, A. R. (1988)
+<EM>The New S Language</EM>.
+Wadsworth &amp; Brooks/Cole.
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+require(stats); require(graphics)
+pairs(swiss, panel = panel.smooth, main = "swiss data",
+      col = 3 + (swiss$Catholic &gt; 50))
+summary(lm(Fertility ~ . , data = swiss))
+</pre>
+
+
+</body></html>

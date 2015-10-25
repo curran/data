@@ -1,0 +1,80 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>R: U.S. Senate vote on the use of force against Iraq, 2002.</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" type="text/css" href="R.css">
+</head><body>
+
+<table width="100%" summary="page for iraqVote"><tr><td>iraqVote</td><td align="right">R Documentation</td></tr></table>
+
+<h2>
+U.S. Senate vote on the use of force against Iraq, 2002.	
+</h2>
+
+<h3>Description</h3>
+
+<p>On October 11, 2002, the United States Senate
+voted 77-23 to authorize the use of military force against Iraq.  This data set lists the &ldquo;Ayes&rdquo; and &ldquo;Nays&rdquo; for each Senator and some covariates.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>data(iraqVote)</pre>
+
+
+<h3>Format</h3>
+
+<p>A data frame with 100 observations on the following 6 variables.
+</p>
+
+<dl>
+<dt><code>y</code></dt><dd><p>a numeric vector, the recorded vote (1 if Aye, 0 if Nay)</p>
+</dd>
+<dt><code>state.abb</code></dt><dd><p>two letter abbreviation for each state</p>
+</dd>
+<dt><code>name</code></dt><dd><p>senator name, party and state, e.g., <code>AKAKA (D HI)</code></p>
+</dd>
+<dt><code>rep</code></dt><dd><p>logical, <code>TRUE</code> for Republican senators</p>
+</dd>
+<dt><code>state.name</code></dt><dd><p>name of state</p>
+</dd>
+<dt><code>gorevote</code></dt><dd><p>numeric, the vote share recorded by Al Gore in the corresponding state in the 2000 Presidential election</p>
+</dd>
+</dl>
+
+
+
+<h3>Details</h3>
+
+<p>The only Republican to vote against the resolution was Lincoln
+Chafee (Rhode Island); Democrats split 29-22 in favor of the
+resolution.
+</p>
+
+
+<h3>Source</h3>
+
+<p>Keith Poole, 107th Senate Roll Call Data. <a href="ftp://voteview.com/sen107kh.ord">ftp://voteview.com/sen107kh.ord</a>  The Iraq vote is vote number 617.
+</p>
+<p>David Leip's Atlas of U.S. Presidential Elections.  <a href="http://uselectionatlas.org">http://uselectionatlas.org</a> 
+</p>
+
+
+<h3>References</h3>
+
+<p>Jackman, Simon. 2009.  <EM>Bayesian Analysis for the Social Sciences</EM>.  Wiley: Chichester.  Example 8.3.
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+data(iraqVote)
+## probit model
+glm1 &lt;- glm(y ~ gorevote + rep,
+            data=iraqVote,
+            family=binomial(link=probit))
+</pre>
+
+
+</body></html>

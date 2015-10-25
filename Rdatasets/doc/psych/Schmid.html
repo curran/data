@@ -1,0 +1,75 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>R: 12 variables created by Schmid and Leiman to show the...</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" type="text/css" href="R.css">
+</head><body>
+
+<table width="100%" summary="page for Schmid"><tr><td>Schmid</td><td align="right">R Documentation</td></tr></table>
+
+<h2>12 variables created by Schmid and Leiman to show the Schmid-Leiman Transformation</h2>
+
+<h3>Description</h3>
+
+<p>John Schmid and John M. Leiman (1957) discuss how to transform a hierarchical factor structure to a bifactor structure. Schmid contains the example 12 x 12 correlation matrix. schmid.leiman is a 12 x 12 correlation matrix with communalities on the diagonal. This can be used to show the effect of correcting for attenuation. Two additional data sets are taken from Chen et al. (2006).
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>data(Schmid)</pre>
+
+
+<h3>Details</h3>
+
+<p> Two artificial correlation matrices from Schmid and Leiman (1957). One real and one artificial covariance matrices from Chen et al. (2006). 
+</p>
+
+<ul>
+<li><p> Schmid: a 12 x 12 artificial correlation matrix created to show the Schmid-Leiman transformation. 
+</p>
+</li>
+<li><p> schmid.leiman: A 12 x 12 matrix with communalities on the diagonal.  Treating this as a covariance matrix shows the 6 x 6 factor solution
+</p>
+</li>
+<li><p> Chen: An 18 x 18 covariance matrix of health related quality of life items from Chen et al. (2006). Number of observations = 403.  The first item is a measure of the quality of life.  The remaining 17 items form four subfactors: The items are (a) Cognition subscale: &ldquo;Have difficulty reasoning
+and solving problems?&quot;  &ldquo;React slowly to things that were said or done?&quot;; &ldquo;Become confused and start several actions at a time?&quot;  &ldquo;Forget where you
+put things or appointments?&quot;; &ldquo;Have difficulty concentrating?&quot;  (b) Vitality
+subscale: &ldquo;Feel tired?&quot;  &ldquo;Have enough energy to do the things you want?&quot; (R) 
+&ldquo;Feel worn out?&quot; ; &ldquo;Feel full of pep?&quot; (R). (c) Mental health subscale: &ldquo;Feel
+calm and peaceful?&quot;(R)  &ldquo;Feel downhearted and blue?&quot;; &ldquo;Feel very
+happy&quot;(R) ; &ldquo;Feel very nervous?&quot; ; &ldquo;Feel so down in the dumps nothing could
+cheer you up?  (d) Disease worry subscale: &ldquo;Were you afraid because of your health?&quot;; &ldquo;Were you frustrated about your health?&quot;; &ldquo;Was your health a worry in your life?&quot; .
+</p>
+</li>
+<li><p> West: A 16 x 16 artificial covariance matrix from Chen et al. (2006).
+</p>
+</li></ul>
+
+
+
+<h3>Source</h3>
+
+<p>John Schmid Jr. and John. M. Leiman (1957), The development of hierarchical factor solutions.Psychometrika, 22, 83-90.
+</p>
+<p>F.F. Chen, S.G. West, and K.H. Sousa.(2006) A comparison of bifactor and second-order models of quality of life. Multivariate Behavioral Research, 41(2):189-225, 2006.
+</p>
+
+
+<h3>References</h3>
+
+<p>Y.-F. Yung, D.Thissen, and L.D. McLeod. (1999) On the relationship between the higher-order factor model and the hierarchical factor model. Psychometrika, 64(2):113-128, 1999.
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+data(Schmid)
+cor.plot(Schmid,TRUE)
+print(fa(Schmid,6,rotate="oblimin"),cut=0)  #shows an oblique solution
+round(cov2cor(schmid.leiman),2)
+cor.plot(cov2cor(West),TRUE)
+</pre>
+
+
+</body></html>

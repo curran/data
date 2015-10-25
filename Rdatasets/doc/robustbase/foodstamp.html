@@ -1,0 +1,97 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>R: Food Stamp Program Participation</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" type="text/css" href="R.css">
+</head><body>
+
+<table width="100%" summary="page for foodstamp"><tr><td>foodstamp</td><td align="right">R Documentation</td></tr></table>
+
+<h2>Food Stamp Program Participation</h2>
+
+<h3>Description</h3>
+
+<p>This data consists of 150 randomly selected persons from a survey
+with information on over 2000 elderly US citizens, where the response,
+indicates participation in the U.S. Food Stamp Program.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>data(foodstamp)</pre>
+
+
+<h3>Format</h3>
+
+<p>A data frame with 150 observations on the following 4 variables.
+</p>
+
+<dl>
+<dt><code>participation</code></dt><dd><p>participation in U.S. Food Stamp Program; yes = 1, no = 0</p>
+</dd>
+<dt><code>tenancy</code></dt><dd><p>tenancy, indicating home ownership; yes = 1, no = 0</p>
+</dd>
+<dt><code>suppl.income</code></dt><dd><p>supplemental income, indicating whether
+some form of supplemental security income is received; yes = 1, no = 0</p>
+</dd>
+<dt><code>income</code></dt><dd><p>monthly income (in US dollars)</p>
+</dd>
+</dl>
+
+
+
+<h3>Source</h3>
+
+<p>Data description and first analysis: Stefanski et al.(1986) who
+indicate Rizek(1978) as original source of the larger study.
+</p>
+<p>Electronic version from CRAN package <span class="pkg">catdata</span>.
+
+</p>
+
+
+<h3>References</h3>
+
+<p>Rizek, R. L. (1978)
+The 1977-78 Nationwide Food Consumption Survey.
+<EM>Family Econ. Rev.</EM>, Fall, 3&ndash;7.
+</p>
+
+<p>Stefanski, L. A., Carroll, R. J. and Ruppert, D. (1986)
+Optimally bounded score functions for generalized linear models with
+applications to logistic regression.
+<EM>Biometrika</EM> <B>73</B>, 413&ndash;424.
+</p>
+<p>Künsch, H. R., Stefanski, L. A., Carroll, R. J. (1989)
+Conditionally unbiased bounded-influence estimation in general
+regression models, with applications to generalized linear models.
+<EM>J. American Statistical Association</EM> <B>84</B>, 460&ndash;466.
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+data(foodstamp)
+
+(T123 &lt;- xtabs(~ participation+ tenancy+ suppl.income, data=foodstamp))
+summary(T123) ## ==&gt; the binary var's are clearly not independent
+
+foodSt &lt;- within(foodstamp, {
+   logInc &lt;- log(1 + income)
+   rm(income)
+})
+
+m1 &lt;- glm(participation ~ ., family=binomial, data=foodSt)
+summary(m1)
+rm1 &lt;- glmrob(participation ~ ., family=binomial, data=foodSt)
+summary(rm1)
+## Now use robust weights.on.x :
+rm2 &lt;- glmrob(participation ~ ., family=binomial, data=foodSt,
+              weights.on.x = "robCov")
+summary(rm2)## aha, now the weights are different:
+which( weights(rm2, type="robust") &lt; 0.5)
+</pre>
+
+
+</body></html>

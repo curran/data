@@ -1,0 +1,71 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>R: A data.frame of the Galton (1888) height and cubit data set.</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" type="text/css" href="R.css">
+</head><body>
+
+<table width="100%" summary="page for heights"><tr><td>heights</td><td align="right">R Documentation</td></tr></table>
+
+<h2>A data.frame of the Galton (1888) height and cubit data set.</h2>
+
+<h3>Description</h3>
+
+<p>Francis Galton introduced the 'co-relation' in 1888 with a paper discussing how to measure the relationship between two variables.  His primary example was the relationship between height and forearm length.  The data table (<code>cubits</code>) is taken from Galton (1888).  Unfortunately, there seem to be some errors in the original data table in that the marginal totals do not match the table.
+</p>
+<p>The data frame, <code>heights</code>, is converted from this table using  <code>table2df</code>.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>data(heights)</pre>
+
+
+<h3>Format</h3>
+
+<p>A data frame with 348 observations on the following 2 variables.
+</p>
+
+<dl>
+<dt><code>height</code></dt><dd><p>Height in inches</p>
+</dd>
+<dt><code>cubit</code></dt><dd><p>Forearm length in inches</p>
+</dd>
+</dl>
+
+
+
+<h3>Details</h3>
+
+<p>Sir Francis Galton (1888) published the first demonstration of the correlation coefficient.  The regression (or reversion to mediocrity) of the height to the length of the left forearm (a cubit) was found to .8. The original table <code>cubits</code> is taken from Galton (1888). There seem to be some errors in the table as published in that the row sums do not agree with the actual row sums. These data are used to create a matrix using <code>table2matrix</code> for demonstrations of analysis and displays of the data.
+</p>
+
+
+<h3>Source</h3>
+
+<p>Galton (1888)
+</p>
+
+
+<h3>References</h3>
+
+<p>Galton, Francis (1888) Co-relations and their measurement. Proceedings of the Royal Society. London Series,45,135-145,
+</p>
+
+
+<h3>See Also</h3>
+
+  <p><code>table2matrix</code>,  <code>table2df</code>, <code>cubits</code>, <code>ellipses</code>, <code>galton</code>
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+data(heights)
+ellipses(heights,n=1,main="Galton's co-relation data set")
+
+</pre>
+
+
+</body></html>

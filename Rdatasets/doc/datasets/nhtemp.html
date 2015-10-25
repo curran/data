@@ -1,0 +1,52 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>R: Average Yearly Temperatures in New Haven</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" type="text/css" href="R.css">
+</head><body>
+
+<table width="100%" summary="page for nhtemp"><tr><td>nhtemp</td><td align="right">R Documentation</td></tr></table>
+
+<h2>Average Yearly Temperatures in New Haven</h2>
+
+<h3>Description</h3>
+
+<p>The mean annual temperature in degrees Fahrenheit in New Haven,
+Connecticut, from 1912 to 1971.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>nhtemp</pre>
+
+
+<h3>Format</h3>
+
+<p>A time series of 60 observations.</p>
+
+
+<h3>Source</h3>
+
+<p>Vaux, J. E. and Brinker, N. B. (1972)
+<EM>Cycles</EM>, <B>1972</B>, 117&ndash;121.
+</p>
+
+
+<h3>References</h3>
+
+<p>McNeil, D. R. (1977)
+<EM>Interactive Data Analysis</EM>.
+New York: Wiley.
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+require(stats); require(graphics)
+plot(nhtemp, main = "nhtemp data",
+  ylab = "Mean annual temperature in New Haven, CT (deg. F)")
+</pre>
+
+
+</body></html>

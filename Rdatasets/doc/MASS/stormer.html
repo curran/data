@@ -1,0 +1,70 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>R: The Stormer Viscometer Data</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" type="text/css" href="R.css">
+</head><body>
+
+<table width="100%" summary="page for stormer"><tr><td>stormer</td><td align="right">R Documentation</td></tr></table>
+
+<h2>
+The Stormer Viscometer Data
+</h2>
+
+<h3>Description</h3>
+
+<p>The stormer viscometer measures the viscosity of a fluid by measuring the
+time taken for an inner cylinder in the mechanism to perform a fixed number
+of revolutions in response to an actuating weight.  The viscometer is
+calibrated by measuring the time taken with varying weights while the
+mechanism is suspended in fluids of accurately known viscosity.  The data
+comes from such a calibration, and theoretical considerations suggest a
+nonlinear relationship between time, weight and viscosity, of the form
+<code>Time = (B1*Viscosity)/(Weight - B2) + E</code>
+where <code>B1</code> and <code>B2</code>
+are unknown parameters to be estimated, and <code>E</code> is error.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+stormer
+</pre>
+
+
+<h3>Format</h3>
+
+<p>The data frame contains the following components:
+</p>
+
+<dl>
+<dt><code>Viscosity</code></dt><dd>
+<p>viscosity of fluid.
+</p>
+</dd>
+<dt><code>Wt</code></dt><dd>
+<p>actuating weight.
+</p>
+</dd>
+<dt><code>Time</code></dt><dd>
+<p>time taken.
+</p>
+</dd>
+</dl>
+
+
+
+<h3>Source</h3>
+
+<p>E. J. Williams (1959) <EM>Regression Analysis.</EM> Wiley.
+</p>
+
+
+<h3>References</h3>
+
+<p>Venables, W. N. and Ripley, B. D. (2002)
+<EM>Modern Applied Statistics with S.</EM> Fourth edition.  Springer.
+</p>
+
+
+</body></html>

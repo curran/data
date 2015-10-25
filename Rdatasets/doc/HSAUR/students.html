@@ -1,0 +1,69 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>R: Student Risk Taking</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" type="text/css" href="R.css">
+</head><body>
+
+<table width="100%" summary="page for students"><tr><td>students</td><td align="right">R Documentation</td></tr></table>
+
+<h2> Student Risk Taking </h2>
+
+<h3>Description</h3>
+
+<p>Students were administered two parallel forms of a test after a random
+assignment to three different treatments.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>data("students")</pre>
+
+
+<h3>Format</h3>
+
+<p>A data frame with 35 observations on the following 3 variables.
+</p>
+
+<dl>
+<dt><code>treatment</code></dt><dd><p>a factor with levels <code>AA</code>, <code>C</code>, and
+<code>NC</code>.</p>
+</dd>
+<dt><code>low</code></dt><dd><p>the result of the first test.</p>
+</dd>
+<dt><code>high</code></dt><dd><p>the result of the second test.</p>
+</dd>
+</dl>
+
+
+
+<h3>Details</h3>
+
+<p>The data arise from a large study of risk taking (Timm, 2002).
+Students were randomly assigned to three different
+treatments labelled AA, C and NC. Students were administered two   
+parallel forms of a test called <code>low</code> and <code>high</code>. The aim is to 
+carry out a test of the equality of the bivariate means of each treatment
+population.
+</p>
+
+
+<h3>Source</h3>
+
+<p>N. H. Timm (2002), <EM>Applied Multivariate Analysis</EM>. Springer, New York.
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+
+  data("students", package = "HSAUR")
+  layout(matrix(1:2, ncol = 2))
+  boxplot(low ~ treatment, data = students, ylab = "low")
+  boxplot(high ~ treatment, data = students, ylab = "high")
+
+</pre>
+
+
+</body></html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>R: Cavendish's Determinations of the Density of the Earth</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" type="text/css" href="R.css">
+</head><body>
+
+<table width="100%" summary="page for Cavendish"><tr><td>Cavendish</td><td align="right">R Documentation</td></tr></table>
+
+<h2>
+Cavendish's Determinations of the Density of the Earth
+</h2>
+
+<h3>Description</h3>
+
+<p>Henry Cavendish carried out a series of experiments in 1798 to determine the
+mean density of the earth, as an indirect means to calculate the
+gravitational constant, G, in Newton's formula for the force (f) of
+gravitational attraction,
+<i>f = G m M / r^2</i>
+between two bodies of mass m and M.
+</p>
+<p>Stigler (1977) used these data to illustrate properties of robust estimators
+with real, historical data.  For these data sets, he found that trimmed means
+performed as well or better than more elaborate robust estimators.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>data(Cavendish)</pre>
+
+
+<h3>Format</h3>
+
+<p>A data frame with 29 observations on the following 3 variables.
+</p>
+
+<dl>
+<dt><code>density</code></dt><dd><p>Cavendish's 29 determinations of the mean density of the earth</p>
+</dd>
+<dt><code>density2</code></dt><dd><p>same as <code>density</code>, with the third value (4.88) replaced by 5.88</p>
+</dd>
+<dt><code>density3</code></dt><dd><p>same as <code>density</code>, omitting the the first 6 observations</p>
+</dd>
+</dl>
+
+
+
+<h3>Details</h3>
+
+<p>Density values (D) of the earth are given as relative to that of water.  If the earth is
+regarded as a sphere of radius R, Newton's law can be expressed as
+<i>G D = 3 g / (4 &pi; R)</i>, where <i>g=9.806 m/s^2</i> is the acceleration due to gravity; so G is proportional to 1/D.
+</p>
+<p><code>density</code> contains Cavendish's measurements as analyzed, where he treated the
+value 4.88 as if it were 5.88.   <code>density2</code> corrects this.
+Cavendish also changed his experimental apparatus after the sixth determination,
+using a stiffer wire in the torsion balance. <code>density3</code> replaces the first
+6 values with <code>NA</code>.
+</p>
+<p>The modern &quot;true&quot; value of D is taken as 5.517. 
+The gravitational constant can be expressed as <i>G = 6.674 * 10^-11 m^3/kg/s^2</i>.
+</p>
+
+
+<h3>Source</h3>
+
+<p>Kyle Siegrist, &quot;Virtual Laboratories in Probability and Statistics&quot;, <a href="http://www.math.uah.edu/stat/data/Cavendish.xhtml">http://www.math.uah.edu/stat/data/Cavendish.xhtml</a>
+</p>
+<p>Stephen M. Stigler (1977), &quot;Do robust estimators work with <EM>real</EM> data?&quot;, <EM>Annals of Statistics</EM>,  5, 1055-1098
+</p>
+
+
+<h3>References</h3>
+
+<p>Cavendish, H. (1798). Experiments to determine the density of the earth.
+<EM>Philosophical Transactions of the Royal Society of London</EM>, 88 (Part II),
+469-527.
+Reprinted in A. S. Mackenzie (ed.), <EM>The Laws of Gravitation</EM>, 1900, 
+New York: American.
+</p>
+<p>Brownlee, K. A. (1965). <EM>Statistical theory and methodology in science and engineering</EM>,
+NY: Wiley, p. 520.
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+data(Cavendish)
+summary(Cavendish)
+boxplot(Cavendish, ylab='Density', xlab='Data set')
+abline(h=5.517, col="red", lwd=2)
+
+# trimmed means
+sapply(Cavendish, mean, trim=.1, na.rm=TRUE)
+
+# express in terms of G
+G &lt;- function(D, g=9.806, R=6371) 3*g / (4 * pi * R * D)
+ 
+boxplot(10^5 * G(Cavendish), ylab='~ Gravitational constant (G)', xlab='Data set')
+abline(h=10^5 * G(5.517), col="red", lwd=2)
+
+</pre>
+
+
+</body></html>

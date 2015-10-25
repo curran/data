@@ -1,0 +1,80 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>R: azcabgptca</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" type="text/css" href="R.css">
+</head><body>
+
+<table width="100%" summary="page for azcabgptca"><tr><td>azcabgptca</td><td align="right">R Documentation</td></tr></table>
+
+<h2>azcabgptca</h2>
+
+<h3>Description</h3>
+
+<p>Random subset of the 1991 Arizona Medicare data for patients hospitalized 
+subsequent to undergoing  a CABG (DRGs 106, 107) or PTCA (DRG 112) 
+cardiovascular procedure. 
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>data(azcabgptca)</pre>
+
+
+<h3>Format</h3>
+
+<p>A data frame with 1959 observations on the following 6 variables.
+</p>
+
+<dl>
+<dt><code>died</code></dt><dd><p>systolic blood pressure of subject</p>
+</dd>
+<dt><code>procedure</code></dt><dd><p>1=CABG; 0=PTCA</p>
+</dd>
+<dt><code>gender</code></dt><dd><p>1=male; 0=female</p>
+</dd>
+<dt><code>age</code></dt><dd><p>age of subject</p>
+</dd>
+<dt><code>los</code></dt><dd><p>hospital length of stay</p>
+</dd>
+<dt><code>type</code></dt><dd><p>1=emerg/urgent; 0=elective</p>
+</dd>
+</dl>
+
+
+
+<h3>Details</h3>
+
+<p>azcabgptca is saved as a data frame.
+</p>
+
+
+<h3>Source</h3>
+
+<p>Hilbe, Negative Binomial Regression, 2nd ed, Cambridge Univ Press
+</p>
+
+
+<h3>References</h3>
+
+<p>Hilbe, Joseph M (2014), Modeling Count Data, Cambridge University Press
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+
+data(azcabgptca); attach(azcabgptca)
+table(los); table(procedure, type); table(los, procedure)
+summary(los)
+summary(c91a &lt;- glm(los ~ procedure+ type, family=poisson, data=azcabgptca))
+modelfit(c91a)
+summary(c91b &lt;- glm(los ~ procedure+ type, family=quasipoisson, data=azcabgptca))
+modelfit(c91b)
+library(sandwich)
+sqrt(diag(vcovHC(c91a, type="HC0")))
+</pre>
+
+
+</body></html>

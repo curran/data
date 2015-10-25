@@ -1,0 +1,90 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>R: Klein's Data on the U. S. Economy</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" type="text/css" href="R.css">
+</head><body>
+
+<table width="100%" summary="page for Klein"><tr><td>Klein</td><td align="right">R Documentation</td></tr></table>
+
+<h2>Klein's Data on the U. S. Economy</h2>
+
+<h3>Description</h3>
+
+<p>Data for Klein's (1950) simple econometric model of the U. S. economy.
+</p>
+<p>The <code>Klein</code> data frame has 22 rows and 10 columns.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>Klein</pre>
+
+
+<h3>Format</h3>
+
+<p>This data frame contains the following columns:
+</p>
+
+<dl>
+<dt>Year</dt><dd><p>1921&ndash;1941</p>
+</dd>
+<dt>C</dt><dd><p>consumption.</p>
+</dd>
+<dt>P</dt><dd><p>private profits.</p>
+</dd>
+<dt>Wp</dt><dd><p>private wages.</p>
+</dd>
+<dt>I</dt><dd><p>investment.</p>
+</dd>
+<dt>K.lag</dt><dd><p>capital stock, lagged one year.</p>
+</dd>
+<dt>X</dt><dd><p>equilibrium demand.</p>
+</dd>
+<dt>Wg</dt><dd><p>government wages.</p>
+</dd>
+<dt>G</dt><dd><p>government non-wage spending.</p>
+</dd>
+<dt>T</dt><dd><p>indirect business taxes and net exports.</p>
+</dd>
+</dl>
+
+
+
+<h3>Source</h3>
+
+<p>Greene, W. H. (1993)
+<EM>Econometric Analysis, Second Edition.</EM>
+Macmillan.
+</p>
+
+
+<h3>References</h3>
+
+<p>Klein, L. (1950)
+<EM>Economic Fluctuations in the United States 1921&ndash;1941.</EM>
+Wiley.
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+Klein$P.lag &lt;- c(NA, Klein$P[-22])
+Klein$X.lag &lt;- c(NA, Klein$X[-22])
+
+summary(tsls(C ~ P + P.lag + I(Wp + Wg), 
+    instruments=~1 + G + T + Wg + I(Year - 1931) + K.lag + P.lag + X.lag,
+    data=Klein))
+    
+summary(tsls(I ~ P + P.lag + K.lag,
+    instruments=~1 + G + T + Wg + I(Year - 1931) + K.lag + P.lag + X.lag,
+    data=Klein))
+    
+summary(tsls(Wp ~ X + X.lag + I(Year - 1931),
+    instruments=~1 + G + T + Wg + I(Year - 1931) + K.lag + P.lag + X.lag,
+    data=Klein))
+</pre>
+
+
+</body></html>

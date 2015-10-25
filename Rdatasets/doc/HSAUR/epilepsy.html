@@ -1,0 +1,84 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>R: Epilepsy Data</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" type="text/css" href="R.css">
+</head><body>
+
+<table width="100%" summary="page for epilepsy"><tr><td>epilepsy</td><td align="right">R Documentation</td></tr></table>
+
+<h2> Epilepsy Data </h2>
+
+<h3>Description</h3>
+
+<p>A randomised clinical trial investigating the effect of an anti-epileptic
+drug.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>data("epilepsy")</pre>
+
+
+<h3>Format</h3>
+
+<p>A data frame with 236 observations on the following 6 variables.
+</p>
+
+<dl>
+<dt><code>treatment</code></dt><dd><p>the treatment group, a factor with levels <code>placebo</code>
+and <code>Progabide</code>.</p>
+</dd>
+<dt><code>base</code></dt><dd><p>the number of seizures before the trial.</p>
+</dd>
+<dt><code>age</code></dt><dd><p>the age of the patient.</p>
+</dd>
+<dt><code>seizure.rate</code></dt><dd><p>the number of seizures (response variable).</p>
+</dd>
+<dt><code>period</code></dt><dd><p>treatment period, an ordered factor with levels
+<code>1</code> to <code>4</code>.</p>
+</dd>
+<dt><code>subject</code></dt><dd><p>the patient ID, a factor with levels <code>1</code> to
+<code>59</code>.</p>
+</dd>
+</dl>
+
+
+
+<h3>Details</h3>
+
+<p>In this clinical trial, 59
+patients suffering from epilepsy were randomized to groups receiving either 
+the anti-epileptic drug Progabide or a placebo in addition to 
+standard chemotherapy. The numbers of seizures suffered in each 
+of four, two-week periods were recorded for each patient along 
+with a baseline seizure count for the 8 weeks prior to being 
+randomized to treatment and age. The main question of interest 
+is whether taking progabide reduced the number of epileptic seizures  
+compared with placebo.
+</p>
+
+
+<h3>Source</h3>
+
+<p>P. F. Thall and S. C. Vail (1990),
+Some covariance models for longitudinal count data with
+overdispersion. <EM>Biometrics</EM>, <B>46</B>, 657&ndash;671.
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+
+  data("epilepsy", package = "HSAUR")
+  library(lattice)
+  dotplot(I(seizure.rate / base) ~ period | subject, data = epilepsy, 
+          subset = treatment == "Progabide")
+  dotplot(I(seizure.rate / base) ~ period | subject, data = epilepsy, 
+          subset = treatment == "Progabide")
+
+</pre>
+
+
+</body></html>

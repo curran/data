@@ -1,0 +1,96 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>R: Data from an Oats Field Trial</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" type="text/css" href="R.css">
+</head><body>
+
+<table width="100%" summary="page for oats"><tr><td>oats</td><td align="right">R Documentation</td></tr></table>
+
+<h2>
+Data from an Oats Field Trial
+</h2>
+
+<h3>Description</h3>
+
+<p>The yield of oats from a split-plot field trial using three varieties and
+four levels of manurial treatment.  The experiment was laid out in 6 blocks
+of 3 main plots, each split into 4 sub-plots.  The varieties were applied
+to the main plots and the manurial treatments to the sub-plots.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+oats
+</pre>
+
+
+<h3>Format</h3>
+
+<p>This data frame contains the following columns:
+</p>
+
+<dl>
+<dt><code>B</code></dt><dd>
+<p>Blocks, levels I, II, III, IV, V and VI.
+</p>
+</dd>
+<dt><code>V</code></dt><dd>
+<p>Varieties, 3 levels.
+</p>
+</dd>
+<dt><code>N</code></dt><dd>
+<p>Nitrogen (manurial) treatment, levels  0.0cwt, 0.2cwt, 0.4cwt and 0.6cwt,
+showing the application in cwt/acre.
+</p>
+</dd>
+<dt><code>Y</code></dt><dd>
+<p>Yields in 1/4lbs per sub-plot, each of area 1/80 acre.
+</p>
+</dd>
+</dl>
+
+
+
+<h3>Source</h3>
+
+<p>Yates, F. (1935) Complex experiments,
+<EM>Journal of the Royal Statistical Society Suppl.</EM>
+<B>2</B>, 181&ndash;247.
+</p>
+<p>Also given in
+Yates, F. (1970)
+<EM>Experimental design: Selected papers of Frank Yates, C.B.E, F.R.S.</EM>
+London: Griffin.
+</p>
+
+
+<h3>References</h3>
+
+<p>Venables, W. N. and Ripley, B. D. (2002)
+<EM>Modern Applied Statistics with S.</EM> Fourth edition.  Springer.
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+oats$Nf &lt;- ordered(oats$N, levels = sort(levels(oats$N)))
+oats.aov &lt;- aov(Y ~ Nf*V + Error(B/V), data = oats, qr = TRUE)
+summary(oats.aov)
+summary(oats.aov, split = list(Nf=list(L=1, Dev=2:3)))
+par(mfrow = c(1,2), pty = "s")
+plot(fitted(oats.aov[[4]]), studres(oats.aov[[4]]))
+abline(h = 0, lty = 2)
+oats.pr &lt;- proj(oats.aov)
+qqnorm(oats.pr[[4]][,"Residuals"], ylab = "Stratum 4 residuals")
+qqline(oats.pr[[4]][,"Residuals"])
+
+par(mfrow = c(1,1), pty = "m")
+oats.aov2 &lt;- aov(Y ~ N + V + Error(B/V), data = oats, qr = TRUE)
+model.tables(oats.aov2, type = "means", se = TRUE)
+</pre>
+
+
+</body></html>

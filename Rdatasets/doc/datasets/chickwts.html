@@ -1,0 +1,75 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>R: Chicken Weights by Feed Type</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" type="text/css" href="R.css">
+</head><body>
+
+<table width="100%" summary="page for chickwts"><tr><td>chickwts</td><td align="right">R Documentation</td></tr></table>
+
+<h2>Chicken Weights by Feed Type</h2>
+
+<h3>Description</h3>
+
+<p>An experiment was conducted to measure and compare the effectiveness
+of various feed supplements on the growth rate of chickens.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>chickwts</pre>
+
+
+<h3>Format</h3>
+
+<p>A data frame with 71 observations on 2 variables.
+</p>
+
+<dl>
+<dt>weight</dt><dd><p>a numeric variable giving the chick weight.</p>
+</dd>
+<dt>feed</dt><dd><p>a factor giving the feed type.</p>
+</dd>
+</dl>
+
+
+
+<h3>Details</h3>
+
+<p>Newly hatched chicks were randomly allocated into six groups, and each
+group was given a different feed supplement.  Their weights in grams
+after six weeks are given along with feed types.
+</p>
+
+
+<h3>Source</h3>
+
+<p>Anonymous (1948)
+<EM>Biometrika</EM>, <B>35</B>, 214.
+</p>
+
+
+<h3>References</h3>
+
+<p>McNeil, D. R. (1977)
+<EM>Interactive Data Analysis</EM>.
+New York: Wiley.
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+require(stats); require(graphics)
+boxplot(weight ~ feed, data = chickwts, col = "lightgray",
+    varwidth = TRUE, notch = TRUE, main = "chickwt data",
+    ylab = "Weight at six weeks (gm)")
+anova(fm1 &lt;- lm(weight ~ feed, data = chickwts))
+opar &lt;- par(mfrow = c(2, 2), oma = c(0, 0, 1.1, 0),
+            mar = c(4.1, 4.1, 2.1, 1.1))
+plot(fm1)
+par(opar)
+</pre>
+
+
+</body></html>
