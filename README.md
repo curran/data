@@ -8,32 +8,13 @@ Some of these data sets are exposed as [AMD modules](http://requirejs.org/docs/w
 Here's some example code that loads a data set from this repository using [Require.js](http://requirejs.org/):
 
 ```javascript
-var irisURL = 'http://curran.github.io/data/iris/iris.js';
-require([irisURL], function(data){ console.log(data); });
+var irisURL = 'http://curran.github.io/data/uci_ml/iris/iris.js';
+require([irisURL], function(data){
+  d3.select("body").append("pre")
+    .text(JSON.stringify(data, null, 2));
+});
 ```
-[See it in JSBin](http://jsbin.com/ayanoy/2/edit)
-
-Here's some example code that tests several data sets and prints some information about them:
-
-```javascript
-var dataDir = 'http://curran.github.io/data/';
-
-function test(name, path) {
-  require([dataDir + path], function (data) {
-    console.log([
-      "Got ", name, " data (", data.length, " rows)",
-      " fields: ", _.keys(data[0])
-    ].join(""));
-  });
-}
-
-test("Child Mortality", "un/mdg/ChildrenUnderFiveMortalityRate.js");
-test("Iris", "iris/iris.js");
-test("Population", "un/population/populationEstimates.js");
-test("GDP", "worldFactbook/GDPPerCapita.js");
-```
-
-[See it in JSBin](http://jsbin.com/maqarovovu/1/edit)
+[See it in JSBin](http://jsbin.com/xayiwolazo/edit?html,output)
 
 ## Targets for import:
 
@@ -159,6 +140,9 @@ Best Buy has a [developer portal for querying their data via a Web API.](https:/
 [Energy Information Administration Open Data](http://www.eia.gov/beta/api/)
 
 [Data sets from Five Thirty Eight](https://github.com/fivethirtyeight/data)
+
+
+[Data sets in the Infovis Wiki](http://www.infovis-wiki.net/index.php?title=Data_Libraries)
 
 # Design Ideas
 
