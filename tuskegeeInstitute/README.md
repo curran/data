@@ -5,3 +5,8 @@ This data was extracted from the HTML tables published as part of the project [T
  * [Lynching Statistics, by State and Race](http://law2.umkc.edu/faculty/projects/ftrials/shipp/lynchstats.html)
  * [Lynching Statistics, by Year](http://law2.umkc.edu/faculty/projects/ftrials/shipp/lynchingyear.html)
  * [Lynching Statistics, by Supposed Offense](http://law2.umkc.edu/faculty/projects/ftrials/shipp/Lynchcauses.html)
+
+The following visualizations of this data have been created:
+
+ * [American Lynches Map by @ Malcolm_Decuire](http://bl.ocks.org/malcolm-decuire/34d2ce39d3b8c2f8a577)
+ * [State Grid by @enjalot](http://bl.ocks.org/anonymous/19a3f0afed794cf720b3) - created in this [Video of Block Remix](https://www.youtube.com/watch?v=cWsONCBWOJQ&feature=youtu.be)
