@@ -1,7 +1,7 @@
 This data is about gun sales. It was featured in the article [What Drives Gun Sales: Terrorism,
 Obama and Calls for Restrictions](http://www.nytimes.com/interactive/2015/12/10/us/gun-sales-terrorism-obama-restrictions.html?_r=0) and processed for seasonal adjustment by the NYT Graphics team.
 
-The original source of this data is [The US Firearms Industry - Production and Supply by Jurgen Brauer](http://www.smallarmssurvey.org/fileadmin/docs/F-Working-papers/SAS-WP14-US-Firearms-Industry.pdf). This data was processed to adjust for seasonality, which revealed spikes otherwise hidden in the data.
+The original source of this data is [The US Firearms Industry - Production and Supply by Jurgen Brauer](http://www.smallarmssurvey.org/fileadmin/docs/F-Working-papers/SAS-WP14-US-Firearms-Industry.pdf). This data was processed to adjust for seasonality by Gregor Aisch, which revealed spikes otherwise hidden in the data. According to [his tweet](https://twitter.com/driven_by_data/status/674961435584241665), he used the [The X-13ARIMA-SEATS Seasonal Adjustment Program](https://www.census.gov/srd/www/x13as/) written in FORTRAN.
 
 This dataset was downloaded with the following command:
 
