@@ -1,20 +1,7 @@
 data
 ====
 
-A collection of public data sets for testing out visualization methods. These data sets are at various stages of preparation, some are just raw data, some are CSV files, and some are exposed as AMD modules. All of the clean data sets are presented as CSV files in [the "all" directory"](all).
-
-Some of these data sets are exposed as [AMD modules](http://requirejs.org/docs/whyamd.html) that contain data formatted to [D3's data conventions](https://github.com/mbostock/d3/wiki/CSV). AMD modules are used rather than text files so that the data sets can be loaded cross-domain (circumventing the [same origin policy](http://en.wikipedia.org/wiki/Same-origin_policy)).
-
-Here's some example code that loads a data set from this repository using [Require.js](http://requirejs.org/):
-
-```javascript
-var irisURL = 'http://curran.github.io/data/uci_ml/iris/iris.js';
-require([irisURL], function(data){
-  d3.select("body").append("pre")
-    .text(JSON.stringify(data, null, 2));
-});
-```
-[See it in JSBin](http://jsbin.com/xayiwolazo/edit?html,output)
+A collection of public data sets for testing out visualization methods. These data sets are at various stages of preparation, some are just raw data, some are CSV files, and some are exposed as AMD modules. This collection is messy, but with some digging you may find hidden gems.
 
 ## Targets for import:
 
@@ -25,6 +12,11 @@ require([irisURL], function(data){
  * [GapMinder Data](http://www.gapminder.org/data/)
  * [NASA Satellite-Derived Environmental Indicators](http://sedac.ciesin.columbia.edu/data/collection/sdei)
  * [IMF Public Finances in Modern History Database](http://www.imf.org/external/np/fad/histdb/)
+ * [Executions in the US by type over time](http://www.deathpenaltyinfo.org/views-executions)
+ * [Datasets used in the book, An Introduction to Categorical Data Analysis](http://lib.stat.cmu.edu/datasets/agresti)
+ * [Energy Information Administration Open Data](http://www.eia.gov/beta/api/)
+ * [Data sets from Five Thirty Eight](https://github.com/fivethirtyeight/data)
+ * [Data sets in the Infovis Wiki](http://www.infovis-wiki.net/index.php?title=Data_Libraries)
 
 Here's a listing of data sets with more detail. Columns will be marked in terms of their type for visualization, including:
 
@@ -132,26 +124,3 @@ This would be a great data set for more extreme scalability testing. There is an
 [The Indian Census has lots of public data.](http://www.google.com/url?q=http%3A%2F%2Fwww.devinfo.org%2Findiacensus2011%2Flibraries%2Faspx%2FCatalog.aspx&sa=D&sntz=1&usg=AFQjCNFpZ93xLZHQvmkLq-4u38ymTPsDKw)
 
 Best Buy has a [developer portal for querying their data via a Web API.](https://www.google.com/url?q=https%3A%2F%2Fdeveloper.bestbuy.com%2F&sa=D&sntz=1&usg=AFQjCNHeep1tEkODill37AcU-weTtkoDBw)
-
-[Executions in the US by type over time](http://www.deathpenaltyinfo.org/views-executions)
-
-[Datasets used in the book, An Introduction to Categorical Data Analysis](http://lib.stat.cmu.edu/datasets/agresti)
-
-[Energy Information Administration Open Data](http://www.eia.gov/beta/api/)
-
-[Data sets from Five Thirty Eight](https://github.com/fivethirtyeight/data)
-
-
-[Data sets in the Infovis Wiki](http://www.infovis-wiki.net/index.php?title=Data_Libraries)
-
-# Design Ideas
-
-Data publishing format for visualizations:
-
-`http://curran.github.io/data/:dataSource/:dataSet/:table.js`
-
-Here,
-
- * `dataSource` is a data source String identifier, e.g. "united-nations"
- * `dataSet` is a data set String identifier, e.g. "populationEstimates"
- * `table` is a table String identifier, e.g. "populationByCountry-1950-2010"
