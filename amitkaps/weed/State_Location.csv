@@ -1,0 +1,52 @@
+region,state,latitude,longitude,status
+alaska,AK,61.385,-152.2683,legal
+alabama,AL,32.799,-86.8073,medical-limited
+arkansas,AR,34.9513,-92.3809,illegal
+arizona,AZ,33.7712,-111.3877,medical
+california,CA,36.17,-119.7462,decriminalized+medical
+colorado,CO,39.0646,-105.3272,legal
+connecticut,CT,41.5834,-72.7622,decriminalized+medical
+district of columbia,DC,38.8964,-77.0262,legal
+delaware,DE,39.3498,-75.5148,medical
+florida,FL,27.8333,-81.717,medical-limited
+georgia,GA,32.9866,-83.6487,medical-limited
+hawaii,HI,21.1098,-157.5311,medical
+iowa,IA,42.0046,-93.214,medical-limited
+idaho,ID,44.2394,-114.5103,illegal
+illinois,IL,40.3363,-89.0022,medical
+indiana,IN,39.8647,-86.2604,illegal
+kansas,KS,38.5111,-96.8005,illegal
+kentucky,KY,37.669,-84.6514,medical-limited
+louisiana,LA,31.1801,-91.8749,illegal
+massachusetts,MA,42.2373,-71.5314,decriminalized+medical
+maryland,MD,39.0724,-76.7902,decriminalized+medical
+maine,ME,44.6074,-69.3977,decriminalized+medical
+michigan,MI,43.3504,-84.5603,medical
+minnesota,MN,45.7326,-93.9196,decriminalized+medical
+missouri,MO,38.4623,-92.302,illegal
+mississippi,MS,32.7673,-89.6812,decriminalized
+montana,MT,46.9048,-110.3261,medical
+north carolina,NC,35.6411,-79.8431,decriminalized
+north dakota,ND,47.5362,-99.793,illegal
+nebraska,NE,41.1289,-98.2883,decriminalized
+new hampshire,NH,43.4108,-71.5653,medical
+new jersey,NJ,40.314,-74.5089,medical
+new mexico,NM,34.8375,-106.2371,medical
+nevada,NV,38.4199,-117.1219,decriminalized+medical
+new york,NY,42.1497,-74.9384,decriminalized+medical
+ohio,OH,40.3736,-82.7755,decriminalized
+oklahoma,OK,35.5376,-96.9247,illegal
+oregon,OR,44.5672,-122.1269,legal
+pennsylvania,PA,40.5773,-77.264,illegal
+rhode island,RI,41.6772,-71.5101,decriminalized+medical
+south carolina,SC,33.8191,-80.9066,medical-limited
+south dakota,SD,44.2853,-99.4632,illegal
+tennessee,TN,35.7449,-86.7489,medical-limited
+texas,TX,31.106,-97.6475,illegal
+utah,UT,40.1135,-111.8535,illegal
+virginia,VA,37.768,-78.2057,medical-limited
+vermont,VT,44.0407,-72.7093,decriminalized+medical
+washington,WA,47.3917,-121.5708,legal
+wisconsin,WI,44.2563,-89.6385,medical-limited
+west virginia,WV,38.468,-80.9696,illegal
+wyoming,WY,42.7475,-107.2085,illegal

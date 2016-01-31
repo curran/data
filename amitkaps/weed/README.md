@@ -1,0 +1,1 @@
+This is an interesting collection of data about US States relating to the price of weed. Originally curated and assembled by [Amit Kapoor](https://github.com/amitkaps). Originally published in [github.com/amitkaps/weed](https://github.com/amitkaps/weed).
