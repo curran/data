@@ -1,3 +1,4 @@
+[![Beerpay](http://test.beerpay.io/curran/data/badge.svg?style=flat-square)](http://test.beerpay.io/curran/data)
 data
 ====
 
