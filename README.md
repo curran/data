@@ -1,5 +1,3 @@
-[![Beerpay](https://beerpay.io/curran/data/badge.svg?style=flat-square)](https://beerpay.io/curran/data)
-
 A collection of public data sets for testing out visualization methods. These data sets are at various stages of preparation, some are just raw data, some are CSV files, and some are exposed as AMD modules. This collection is messy, but with some digging you may find hidden gems.
 
 ## Targets for import:
