@@ -58,11 +58,25 @@ fs.readFile(inputFile, 'utf8', function (err, data) {
   writeTable("religionWorldTotals.csv", religionWorldTotals);
 
 
-  // Take the top 5 countries by population and sort them.
-  data = data
-    .filter(function (d){ return d.total > 180000000; })
-    .sort(function (a, b){ return b.total - a.total; });
+  data = data.sort(function (a, b){ return b.total - a.total; });
 
+  data = data.slice(0, 20);
+
+  // Pivot the data so "religion" is a column.
+  var religionByCountryTop20 = [];
+  data.forEach(function (d){
+    religions.forEach(function (religion){
+      religionByCountryTop20.push({
+        country: d.Country,
+        religion: religion,
+        population: d[religion]
+      });
+    });
+  });
+  writeTable("religionByCountryTop20.csv", religionByCountryTop20);
+
+
+  data = data.slice(0, 5);
   // Pivot the data so "religion" is a column.
   var religionByCountryTop5 = [];
   data.forEach(function (d){
