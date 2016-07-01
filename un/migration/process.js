@@ -2,35 +2,37 @@ var d3 = require("d3"),
     fs = require("fs"),
     inputFile = "UN_MigrantStockByOriginAndDestination_2015_cleaned.csv";
 
-// All other columns besides these are treated as "origin" values.
-var columnsToExclude = [
-  "Sort order",
-  "Place",
-  "Notes",
-  "Country code",
-  "Type of data (a)",
-  "Total",
-  "Other North",
-  "Other South"
-];
+var hierarchy = JSON.parse(fs.readFileSync("../placeHierarchy/countryHierarchy.json"));
+var countries = {};
+
+function visit(node){
+  if(node.children){
+    node.children.forEach(visit);
+  } else {
+    countries[node.data.id] = true;
+  }
+}
+visit(hierarchy);
 
 fs.readFile(inputFile, "utf8", function (err, data) {
   var data = d3.csv.parse(data);
   var output = [];
-  var origins = Object.keys(data[0])
-    .filter(function (column){
-      return columnsToExclude.indexOf(column) === -1;
-    });
+  var origins = Object.keys(countries);
 
   //console.log(JSON.stringify(data[0], null, 2));
   //console.log(JSON.stringify(Object.keys(data[0]), null, 2));
   data.forEach(function (d){
     origins.forEach(function(origin){
-      output.push({
-        origin: origin,
-        destination: d.Place,
-        count: d[origin].replace(/ /g, "")
-      });
+      var destination = d.Place;
+      if(destination in countries){
+        if(d[origin]){
+          output.push({
+            origin: origin,
+            destination: destination,
+            count: d[origin].replace(/ /g, "")
+          });
+        }
+      }
     });
   });
   writeTable("migration.csv", output);
