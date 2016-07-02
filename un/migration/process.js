@@ -4,6 +4,7 @@ var d3 = require("d3"),
 
 var hierarchy = JSON.parse(fs.readFileSync("../placeHierarchy/countryHierarchy.json"));
 var countries = {};
+var placeColumn = "Major area, region, country or area of destination";
 
 function visit(node){
   if(node.children){
@@ -23,14 +24,17 @@ fs.readFile(inputFile, "utf8", function (err, data) {
   //console.log(JSON.stringify(Object.keys(data[0]), null, 2));
   data.forEach(function (d){
     origins.forEach(function(origin){
-      var destination = d.Place;
+      var destination = d[placeColumn];
       if(destination in countries){
         if(d[origin]){
-          output.push({
-            origin: origin,
-            destination: destination,
-            count: d[origin].replace(/ /g, "")
-          });
+          var count = parseFloat(d[origin].replace(/ /g, ""));
+          if(count > 0){
+            output.push({
+              origin: origin,
+              destination: destination,
+              count: count
+            });
+          }
         }
       }
     });
