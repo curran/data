@@ -1,1 +1,1 @@
-This dataset is from [Mike Bostock’s Block - Bar Chart](http://bl.ocks.org/mbostock/3885304). It represents frequency of letters in the English language.
+This dataset is from [Mike Bostock’s Block - Bar Chart](http://bl.ocks.org/mbostock/3885304). It represents frequency of letters in the English language. Also present in [Wikipedia - Letter frequency](https://en.wikipedia.org/wiki/Letter_frequency#Relative_frequencies_of_letters_in_the_English_language). The original source is believed to be Robert Lewand's "Cryptological Mathematics".
