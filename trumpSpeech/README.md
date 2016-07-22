@@ -1,0 +1,1 @@
+Extracted from the page [Full text: Donald Trump 2016 RNC draft speech transcript](http://www.politico.com/story/2016/07/full-transcript-donald-trump-nomination-acceptance-speech-at-rnc-225974](http://www.politico.com/story/2016/07/full-transcript-donald-trump-nomination-acceptance-speech-at-rnc-225974). Accessed on July 21, 2016.
