@@ -60,6 +60,30 @@ fs.readFile(inputFile, 'utf8', function (err, data) {
 
   data = data.sort(function (a, b){ return b.total - a.total; });
 
+  // Pivot the data so "religion" is a column.
+  var banned7 = {
+    "Iraq": true,
+    "Syria": true,
+    "Iran": true,
+    "Libya": true,
+    "Somalia": true,
+    "Sudan": true,
+    "Yemen": true
+  };
+  var religionByCountryBanned7 = [];
+  data.forEach(function (d){
+    religions.forEach(function (religion){
+      if(banned7[d.Country]){
+        religionByCountryBanned7.push({
+          country: d.Country,
+          religion: religion,
+          population: d[religion]
+        });
+      }
+    });
+  });
+  writeTable("religionByCountryBanned7.csv", religionByCountryBanned7);
+
   data = data.slice(0, 20);
 
   // Pivot the data so "religion" is a column.

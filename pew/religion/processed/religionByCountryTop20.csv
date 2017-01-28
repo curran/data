@@ -1,0 +1,161 @@
+country,religion,population
+China,Christian,68410000
+China,Muslim,24690000
+China,Unaffiliated,700680000
+China,Hindu,20000
+China,Buddhist,244130000
+China,Folk Religions,294320000
+China,Other Religions,9080000
+China,Jewish,0
+India,Christian,31130000
+India,Muslim,176190000
+India,Unaffiliated,870000
+India,Hindu,973750000
+India,Buddhist,9250000
+India,Folk Religions,5840000
+India,Other Religions,27560000
+India,Jewish,10000
+United States,Christian,243060000
+United States,Muslim,2770000
+United States,Unaffiliated,50980000
+United States,Hindu,1790000
+United States,Buddhist,3570000
+United States,Folk Religions,630000
+United States,Other Religions,1900000
+United States,Jewish,5690000
+Indonesia,Christian,23660000
+Indonesia,Muslim,209120000
+Indonesia,Unaffiliated,240000
+Indonesia,Hindu,4050000
+Indonesia,Buddhist,1720000
+Indonesia,Folk Religions,750000
+Indonesia,Other Religions,340000
+Indonesia,Jewish,0
+Brazil,Christian,173300000
+Brazil,Muslim,40000
+Brazil,Unaffiliated,15410000
+Brazil,Hindu,0
+Brazil,Buddhist,250000
+Brazil,Folk Religions,5540000
+Brazil,Other Religions,300000
+Brazil,Jewish,110000
+Pakistan,Christian,2750000
+Pakistan,Muslim,167410000
+Pakistan,Unaffiliated,20000
+Pakistan,Hindu,3330000
+Pakistan,Buddhist,20000
+Pakistan,Folk Religions,30000
+Pakistan,Other Religions,20000
+Pakistan,Jewish,0
+Nigeria,Christian,78050000
+Nigeria,Muslim,77300000
+Nigeria,Unaffiliated,680000
+Nigeria,Hindu,0
+Nigeria,Buddhist,10000
+Nigeria,Folk Religions,2290000
+Nigeria,Other Religions,90000
+Nigeria,Jewish,0
+Bangladesh,Christian,280000
+Bangladesh,Muslim,133540000
+Bangladesh,Unaffiliated,80000
+Bangladesh,Hindu,13520000
+Bangladesh,Buddhist,720000
+Bangladesh,Folk Religions,520000
+Bangladesh,Other Religions,30000
+Bangladesh,Jewish,0
+Russia,Christian,104750000
+Russia,Muslim,14290000
+Russia,Unaffiliated,23180000
+Russia,Hindu,30000
+Russia,Buddhist,170000
+Russia,Folk Religions,310000
+Russia,Other Religions,0
+Russia,Jewish,230000
+Japan,Christian,2030000
+Japan,Muslim,200000
+Japan,Unaffiliated,72120000
+Japan,Hindu,30000
+Japan,Buddhist,45820000
+Japan,Folk Religions,450000
+Japan,Other Religions,5890000
+Japan,Jewish,0
+Mexico,Christian,107910000
+Mexico,Muslim,0
+Mexico,Unaffiliated,5330000
+Mexico,Hindu,0
+Mexico,Buddhist,0
+Mexico,Folk Religions,70000
+Mexico,Other Religions,20000
+Mexico,Jewish,70000
+Philippines,Christian,86370000
+Philippines,Muslim,5150000
+Philippines,Unaffiliated,90000
+Philippines,Hindu,0
+Philippines,Buddhist,80000
+Philippines,Folk Religions,1430000
+Philippines,Other Religions,130000
+Philippines,Jewish,0
+Vietnam,Christian,7170000
+Vietnam,Muslim,160000
+Vietnam,Unaffiliated,26040000
+Vietnam,Hindu,0
+Vietnam,Buddhist,14380000
+Vietnam,Folk Religions,39750000
+Vietnam,Other Religions,350000
+Vietnam,Jewish,0
+Ethiopia,Christian,52070000
+Ethiopia,Muslim,28680000
+Ethiopia,Unaffiliated,50000
+Ethiopia,Hindu,0
+Ethiopia,Buddhist,0
+Ethiopia,Folk Religions,2130000
+Ethiopia,Other Religions,0
+Ethiopia,Jewish,0
+Germany,Christian,56540000
+Germany,Muslim,4760000
+Germany,Unaffiliated,20350000
+Germany,Hindu,80000
+Germany,Buddhist,210000
+Germany,Folk Religions,40000
+Germany,Other Religions,100000
+Germany,Jewish,230000
+Egypt,Christian,4120000
+Egypt,Muslim,76990000
+Egypt,Unaffiliated,0
+Egypt,Hindu,0
+Egypt,Buddhist,0
+Egypt,Folk Religions,0
+Egypt,Other Religions,0
+Egypt,Jewish,0
+Iran,Christian,110000
+Iran,Muslim,73570000
+Iran,Unaffiliated,110000
+Iran,Hindu,20000
+Iran,Buddhist,0
+Iran,Folk Religions,0
+Iran,Other Religions,150000
+Iran,Jewish,0
+Turkey,Christian,320000
+Turkey,Muslim,71330000
+Turkey,Unaffiliated,860000
+Turkey,Hindu,0
+Turkey,Buddhist,40000
+Turkey,Folk Religions,20000
+Turkey,Other Religions,150000
+Turkey,Jewish,20000
+Thailand,Christian,600000
+Thailand,Muslim,3770000
+Thailand,Unaffiliated,190000
+Thailand,Hindu,70000
+Thailand,Buddhist,64420000
+Thailand,Folk Religions,60000
+Thailand,Other Religions,0
+Thailand,Jewish,0
+Democratic Republic of the Congo,Christian,63210000
+Democratic Republic of the Congo,Muslim,970000
+Democratic Republic of the Congo,Unaffiliated,1170000
+Democratic Republic of the Congo,Hindu,30000
+Democratic Republic of the Congo,Buddhist,0
+Democratic Republic of the Congo,Folk Religions,490000
+Democratic Republic of the Congo,Other Religions,100000
+Democratic Republic of the Congo,Jewish,0
