@@ -4,11 +4,6 @@ War on Terror
  • Iraq War
  • War in Afghanistan
 
-Herbert Raymond "H. R." McMaster
-
-born July 24, 1962, Philadelphia
-
-
 prior assignments
 Commanding General, Ft. Benning Maneuver Center of Excellence
 Director of the Combined Joint Interagency Task Force-Shafafiyat at the International Security Assistance Force Headquarters in Kabul, Afghanistan.
@@ -17,23 +12,44 @@ known for his roles in
 Gulf War - 2 Aug 1990 – 28 Feb 1991 (src https://en.wikipedia.org/wiki/Gulf_War)
 Operation Iraqi Freedom
 
-authored the book Dereliction of Duty in 1997
+(When?) McMaster earned a Master of Arts and Ph.D. in American history from the University of North Carolina at Chapel Hill (UNC)
 
-high school at Valley Forge Military Academy, graduating in 1980
+{
+  "name": "Herbert Raymond \"H. R.\" McMaster",
+  "events": [
+    {
+      "id": "birth",
+      "date": "July 24, 1962",
+      "label": "born in Philadelphia"
+    },
+    {
+      "id": "highschool",
+      "date": "1980",
+      "label": "graduated high school at Valley Forge Military Academy"
+    },
+    {
+      "id": "westpoint",
+      "date": "1984",
+      "label": "graduated from US Military Academy at West Point"
+    },
+    {
+      "id": "secondlietenant",
+      "date": "1984",
+      "label": "earned a commission as a second lieutenant"
+    },
+    {
+      "id": "book",
+      "date": "1997",
+      "label": "authored the book \"Dereliction of Duty\""
+    }
+  ]
+}
 
-graduated from the United States Military Academy at West Point in 1984
-earned a commission as a second lieutenant upon graduation in 1984
 
-McMaster earned a Master of Arts and Ph.D. in American history from the University of North Carolina at Chapel Hill (UNC)
-
-thesis critical of American strategy in the Vietnam War
-
-1997 book Dereliction of Duty
-explores the military's role in the policies of the Vietnam War
 
 Company grade officer
-first assignment (starting 1984) 2nd Armored Division at Fort Hood, served with 1st Battalion 66th Armor Regiment.
 
+(when?) first assignment 2nd Armored Division at Fort Hood, served with 1st Battalion 66th Armor Regiment.
 1989, assigned to the 2nd Armored Cavalry Regiment at Warner Barracks in Bamberg, Germany, where he served until 1992
 including deployment to Operation Desert Storm.
 
@@ -42,53 +58,49 @@ he was a captain commanding Eagle Troop of the 2nd Armored Cavalry Regiment at t
   Battle of 73 Easting was a battle fought on 26-27 February 1991 (src https://en.wikipedia.org/wiki/Battle_of_73_Easting)
   Part of  Persian Gulf War - Operation Desert Storm (17 January 1991 – 28 February 1991)
 awarded the Silver Star.
-Battle receives coverage in Tom Clancy's 1994 popular non-fiction book Armored Cav
 
-McMaster served as a military history professor at West Point from 1994 to 1996
-graduated from the United States Army Command and General Staff College in 1999
+1994 to 1996 military history professor at West Point
+1999 graduated from the United States Army Command and General Staff College
 
-Field grade officer[edit]
-From 1999 to 2002, commanded 1st Squadron, 4th Cavalry Regiment
-staff positions at U.S. Central Command (USCENTCOM)
+Field grade officer
+1999 to 2002 commanded 1st Squadron, 4th Cavalry Regiment
+(when?) held staff positions at U.S. Central Command (USCENTCOM)
 
-lieutenant colonel
-colonel
+(when?) lieutenant colonel
+(when?) colonel
 worked on the staff of USCENTCOM as executive officer to Deputy Commander Lieutenant General John Abizaid
 
-When Abizaid received four-star rank and became Central Command's head, McMaster served as Director, Commander's Advisory Group (CAG)
+(when?) When Abizaid received four-star rank and became Central Command's head, McMaster served as Director, Commander's Advisory Group (CAG)
 
-In 2003 McMaster completed an Army War College research fellowship at Stanford University's Hoover Institution.
+2003 completed an Army War College research fellowship at Stanford University's Hoover Institution.
 
-In 2004, he was assigned to command the 3rd Armored Cavalry Regiment (3rd ACR).
-September - Operation Restoring Rights
-PBS show Frontline broadcast a documentary in February 2006 featuring interviews with McMaster.
-CBS' 60 Minutes produced a similar segment in July
-the operation was the subject of an article in the April 10, 2006, issue of The New Yorker.
+2004 to June 29, 2006, commanded 3rd Armored Cavalry Regiment (3rd ACR).
+  September - Operation Restoring Rights
+    PBS show Frontline broadcast a documentary in February 2006 featuring interviews with McMaster.
+    CBS' 60 Minutes produced a similar segment in July
+    the operation was the subject of an article in the April 10, 2006, issue of The New Yorker.
 
-ended command of the 3rd ACR on June 29, 2006
 June 29, 2006 joined the International Institute for Strategic Studies in London, as a Senior Research Associate
 
-From August 2007 to August 2008 McMaster was part of an "elite team of officers advising US commander" General David Petraeus on counterinsurgency operations while Petraeus directed revision of the Army's Counterinsurgency Field Manual during his command of the Combined Arms Center.
+August 2007 to August 2008 part of an "elite team of officers advising US commander" General David Petraeus on counterinsurgency operations
 
-General officer[edit]
+General officer
 
-McMaster was passed over for promotion to Brigadier General in 2006 and 2007
+August 2008, assumed duties as Director, Concept Development and Experimentation (later renamed Concept Development and Learning), in the Army Capabilities Integration Center (ARCIC) at Fort Monroe, Virginia, part of U.S. Army Training and Doctrine Command.
 
-August 2008, McMaster assumed duties as Director, Concept Development and Experimentation (later renamed Concept Development and Learning), in the Army Capabilities Integration Center (ARCIC) at Fort Monroe, Virginia, part of U.S. Army Training and Doctrine Command.
+June 29, 2009 promoted to Brigadier General
 
-promoted on June 29, 2009
 July 2010 he was selected to be the J-5, Deputy to the Commander for Planning, at ISAF (International Security Assistance Forces) Headquarters in Kabul, Afghanistan. 
 
-McMaster was nominated for Major General on January 23, 2012
-selected to be the commander of the Army's Maneuver Center of Excellence at Ft. Benning.
-took the position in June 2012
+January 23, 2012 nominated for Major General
+June 2012 became commander of the Army's Maneuver Center of Excellence at Ft. Benning.
+August 2, 2012 Promoted to Major General
 
 February 2014, Defense Secretary Chuck Hagel nominated McMaster for Lieutenant General
-July 2014, McMaster pinned on his third star when he began his duties as Deputy Commanding General of the Training and Doctrine Command and Director of TRADOC's Army Capabilities Integration Center.
+July 2014, promoted to Lieutenant General
+July 2014, began his duties as Deputy Commanding General of the Training and Doctrine Command and Director of TRADOC's Army Capabilities Integration Center.
 
-made Time's list of the 100 most influential people in the world in April 2014
-
-National Security Advisor[edit]
+April 2014 made Time's list of the 100 most influential people in the world in 
 
 February 20, 2017, U.S. President Donald Trump named McMaster to serve as his National Security Advisor
 
