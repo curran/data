@@ -1,0 +1,273 @@
+country,population
+More developed regions,NaN
+Less developed regions,NaN
+Least developed countries,NaN
+Less developed regions, excluding least developed countries,NaN
+Less developed regions, excluding China,NaN
+High-income countries,NaN
+Middle-income countries,NaN
+Upper-middle-income countries,NaN
+Lower-middle-income countries,NaN
+Low-income countries,NaN
+Sub-Saharan Africa,NaN
+AFRICA,NaN
+Eastern Africa,NaN
+Burundi,NaN
+Comoros,826000
+Djibouti,911000
+Eritrea,NaN
+Ethiopia,NaN
+Kenya,NaN
+Madagascar,NaN
+Malawi,NaN
+Mauritius,NaN
+Mayotte,253000
+Mozambique,NaN
+Réunion,873000
+Rwanda,NaN
+Seychelles,98000
+Somalia,NaN
+South Sudan,NaN
+Uganda,NaN
+United Republic of Tanzania,NaN
+Zambia,NaN
+Zimbabwe,NaN
+Middle Africa,NaN
+Angola,NaN
+Cameroon,NaN
+Central African Republic,NaN
+Chad,NaN
+Congo,NaN
+Democratic Republic of the Congo,NaN
+Equatorial Guinea,894000
+Gabon,NaN
+Sao Tome and Principe,198000
+Northern Africa,NaN
+Algeria,NaN
+Egypt,NaN
+Libya,NaN
+Morocco,NaN
+Sudan,NaN
+Tunisia,NaN
+Western Sahara,596000
+Southern Africa,NaN
+Botswana,NaN
+Lesotho,NaN
+Namibia,NaN
+South Africa,NaN
+Swaziland,NaN
+Western Africa,NaN
+Benin,NaN
+Burkina Faso,NaN
+Cabo Verde,533000
+Côte d'Ivoire,NaN
+Gambia,NaN
+Ghana,NaN
+Guinea,NaN
+Guinea-Bissau,NaN
+Liberia,NaN
+Mali,NaN
+Mauritania,NaN
+Niger,NaN
+Nigeria,NaN
+Saint Helena,4000
+Senegal,NaN
+Sierra Leone,NaN
+Togo,NaN
+ASIA,NaN
+Eastern Asia,NaN
+China,NaN
+China, Hong Kong SAR,NaN
+China, Macao SAR,606000
+Dem. People's Republic of Korea,NaN
+Japan,NaN
+Mongolia,NaN
+Republic of Korea,NaN
+Other non-specified areas,NaN
+South-Central Asia,NaN
+Central Asia,NaN
+Kazakhstan,NaN
+Kyrgyzstan,NaN
+Tajikistan,NaN
+Turkmenistan,NaN
+Uzbekistan,NaN
+Southern Asia,NaN
+Afghanistan,NaN
+Bangladesh,NaN
+Bhutan,793000
+India,NaN
+Iran (Islamic Republic of),NaN
+Maldives,376000
+Nepal,NaN
+Pakistan,NaN
+Sri Lanka,NaN
+South-Eastern Asia,NaN
+Brunei Darussalam,434000
+Cambodia,NaN
+Indonesia,NaN
+Lao People's Democratic Republic,NaN
+Malaysia,NaN
+Myanmar,NaN
+Philippines,NaN
+Singapore,NaN
+Thailand,NaN
+Timor-Leste,NaN
+Viet Nam,NaN
+Western Asia,NaN
+Armenia,NaN
+Azerbaijan,NaN
+Bahrain,NaN
+Cyprus,NaN
+Georgia,NaN
+Iraq,NaN
+Israel,NaN
+Jordan,NaN
+Kuwait,NaN
+Lebanon,NaN
+Oman,NaN
+Qatar,NaN
+Saudi Arabia,NaN
+State of Palestine,NaN
+Syrian Arab Republic,NaN
+Turkey,NaN
+United Arab Emirates,NaN
+Yemen,NaN
+EUROPE,NaN
+Eastern Europe,NaN
+Belarus,NaN
+Bulgaria,NaN
+Czech Republic,NaN
+Hungary,NaN
+Poland,NaN
+Republic of Moldova,NaN
+Romania,NaN
+Russian Federation,NaN
+Slovakia,NaN
+Ukraine,NaN
+Northern Europe,NaN
+Channel Islands,165000
+Denmark,NaN
+Estonia,NaN
+Faeroe Islands,48000
+Finland,NaN
+Iceland,334000
+Ireland,NaN
+Isle of Man,89000
+Latvia,NaN
+Lithuania,NaN
+Norway,NaN
+Sweden,NaN
+United Kingdom,NaN
+Southern Europe,NaN
+Albania,NaN
+Andorra,69000
+Bosnia and Herzegovina,NaN
+Croatia,NaN
+Gibraltar,32000
+Greece,NaN
+Holy See,1000
+Italy,NaN
+Malta,421000
+Montenegro,626000
+Portugal,NaN
+San Marino,32000
+Serbia,NaN
+Slovenia,NaN
+Spain,NaN
+TFYR Macedonia,NaN
+Western Europe,NaN
+Austria,NaN
+Belgium,NaN
+France,NaN
+Germany,NaN
+Liechtenstein,38000
+Luxembourg,584000
+Monaco,38000
+Netherlands,NaN
+Switzerland,NaN
+LATIN AMERICA AND THE CARIBBEAN,NaN
+Caribbean,NaN
+Anguilla,15000
+Antigua and Barbuda,94000
+Aruba,105000
+Bahamas,397000
+Barbados,286000
+British Virgin Islands,31000
+Caribbean Netherlands,26000
+Cayman Islands,62000
+Cuba,NaN
+Curaçao,160000
+Dominica,73000
+Dominican Republic,NaN
+Grenada,108000
+Guadeloupe,472000
+Haiti,NaN
+Jamaica,NaN
+Martinique,396000
+Montserrat,5000
+Puerto Rico,NaN
+Saint Kitts and Nevis,57000
+Saint Lucia,188000
+Saint Vincent and the Grenadines,110000
+Sint Maarten (Dutch part),40000
+Trinidad and Tobago,NaN
+Turks and Caicos Islands,35000
+United States Virgin Islands,107000
+Central America,NaN
+Belize,375000
+Costa Rica,NaN
+El Salvador,NaN
+Guatemala,NaN
+Honduras,NaN
+Mexico,NaN
+Nicaragua,NaN
+Panama,NaN
+South America,NaN
+Argentina,NaN
+Bolivia (Plurinational State of),NaN
+Brazil,NaN
+Chile,NaN
+Colombia,NaN
+Ecuador,NaN
+Falkland Islands (Malvinas),3000
+French Guiana,283000
+Guyana,774000
+Paraguay,NaN
+Peru,NaN
+Suriname,552000
+Uruguay,NaN
+Venezuela (Bolivarian Republic of),NaN
+NORTHERN AMERICA,NaN
+Bermuda,61000
+Canada,NaN
+Greenland,56000
+Saint Pierre and Miquelon,6000
+United States of America,NaN
+OCEANIA,NaN
+Australia/New Zealand,NaN
+Australia,NaN
+New Zealand,NaN
+Melanesia,NaN
+Fiji,903000
+New Caledonia,270000
+Papua New Guinea,NaN
+Solomon Islands,606000
+Vanuatu,276000
+Micronesia,537000
+Guam,174000
+Kiribati,116000
+Marshall Islands,53000
+Micronesia (Fed. States of),106000
+Nauru,10000
+Northern Mariana Islands,56000
+Palau,22000
+Polynesia,695000
+American Samoa,56000
+Cook Islands,21000
+French Polynesia,289000
+Niue,2000
+Samoa,196000
+Tokelau,1000
+Tonga,108000
+Tuvalu,10000
+Wallis and Futuna Islands,13000

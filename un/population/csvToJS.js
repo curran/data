@@ -2,7 +2,7 @@
 var d3 = require('d3'),
     _ = require('underscore'),
     fs = require('fs'),
-    name = 'populationEstimates';
+    name = 'populationEstimates2015MediumVariant';
 
 fs.readFile('./'+name+'.csv', 'utf8', function (err, data) {
   var data = d3.csv.parse(data),
