@@ -1,0 +1,14 @@
+{
+  "name": "olpc",
+  "version": "1.0.0",
+  "description": "This data is from [http://one.laptop.org/map](http://one.laptop.org/map), extracted on April 1, 2015. This shows how many laptops have been distributed in various countries around the world as part of the One Laptop Per Child project.",
+  "main": "joinLatLon.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "xml2js": "^0.4.17"
+  }
+}

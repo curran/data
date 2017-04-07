@@ -2,6 +2,8 @@ This data is from [http://one.laptop.org/map](http://one.laptop.org/map), extrac
 
 This data was originally visualized as the following map:
 
+Data comes as XML from http://one.laptop.org/sites/default/modules/olpc/map_feed/feed.php?r=70
+
 ![](originalMap.png)
 
 This visualization has several issues:
