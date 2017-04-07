@@ -9,8 +9,8 @@ var laptopsPerCountryCSV = fs.readFileSync('laptopsPerCountry.csv', 'utf8');
 var countriesCSV = fs.readFileSync('countries.csv', 'utf8');
 
 
-var laptopsPerCountry = d3.csv.parse(laptopsPerCountryCSV);
-var countries = d3.csv.parse(countriesCSV);
+var laptopsPerCountry = d3.csvParse(laptopsPerCountryCSV);
+var countries = d3.csvParse(countriesCSV);
 
 // This will print names that do not match.
 //var counts = {};
