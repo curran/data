@@ -16,6 +16,7 @@ A collection of public data sets for testing out visualization methods. These da
  * [Data sets in the Infovis Wiki](http://www.infovis-wiki.net/index.php?title=Data_Libraries)
  * [Data sets from Andy Kirk's Link Archive](http://www.visualisingdata.com/2017/02/archiving-collection-places-access-data/)
  * [Makeover Monday Datasets](http://www.makeovermonday.co.uk/data/)
+ * [SOCR Datasets](http://wiki.socr.umich.edu/index.php/SOCR_Data)
 
 Here's a listing of data sets with more detail. Columns will be marked in terms of their type for visualization, including:
 
