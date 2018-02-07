@@ -3,13 +3,14 @@ const scraper = require('table-scraper');
 const d3 = Object.assign(require('d3-dsv'), require('d3-time-format'));
 const dl = require('datalib');
 const fs = require('fs');
-const lastPage = 2;//119;
+const lastPage = 1579;
 const start = Date.now();
 const parseDate = d3.timeParse('%Y-%m-%d');
 const formatMonth = d3.timeFormat('%Y-%m');
+const token = 'c29ydGJ5PWEua2lsbGVkX2RhdGV8c29ydGRpcj1ERVNDfGFwcHJvdmVkPXZpc2libGV8ZXh0cmFkaXNwbGF5PTB8c3RhcnREYXRlPTIwMTEtMDMtMTh8'
 const scrapePage = page => {
   scraper
-    .get(`http://www.vdc-sy.info/index.php/en/martyrs/${page}/c29ydGJ5PWEua2lsbGVkX2RhdGV8c29ydGRpcj1ERVNDfGFwcHJvdmVkPXZpc2libGV8ZXh0cmFkaXNwbGF5PTB8c3RhcnREYXRlPTIwMTctMDEtMDF8ZW5kRGF0ZT0yMDE4LTAyLTA3fA==`)
+    .get(`http://www.vdc-sy.info/index.php/en/martyrs/${page}/${token}`)
     .then(tableData => {
       tableData[0].slice(1).forEach(d => {
         data.push({
@@ -37,10 +38,10 @@ const scrapePage = page => {
         const dataAggregated = dl
           .groupby([
             'Status',
-            'Sex',
+            //'Sex',
             'Province',
 	    { name: 'Date', get: d => formatMonth(d['Date of death']) },
-            'Cause of Death',
+            //'Cause of Death',
             'Actors',
           ])
           .count()
