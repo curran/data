@@ -3,11 +3,19 @@ const scraper = require('table-scraper');
 const d3 = Object.assign(require('d3-dsv'), require('d3-time-format'));
 const dl = require('datalib');
 const fs = require('fs');
-const lastPage = 1579;
 const start = Date.now();
 const parseDate = d3.timeParse('%Y-%m-%d');
 const formatMonth = d3.timeFormat('%Y-%m');
-const token = 'c29ydGJ5PWEua2lsbGVkX2RhdGV8c29ydGRpcj1ERVNDfGFwcHJvdmVkPXZpc2libGV8ZXh0cmFkaXNwbGF5PTB8c3RhcnREYXRlPTIwMTEtMDMtMTh8'
+
+// To get this token (which is probably more of a cursor for pagination),
+// Make a query in the UI found here http://www.vdc-sy.info/index.php/en/martyrs/
+// and copy the token from the URL.
+const token = 'c29ydGJ5PWEua2lsbGVkX2RhdGV8c29ydGRpcj1ERVNDfGFwcHJvdmVkPXZpc2libGV8ZXh0cmFkaXNwbGF5PTB8c3RhcnREYXRlPTIwMTEtMDQtMDF8ZW5kRGF0ZT0yMDE4LTAzLTAyfA'
+
+// Update this number depending on how many pages of the results there are.
+// To find out, click "End" and see what page it is.
+const lastPage = 1591;
+
 const scrapePage = page => {
   scraper
     .get(`http://www.vdc-sy.info/index.php/en/martyrs/${page}/${token}`)

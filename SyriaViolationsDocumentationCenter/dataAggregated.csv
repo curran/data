@@ -1,78 +1,126 @@
 Status,Province,Date,Actors,count
-Civilian,Homs,2018-02,Syrian government and affiliated militias,7
-Civilian,Idlib,2018-02,Russian troops,17
-Civilian,Idlib,2018-02,Syrian government and affiliated militias,20
-Non-Civilian,Homs,2018-02,Self administration forces,1
-Civilian,Damascus Suburbs,2018-02,Syrian government and affiliated militias,56
-Non-Civilian,Damascus Suburbs,2018-02,Syrian government and affiliated militias,9
-Civilian,Damascus,2018-02,Syrian government and affiliated militias,1
-Civilian,Idlib,2018-02,Armed opposition groups,1
-Non-Civilian,Homs,2018-02,Syrian government and affiliated militias,1
-Civilian,Idlib,2018-02,Not identified,2
-Non-Civilian,Damascus Suburbs,2018-02,Not identified,2
+Civilian,Damascus Suburbs,2018-02,Syrian government and affiliated militias,866
+Non-Civilian,Damascus Suburbs,2018-02,Syrian government and affiliated militias,31
+Civilian,Damascus Suburbs,2018-02,Russian troops,46
 Civilian,Damascus,2018-02,The organization of the Islamic State in Iraq and the Levant - ISIS,2
-Civilian,Hama,2018-02,Russian troops,12
+Non-Civilian,Hama,2018-02,Syrian government and affiliated militias,7
+Civilian,Hama,2018-02,Syrian government and affiliated militias,9
+Non-Civilian,Daraa,2018-02,Russian troops,1
+Civilian,Idlib,2018-02,Syrian government and affiliated militias,22
+Non-Civilian,Homs,2018-02,Syrian government and affiliated militias,20
+Civilian,Homs,2018-02,Syrian government and affiliated militias,17
+Non-Civilian,Aleppo,2018-02,Armed opposition groups,2
+Civilian,Damascus,2018-02,Syrian government and affiliated militias,23
+Non-Civilian,Lattakia,2018-02,Armed opposition groups,1
+Civilian,Aleppo,2018-02,Armed opposition groups,8
+Non-Civilian,Aleppo,2018-02,Syrian government and affiliated militias,2
+Non-Civilian,Hasakeh,2018-02,The organization of the Islamic State in Iraq and the Levant - ISIS,10
+Civilian,Hama,2018-02,Russian troops,19
+Civilian,Damascus,2018-02,Armed opposition groups,7
+Non-Civilian,Daraa,2018-02,Not identified,5
+Civilian,Hasakeh,2018-02,Syrian government and affiliated militias,1
+Civilian,Aleppo,2018-02,Syrian government and affiliated militias,11
+Civilian,Unknown,2018-02,Armed opposition groups,2
+Non-Civilian,Damascus Suburbs,2018-02,The organization of the Islamic State in Iraq and the Levant - ISIS,7
+Civilian,Hasakeh,2018-02,Not identified,4
+Non-Civilian,Hama,2018-02,Self administration forces,1
+Civilian,Daraa,2018-02,Not identified,2
+Civilian,Raqqa,2018-02,Not identified,1
+Civilian,Hasakeh,2018-02,Self administration forces,1
+Civilian,Daraa,2018-02,Syrian government and affiliated militias,1
+Non-Civilian,Homs,2018-02,Self administration forces,3
+Civilian,Homs,2018-02,International coalition forces,5
+Non-Civilian,Damascus Suburbs,2018-02,Not identified,3
+Civilian,Damascus Suburbs,2018-02,Not identified,1
+Non-Civilian,Damascus,2018-02,Syrian government and affiliated militias,1
+Civilian,Homs,2018-02,Not identified,1
+Non-Civilian,Daraa,2018-02,The organization of the Islamic State in Iraq and the Levant - ISIS,6
+Civilian,Damascus Suburbs,2018-02,Armed opposition groups,2
+Non-Civilian,Quneitra,2018-02,The organization of the Islamic State in Iraq and the Levant - ISIS,2
+Civilian,Quneitra,2018-02,Syrian government and affiliated militias,1
+Civilian,Aleppo,2018-02,International coalition forces,40
+Civilian,Raqqa,2018-02,The organization of the Islamic State in Iraq and the Levant - ISIS,5
+Civilian,Homs,2018-02,Russian troops,1
+Civilian,Idlib,2018-02,Russian troops,17
+Civilian,Raqqa,2018-02,Self administration forces,4
+Civilian,Raqqa,2018-02,Syrian government and affiliated militias,1
+Non-Civilian,Daraa,2018-02,Syrian government and affiliated militias,2
+Civilian,Idlib,2018-02,Armed opposition groups,1
+Civilian,Idlib,2018-02,Self administration forces,1
+Civilian,Idlib,2018-02,Not identified,2
+Non-Civilian,Damascus,2018-02,The organization of the Islamic State in Iraq and the Levant - ISIS,1
 Non-Civilian,Damascus Suburbs,2018-02,Self administration forces,1
-Civilian,Idlib,2018-01,Syrian government and affiliated militias,69
+Civilian,Idlib,2018-01,Syrian government and affiliated militias,83
+Civilian,Idlib,2018-01,Not identified,51
 Civilian,Homs,2018-01,Syrian government and affiliated militias,15
-Civilian,Damascus Suburbs,2018-01,Syrian government and affiliated militias,184
-Non-Civilian,Damascus,2018-01,Syrian government and affiliated militias,10
-Non-Civilian,Damascus Suburbs,2018-01,Syrian government and affiliated militias,63
+Non-Civilian,Idlib,2018-01,Syrian government and affiliated militias,66
+Non-Civilian,Idlib,2018-01,Self administration forces,4
+Civilian,Damascus Suburbs,2018-01,Syrian government and affiliated militias,211
+Non-Civilian,Damascus,2018-01,Syrian government and affiliated militias,16
+Non-Civilian,Damascus Suburbs,2018-01,Syrian government and affiliated militias,73
 Non-Civilian,Homs,2018-01,Self administration forces,6
 Non-Civilian,Other Nationalities,2018-01,Armed opposition groups,1
-Civilian,Damascus Suburbs,2018-01,Russian troops,3
+Civilian,Aleppo,2018-01,Al-Nusra Front,2
+Civilian,Damascus Suburbs,2018-01,Russian troops,20
 Civilian,Damascus,2018-01,Russian troops,1
+Non-Civilian,Homs,2018-01,Syrian government and affiliated militias,22
+Civilian,Aleppo,2018-01,Russian troops,11
+Civilian,Idlib,2018-01,Russian troops,64
 Non-Civilian,Daraa,2018-01,Not identified,7
-Non-Civilian,Other Nationalities,2018-01,Not identified,1
-Non-Civilian,Homs,2018-01,Syrian government and affiliated militias,21
+Non-Civilian,Other Nationalities,2018-01,Not identified,2
+Civilian,Deir Ezzor,2018-01,The organization of the Islamic State in Iraq and the Levant - ISIS,23
+Civilian,Raqqa,2018-01,The organization of the Islamic State in Iraq and the Levant - ISIS,23
 Non-Civilian,Damascus Suburbs,2018-01,Al-Nusra Front,1
 Civilian,Daraa,2018-01,Syrian government and affiliated militias,2
-Civilian,Idlib,2018-01,Russian troops,36
+Civilian,Deir Ezzor,2018-01,Not identified,11
 Civilian,Hama,2018-01,Russian troops,11
 Civilian,Daraa,2018-01,Not identified,3
+Civilian,Deir Ezzor,2018-01,Syrian government and affiliated militias,11
+Civilian,Raqqa,2018-01,Not identified,4
 Non-Civilian,Idlib,2018-01,Russian troops,4
 Non-Civilian,Damascus Suburbs,2018-01,The organization of the Islamic State in Iraq and the Levant - ISIS,3
 Non-Civilian,Damascus,2018-01,The organization of the Islamic State in Iraq and the Levant - ISIS,2
 Non-Civilian,Aleppo,2018-01,Syrian government and affiliated militias,4
-Civilian,Aleppo,2018-01,Not identified,1
-Non-Civilian,Idlib,2018-01,Syrian government and affiliated militias,58
+Civilian,Idlib,2018-01,Armed opposition groups,1
+Civilian,Deir Ezzor,2018-01,International coalition forces,9
+Civilian,Aleppo,2018-01,Not identified,2
+Non-Civilian,Deir Ezzor,2018-01,The organization of the Islamic State in Iraq and the Levant - ISIS,1
 Non-Civilian,Hama,2018-01,Syrian government and affiliated militias,20
 Non-Civilian,Hama,2018-01,Self administration forces,1
-Civilian,Damascus,2018-01,Armed opposition groups,10
+Civilian,Damascus,2018-01,Armed opposition groups,9
 Civilian,Other Nationalities,2018-01,Armed opposition groups,1
-Non-Civilian,Idlib,2018-01,Armed opposition groups,1
 Civilian,Hama,2018-01,Syrian government and affiliated militias,8
-Civilian,Raqqa,2018-01,The organization of the Islamic State in Iraq and the Levant - ISIS,15
-Civilian,Aleppo,2018-01,Russian troops,6
 Civilian,Damascus Suburbs,2018-01,Not identified,4
-Civilian,Idlib,2018-01,Not identified,48
 Civilian,Hama,2018-01,Self administration forces,1
-Civilian,Damascus,2018-01,Syrian government and affiliated militias,4
+Civilian,Damascus,2018-01,Syrian government and affiliated militias,8
 Civilian,Aleppo,2018-01,Self administration forces,4
-Civilian,Raqqa,2018-01,Not identified,3
 Non-Civilian,Daraa,2018-01,Syrian government and affiliated militias,10
 Non-Civilian,Damascus Suburbs,2018-01,Not identified,2
 Non-Civilian,Idlib,2018-01,The organization of the Islamic State in Iraq and the Levant - ISIS,5
+Non-Civilian,Deir Ezzor,2018-01,Self administration forces,4
 Non-Civilian,Damascus,2018-01,Armed opposition groups,3
 Non-Civilian,Damascus,2018-01,Not identified,2
 Non-Civilian,Aleppo,2018-01,Not identified,1
 Civilian,Daraa,2018-01,Armed opposition groups,4
+Civilian,Damascus Suburbs,2018-01,Armed opposition groups,2
 Civilian,Raqqa,2018-01,Self administration forces,2
 Non-Civilian,Homs,2018-01,Not identified,1
 Non-Civilian,Raqqa,2018-01,Not identified,1
 Civilian,Homs,2018-01,The organization of the Islamic State in Iraq and the Levant - ISIS,1
 Civilian,Damascus,2018-01,Not identified,1
 Civilian,Aleppo,2018-01,Syrian government and affiliated militias,3
-Civilian,Homs,2018-01,Not identified,1
+Non-Civilian,Quneitra,2018-01,The organization of the Islamic State in Iraq and the Levant - ISIS,3
+Civilian,Homs,2018-01,Not identified,2
 Civilian,Idlib,2018-01,Al-Nusra Front,1
 Non-Civilian,Raqqa,2018-01,The organization of the Islamic State in Iraq and the Levant - ISIS,3
 Non-Civilian,Homs,2018-01,The organization of the Islamic State in Iraq and the Levant - ISIS,1
+Civilian,Hasakeh,2018-01,Syrian government and affiliated militias,1
 Non-Civilian,Idlib,2018-01,Not identified,2
 Non-Civilian,Daraa,2018-01,Armed opposition groups,2
 Non-Civilian,Damascus Suburbs,2018-01,Armed opposition groups,1
-Civilian,Damascus Suburbs,2017-12,Syrian government and affiliated militias,96
-Non-Civilian,Damascus Suburbs,2017-12,Syrian government and affiliated militias,32
-Non-Civilian,Damascus,2017-12,Syrian government and affiliated militias,5
+Civilian,Damascus Suburbs,2017-12,Syrian government and affiliated militias,104
+Non-Civilian,Damascus Suburbs,2017-12,Syrian government and affiliated militias,36
+Non-Civilian,Damascus,2017-12,Syrian government and affiliated militias,6
 Civilian,Deir Ezzor,2017-12,Not identified,21
 Civilian,Raqqa,2017-12,The organization of the Islamic State in Iraq and the Levant - ISIS,69
 Civilian,Idlib,2017-12,Syrian government and affiliated militias,57
@@ -84,6 +132,7 @@ Non-Civilian,Idlib,2017-12,Syrian government and affiliated militias,35
 Non-Civilian,Homs,2017-12,Syrian government and affiliated militias,10
 Non-Civilian,Daraa,2017-12,Syrian government and affiliated militias,7
 Civilian,Daraa,2017-12,The organization of the Islamic State in Iraq and the Levant - ISIS,5
+Civilian,Damascus Suburbs,2017-12,Armed opposition groups,1
 Civilian,Damascus Suburbs,2017-12,Not identified,3
 Civilian,Homs,2017-12,The organization of the Islamic State in Iraq and the Levant - ISIS,4
 Non-Civilian,Deir Ezzor,2017-12,Self administration forces,6
@@ -92,15 +141,16 @@ Civilian,Deir Ezzor,2017-12,International coalition forces,50
 Civilian,Deir Ezzor,2017-12,The organization of the Islamic State in Iraq and the Levant - ISIS,19
 Non-Civilian,Deir Ezzor,2017-12,International coalition forces,2
 Civilian,Homs,2017-12,Syrian government and affiliated militias,5
+Non-Civilian,Other Nationalities,2017-12,International coalition forces,9
 Civilian,Idlib,2017-12,Russian troops,28
 Non-Civilian,Idlib,2017-12,The organization of the Islamic State in Iraq and the Levant - ISIS,2
 Civilian,Homs,2017-12,Russian troops,4
 Non-Civilian,Daraa,2017-12,Armed opposition groups,1
+Civilian,Damascus,2017-12,Syrian government and affiliated militias,11
 Non-Civilian,Hama,2017-12,Russian troops,1
-Civilian,Hama,2017-12,Russian troops,9
+Civilian,Hama,2017-12,Russian troops,8
 Non-Civilian,Hama,2017-12,Syrian government and affiliated militias,8
 Civilian,Deir Ezzor,2017-12,Russian troops,41
-Non-Civilian,Other Nationalities,2017-12,International coalition forces,8
 Non-Civilian,Other Nationalities,2017-12,Syrian government and affiliated militias,1
 Civilian,Deir Ezzor,2017-12,Self administration forces,3
 Non-Civilian,Damascus Suburbs,2017-12,The organization of the Islamic State in Iraq and the Levant - ISIS,2
@@ -118,25 +168,24 @@ Civilian,Raqqa,2017-12,Russian troops,5
 Non-Civilian,Unknown,2017-12,Syrian government and affiliated militias,1
 Civilian,Aleppo,2017-12,The organization of the Islamic State in Iraq and the Levant - ISIS,4
 Civilian,Raqqa,2017-12,International coalition forces,3
-Non-Civilian,Aleppo,2017-12,The organization of the Islamic State in Iraq and the Levant - ISIS,5
+Non-Civilian,Aleppo,2017-12,The organization of the Islamic State in Iraq and the Levant - ISIS,6
+Civilian,Damascus,2017-12,Not identified,1
 Non-Civilian,Idlib,2017-12,Self administration forces,1
 Non-Civilian,Deir Ezzor,2017-12,The organization of the Islamic State in Iraq and the Levant - ISIS,4
 Non-Civilian,Raqqa,2017-12,International coalition forces,1
-Non-Civilian,Damascus,2017-12,The organization of the Islamic State in Iraq and the Levant - ISIS,1
-Civilian,Damascus,2017-12,Syrian government and affiliated militias,10
 Non-Civilian,Other Nationalities,2017-12,The organization of the Islamic State in Iraq and the Levant - ISIS,1
 Civilian,Daraa,2017-12,Not identified,1
 Civilian,Homs,2017-12,International coalition forces,1
 Non-Civilian,Idlib,2017-11,Syrian government and affiliated militias,31
 Non-Civilian,Damascus Suburbs,2017-11,Syrian government and affiliated militias,52
-Civilian,Damascus Suburbs,2017-11,Syrian government and affiliated militias,210
+Civilian,Damascus Suburbs,2017-11,Syrian government and affiliated militias,211
 Civilian,Damascus,2017-11,Syrian government and affiliated militias,13
 Non-Civilian,Daraa,2017-11,Syrian government and affiliated militias,19
 Non-Civilian,Other Nationalities,2017-11,The organization of the Islamic State in Iraq and the Levant - ISIS,2
 Civilian,Raqqa,2017-11,The organization of the Islamic State in Iraq and the Levant - ISIS,71
 Civilian,Homs,2017-11,Not identified,3
-Civilian,Deir Ezzor,2017-11,Russian troops,132
-Civilian,Deir Ezzor,2017-11,Syrian government and affiliated militias,15
+Civilian,Deir Ezzor,2017-11,Russian troops,134
+Civilian,Deir Ezzor,2017-11,Syrian government and affiliated militias,16
 Non-Civilian,Deir Ezzor,2017-11,International coalition forces,6
 Civilian,Damascus Suburbs,2017-11,The organization of the Islamic State in Iraq and the Levant - ISIS,1
 Civilian,Deir Ezzor,2017-11,Not identified,5
@@ -186,22 +235,21 @@ Non-Civilian,Idlib,2017-11,Armed opposition groups,2
 Civilian,Raqqa,2017-11,International coalition forces,1
 Non-Civilian,Idlib,2017-11,The organization of the Islamic State in Iraq and the Levant - ISIS,2
 Non-Civilian,Other Nationalities,2017-11,Syrian government and affiliated militias,1
-Non-Civilian,Daraa,2017-10,Not identified,7
+Non-Civilian,Daraa,2017-10,Not identified,8
 Civilian,Homs,2017-10,Syrian government and affiliated militias,13
 Non-Civilian,Homs,2017-10,Syrian government and affiliated militias,11
-Non-Civilian,Damascus,2017-10,Not identified,3
-Civilian,Damascus Suburbs,2017-10,Syrian government and affiliated militias,55
+Non-Civilian,Damascus,2017-10,Not identified,2
+Civilian,Damascus Suburbs,2017-10,Syrian government and affiliated militias,56
 Civilian,Damascus,2017-10,Syrian government and affiliated militias,4
-Civilian,Deir Ezzor,2017-10,Russian troops,103
+Civilian,Deir Ezzor,2017-10,Russian troops,132
 Civilian,Aleppo,2017-10,Not identified,3
 Civilian,Daraa,2017-10,Syrian government and affiliated militias,11
 Non-Civilian,Daraa,2017-10,The organization of the Islamic State in Iraq and the Levant - ISIS,7
 Civilian,Daraa,2017-10,Not identified,8
 Civilian,Raqqa,2017-10,The organization of the Islamic State in Iraq and the Levant - ISIS,16
 Non-Civilian,Damascus Suburbs,2017-10,Syrian government and affiliated militias,20
-Non-Civilian,Daraa,2017-10,Syrian government and affiliated militias,17
+Non-Civilian,Daraa,2017-10,Syrian government and affiliated militias,18
 Civilian,Raqqa,2017-10,International coalition forces,118
-Non-Civilian,Damascus,2017-10,Syrian government and affiliated militias,5
 Civilian,Homs,2017-10,International coalition forces,38
 Civilian,Hama,2017-10,Syrian government and affiliated militias,15
 Civilian,Hama,2017-10,Russian troops,12
@@ -213,6 +261,7 @@ Civilian,Idlib,2017-10,Not identified,2
 Non-Civilian,Idlib,2017-10,Not identified,6
 Non-Civilian,Homs,2017-10,Self administration forces,2
 Non-Civilian,Damascus Suburbs,2017-10,The organization of the Islamic State in Iraq and the Levant - ISIS,2
+Non-Civilian,Damascus,2017-10,Syrian government and affiliated militias,4
 Civilian,Damascus Suburbs,2017-10,International coalition forces,1
 Non-Civilian,Lattakia,2017-10,Not identified,1
 Non-Civilian,Daraa,2017-10,Armed opposition groups,3
@@ -230,25 +279,25 @@ Civilian,Idlib,2017-10,Syrian government and affiliated militias,24
 Non-Civilian,Idlib,2017-10,Armed opposition groups,3
 Non-Civilian,Aleppo,2017-10,The organization of the Islamic State in Iraq and the Levant - ISIS,3
 Non-Civilian,Deir Ezzor,2017-10,The organization of the Islamic State in Iraq and the Levant - ISIS,2
-Non-Civilian,Deir Ezzor,2017-10,Syrian government and affiliated militias,6
+Non-Civilian,Deir Ezzor,2017-10,Syrian government and affiliated militias,16
 Non-Civilian,Deir Ezzor,2017-10,Self administration forces,25
 Non-Civilian,Hama,2017-10,Syrian government and affiliated militias,7
 Civilian,Daraa,2017-10,Armed opposition groups,6
 Civilian,Homs,2017-10,Self administration forces,1
 Non-Civilian,Homs,2017-10,International coalition forces,1
 Civilian,Raqqa,2017-10,Self administration forces,4
-Civilian,Deir Ezzor,2017-10,International coalition forces,31
-Civilian,Deir Ezzor,2017-10,Syrian government and affiliated militias,15
+Civilian,Deir Ezzor,2017-10,International coalition forces,41
+Civilian,Deir Ezzor,2017-10,Syrian government and affiliated militias,16
 Civilian,Raqqa,2017-10,Syrian government and affiliated militias,3
 Non-Civilian,Unknown,2017-10,International coalition forces,6
 Non-Civilian,Deir Ezzor,2017-10,International coalition forces,10
 Non-Civilian,Raqqa,2017-10,The organization of the Islamic State in Iraq and the Levant - ISIS,1
 Civilian,Aleppo,2017-10,International coalition forces,15
 Civilian,Idlib,2017-10,Armed opposition groups,2
-Civilian,Deir Ezzor,2017-10,Not identified,22
-Non-Civilian,Damascus Suburbs,2017-10,Armed opposition groups,1
+Civilian,Deir Ezzor,2017-10,Not identified,37
+Non-Civilian,Damascus,2017-10,Armed opposition groups,1
 Civilian,Deir Ezzor,2017-10,Self administration forces,1
-Civilian,Deir Ezzor,2017-10,The organization of the Islamic State in Iraq and the Levant - ISIS,3
+Civilian,Deir Ezzor,2017-10,The organization of the Islamic State in Iraq and the Levant - ISIS,7
 Non-Civilian,Homs,2017-10,The organization of the Islamic State in Iraq and the Levant - ISIS,1
 Non-Civilian,Aleppo,2017-10,Syrian government and affiliated militias,1
 Civilian,Aleppo,2017-10,Russian troops,1
@@ -257,15 +306,19 @@ Civilian,Hama,2017-10,International coalition forces,5
 Civilian,Idlib,2017-09,Syrian government and affiliated militias,50
 Civilian,Homs,2017-09,Not identified,2
 Civilian,Raqqa,2017-09,Self administration forces,1
+Civilian,Deir Ezzor,2017-09,International coalition forces,58
 Non-Civilian,Daraa,2017-09,Syrian government and affiliated militias,12
-Non-Civilian,Damascus Suburbs,2017-09,Syrian government and affiliated militias,29
-Civilian,Deir Ezzor,2017-09,Syrian government and affiliated militias,43
-Civilian,Homs,2017-09,Syrian government and affiliated militias,20
-Civilian,Homs,2017-09,Russian troops,13
+Civilian,Deir Ezzor,2017-09,Syrian government and affiliated militias,56
+Non-Civilian,Damascus Suburbs,2017-09,Syrian government and affiliated militias,30
+Civilian,Homs,2017-09,Syrian government and affiliated militias,19
+Non-Civilian,Homs,2017-09,Syrian government and affiliated militias,10
+Civilian,Homs,2017-09,Russian troops,14
 Civilian,Damascus Suburbs,2017-09,Syrian government and affiliated militias,56
 Civilian,Idlib,2017-09,Russian troops,89
+Civilian,Deir Ezzor,2017-09,Russian troops,119
 Non-Civilian,Idlib,2017-09,Syrian government and affiliated militias,29
-Civilian,Raqqa,2017-09,Not identified,9
+Civilian,Deir Ezzor,2017-09,The organization of the Islamic State in Iraq and the Levant - ISIS,39
+Civilian,Raqqa,2017-09,Not identified,6
 Civilian,Daraa,2017-09,Not identified,6
 Civilian,Daraa,2017-09,Armed opposition groups,2
 Civilian,Aleppo,2017-09,Syrian government and affiliated militias,15
@@ -273,10 +326,11 @@ Civilian,Aleppo,2017-09,Russian troops,6
 Civilian,Hama,2017-09,Russian troops,33
 Non-Civilian,Daraa,2017-09,Not identified,4
 Non-Civilian,Aleppo,2017-09,Not identified,1
-Civilian,Raqqa,2017-09,International coalition forces,69
+Civilian,Raqqa,2017-09,International coalition forces,67
 Non-Civilian,Idlib,2017-09,Russian troops,41
 Civilian,Hama,2017-09,Syrian government and affiliated militias,40
 Civilian,Raqqa,2017-09,The organization of the Islamic State in Iraq and the Levant - ISIS,13
+Civilian,Deir Ezzor,2017-09,Not identified,7
 Civilian,Aleppo,2017-09,International coalition forces,1
 Civilian,Aleppo,2017-09,Not identified,2
 Non-Civilian,Aleppo,2017-09,Syrian government and affiliated militias,1
@@ -288,16 +342,13 @@ Civilian,Daraa,2017-09,Syrian government and affiliated militias,10
 Civilian,Damascus Suburbs,2017-09,Not identified,2
 Civilian,Raqqa,2017-09,Russian troops,1
 Non-Civilian,Deir Ezzor,2017-09,Syrian government and affiliated militias,39
-Civilian,Deir Ezzor,2017-09,Russian troops,83
+Non-Civilian,Homs,2017-09,The organization of the Islamic State in Iraq and the Levant - ISIS,2
 Civilian,Daraa,2017-09,International coalition forces,1
 Civilian,Idlib,2017-09,Not identified,5
 Non-Civilian,Damascus Suburbs,2017-09,Russian troops,9
 Non-Civilian,Damascus,2017-09,Russian troops,1
 Non-Civilian,Aleppo,2017-09,Russian troops,1
-Non-Civilian,Homs,2017-09,Syrian government and affiliated militias,9
 Civilian,Homs,2017-09,International coalition forces,9
-Civilian,Deir Ezzor,2017-09,International coalition forces,43
-Civilian,Deir Ezzor,2017-09,The organization of the Islamic State in Iraq and the Levant - ISIS,35
 Non-Civilian,Idlib,2017-09,Not identified,2
 Non-Civilian,Hama,2017-09,Armed opposition groups,1
 Civilian,Homs,2017-09,Self administration forces,1
@@ -311,7 +362,6 @@ Civilian,Damascus Suburbs,2017-09,The organization of the Islamic State in Iraq 
 Civilian,Quneitra,2017-09,Not identified,1
 Civilian,Other Nationalities,2017-09,Not identified,1
 Non-Civilian,Raqqa,2017-09,The organization of the Islamic State in Iraq and the Levant - ISIS,1
-Civilian,Deir Ezzor,2017-09,Not identified,4
 Non-Civilian,Damascus Suburbs,2017-09,Armed opposition groups,1
 Civilian,Daraa,2017-09,Russian troops,1
 Non-Civilian,Daraa,2017-09,The organization of the Islamic State in Iraq and the Levant - ISIS,3
@@ -325,7 +375,7 @@ Non-Civilian,Quneitra,2017-09,Not identified,2
 Civilian,Aleppo,2017-09,Al-Nusra Front,1
 Non-Civilian,Raqqa,2017-09,Syrian government and affiliated militias,2
 Non-Civilian,Raqqa,2017-09,International coalition forces,1
-Non-Civilian,Homs,2017-09,The organization of the Islamic State in Iraq and the Levant - ISIS,1
+Civilian,Homs,2017-08,The organization of the Islamic State in Iraq and the Levant - ISIS,7
 Non-Civilian,Idlib,2017-08,Armed opposition groups,10
 Civilian,Homs,2017-08,Not identified,4
 Civilian,Daraa,2017-08,Syrian government and affiliated militias,7
@@ -335,8 +385,9 @@ Non-Civilian,Homs,2017-08,Self administration forces,1
 Civilian,Aleppo,2017-08,Self administration forces,10
 Civilian,Damascus Suburbs,2017-08,Syrian government and affiliated militias,46
 Non-Civilian,Daraa,2017-08,Syrian government and affiliated militias,8
-Non-Civilian,Homs,2017-08,Syrian government and affiliated militias,9
+Non-Civilian,Homs,2017-08,Syrian government and affiliated militias,10
 Non-Civilian,Damascus Suburbs,2017-08,Syrian government and affiliated militias,21
+Civilian,Homs,2017-08,International coalition forces,66
 Civilian,Aleppo,2017-08,Syrian government and affiliated militias,16
 Non-Civilian,Daraa,2017-08,The organization of the Islamic State in Iraq and the Levant - ISIS,16
 Non-Civilian,Idlib,2017-08,Not identified,3
@@ -344,7 +395,6 @@ Non-Civilian,Damascus Suburbs,2017-08,Armed opposition groups,19
 Non-Civilian,Damascus Suburbs,2017-08,The organization of the Islamic State in Iraq and the Levant - ISIS,1
 Civilian,Raqqa,2017-08,Self administration forces,16
 Civilian,Raqqa,2017-08,International coalition forces,154
-Civilian,Homs,2017-08,International coalition forces,64
 Non-Civilian,Aleppo,2017-08,Syrian government and affiliated militias,3
 Civilian,Daraa,2017-08,Armed opposition groups,5
 Non-Civilian,Sweida,2017-08,Not identified,2
@@ -352,7 +402,7 @@ Civilian,Damascus,2017-08,Syrian government and affiliated militias,6
 Civilian,Aleppo,2017-08,International coalition forces,1
 Civilian,Aleppo,2017-08,Armed opposition groups,1
 Civilian,Aleppo,2017-08,Not identified,5
-Civilian,Homs,2017-08,Syrian government and affiliated militias,18
+Civilian,Homs,2017-08,Syrian government and affiliated militias,19
 Non-Civilian,Idlib,2017-08,Syrian government and affiliated militias,12
 Civilian,Damascus Suburbs,2017-08,Not identified,15
 Civilian,Idlib,2017-08,Syrian government and affiliated militias,4
@@ -379,7 +429,6 @@ Non-Civilian,Damascus,2017-08,Syrian government and affiliated militias,2
 Civilian,Quneitra,2017-08,Not identified,4
 Civilian,Raqqa,2017-08,Russian troops,2
 Non-Civilian,Quneitra,2017-08,Not identified,3
-Civilian,Homs,2017-08,The organization of the Islamic State in Iraq and the Levant - ISIS,4
 Non-Civilian,Unknown,2017-08,The organization of the Islamic State in Iraq and the Levant - ISIS,1
 Non-Civilian,Hama,2017-08,Not identified,2
 Civilian,Idlib,2017-08,Armed opposition groups,1
@@ -444,7 +493,7 @@ Civilian,Damascus Suburbs,2017-07,Not identified,2
 Non-Civilian,Idlib,2017-07,Armed opposition groups,8
 Civilian,Idlib,2017-07,Syrian government and affiliated militias,3
 Civilian,Damascus,2017-07,The organization of the Islamic State in Iraq and the Levant - ISIS,1
-Civilian,Deir Ezzor,2017-07,Russian troops,18
+Civilian,Deir Ezzor,2017-07,Russian troops,17
 Non-Civilian,Unknown,2017-07,Syrian government and affiliated militias,1
 Civilian,Homs,2017-07,Armed opposition groups,3
 Civilian,Deir Ezzor,2017-07,Armed opposition groups,1
@@ -1158,13 +1207,13 @@ Non-Civilian,Hama,2016-10,Russian troops,6
 Non-Civilian,Homs,2016-10,Not identified,1
 Non-Civilian,Idlib,2016-09,Syrian government and affiliated militias,94
 Civilian,Idlib,2016-09,Syrian government and affiliated militias,86
-Civilian,Aleppo,2016-09,Russian troops,364
-Civilian,Aleppo,2016-09,Not identified,21
-Civilian,Aleppo,2016-09,Syrian government and affiliated militias,214
-Civilian,Aleppo,2016-09,The organization of the Islamic State in Iraq and the Levant - ISIS,38
-Non-Civilian,Aleppo,2016-09,Syrian government and affiliated militias,42
-Civilian,Aleppo,2016-09,Armed opposition groups,32
-Civilian,Damascus Suburbs,2016-09,Syrian government and affiliated militias,67
+Civilian,Aleppo,2016-09,Russian troops,366
+Civilian,Aleppo,2016-09,Not identified,22
+Civilian,Aleppo,2016-09,Syrian government and affiliated militias,220
+Civilian,Aleppo,2016-09,The organization of the Islamic State in Iraq and the Levant - ISIS,39
+Non-Civilian,Aleppo,2016-09,Syrian government and affiliated militias,43
+Civilian,Aleppo,2016-09,Armed opposition groups,38
+Civilian,Damascus Suburbs,2016-09,Syrian government and affiliated militias,66
 Civilian,Hama,2016-09,Syrian government and affiliated militias,86
 Non-Civilian,Damascus Suburbs,2016-09,Syrian government and affiliated militias,62
 Non-Civilian,Hama,2016-09,Syrian government and affiliated militias,54
@@ -1190,7 +1239,7 @@ Civilian,Daraa,2016-09,Not identified,5
 Civilian,Aleppo,2016-09,International coalition forces,4
 Non-Civilian,Quneitra,2016-09,Syrian government and affiliated militias,7
 Civilian,Other Nationalities,2016-09,Syrian government and affiliated militias,1
-Civilian,Damascus,2016-09,Syrian government and affiliated militias,3
+Civilian,Damascus,2016-09,Syrian government and affiliated militias,4
 Non-Civilian,Aleppo,2016-09,The organization of the Islamic State in Iraq and the Levant - ISIS,24
 Non-Civilian,Hasakeh,2016-09,Syrian government and affiliated militias,1
 Civilian,Daraa,2016-09,Syrian government and affiliated militias,37
@@ -1230,19 +1279,18 @@ Civilian,Deir Ezzor,2016-08,Not identified,8
 Non-Civilian,Damascus Suburbs,2016-08,Syrian government and affiliated militias,85
 Civilian,Aleppo,2016-08,Syrian government and affiliated militias,189
 Civilian,Damascus Suburbs,2016-08,Syrian government and affiliated militias,105
-Non-Civilian,Homs,2016-08,Syrian government and affiliated militias,53
+Non-Civilian,Homs,2016-08,Syrian government and affiliated militias,52
 Civilian,Homs,2016-08,Syrian government and affiliated militias,109
 Non-Civilian,Aleppo,2016-08,The organization of the Islamic State in Iraq and the Levant - ISIS,9
 Civilian,Aleppo,2016-08,Russian troops,74
 Civilian,Aleppo,2016-08,The organization of the Islamic State in Iraq and the Levant - ISIS,122
-Civilian,Aleppo,2016-08,Self administration forces,16
+Civilian,Aleppo,2016-08,Self administration forces,17
 Civilian,Aleppo,2016-08,Not identified,56
 Civilian,Daraa,2016-08,Syrian government and affiliated militias,25
 Non-Civilian,Idlib,2016-08,Not identified,11
 Civilian,Damascus Suburbs,2016-08,Not identified,9
 Non-Civilian,Daraa,2016-08,Not identified,8
 Non-Civilian,Aleppo,2016-08,Syrian government and affiliated militias,81
-Civilian,Damascus,2016-08,Self administration forces,1
 Civilian,Damascus Suburbs,2016-08,The organization of the Islamic State in Iraq and the Levant - ISIS,1
 Non-Civilian,Other Nationalities,2016-08,Armed opposition groups,1
 Civilian,Idlib,2016-08,Al-Nusra Front,1
@@ -1289,11 +1337,11 @@ Civilian,Damascus Suburbs,2016-08,Armed opposition groups,1
 Non-Civilian,Daraa,2016-08,Armed opposition groups,4
 Civilian,Homs,2016-07,Syrian government and affiliated militias,97
 Civilian,Daraa,2016-07,Syrian government and affiliated militias,45
-Civilian,Aleppo,2016-07,Syrian government and affiliated militias,217
+Civilian,Aleppo,2016-07,Syrian government and affiliated militias,226
 Civilian,Aleppo,2016-07,Russian troops,229
-Non-Civilian,Aleppo,2016-07,Syrian government and affiliated militias,91
+Non-Civilian,Aleppo,2016-07,Syrian government and affiliated militias,94
 Non-Civilian,Idlib,2016-07,Syrian government and affiliated militias,75
-Civilian,Aleppo,2016-07,The organization of the Islamic State in Iraq and the Levant - ISIS,41
+Civilian,Aleppo,2016-07,The organization of the Islamic State in Iraq and the Levant - ISIS,69
 Civilian,Daraa,2016-07,Not identified,9
 Civilian,Daraa,2016-07,Armed opposition groups,7
 Non-Civilian,Daraa,2016-07,Not identified,13
@@ -1309,9 +1357,9 @@ Civilian,Aleppo,2016-07,Armed opposition groups,37
 Civilian,Damascus Suburbs,2016-07,Syrian government and affiliated militias,173
 Non-Civilian,Raqqa,2016-07,Armed opposition groups,1
 Civilian,Raqqa,2016-07,The organization of the Islamic State in Iraq and the Levant - ISIS,8
-Civilian,Aleppo,2016-07,Self administration forces,17
+Civilian,Aleppo,2016-07,Self administration forces,19
 Civilian,Deir Ezzor,2016-07,The organization of the Islamic State in Iraq and the Levant - ISIS,25
-Civilian,Aleppo,2016-07,Not identified,148
+Civilian,Aleppo,2016-07,Not identified,153
 Non-Civilian,Aleppo,2016-07,The organization of the Islamic State in Iraq and the Levant - ISIS,19
 Civilian,Damascus Suburbs,2016-07,Not identified,16
 Non-Civilian,Quneitra,2016-07,Syrian government and affiliated militias,1
@@ -1446,8 +1494,8 @@ Non-Civilian,Daraa,2016-06,Russian troops,1
 Civilian,Deir Ezzor,2016-05,The organization of the Islamic State in Iraq and the Levant - ISIS,32
 Civilian,Aleppo,2016-05,Syrian government and affiliated militias,114
 Non-Civilian,Aleppo,2016-05,The organization of the Islamic State in Iraq and the Levant - ISIS,46
-Civilian,Homs,2016-05,Syrian government and affiliated militias,82
-Non-Civilian,Homs,2016-05,Syrian government and affiliated militias,48
+Civilian,Homs,2016-05,Syrian government and affiliated militias,83
+Non-Civilian,Homs,2016-05,Syrian government and affiliated militias,49
 Civilian,Raqqa,2016-05,Syrian government and affiliated militias,5
 Civilian,Aleppo,2016-05,Russian troops,30
 Civilian,Idlib,2016-05,Russian troops,29
@@ -1539,7 +1587,7 @@ Non-Civilian,Idlib,2016-04,The organization of the Islamic State in Iraq and the
 Civilian,Deir Ezzor,2016-04,The organization of the Islamic State in Iraq and the Levant - ISIS,17
 Non-Civilian,Homs,2016-04,Self administration forces,13
 Non-Civilian,Aleppo,2016-04,International coalition forces,2
-Non-Civilian,Hama,2016-04,Syrian government and affiliated militias,21
+Non-Civilian,Hama,2016-04,Syrian government and affiliated militias,22
 Civilian,Deir Ezzor,2016-04,Syrian government and affiliated militias,37
 Civilian,Damascus,2016-04,Syrian government and affiliated militias,5
 Non-Civilian,Daraa,2016-04,Syrian government and affiliated militias,5
@@ -1609,7 +1657,7 @@ Civilian,Aleppo,2016-04,,33
 Civilian,Hama,2016-04,,5
 Non-Civilian,Raqqa,2016-04,,2
 Non-Civilian,Homs,2016-04,,13
-Non-Civilian,Hama,2016-04,,15
+Non-Civilian,Hama,2016-04,,14
 Civilian,Damascus Suburbs,2016-04,,26
 Non-Civilian,Other Nationalities,2016-04,,1
 Civilian,Hasakeh,2016-04,,3
@@ -1692,7 +1740,7 @@ Civilian,Deir Ezzor,2016-02,The organization of the Islamic State in Iraq and th
 Civilian,Idlib,2016-02,,76
 Non-Civilian,Aleppo,2016-02,,175
 Non-Civilian,Daraa,2016-02,,52
-Non-Civilian,Hama,2016-02,,33
+Non-Civilian,Hama,2016-02,,32
 Non-Civilian,Deir Ezzor,2016-02,,20
 Civilian,Damascus Suburbs,2016-02,Armed opposition groups,2
 Civilian,Damascus,2016-02,,12
@@ -1727,8 +1775,8 @@ Non-Civilian,Other Nationalities,2016-02,,1
 Civilian,Hasakeh,2016-02,Not identified,1
 Non-Civilian,Daraa,2016-02,The organization of the Islamic State in Iraq and the Levant - ISIS,2
 Non-Civilian,Raqqa,2016-02,,1
+Non-Civilian,Hama,2016-02,Syrian government and affiliated militias,3
 Non-Civilian,Damascus Suburbs,2016-02,Not identified,1
-Non-Civilian,Hama,2016-02,Syrian government and affiliated militias,2
 Civilian,Idlib,2016-01,Not identified,8
 Non-Civilian,Homs,2016-01,,34
 Civilian,Raqqa,2016-01,The organization of the Islamic State in Iraq and the Levant - ISIS,11
@@ -1858,7 +1906,7 @@ Non-Civilian,Damascus Suburbs,2015-11,,124
 Non-Civilian,Aleppo,2015-11,,87
 Civilian,Aleppo,2015-11,,173
 Civilian,Deir Ezzor,2015-11,The organization of the Islamic State in Iraq and the Levant - ISIS,27
-Civilian,Homs,2015-11,,89
+Civilian,Homs,2015-11,,87
 Civilian,Deir Ezzor,2015-11,,133
 Non-Civilian,Idlib,2015-11,,126
 Non-Civilian,Damascus Suburbs,2015-11,The organization of the Islamic State in Iraq and the Levant - ISIS,8
@@ -1871,7 +1919,7 @@ Civilian,Damascus Suburbs,2015-11,Syrian government and affiliated militias,3
 Non-Civilian,Damascus Suburbs,2015-11,Armed opposition groups,6
 Non-Civilian,Homs,2015-11,Syrian government and affiliated militias,3
 Non-Civilian,Homs,2015-11,,53
-Non-Civilian,Hama,2015-11,,61
+Non-Civilian,Hama,2015-11,,60
 Civilian,Hama,2015-11,,36
 Civilian,Raqqa,2015-11,,25
 Non-Civilian,Idlib,2015-11,Al-Nusra Front,1
@@ -1895,7 +1943,7 @@ Civilian,Daraa,2015-11,Armed opposition groups,5
 Non-Civilian,Idlib,2015-11,Syrian government and affiliated militias,5
 Non-Civilian,Idlib,2015-11,The organization of the Islamic State in Iraq and the Levant - ISIS,1
 Non-Civilian,Tartous,2015-11,,1
-Non-Civilian,Hama,2015-11,Syrian government and affiliated militias,9
+Non-Civilian,Hama,2015-11,Syrian government and affiliated militias,10
 Civilian,Sweida,2015-11,,1
 Non-Civilian,Damascus,2015-11,,6
 Non-Civilian,Other Nationalities,2015-11,The organization of the Islamic State in Iraq and the Levant - ISIS,1
@@ -1904,8 +1952,8 @@ Non-Civilian,Hasakeh,2015-11,,4
 Non-Civilian,Daraa,2015-11,Al-Nusra Front,13
 Civilian,Aleppo,2015-11,Syrian government and affiliated militias,1
 Non-Civilian,Daraa,2015-11,Armed opposition groups,15
+Civilian,Homs,2015-11,Syrian government and affiliated militias,4
 Civilian,Hasakeh,2015-11,The organization of the Islamic State in Iraq and the Levant - ISIS,3
-Civilian,Homs,2015-11,Syrian government and affiliated militias,2
 Civilian,Daraa,2015-11,Syrian government and affiliated militias,1
 Civilian,Deir Ezzor,2015-11,Not identified,2
 Non-Civilian,Daraa,2015-11,Not identified,3
@@ -2253,6 +2301,7 @@ Non-Civilian,Daraa,2015-05,Al-Nusra Front,2
 Non-Civilian,Hama,2015-05,,36
 Non-Civilian,Damascus,2015-05,,4
 Civilian,Hasakeh,2015-05,Not identified,2
+Civilian,Hama,2015-05,Syrian government and affiliated militias,2
 Non-Civilian,Deir Ezzor,2015-05,Syrian government and affiliated militias,1
 Civilian,Lattakia,2015-05,,1
 Non-Civilian,Other Nationalities,2015-05,Syrian government and affiliated militias,1
@@ -2289,7 +2338,6 @@ Non-Civilian,Quneitra,2015-05,,1
 Non-Civilian,Raqqa,2015-05,,3
 Non-Civilian,Hama,2015-05,Syrian government and affiliated militias,1
 Non-Civilian,Idlib,2015-05,Armed opposition groups,1
-Civilian,Hama,2015-05,Syrian government and affiliated militias,1
 Civilian,Damascus Suburbs,2015-05,Armed opposition groups,1
 Non-Civilian,Quneitra,2015-05,The organization of the Islamic State in Iraq and the Levant - ISIS,1
 Civilian,Damascus,2015-05,Syrian government and affiliated militias,1
@@ -2364,7 +2412,7 @@ Civilian,Aleppo,2015-03,,87
 Non-Civilian,Aleppo,2015-03,,52
 Civilian,Daraa,2015-03,,253
 Civilian,Hama,2015-03,,52
-Non-Civilian,Hama,2015-03,,43
+Non-Civilian,Hama,2015-03,,42
 Civilian,Idlib,2015-03,,129
 Civilian,Damascus Suburbs,2015-03,,487
 Civilian,Deir Ezzor,2015-03,,57
@@ -2399,7 +2447,7 @@ Civilian,Hama,2015-03,Armed opposition groups,4
 Civilian,Damascus Suburbs,2015-03,Syrian government and affiliated militias,2
 Civilian,Other Nationalities,2015-03,,1
 Civilian,Daraa,2015-03,Not identified,2
-Non-Civilian,Hama,2015-03,Syrian government and affiliated militias,1
+Non-Civilian,Hama,2015-03,Syrian government and affiliated militias,2
 Non-Civilian,Damascus Suburbs,2015-03,The organization of the Islamic State in Iraq and the Levant - ISIS,2
 Non-Civilian,Damascus,2015-03,Al-Nusra Front,1
 Civilian,Damascus Suburbs,2015-03,Not identified,6
@@ -2432,6 +2480,7 @@ Non-Civilian,Other Nationalities,2015-02,,5
 Non-Civilian,Idlib,2015-02,,38
 Civilian,Raqqa,2015-02,The organization of the Islamic State in Iraq and the Levant - ISIS,4
 Civilian,Damascus Suburbs,2015-02,,223
+Civilian,Hama,2015-02,Syrian government and affiliated militias,1
 Non-Civilian,Homs,2015-02,,29
 Non-Civilian,Aleppo,2015-02,,93
 Civilian,Deir Ezzor,2015-02,,32
@@ -3056,7 +3105,7 @@ Non-Civilian,Damascus Suburbs,2014-04,,278
 Civilian,Aleppo,2014-04,,557
 Civilian,Daraa,2014-04,,104
 Non-Civilian,Daraa,2014-04,,90
-Non-Civilian,Hama,2014-04,,82
+Non-Civilian,Hama,2014-04,,81
 Non-Civilian,Idlib,2014-04,,163
 Civilian,Hasakeh,2014-04,,4
 Non-Civilian,Aleppo,2014-04,,176
@@ -3075,11 +3124,11 @@ Civilian,Raqqa,2014-04,,9
 Civilian,Damascus Suburbs,2014-04,Syrian government and affiliated militias,81
 Civilian,Aleppo,2014-04,The organization of the Islamic State in Iraq and the Levant - ISIS,6
 Non-Civilian,Lattakia,2014-04,,12
+Non-Civilian,Hama,2014-04,Syrian government and affiliated militias,12
 Civilian,Hama,2014-04,Syrian government and affiliated militias,4
 Non-Civilian,Homs,2014-04,Syrian government and affiliated militias,16
 Non-Civilian,Aleppo,2014-04,The organization of the Islamic State in Iraq and the Levant - ISIS,13
 Civilian,Homs,2014-04,Syrian government and affiliated militias,24
-Non-Civilian,Hama,2014-04,Syrian government and affiliated militias,11
 Non-Civilian,Raqqa,2014-04,,5
 Non-Civilian,Damascus Suburbs,2014-04,Syrian government and affiliated militias,87
 Non-Civilian,Daraa,2014-04,Syrian government and affiliated militias,14
@@ -3348,7 +3397,7 @@ Non-Civilian,Damascus,2013-11,,37
 Non-Civilian,Damascus Suburbs,2013-11,,269
 Civilian,Aleppo,2013-11,,381
 Non-Civilian,Aleppo,2013-11,,236
-Civilian,Hama,2013-11,,91
+Civilian,Hama,2013-11,,90
 Civilian,Deir Ezzor,2013-11,,41
 Civilian,Quneitra,2013-11,,24
 Civilian,Idlib,2013-11,,74
@@ -3393,6 +3442,7 @@ Civilian,Sweida,2013-11,,3
 Non-Civilian,Aleppo,2013-11,The organization of the Islamic State in Iraq and the Levant - ISIS,2
 Non-Civilian,Hama,2013-11,Not identified,1
 Civilian,Damascus,2013-11,Not identified,2
+Civilian,Hama,2013-11,Syrian government and affiliated militias,1
 Non-Civilian,Damascus,2013-11,Not identified,1
 Non-Civilian,Aleppo,2013-11,Armed opposition groups,1
 Non-Civilian,Idlib,2013-11,Al-Nusra Front,2
@@ -3596,7 +3646,7 @@ Non-Civilian,Aleppo,2013-06,,198
 Non-Civilian,Raqqa,2013-06,,35
 Non-Civilian,Homs,2013-06,,168
 Civilian,Daraa,2013-06,,145
-Civilian,Aleppo,2013-06,,546
+Civilian,Aleppo,2013-06,,524
 Non-Civilian,Lattakia,2013-06,,3
 Civilian,Raqqa,2013-06,,40
 Non-Civilian,Other Nationalities,2013-06,,24
@@ -3605,7 +3655,7 @@ Civilian,Hama,2013-06,,94
 Civilian,Deir Ezzor,2013-06,,61
 Civilian,Sweida,2013-06,,4
 Civilian,Hasakeh,2013-06,,49
-Civilian,Aleppo,2013-06,Syrian government and affiliated militias,1
+Civilian,Aleppo,2013-06,Syrian government and affiliated militias,23
 Civilian,Hama,2013-06,Syrian government and affiliated militias,1
 Civilian,Lattakia,2013-06,,5
 Non-Civilian,Quneitra,2013-06,,17
@@ -3620,6 +3670,7 @@ Civilian,Idlib,2013-06,Not identified,1
 Civilian,Other Nationalities,2013-06,,1
 Civilian,Homs,2013-06,Syrian government and affiliated militias,3
 Non-Civilian,Deir Ezzor,2013-06,Syrian government and affiliated militias,1
+Non-Civilian,Aleppo,2013-06,Syrian government and affiliated militias,2
 Non-Civilian,Homs,2013-06,Syrian government and affiliated militias,2
 Civilian,Damascus Suburbs,2013-05,,415
 Non-Civilian,Damascus Suburbs,2013-05,,375
@@ -3631,7 +3682,7 @@ Non-Civilian,Damascus,2013-05,,48
 Non-Civilian,Other Nationalities,2013-05,,20
 Civilian,Daraa,2013-05,,110
 Non-Civilian,Idlib,2013-05,,121
-Non-Civilian,Hama,2013-05,,114
+Non-Civilian,Hama,2013-05,,113
 Civilian,Hama,2013-05,,161
 Civilian,Idlib,2013-05,,135
 Civilian,Raqqa,2013-05,,62
@@ -3643,7 +3694,7 @@ Non-Civilian,Quneitra,2013-05,,15
 Civilian,Quneitra,2013-05,,14
 Non-Civilian,Hasakeh,2013-05,,3
 Non-Civilian,Deir Ezzor,2013-05,,54
-Non-Civilian,Hama,2013-05,Syrian government and affiliated militias,1
+Non-Civilian,Hama,2013-05,Syrian government and affiliated militias,2
 Non-Civilian,Raqqa,2013-05,,11
 Civilian,Other Nationalities,2013-05,,4
 Civilian,Hasakeh,2013-05,,16
@@ -3737,7 +3788,7 @@ Civilian,Damascus Suburbs,2013-02,,650
 Non-Civilian,Aleppo,2013-02,,281
 Civilian,Damascus,2013-02,,346
 Civilian,Deir Ezzor,2013-02,,61
-Non-Civilian,Hama,2013-02,,81
+Non-Civilian,Hama,2013-02,,80
 Non-Civilian,Other Nationalities,2013-02,,58
 Non-Civilian,Deir Ezzor,2013-02,,133
 Non-Civilian,Daraa,2013-02,,104
@@ -3767,6 +3818,7 @@ Civilian,Quneitra,2013-02,Not identified,1
 Civilian,Homs,2013-02,Syrian government and affiliated militias,3
 Non-Civilian,Lattakia,2013-02,,2
 Non-Civilian,Sweida,2013-02,,2
+Non-Civilian,Hama,2013-02,Syrian government and affiliated militias,1
 Civilian,Idlib,2013-01,,274
 Civilian,Damascus Suburbs,2013-01,,925
 Non-Civilian,Damascus Suburbs,2013-01,,158
@@ -3779,7 +3831,7 @@ Civilian,Damascus,2013-01,,254
 Civilian,Daraa,2013-01,,187
 Non-Civilian,Other Nationalities,2013-01,,32
 Non-Civilian,Aleppo,2013-01,,165
-Non-Civilian,Hama,2013-01,,57
+Non-Civilian,Hama,2013-01,,55
 Non-Civilian,Deir Ezzor,2013-01,,86
 Non-Civilian,Damascus,2013-01,,44
 Non-Civilian,Idlib,2013-01,,142
@@ -3788,17 +3840,18 @@ Civilian,Quneitra,2013-01,,12
 Civilian,Deir Ezzor,2013-01,,84
 Non-Civilian,Quneitra,2013-01,,3
 Non-Civilian,Hasakeh,2013-01,,15
-Civilian,Hama,2013-01,,184
+Civilian,Hama,2013-01,,183
 Non-Civilian,Lattakia,2013-01,,9
 Non-Civilian,Homs,2013-01,Syrian government and affiliated militias,4
 Non-Civilian,Raqqa,2013-01,,19
+Non-Civilian,Hama,2013-01,Syrian government and affiliated militias,2
 Civilian,Lattakia,2013-01,,14
 Civilian,Raqqa,2013-01,,49
+Civilian,Hama,2013-01,Syrian government and affiliated militias,2
 Civilian,Other Nationalities,2013-01,,4
 Civilian,Aleppo,2013-01,The organization of the Islamic State in Iraq and the Levant - ISIS,1
 Civilian,Homs,2013-01,Syrian government and affiliated militias,3
 Non-Civilian,Hasakeh,2013-01,Syrian government and affiliated militias,1
-Civilian,Hama,2013-01,Syrian government and affiliated militias,1
 Non-Civilian,Tartous,2013-01,,1
 Non-Civilian,Deir Ezzor,2013-01,Syrian government and affiliated militias,1
 Civilian,Sweida,2013-01,,7
@@ -3881,7 +3934,7 @@ Civilian,Aleppo,2012-10,,770
 Non-Civilian,Hama,2012-10,,71
 Civilian,Idlib,2012-10,,559
 Civilian,Damascus,2012-10,,190
-Civilian,Hama,2012-10,,110
+Civilian,Hama,2012-10,,109
 Non-Civilian,Damascus Suburbs,2012-10,,215
 Civilian,Damascus Suburbs,2012-10,,1159
 Civilian,Homs,2012-10,,265
@@ -3907,6 +3960,7 @@ Non-Civilian,Tartous,2012-10,,1
 Civilian,Tartous,2012-10,,11
 Civilian,Hasakeh,2012-10,,3
 Non-Civilian,Quneitra,2012-10,,8
+Civilian,Hama,2012-10,Syrian government and affiliated militias,1
 Non-Civilian,Sweida,2012-10,,1
 Civilian,Sweida,2012-10,,1
 Civilian,Hama,2012-09,,246
@@ -3964,7 +4018,7 @@ Non-Civilian,Damascus Suburbs,2012-08,,136
 Non-Civilian,Homs,2012-08,Syrian government and affiliated militias,1
 Non-Civilian,Raqqa,2012-08,,3
 Civilian,Hasakeh,2012-08,,7
-Non-Civilian,Hama,2012-08,,47
+Non-Civilian,Hama,2012-08,,46
 Civilian,Homs,2012-08,Syrian government and affiliated militias,6
 Non-Civilian,Sweida,2012-08,,3
 Non-Civilian,Other Nationalities,2012-08,,9
@@ -3975,6 +4029,7 @@ Civilian,Other Nationalities,2012-08,,17
 Civilian,Damascus Suburbs,2012-08,Syrian government and affiliated militias,2
 Civilian,Tartous,2012-08,,6
 Non-Civilian,Deir Ezzor,2012-08,Syrian government and affiliated militias,1
+Non-Civilian,Hama,2012-08,Syrian government and affiliated militias,1
 Civilian,Daraa,2012-08,Syrian government and affiliated militias,1
 Civilian,Damascus Suburbs,2012-07,,689
 Non-Civilian,Aleppo,2012-07,,118
@@ -3982,7 +4037,7 @@ Civilian,Aleppo,2012-07,,421
 Civilian,Quneitra,2012-07,,8
 Non-Civilian,Daraa,2012-07,,87
 Civilian,Damascus,2012-07,,401
-Non-Civilian,Damascus Suburbs,2012-07,,134
+Non-Civilian,Damascus Suburbs,2012-07,,133
 Civilian,Homs,2012-07,,369
 Civilian,Hama,2012-07,,278
 Non-Civilian,Homs,2012-07,,152
@@ -4247,11 +4302,11 @@ Non-Civilian,Raqqa,2011-12,,2
 Civilian,Other Nationalities,2011-12,Syrian government and affiliated militias,1
 Civilian,Hasakeh,2011-12,Syrian government and affiliated militias,2
 Civilian,Idlib,2011-11,,68
-Civilian,Hama,2011-11,,92
+Civilian,Hama,2011-11,Syrian government and affiliated militias,7
 Civilian,Homs,2011-11,,289
+Civilian,Hama,2011-11,,91
 Civilian,Idlib,2011-11,Syrian government and affiliated militias,14
 Civilian,Homs,2011-11,Syrian government and affiliated militias,34
-Civilian,Hama,2011-11,Syrian government and affiliated militias,6
 Civilian,Damascus Suburbs,2011-11,,49
 Civilian,Other Nationalities,2011-11,,1
 Non-Civilian,Deir Ezzor,2011-11,Syrian government and affiliated militias,1
@@ -4409,10 +4464,11 @@ Non-Civilian,Daraa,2011-05,,4
 Civilian,Aleppo,2011-05,,1
 Non-Civilian,Lattakia,2011-05,,1
 Civilian,Damascus Suburbs,2011-05,,18
-Civilian,Idlib,2011-05,,45
+Civilian,Idlib,2011-05,,44
 Civilian,Lattakia,2011-05,,10
 Non-Civilian,Damascus Suburbs,2011-05,,5
 Civilian,Deir Ezzor,2011-05,,13
+Civilian,Idlib,2011-05,Syrian government and affiliated militias,1
 Non-Civilian,Hasakeh,2011-05,,1
 Civilian,Tartous,2011-05,,12
 Civilian,Homs,2011-05,Syrian government and affiliated militias,1
@@ -4443,8 +4499,3 @@ Non-Civilian,Homs,2011-04,Syrian government and affiliated militias,1
 Civilian,Idlib,2011-04,Syrian government and affiliated militias,1
 Non-Civilian,Aleppo,2011-04,,1
 Civilian,Daraa,2011-04,Syrian government and affiliated militias,1
-Civilian,Lattakia,2011-03,,26
-Non-Civilian,Lattakia,2011-03,,1
-Civilian,Homs,2011-03,Syrian government and affiliated militias,1
-Civilian,Daraa,2011-03,,147
-Non-Civilian,Homs,2011-03,,3
