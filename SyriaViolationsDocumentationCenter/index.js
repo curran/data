@@ -10,11 +10,11 @@ const formatMonth = d3.timeFormat('%Y-%m');
 // To get this token (which is probably more of a cursor for pagination),
 // Make a query in the UI found here http://www.vdc-sy.info/index.php/en/martyrs/
 // and copy the token from the URL.
-const token = 'c29ydGJ5PWEua2lsbGVkX2RhdGV8c29ydGRpcj1ERVNDfGFwcHJvdmVkPXZpc2libGV8ZXh0cmFkaXNwbGF5PTB8c3RhcnREYXRlPTIwMTEtMDQtMDF8ZW5kRGF0ZT0yMDE4LTAzLTAyfA'
+const token = 'c29ydGJ5PWEua2lsbGVkX2RhdGV8c29ydGRpcj1ERVNDfGFwcHJvdmVkPXZpc2libGV8ZXh0cmFkaXNwbGF5PTB8';
 
 // Update this number depending on how many pages of the results there are.
 // To find out, click "End" and see what page it is.
-const lastPage = 1591;
+const lastPage = 1661;
 
 const scrapePage = page => {
   scraper
