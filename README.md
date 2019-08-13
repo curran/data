@@ -2,6 +2,7 @@ A collection of public data sets for testing out visualization methods. These da
 
 ## Targets for import:
 
+ * [CWUR - World University Rankings 2019-2020](https://cwur.org/2019-2020.php)
  * [TopoJSON Collection](https://bl.ocks.org/FrissAnalytics/a5b18dc15b73f34f92c7448cbb62c38e) World countries _and subdivisions_
  * [Classic datasets from Petra Isenberg et. al.](https://perso.telecom-paristech.fr/eagan/class/igr204/datasets)
  * [Soul of the Community](http://streaming.stat.iastate.edu/dataexpo/2013/) (American Statistical Association)
