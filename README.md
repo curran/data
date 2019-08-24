@@ -1,7 +1,8 @@
 A collection of public data sets for testing out visualization methods. These data sets are at various stages of preparation, some are just raw data, some are CSV files, and some are exposed as AMD modules. This collection is messy, but with some digging you may find hidden gems.
 
-## Targets for import:
+## Interesting Datasets
 
+ * [Stranger Things Ratings](https://data.world/priyankad0993/stranger-things-episode-ratings)
  * [SIPRI Arms Transfers Database](https://www.sipri.org/databases/armstransfers)
  * [CWUR - World University Rankings 2019-2020](https://cwur.org/2019-2020.php)
  * [TopoJSON Collection](https://bl.ocks.org/FrissAnalytics/a5b18dc15b73f34f92c7448cbb62c38e) World countries _and subdivisions_
