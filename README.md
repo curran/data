@@ -2,6 +2,7 @@ A collection of public data sets for testing out visualization methods. These da
 
 ## Interesting Datasets
 
+ * [Dataset collection: R for Data Science Tidy Tuesdays](https://github.com/rfordatascience/tidytuesday)
  * [Stranger Things Ratings](https://data.world/priyankad0993/stranger-things-episode-ratings)
  * [SIPRI Arms Transfers Database](https://www.sipri.org/databases/armstransfers)
  * [CWUR - World University Rankings 2019-2020](https://cwur.org/2019-2020.php)
