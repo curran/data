@@ -2,6 +2,7 @@ A collection of public data sets for testing out visualization methods. These da
 
 ## Interesting Datasets
 
+ * [Dataset collection: SPORTS DATA SETS FOR DATA MODELING, VISUALIZATION, PREDICTIONS, MACHINE-LEARNING](https://sports-statistics.com/sports-statistics-datasets-for-research-modeling-predictions-machine-learning-ai/).
  * [Dataset collection: information is beautiful - Data](https://informationisbeautiful.net/data/)
  * [Dataset collection: R for Data Science Tidy Tuesdays](https://github.com/rfordatascience/tidytuesday)
  * [Stranger Things Ratings](https://data.world/priyankad0993/stranger-things-episode-ratings)
