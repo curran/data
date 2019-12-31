@@ -28,28 +28,9 @@ A collection of public data sets for testing out visualization methods. These da
  * [SOCR Datasets](http://wiki.socr.umich.edu/index.php/SOCR_Data)
  * [UCI Machine Learning Repository Datasets](https://archive.ics.uci.edu/ml/datasets)
  * [BrightKite User Check-ins](http://snap.stanford.edu/data/loc-brightkite.html) (57.2 MB)
-
-[ACLED (Armed Conflict Location and Event Data Project)](http://www.google.com/url?q=http%3A%2F%2Fwww.acleddata.com%2Fdata%2F&sa=D&sntz=1&usg=AFQjCNFV5lpcdVoD6nKJR-vXkKidw5XuPQ) (35MB)
-
-This data set contains entries for each violent event in Africa from 1997 - 2014\. This data set would be a good candidate for visualization with a linked timeline and choropleth map, where selections in the timeline can drive the filtering of data shown on the map.
-
-*   timestamp: T
-*   (latitude, longitude): G
-*   country: G
-*   number of fatalities: Q
-
-[Safecast](http://www.google.com/url?q=http%3A%2F%2Fblog.safecast.org%2Fdata%2F&sa=D&sntz=1&usg=AFQjCNHExG-991SfaAYOMkX_FMPGJFHpew) (3.2GB)
-
-Grassroots sensor data about nuclear radiation in Japan
-
-[Statistical Computing Statistical Graphics Data expo Airline on-time performance](http://www.google.com/url?q=http%3A%2F%2Fstat-computing.org%2Fdataexpo%2F2009%2F&sa=D&sntz=1&usg=AFQjCNGAAyzi1YJc-Xhkbtnw7bk8fY0MwA) (12GB)
-
-A great data set for scalability testing. This is the data set used in the [Crossfilter Demo](http://www.google.com/url?q=http%3A%2F%2Fsquare.github.io%2Fcrossfilter%2F&sa=D&sntz=1&usg=AFQjCNH-caOpObkW654NYdXJxNYLmpkxCQ).
-
-[The GDELT Data Set](http://www.google.com/url?q=http%3A%2F%2Fgdeltproject.org%2Fdata.html%23rawdatafiles&sa=D&sntz=1&usg=AFQjCNEpiEVGZcQX-U_ZZm8MlTL9oU6ZZg) (~100GB)
-
-This would be a great data set for more extreme scalability testing. There is an [Open Source project for loading this data set into Spark on AWS.](https://www.google.com/url?q=https%3A%2F%2Fgithub.com%2Fvelvia%2Fspark-sql-gdelt&sa=D&sntz=1&usg=AFQjCNG766ALWSV8iNLjbQZd_CJnqK3spg)
-
-[The Indian Census has lots of public data.](http://www.google.com/url?q=http%3A%2F%2Fwww.devinfo.org%2Findiacensus2011%2Flibraries%2Faspx%2FCatalog.aspx&sa=D&sntz=1&usg=AFQjCNFpZ93xLZHQvmkLq-4u38ymTPsDKw)
-
-Best Buy has a [developer portal for querying their data via a Web API.](https://www.google.com/url?q=https%3A%2F%2Fdeveloper.bestbuy.com%2F&sa=D&sntz=1&usg=AFQjCNHeep1tEkODill37AcU-weTtkoDBw)
+ * [ACLED (Armed Conflict Location and Event Data Project)](https://www.acleddata.com/data/) (35MB)
+ * [Safecast](https://blog.safecast.org/data/) (3.2GB)
+ * [Statistical Computing Statistical Graphics Data expo Airline on-time performance](http://stat-computing.org/dataexpo/2009/) (12GB)
+ * [The GDELT Data Set](https://www.gdeltproject.org/data.html#rawdatafiles) (~100GB)
+ * [The Indian Census 2011](http://censusindia.gov.in/2011-Common/CensusData2011.html)
+ * [Best Buy Developer API](https://developer.bestbuy.com/)
