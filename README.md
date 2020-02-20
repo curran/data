@@ -2,6 +2,9 @@ A collection of public data sets for testing out visualization methods. These da
 
 ## Interesting Datasets
 
+Most recently added on the top.
+
+ * [US Energy Information Administration Data](https://www.eia.gov/electricity/data.php#sales) (see also [Analysis & Projections](https://www.eia.gov/electricity/data/eia860M/))
  * [Climate.gov Datasets](https://www.climate.gov/maps-data/datasets)
  * [The Economist Graphic Detail data](https://github.com/TheEconomist/graphic-detail-data)
  * [Dataset collection: SPORTS DATA SETS FOR DATA MODELING, VISUALIZATION, PREDICTIONS, MACHINE-LEARNING](https://sports-statistics.com/sports-statistics-datasets-for-research-modeling-predictions-machine-learning-ai/).
