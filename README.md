@@ -4,6 +4,7 @@ A collection of public data sets for testing out visualization methods. These da
 
 Most recently added on the top.
 
+ * [Historical Weather Warnings](https://mesonet.agron.iastate.edu/request/gis/watchwarn.phtml)
  * [PM2.5 Air Quality by Country over Time](https://github.com/maurosc3ner/uspm25_2000_2018/blob/master/data/pm2.5byCounty.csv)
  * [US Energy Information Administration Data](https://www.eia.gov/electricity/data.php#sales) (see also [Analysis & Projections](https://www.eia.gov/electricity/data/eia860M/))
  * [Climate.gov Datasets](https://www.climate.gov/maps-data/datasets)
