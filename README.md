@@ -3,7 +3,8 @@ A collection of public data sets for testing out visualization methods. These da
 ## Interesting Datasets
 
 Most recently added on the top.
-
+ * [Awesome Public Datasets](https://github.com/awesomedata/awesome-public-datasets)
+ * [FMA: A Dataset For Music Analysis](https://github.com/mdeff/fma)
  * [Food Nutrition Data](https://fdc.nal.usda.gov/download-datasets.html)
  * [Historical Weather Warnings](https://mesonet.agron.iastate.edu/request/gis/watchwarn.phtml)
  * [PM2.5 Air Quality by Country over Time](https://github.com/maurosc3ner/uspm25_2000_2018/blob/master/data/pm2.5byCounty.csv)
