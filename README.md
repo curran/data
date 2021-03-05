@@ -43,3 +43,9 @@ Most recently added on the top.
  * [The GDELT Data Set](https://www.gdeltproject.org/data.html#rawdatafiles) (~100GB)
  * [The Indian Census 2011](http://censusindia.gov.in/2011-Common/CensusData2011.html)
  * [Best Buy Developer API](https://developer.bestbuy.com/)
+
+## Leads
+
+These are "leads" to find interesting datasets. They have teasers of cool data, but it will take some work to find the data behind them.
+
+ * [Social Explorer](https://www.socialexplorer.com/product-maps)
