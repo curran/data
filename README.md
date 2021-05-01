@@ -3,6 +3,7 @@ A collection of public data sets for testing out visualization methods. These da
 ## Interesting Datasets
 
 Most recently added on the top.
+ * [Most Popular Operating Systems](https://observablehq.com/@mbostock/most-popular-operating-systems-2003-2020)
  * [Remaking Figures from Semiology of Graphics](https://github.com/nicolaskruchten/semiology_of_graphics)
  * [Awesome Public Datasets](https://github.com/awesomedata/awesome-public-datasets)
  * [FMA: A Dataset For Music Analysis](https://github.com/mdeff/fma)
