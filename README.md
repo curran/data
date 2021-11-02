@@ -3,6 +3,7 @@ A collection of public data sets for testing out visualization methods. These da
 ## Interesting Datasets
 
 Most recently added on the top.
+ * [MFRED Electricity Usage Dataset](https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/X9MIDJ)
  * [BBC Shared Data Unit](https://github.com/BBC-Data-Unit/shared-data-unit)
  * [Most Popular Operating Systems](https://observablehq.com/@mbostock/most-popular-operating-systems-2003-2020)
  * [Remaking Figures from Semiology of Graphics](https://github.com/nicolaskruchten/semiology_of_graphics)
