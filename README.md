@@ -4,7 +4,7 @@ A collection of public data sets for testing out visualization methods. These da
 
 Most recently added on the top.
  * [Cantometrics Data, from The Global Jukebox, music database](https://github.com/theglobaljukebox/cantometrics/tree/main/raw)
- * [Observable Curated Datasets](https://observablehq.com/@observablehq/curated-datasets)
+ * [Observable Curated Datasets](https://observablehq.com/@observablehq/curated-datasets) | [Old Observable Curated Datasets](https://github.com/observablehq/datasets)
  * [MFRED Electricity Usage Dataset](https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/X9MIDJ)
  * [BBC Shared Data Unit](https://github.com/BBC-Data-Unit/shared-data-unit)
  * [Most Popular Operating Systems](https://observablehq.com/@mbostock/most-popular-operating-systems-2003-2020)
