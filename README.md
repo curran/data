@@ -3,6 +3,7 @@ A collection of public data sets for testing out visualization methods. These da
 ## Interesting Datasets
 
 Most recently added on the top.
+ * [RawGraphs Sample Datasets](https://github.com/rawgraphs/rawgraphs-app/tree/master/public/sample-datasets)
  * [nomis - UK Census data from 2021](https://www.nomisweb.co.uk/sources/census_2021_bulk) (via [Twitter](https://twitter.com/undertheraedar/status/1612751365343961090))
  * [Cantometrics Data, from The Global Jukebox, music database](https://github.com/theglobaljukebox/cantometrics/tree/main/raw)
  * [Observable Curated Datasets](https://observablehq.com/@observablehq/curated-datasets) | [Old Observable Curated Datasets](https://github.com/observablehq/datasets)
