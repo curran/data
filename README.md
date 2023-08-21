@@ -4,6 +4,8 @@ A collection of public data sets for testing out visualization methods. These da
 
 Most recently added on the top.
 
+ * [Gothenburg Quality of Government Expert Survey](https://www.gu.se/en/quality-government/qog-data/data-downloads/qog-expert-survey)
+ * [UN Human Development Index](https://hdr.undp.org/data-center/human-development-index#/indicies/HDI)
  * [Vega Datasets](https://github.com/vega/vega-datasets/tree/main)
  * [Data sources by EfoxMaps](https://www.notion.so/a360dea317234868a0f7cfb1ef249843)
  * [RawGraphs Sample Datasets](https://github.com/rawgraphs/rawgraphs-app/tree/master/public/sample-datasets)
