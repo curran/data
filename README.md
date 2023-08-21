@@ -4,6 +4,7 @@ A collection of public data sets for testing out visualization methods. These da
 
 Most recently added on the top.
 
+ * [Vega Datasets](https://github.com/vega/vega-datasets/tree/main)
  * [Data sources by EfoxMaps](https://www.notion.so/a360dea317234868a0f7cfb1ef249843)
  * [RawGraphs Sample Datasets](https://github.com/rawgraphs/rawgraphs-app/tree/master/public/sample-datasets)
  * [nomis - UK Census data from 2021](https://www.nomisweb.co.uk/sources/census_2021_bulk) (via [Twitter](https://twitter.com/undertheraedar/status/1612751365343961090))
